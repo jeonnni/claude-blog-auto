@@ -15,7 +15,7 @@ class GeminiError(Exception):
     pass
 
 
-def call(prompt: str, temperature: float = 0.9, max_retries: int = 4) -> str:
+def call(prompt: str, temperature: float = 0.9, max_retries: int = 6) -> str:
     """Gemini에 프롬프트를 보내고 텍스트 응답을 받는다."""
     if not config.GEMINI_API_KEY:
         raise GeminiError("GEMINI_API_KEY가 설정되지 않았습니다.")
