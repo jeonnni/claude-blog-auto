@@ -27,7 +27,6 @@ def call(prompt: str, temperature: float = 0.9, max_retries: int = 6) -> str:
             "temperature": temperature,
             "maxOutputTokens": 32768,
             "responseMimeType": "application/json",
-            "thinkingConfig": {"thinkingBudget": 0},
         },
     }
     headers = {
