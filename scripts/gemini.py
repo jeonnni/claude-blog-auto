@@ -54,9 +54,18 @@ def call(prompt: str, temperature: float = 0.9, max_retries: int = 6) -> str:
                 return "".join(p.get("text", "") for p in parts).strip()
             except (KeyError, IndexError):
                 raise GeminiError(f"예상과 다른 응답 형식: {json.dumps(data)[:400]}")
-
         # 429 = 요청 한도 초과, 5xx = 일시적 서버 문제 → 재시도
-        if res.status_code == 429 or res.status_code >= 500:
+        if res.status_code == 429:
+            # 일일 한도 초과는 재시도해도 소용없으므로 즉시 중단
+            if "quota" in res.text.lower() or "daily" in res.text.lower():
+                raise GeminiError("일일 무료 한도 초과 — 다음 회차에 재시도합니다.")
+            last_error = "HTTP 429"
+            print(f"    재시도 {attempt}/{max_retries} — {last_error} ({wait}초 대기)")
+            time.sleep(wait)
+            wait *= 2
+            continue
+
+        if res.status_code >= 500:
             last_error = f"HTTP {res.status_code}"
             print(f"    재시도 {attempt}/{max_retries} — {last_error} ({wait}초 대기)")
             time.sleep(wait)
