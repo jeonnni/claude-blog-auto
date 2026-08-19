@@ -29,7 +29,7 @@ BLOGGER_BLOG_ID = os.environ.get("BLOGGER_BLOG_ID", "")
 # 무료 티어 모델명은 바뀔 수 있으니 여기서 한 번에 수정
 # 현재 사용 가능한 모델은 https://ai.google.dev/gemini-api/docs/models 확인
 # ─────────────────────────────────────────────
-GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-3.5-flash-lite")
+GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-flash-lite-latest")
 GEMINI_ENDPOINT = (
     "https://generativelanguage.googleapis.com/v1beta/models/"
     "{model}:generateContent"
