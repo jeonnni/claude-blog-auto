@@ -1,0 +1,31 @@
+# ─── 인증 정보 / 비밀키 (절대 커밋 금지) ───
+refresh_token.txt
+token.json
+credentials.json
+client_secret*.json
+*.pem
+*.key
+.env
+.env.*
+secrets.*
+service-account*.json
+
+# ─── 로컬 설정 ───
+config_local.py
+local_settings.py
+
+# ─── 미리보기 결과물 ───
+data/preview-*.html
+
+# ─── 파이썬 ───
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# ─── 에디터 / OS ───
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
