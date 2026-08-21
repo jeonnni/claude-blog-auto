@@ -136,6 +136,88 @@ def svg_thumbnail(data):
 
 
 # ─────────────────────────────────────────────
+# 1-b. 정사각형 썸네일 (네이버 목록용)
+# ─────────────────────────────────────────────
+SQ = 1080  # 네이버 목록 썸네일은 정사각형으로 잘리므로 1:1로 따로 만든다
+
+
+def svg_thumbnail_square(data):
+    headline = data.get("headline") or data.get("title") or "AI 이야기"
+    sub = data.get("sub", "")
+
+    lines = wrap(headline, 9, 3)
+    total = len(lines)
+    sub_lines = wrap(sub, 17, 2) if sub else []
+
+    # 제목 + 부제를 화면 정중앙에 오도록 배치
+    content_h = total * 104 + (len(sub_lines) * 44 + 6 if sub_lines else 0)
+    start_y = (SQ - content_h) / 2 + 66
+
+    text_block = ""
+    for i, line in enumerate(lines):
+        text_block += (
+            f'<text x="88" y="{start_y + i*104}" font-family="{SERIF}" font-size="86" '
+            f'font-weight="600" fill="{C["ink"]}">{esc(line)}</text>\n'
+        )
+
+    sub_y = start_y + total * 104 + 6
+    sub_block = ""
+    for j, line in enumerate(sub_lines):
+        sub_block += (
+            f'<text x="88" y="{sub_y + j*44}" font-family="{SANS}" font-size="31" '
+            f'fill="{C["muted"]}">{esc(line)}</text>\n'
+        )
+
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="{SQ}" height="{SQ}" viewBox="0 0 {SQ} {SQ}">
+<defs>
+  <linearGradient id="bgGrad" x1="0" y1="0" x2="0.7" y2="1">
+    <stop offset="0%" stop-color="{C['bg']}"/>
+    <stop offset="100%" stop-color="{C['bg2']}"/>
+  </linearGradient>
+</defs>
+<rect width="{SQ}" height="{SQ}" fill="url(#bgGrad)"/>
+<rect x="88" y="150" width="58" height="4" fill="{C['accent']}"/>
+<text x="88" y="206" font-family="{SANS}" font-size="21" font-weight="600"
+ letter-spacing="5" fill="{C['accent']}">AI GUIDE</text>
+{text_block}
+{sub_block}
+<line x1="88" y1="{SQ-150}" x2="{SQ-88}" y2="{SQ-150}"
+ stroke="{C['muted']}" stroke-width="1" opacity="0.28"/>
+<text x="{SQ-88}" y="{SQ-104}" text-anchor="end" font-family="{SANS}" font-size="23"
+ fill="{C['muted']}">{esc(config.BLOG_NAME)}</text>
+</svg>"""
+
+
+def render_square_thumbnail(data, slug):
+    """네이버 목록용 정사각형 썸네일 1장을 따로 만든다."""
+    import cairosvg
+
+    os.makedirs(config.IMAGE_DIR, exist_ok=True)
+    filename = f"{slug}-thumbnail-sq.png"
+    path = os.path.join(config.IMAGE_DIR, filename)
+
+    try:
+        svg = svg_thumbnail_square(data or {})
+    except Exception as e:
+        print(f"    [경고] 정사각 썸네일 생성 실패, 기본값 사용: {e}")
+        svg = svg_thumbnail_square({})
+
+    cairosvg.svg2png(
+        bytestring=svg.encode("utf-8"),
+        write_to=path,
+        output_width=SQ,
+        output_height=SQ,
+    )
+    print(f"    · {filename}")
+
+    return {
+        "file": path,
+        "url": f"{config.IMAGE_BASE_URL}/{filename}",
+        "alt": "대표 이미지",
+    }
+
+
+# ─────────────────────────────────────────────
 # 2. 흐름도
 # ─────────────────────────────────────────────
 def svg_diagram(data):
