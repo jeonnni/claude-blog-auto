@@ -1,0 +1,61 @@
+name: 네이버 원고 생성
+
+on:
+  schedule:
+    # 한국시간 08:00, 20:00 (UTC 23:00, 11:00)
+    - cron: "0 23,11 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: naver-draft
+  cancel-in-progress: false
+
+jobs:
+  draft:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: 저장소 체크아웃
+        uses: actions/checkout@v4
+
+      - name: Python 설정
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: 한글 폰트 및 렌더링 라이브러리 설치
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq \
+            fonts-noto-cjk fonts-nanum \
+            libcairo2 libpango-1.0-0 libpangocairo-1.0-0 libgdk-pixbuf-2.0-0
+          fc-cache -f
+
+      - name: 파이썬 패키지 설치
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: 원고 생성
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python main_naver.py
+
+      - name: 결과물 커밋
+        if: success()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/naver docs/images data/naver_history.json
+          if git diff --staged --quiet; then
+            echo "변경 사항 없음"
+          else
+            git commit -m "네이버 원고: $(date -u +'%Y-%m-%d %H:%M') UTC"
+            git pull --rebase --autostash origin ${{ github.ref_name }} || true
+            git push
+          fi
