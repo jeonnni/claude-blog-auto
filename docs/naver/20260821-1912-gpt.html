@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>개발자 없이 챗GPT 워크로 만드는 우리팀 맞춤 협업 웹페이지 — 네이버 원고</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 24px 16px 80px;
+    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+                 "Malgun Gothic", sans-serif;
+    background: #F6F7F9; color: #1F2937; line-height: 1.75;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  .head {
+    background: #03C75A; color: #fff; padding: 20px 22px;
+    border-radius: 14px; margin-bottom: 20px;
+  }
+  .head h1 { margin: 0 0 6px; font-size: 20px; line-height: 1.45; }
+  .head .date { font-size: 13px; opacity: .9; }
+  .card {
+    background: #fff; border-radius: 14px; padding: 18px 20px;
+    margin-bottom: 16px; border: 1px solid #E5E7EB;
+  }
+  .card h2 {
+    margin: 0 0 12px; font-size: 15px; color: #6B7280;
+    font-weight: 700; letter-spacing: .3px;
+  }
+  ul { margin: 0; padding: 0; list-style: none; }
+  ul li {
+    display: flex; align-items: center; gap: 10px;
+    padding: 9px 0; border-bottom: 1px solid #F3F4F6;
+  }
+  ul li:last-child { border-bottom: 0; }
+  ul li .t { flex: 1; font-size: 15px; }
+  .copy {
+    border: 0; background: #EEF2FF; color: #4F46E5;
+    padding: 7px 13px; border-radius: 8px; font-size: 13px;
+    cursor: pointer; white-space: nowrap; font-weight: 600;
+  }
+  .copy:hover { background: #E0E7FF; }
+  .copy.done { background: #DCFCE7; color: #16A34A; }
+  .tags { color: #2563EB; font-size: 14px; word-break: keep-all; }
+  .block {
+    background: #fff; border: 1px solid #E5E7EB;
+    border-radius: 14px; padding: 16px 18px; margin-bottom: 12px;
+  }
+  .block.text .body { font-size: 15.5px; margin-bottom: 12px; }
+  .block.img { text-align: center; background: #FAFBFC; }
+  .block.img img {
+    width: 100%; height: auto; border-radius: 10px; display: block;
+  }
+  .imgno {
+    font-size: 12px; color: #9CA3AF; margin-bottom: 8px;
+    font-weight: 700; letter-spacing: .5px;
+  }
+  .fname {
+    font-size: 12px; color: #9CA3AF; margin-top: 8px;
+    font-family: ui-monospace, Menlo, monospace;
+  }
+  .dl {
+    display: inline-block; margin-top: 10px; padding: 8px 16px;
+    background: #F3F4F6; color: #374151; border-radius: 8px;
+    text-decoration: none; font-size: 13px; font-weight: 600;
+  }
+  .source {
+    font-size: 13px; color: #9CA3AF; margin-top: 22px;
+    padding-top: 14px; border-top: 1px solid #E5E7EB;
+  }
+  .source a { color: #6B7280; }
+  .allbar {
+    position: fixed; left: 0; right: 0; bottom: 0;
+    background: #fff; border-top: 1px solid #E5E7EB;
+    padding: 12px 16px; text-align: center;
+  }
+  .allbar button {
+    width: 100%; max-width: 720px; padding: 14px;
+    background: #03C75A; color: #fff; border: 0;
+    border-radius: 10px; font-size: 15px; font-weight: 700; cursor: pointer;
+  }
+  .allbar button.done { background: #16A34A; }
+  .guide {
+    background: #FFFBEB; border: 1px solid #FDE68A;
+    border-radius: 12px; padding: 14px 18px; margin-bottom: 16px;
+    font-size: 14px; color: #92400E;
+  }
+  .guide b { display: block; margin-bottom: 6px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="head">
+    <h1>개발자 없이 챗GPT 워크로 만드는 우리팀 맞춤 협업 웹페이지</h1>
+    <div class="date">2026년 08월 21일 19:12 생성</div>
+  </div>
+
+  <div class="guide">
+    <b>이렇게 쓰면 됩니다</b>
+    네이버 블로그 글쓰기를 연 뒤, 아래 본문을 순서대로 복사해 붙여넣고
+    사진 자리에는 저장한 이미지를 올리면 됩니다.
+  </div>
+
+  <div class="card">
+    <h2>제목 후보</h2>
+    <ul><li><span class="t">코딩 1도 몰라도 5분 만에 만드는 챗GPT 워크 팀 협업 페이지</span><button class="copy" data-copy="코딩 1도 몰라도 5분 만에 만드는 챗GPT 워크 팀 협업 페이지">복사</button></li><li><span class="t">개발자 없이 챗GPT 워크로 만드는 우리팀 맞춤 협업 웹페이지</span><button class="copy" data-copy="개발자 없이 챗GPT 워크로 만드는 우리팀 맞춤 협업 웹페이지">복사</button></li><li><span class="t">노코딩으로 끝내는 AI 업무 자동화, ChatGPT Work 협업툴 활용법</span><button class="copy" data-copy="노코딩으로 끝내는 AI 업무 자동화, ChatGPT Work 협업툴 활용법">복사</button></li></ul>
+  </div>
+
+  <div class="card">
+    <h2>태그</h2>
+    <div class="tags">#챗GPT워크 #ChatGPTWork #AI업무자동화 #노코딩웹사이트 #AI협업툴 #팀협업 #생산성향상</div>
+    <div style="margin-top:12px">
+      <button class="copy" data-copy="#챗GPT워크 #ChatGPTWork #AI업무자동화 #노코딩웹사이트 #AI협업툴 #팀협업 #생산성향상">태그 전체 복사</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>본문</h2>
+  </div>
+
+  <div class="block img"><div class="imgno">사진 1</div><img src="../images/20260821-1912-gpt-thumbnail-sq.png" alt="대표 이미지"><div class="fname">20260821-1912-gpt-thumbnail-sq.png</div><a class="dl" href="../images/20260821-1912-gpt-thumbnail-sq.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">팀원들이랑 공유할 간단한 작업 페이지 하나 만드는데<br>개발팀에 요청하려니 한 세월 걸리고.<br><br>직접 만들자니 코딩의 'ㅋ' 자도 몰라서 막막할 때가 있다.<br><br>요즘은 노코딩 도구들이 워낙 잘 나와서<br>말 한두 마디만 던져도 알아서 협업 페이지를 짜주더라.<br><br>그중에서도 챗GPT 워크(ChatGPT Work) 기능 써보니까 진짜 편하다.<br><br>코딩 지식 전혀 없어도<br>5분이면 우리 팀 맞춤 웹페이지가 뚝딱 만들어진다.</div><button class="copy" data-copy="팀원들이랑 공유할 간단한 작업 페이지 하나 만드는데
+개발팀에 요청하려니 한 세월 걸리고.
+
+직접 만들자니 코딩의 'ㅋ' 자도 몰라서 막막할 때가 있다.
+
+요즘은 노코딩 도구들이 워낙 잘 나와서
+말 한두 마디만 던져도 알아서 협업 페이지를 짜주더라.
+
+그중에서도 챗GPT 워크(ChatGPT Work) 기능 써보니까 진짜 편하다.
+
+코딩 지식 전혀 없어도
+5분이면 우리 팀 맞춤 웹페이지가 뚝딱 만들어진다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 2</div><img src="../images/20260821-1912-gpt-diagram.png" alt="동작 구조 다이어그램"><div class="fname">20260821-1912-gpt-diagram.png</div><a class="dl" href="../images/20260821-1912-gpt-diagram.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">기존 협업툴은 이미 정해진 틀에 내 업무를 맞춰야 했다.<br><br>근데 AI를 쓰면 거꾸로다.<br>우리 팀이 일하는 방식을 설명하면 거기에 맞춰서 페이지를 생성해준다.<br><br>주간 일정표, 프로젝트 진행 현황, 업무 체크리스트까지<br>한 화면에 묶어두는 게 기본 흐름이다.</div><button class="copy" data-copy="기존 협업툴은 이미 정해진 틀에 내 업무를 맞춰야 했다.
+
+근데 AI를 쓰면 거꾸로다.
+우리 팀이 일하는 방식을 설명하면 거기에 맞춰서 페이지를 생성해준다.
+
+주간 일정표, 프로젝트 진행 현황, 업무 체크리스트까지
+한 화면에 묶어두는 게 기본 흐름이다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 3</div><img src="../images/20260821-1912-gpt-compare.png" alt="비교표"><div class="fname">20260821-1912-gpt-compare.png</div><a class="dl" href="../images/20260821-1912-gpt-compare.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">보통 기존 협업툴 써보려고 하면 세팅만 며칠씩 걸리기 일쑤다.<br><br>사용법 교육해야 하지, 월 구독료 들어가지.<br>막상 만들어둬도 쓰는 사람만 쓰는 계륵이 되더라.<br><br>반면에 챗GPT 워크 기반 구축은 프롬프트 한 문장이면 끝이다.<br><br>마음에 안 들면 그 자리에서 "일정표 옆으로 옮겨줘" 한마디로 수정도 쉽다.</div><button class="copy" data-copy="보통 기존 협업툴 써보려고 하면 세팅만 며칠씩 걸리기 일쑤다.
+
+사용법 교육해야 하지, 월 구독료 들어가지.
+막상 만들어둬도 쓰는 사람만 쓰는 계륵이 되더라.
+
+반면에 챗GPT 워크 기반 구축은 프롬프트 한 문장이면 끝이다.
+
+마음에 안 들면 그 자리에서 "일정표 옆으로 옮겨줘" 한마디로 수정도 쉽다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 4</div><img src="../images/20260821-1912-gpt-steps.png" alt="단계별 가이드"><div class="fname">20260821-1912-gpt-steps.png</div><a class="dl" href="../images/20260821-1912-gpt-steps.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">만드는 방법도 생각보다 엄청 단순하다.<br><br>1. AI한테 원하는 페이지 구조를 말한다.<br>2. 생성된 결과물 확인하고 디자인이나 위치 조정한다.<br>3. 팀원들한테 링크 공유하고 바로 쓴다.<br><br>예를 들어 프롬프트를 이렇게 입력해 보는 거다.<br><br>"프리랜서 3명이 공유할 프로젝트 현황판 만들어줘.<br>진행 상황, 마감일, 작성한 문서 링크를 한눈에 보게 구성해줘."<br><br>이렇게 던지면 AI가 필요한 요소들을 깔끔하게 배치해준다.<br><br>원하는 디자인이나 색감이 있으면<br>"심플한 모던 스타일로 만들어줘"라고 추가하면 끝이다.</div><button class="copy" data-copy="만드는 방법도 생각보다 엄청 단순하다.
+
+1. AI한테 원하는 페이지 구조를 말한다.
+2. 생성된 결과물 확인하고 디자인이나 위치 조정한다.
+3. 팀원들한테 링크 공유하고 바로 쓴다.
+
+예를 들어 프롬프트를 이렇게 입력해 보는 거다.
+
+"프리랜서 3명이 공유할 프로젝트 현황판 만들어줘.
+진행 상황, 마감일, 작성한 문서 링크를 한눈에 보게 구성해줘."
+
+이렇게 던지면 AI가 필요한 요소들을 깔끔하게 배치해준다.
+
+원하는 디자인이나 색감이 있으면
+"심플한 모던 스타일로 만들어줘"라고 추가하면 끝이다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 5</div><img src="../images/20260821-1912-gpt-summary.png" alt="핵심 요약"><div class="fname">20260821-1912-gpt-summary.png</div><a class="dl" href="../images/20260821-1912-gpt-summary.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">개발 지식 없다고 지레 겁먹을 필요 전혀 없다.<br><br>업무에 필요한 틀을 직접 만들 수 있다는 게 가장 큰 장점이다.<br><br>💡 오늘의 요약<br>- 복잡한 코딩 없이 말로 설명하면 완성<br>- 우리 팀 업무 프로세스에 딱 맞춘 구성 가능<br>- 수정이나 업데이트도 실시간 프롬프트로 해결<br><br>오늘 당장 간단한 프로젝트 현황판부터 하나 만들어보는 걸 추천한다.<br>작업 효율이 확실히 달라진다.</div><button class="copy" data-copy="개발 지식 없다고 지레 겁먹을 필요 전혀 없다.
+
+업무에 필요한 틀을 직접 만들 수 있다는 게 가장 큰 장점이다.
+
+💡 오늘의 요약
+- 복잡한 코딩 없이 말로 설명하면 완성
+- 우리 팀 업무 프로세스에 딱 맞춘 구성 가능
+- 수정이나 업데이트도 실시간 프롬프트로 해결
+
+오늘 당장 간단한 프로젝트 현황판부터 하나 만들어보는 걸 추천한다.
+작업 효율이 확실히 달라진다.">이 부분 복사</button></div>
+
+  <div class="source">참고 기사: <a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE96Tl93Mk9iZG8zZXN1OEJWenVVc2MyQ0xCV3JPdkpJTm52U3kxdC1wX0hHYi1GMHZMazdGRVZpVld2Snh3YTViN0NpVVYxeEtQNmFmVU1B?oc=5" target="_blank" rel="noopener">코딩 몰라도 ‘협업용 홈페이지’ 뚝딱…‘챗GPT워크’ 활용법 [팩플]</a></div>
+</div>
+
+<div class="allbar">
+  <button id="all" data-copy="( 사진 여기 — thumbnail )
+
+팀원들이랑 공유할 간단한 작업 페이지 하나 만드는데
+개발팀에 요청하려니 한 세월 걸리고.
+
+직접 만들자니 코딩의 'ㅋ' 자도 몰라서 막막할 때가 있다.
+
+요즘은 노코딩 도구들이 워낙 잘 나와서
+말 한두 마디만 던져도 알아서 협업 페이지를 짜주더라.
+
+그중에서도 챗GPT 워크(ChatGPT Work) 기능 써보니까 진짜 편하다.
+
+코딩 지식 전혀 없어도
+5분이면 우리 팀 맞춤 웹페이지가 뚝딱 만들어진다.
+
+( 사진 여기 — diagram )
+
+기존 협업툴은 이미 정해진 틀에 내 업무를 맞춰야 했다.
+
+근데 AI를 쓰면 거꾸로다.
+우리 팀이 일하는 방식을 설명하면 거기에 맞춰서 페이지를 생성해준다.
+
+주간 일정표, 프로젝트 진행 현황, 업무 체크리스트까지
+한 화면에 묶어두는 게 기본 흐름이다.
+
+( 사진 여기 — compare )
+
+보통 기존 협업툴 써보려고 하면 세팅만 며칠씩 걸리기 일쑤다.
+
+사용법 교육해야 하지, 월 구독료 들어가지.
+막상 만들어둬도 쓰는 사람만 쓰는 계륵이 되더라.
+
+반면에 챗GPT 워크 기반 구축은 프롬프트 한 문장이면 끝이다.
+
+마음에 안 들면 그 자리에서 "일정표 옆으로 옮겨줘" 한마디로 수정도 쉽다.
+
+( 사진 여기 — steps )
+
+만드는 방법도 생각보다 엄청 단순하다.
+
+1. AI한테 원하는 페이지 구조를 말한다.
+2. 생성된 결과물 확인하고 디자인이나 위치 조정한다.
+3. 팀원들한테 링크 공유하고 바로 쓴다.
+
+예를 들어 프롬프트를 이렇게 입력해 보는 거다.
+
+"프리랜서 3명이 공유할 프로젝트 현황판 만들어줘.
+진행 상황, 마감일, 작성한 문서 링크를 한눈에 보게 구성해줘."
+
+이렇게 던지면 AI가 필요한 요소들을 깔끔하게 배치해준다.
+
+원하는 디자인이나 색감이 있으면
+"심플한 모던 스타일로 만들어줘"라고 추가하면 끝이다.
+
+( 사진 여기 — summary )
+
+개발 지식 없다고 지레 겁먹을 필요 전혀 없다.
+
+업무에 필요한 틀을 직접 만들 수 있다는 게 가장 큰 장점이다.
+
+💡 오늘의 요약
+- 복잡한 코딩 없이 말로 설명하면 완성
+- 우리 팀 업무 프로세스에 딱 맞춘 구성 가능
+- 수정이나 업데이트도 실시간 프롬프트로 해결
+
+오늘 당장 간단한 프로젝트 현황판부터 하나 만들어보는 걸 추천한다.
+작업 효율이 확실히 달라진다.">본문 전체 복사</button>
+</div>
+
+<script>
+document.addEventListener('click', function (e) {
+  var btn = e.target.closest('[data-copy]');
+  if (!btn) return;
+  var text = btn.getAttribute('data-copy');
+  var original = btn.textContent;
+
+  function done() {
+    btn.textContent = '복사됨';
+    btn.classList.add('done');
+    setTimeout(function () {
+      btn.textContent = original;
+      btn.classList.remove('done');
+    }, 1400);
+  }
+
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(text).then(done);
+  } else {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); done(); } catch (err) {}
+    document.body.removeChild(ta);
+  }
+});
+</script>
+</body>
+</html>
