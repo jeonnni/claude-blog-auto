@@ -2,6 +2,8 @@
 정보성 이미지 5종을 SVG로 그리고 PNG로 변환한다.
 템플릿은 고정, 텍스트만 글마다 바뀌므로 블로그 톤이 일관되게 유지된다.
 
+디자인: 딥 차콜 — 따뜻한 검정 배경, 크림 명조 헤드라인, 골드 액센트
+
 1. thumbnail : 대표 썸네일 (제목 카드)
 2. diagram   : 흐름도 (개념/구조)
 3. compare   : 비교표
@@ -9,7 +11,6 @@
 5. summary   : 핵심 요약 카드
 """
 import os
-import re
 from xml.sax.saxutils import escape
 
 import config
@@ -17,19 +18,19 @@ import config
 W = config.IMAGE_WIDTH
 H = config.IMAGE_HEIGHT
 C = config.BRAND
-FONT = config.FONT_FAMILY
+
+SANS = config.FONT_SANS
+SERIF = config.FONT_SERIF
 
 
 # ─────────────────────────────────────────────
 # 공통 유틸
 # ─────────────────────────────────────────────
 def esc(text) -> str:
-    """SVG에 안전한 문자열로 변환"""
     return escape(str(text if text is not None else ""))
 
 
 def cut(text, limit) -> str:
-    """길면 잘라내고 말줄임"""
     text = str(text if text is not None else "").strip()
     return text if len(text) <= limit else text[: limit - 1] + "…"
 
@@ -57,7 +58,6 @@ def wrap(text, per_line, max_lines=2):
     if not lines:
         lines = [text[:per_line]]
 
-    # 넘치는 분량은 마지막 줄에 말줄임 처리
     if len(lines) == max_lines:
         joined = " ".join(lines)
         if len(joined) < len(text):
@@ -66,39 +66,40 @@ def wrap(text, per_line, max_lines=2):
     return lines
 
 
-def _base(extra_defs="") -> str:
-    """모든 이미지 공통 배경 + 그라데이션 정의"""
+def _base() -> str:
+    """공통 배경 — 미세한 온기가 도는 검정"""
     return f"""<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">
 <defs>
-  <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+  <linearGradient id="bgGrad" x1="0" y1="0" x2="0.7" y2="1">
     <stop offset="0%" stop-color="{C['bg']}"/>
-    <stop offset="100%" stop-color="#141B2B"/>
+    <stop offset="100%" stop-color="{C['bg2']}"/>
   </linearGradient>
-  <linearGradient id="accGrad" x1="0" y1="0" x2="1" y2="0">
-    <stop offset="0%" stop-color="{C['accent']}"/>
-    <stop offset="100%" stop-color="{C['accent2']}"/>
-  </linearGradient>
-  {extra_defs}
 </defs>
-<rect width="{W}" height="{H}" fill="url(#bgGrad)"/>
-<circle cx="{W-90}" cy="70" r="220" fill="{C['accent']}" opacity="0.07"/>
-<circle cx="70" cy="{H-60}" r="180" fill="{C['accent2']}" opacity="0.06"/>
-<rect x="0" y="0" width="{W}" height="6" fill="url(#accGrad)"/>"""
+<rect width="{W}" height="{H}" fill="url(#bgGrad)"/>"""
 
 
-def _brand_mark(y=None) -> str:
-    """우측 하단 블로그 이름"""
-    y = y or H - 34
-    return f"""<text x="{W-48}" y="{y}" text-anchor="end" font-family="{FONT}"
- font-size="22" fill="{C['muted']}" opacity="0.75">{esc(config.BLOG_NAME)}</text>"""
+def _label(text, y=152) -> str:
+    """좌상단 골드 라벨 + 짧은 규칙선"""
+    return f"""<rect x="88" y="{y-56}" width="58" height="4" fill="{C['accent']}"/>
+<text x="88" y="{y}" font-family="{SANS}" font-size="20" font-weight="600"
+ letter-spacing="5" fill="{C['accent']}">{esc(text)}</text>"""
 
 
-def _tag(x, y, label) -> str:
-    """좌측 상단 카테고리 뱃지"""
-    width = len(label) * 20 + 44
-    return f"""<rect x="{x}" y="{y}" width="{width}" height="46" rx="23" fill="{C['accent']}" opacity="0.16"/>
-<text x="{x+22}" y="{y+31}" font-family="{FONT}" font-size="22" font-weight="700"
- fill="{C['accent']}">{esc(label)}</text>"""
+def _footer(with_rule=True) -> str:
+    """하단 구분선 + 블로그 이름"""
+    rule = ""
+    if with_rule:
+        rule = (f'<line x1="88" y1="{H-98}" x2="{W-88}" y2="{H-98}" '
+                f'stroke="{C["muted"]}" stroke-width="1" opacity="0.28"/>')
+    return f"""{rule}
+<text x="{W-88}" y="{H-56}" text-anchor="end" font-family="{SANS}" font-size="21"
+ fill="{C['muted']}">{esc(config.BLOG_NAME)}</text>"""
+
+
+def _title(text, y, size=46) -> str:
+    """섹션 제목 (명조)"""
+    return (f'<text x="88" y="{y}" font-family="{SERIF}" font-size="{size}" '
+            f'font-weight="600" fill="{C["ink"]}">{esc(text)}</text>')
 
 
 # ─────────────────────────────────────────────
@@ -108,29 +109,29 @@ def svg_thumbnail(data):
     headline = data.get("headline") or data.get("title") or "AI 이야기"
     sub = data.get("sub", "")
 
-    lines = wrap(headline, 15, 2)
-    start_y = 300 if len(lines) == 1 else 250
+    lines = wrap(headline, 13, 2)
+    start_y = 350 if len(lines) == 1 else 300
+
     text_block = ""
     for i, line in enumerate(lines):
         text_block += (
-            f'<text x="80" y="{start_y + i*92}" font-family="{FONT}" font-size="76" '
-            f'font-weight="800" fill="{C["text"]}">{esc(line)}</text>\n'
+            f'<text x="88" y="{start_y + i*96}" font-family="{SERIF}" font-size="80" '
+            f'font-weight="600" fill="{C["ink"]}">{esc(line)}</text>\n'
         )
 
-    sub_y = start_y + len(lines) * 92 + 28
+    sub_y = start_y + len(lines) * 96 + 14
     sub_block = ""
     if sub:
         sub_block = (
-            f'<text x="80" y="{sub_y}" font-family="{FONT}" font-size="32" '
+            f'<text x="88" y="{sub_y}" font-family="{SANS}" font-size="29" '
             f'fill="{C["muted"]}">{esc(cut(sub, 32))}</text>'
         )
 
     return f"""{_base()}
-{_tag(80, 96, "AI 인사이트")}
-<rect x="80" y="{start_y-92}" width="76" height="8" rx="4" fill="url(#accGrad)"/>
+{_label("AI GUIDE")}
 {text_block}
 {sub_block}
-{_brand_mark()}
+{_footer()}
 </svg>"""
 
 
@@ -145,50 +146,53 @@ def svg_diagram(data):
     caption = data.get("caption", "")
 
     count = len(nodes)
-    gap = 34
-    margin = 80
+    gap = 30
+    margin = 88
     box_w = (W - margin * 2 - gap * (count - 1)) / count
-    box_h = 190
-    box_y = 250
+    box_h = 176
+    box_y = 268
 
     body = ""
     for i, node in enumerate(nodes):
         x = margin + i * (box_w + gap)
         is_last = (i == count - 1)
-        fill = C["surface"]
         stroke = C["accent"] if is_last else C["line"]
+        stroke_w = 1.6 if is_last else 1.2
 
-        body += f"""<rect x="{x:.0f}" y="{box_y}" width="{box_w:.0f}" height="{box_h}" rx="18"
- fill="{fill}" stroke="{stroke}" stroke-width="2"/>
-<circle cx="{x+34:.0f}" cy="{box_y+40}" r="19" fill="{C['accent']}" opacity="0.18"/>
-<text x="{x+34:.0f}" y="{box_y+48}" text-anchor="middle" font-family="{FONT}"
- font-size="20" font-weight="800" fill="{C['accent']}">{i+1}</text>"""
+        body += f"""<rect x="{x:.0f}" y="{box_y}" width="{box_w:.0f}" height="{box_h}"
+ fill="{C['surface']}" stroke="{stroke}" stroke-width="{stroke_w}"/>
+<text x="{x+26:.0f}" y="{box_y+46}" font-family="{SANS}" font-size="19"
+ font-weight="700" letter-spacing="1" fill="{C['accent']}">0{i+1}</text>"""
 
-        for j, line in enumerate(wrap(node, 9, 2)):
+        node_lines = wrap(node, 8, 2)
+        base_y = box_y + 108 if len(node_lines) == 1 else box_y + 90
+        for j, line in enumerate(node_lines):
             body += f"""
-<text x="{x + box_w/2:.0f}" y="{box_y + 110 + j*40}" text-anchor="middle"
- font-family="{FONT}" font-size="30" font-weight="700" fill="{C['text']}">{esc(line)}</text>"""
+<text x="{x + box_w/2:.0f}" y="{base_y + j*40}" text-anchor="middle"
+ font-family="{SERIF}" font-size="31" font-weight="600" fill="{C['ink']}">{esc(line)}</text>"""
 
         if not is_last:
             ax = x + box_w + gap / 2
+            cy = box_y + box_h / 2
             body += f"""
-<path d="M {ax-11:.0f} {box_y+box_h/2-13:.0f} L {ax+9:.0f} {box_y+box_h/2:.0f} L {ax-11:.0f} {box_y+box_h/2+13:.0f} Z"
- fill="{C['accent']}" opacity="0.85"/>"""
+<line x1="{ax-9:.0f}" y1="{cy:.0f}" x2="{ax+7:.0f}" y2="{cy:.0f}"
+ stroke="{C['accent']}" stroke-width="1.6"/>
+<path d="M {ax+3:.0f} {cy-5:.0f} L {ax+9:.0f} {cy:.0f} L {ax+3:.0f} {cy+5:.0f}"
+ fill="none" stroke="{C['accent']}" stroke-width="1.6" stroke-linecap="round"/>"""
 
     caption_block = ""
     if caption:
         caption_block = (
-            f'<text x="{W/2:.0f}" y="{box_y+box_h+78}" text-anchor="middle" '
-            f'font-family="{FONT}" font-size="27" fill="{C["muted"]}">{esc(cut(caption, 42))}</text>'
+            f'<text x="88" y="{box_y+box_h+74}" font-family="{SANS}" font-size="26" '
+            f'fill="{C["muted"]}">{esc(cut(caption, 44))}</text>'
         )
 
     return f"""{_base()}
-{_tag(80, 86, "구조 한눈에")}
-<text x="80" y="196" font-family="{FONT}" font-size="46" font-weight="800"
- fill="{C['text']}">{esc(title)}</text>
+{_label("HOW IT WORKS", 140)}
+{_title(title, 212)}
 {body}
 {caption_block}
-{_brand_mark()}
+{_footer()}
 </svg>"""
 
 
@@ -203,48 +207,51 @@ def svg_compare(data):
     if not rows:
         rows = [{"label": "항목", "a": "-", "b": "-"}]
 
-    table_x, table_y = 80, 208
-    table_w = W - 160
-    head_h = 66
-    row_h = 76
-    label_w = 300
+    table_x, table_y = 88, 240
+    table_w = W - 176
+    head_h = 62
+    row_h = 72
+    label_w = 268
     col_w = (table_w - label_w) / 2
 
-    body = f"""<rect x="{table_x}" y="{table_y}" width="{table_w}" height="{head_h + row_h*len(rows)}"
- rx="18" fill="{C['surface']}" stroke="{C['line']}" stroke-width="2"/>
-<rect x="{table_x}" y="{table_y}" width="{table_w}" height="{head_h}" rx="18" fill="{C['accent']}" opacity="0.14"/>
-<rect x="{table_x}" y="{table_y+head_h-18}" width="{table_w}" height="18" fill="{C['accent']}" opacity="0.14"/>
-<text x="{table_x+label_w/2:.0f}" y="{table_y+44}" text-anchor="middle" font-family="{FONT}"
- font-size="26" font-weight="700" fill="{C['muted']}">항목</text>
-<text x="{table_x+label_w+col_w/2:.0f}" y="{table_y+44}" text-anchor="middle" font-family="{FONT}"
- font-size="28" font-weight="800" fill="{C['accent']}">{esc(col_a)}</text>
-<text x="{table_x+label_w+col_w*1.5:.0f}" y="{table_y+44}" text-anchor="middle" font-family="{FONT}"
- font-size="28" font-weight="800" fill="{C['accent2']}">{esc(col_b)}</text>
-<line x1="{table_x+label_w}" y1="{table_y}" x2="{table_x+label_w}" y2="{table_y+head_h+row_h*len(rows)}"
- stroke="{C['line']}" stroke-width="2"/>
-<line x1="{table_x+label_w+col_w:.0f}" y1="{table_y}" x2="{table_x+label_w+col_w:.0f}"
- y2="{table_y+head_h+row_h*len(rows)}" stroke="{C['line']}" stroke-width="2"/>"""
+    body = f"""<line x1="{table_x}" y1="{table_y}" x2="{table_x+table_w}" y2="{table_y}"
+ stroke="{C['ink']}" stroke-width="1.4" opacity="0.5"/>
+<text x="{table_x}" y="{table_y+42}" font-family="{SANS}" font-size="21"
+ letter-spacing="1" fill="{C['muted']}">항목</text>
+<text x="{table_x+label_w+col_w/2:.0f}" y="{table_y+42}" text-anchor="middle"
+ font-family="{SANS}" font-size="25" font-weight="700" fill="{C['muted']}">{esc(col_a)}</text>
+<text x="{table_x+label_w+col_w*1.5:.0f}" y="{table_y+42}" text-anchor="middle"
+ font-family="{SANS}" font-size="25" font-weight="700" fill="{C['accent']}">{esc(col_b)}</text>
+<line x1="{table_x}" y1="{table_y+head_h}" x2="{table_x+table_w}" y2="{table_y+head_h}"
+ stroke="{C['line']}" stroke-width="1.2"/>"""
 
     for i, row in enumerate(rows):
         ry = table_y + head_h + i * row_h
-        if i > 0:
-            body += f"""
-<line x1="{table_x}" y1="{ry}" x2="{table_x+table_w}" y2="{ry}" stroke="{C['line']}" stroke-width="1.5"/>"""
-        ty = ry + row_h / 2 + 11
+        ty = ry + row_h / 2 + 10
         body += f"""
-<text x="{table_x+28}" y="{ty:.0f}" font-family="{FONT}" font-size="26" font-weight="700"
+<text x="{table_x}" y="{ty:.0f}" font-family="{SANS}" font-size="24"
  fill="{C['muted']}">{esc(cut(row.get('label',''), 11))}</text>
-<text x="{table_x+label_w+col_w/2:.0f}" y="{ty:.0f}" text-anchor="middle" font-family="{FONT}"
- font-size="26" fill="{C['text']}">{esc(cut(row.get('a',''), 15))}</text>
-<text x="{table_x+label_w+col_w*1.5:.0f}" y="{ty:.0f}" text-anchor="middle" font-family="{FONT}"
- font-size="26" fill="{C['text']}">{esc(cut(row.get('b',''), 15))}</text>"""
+<text x="{table_x+label_w+col_w/2:.0f}" y="{ty:.0f}" text-anchor="middle"
+ font-family="{SERIF}" font-size="26" fill="{C['dim']}">{esc(cut(row.get('a',''), 14))}</text>
+<text x="{table_x+label_w+col_w*1.5:.0f}" y="{ty:.0f}" text-anchor="middle"
+ font-family="{SERIF}" font-size="26" font-weight="600"
+ fill="{C['ink']}">{esc(cut(row.get('b',''), 14))}</text>"""
+
+        if i < len(rows) - 1:
+            body += f"""
+<line x1="{table_x}" y1="{ry+row_h}" x2="{table_x+table_w}" y2="{ry+row_h}"
+ stroke="{C['line']}" stroke-width="1" opacity="0.6"/>"""
+
+    bottom = table_y + head_h + row_h * len(rows)
+    body += f"""
+<line x1="{table_x}" y1="{bottom}" x2="{table_x+table_w}" y2="{bottom}"
+ stroke="{C['line']}" stroke-width="1.2"/>"""
 
     return f"""{_base()}
-{_tag(80, 74, "비교 정리")}
-<text x="80" y="184" font-family="{FONT}" font-size="46" font-weight="800"
- fill="{C['text']}">{esc(title)}</text>
+{_label("COMPARE", 128)}
+{_title(title, 198)}
 {body}
-{_brand_mark()}
+{_footer(with_rule=False)}
 </svg>"""
 
 
@@ -257,34 +264,30 @@ def svg_steps(data):
     if not steps:
         steps = [{"name": "준비", "desc": ""}]
 
-    # 단계 수에 따라 간격을 조절해 하단 여백 확보
-    start_y = 230 if len(steps) <= 3 else 214
-    row_h = 112 if len(steps) <= 3 else 98
+    start_y = 250 if len(steps) <= 3 else 236
+    row_h = 106 if len(steps) <= 3 else 92
     body = ""
 
     for i, step in enumerate(steps):
         y = start_y + i * row_h
-        body += f"""<rect x="80" y="{y}" width="{W-160}" height="82" rx="16"
- fill="{C['surface']}" stroke="{C['line']}" stroke-width="2"/>
-<circle cx="136" cy="{y+41}" r="27" fill="url(#accGrad)"/>
-<text x="136" y="{y+51}" text-anchor="middle" font-family="{FONT}" font-size="27"
- font-weight="800" fill="#FFFFFF">{i+1}</text>
-<text x="188" y="{y+38}" font-family="{FONT}" font-size="30" font-weight="700"
- fill="{C['text']}">{esc(cut(step.get('name',''), 13))}</text>
-<text x="188" y="{y+69}" font-family="{FONT}" font-size="24"
+
+        body += f"""<text x="88" y="{y+34}" font-family="{SERIF}" font-size="38"
+ font-weight="600" fill="{C['accent']}">0{i+1}</text>
+<text x="164" y="{y+30}" font-family="{SERIF}" font-size="31" font-weight="600"
+ fill="{C['ink']}">{esc(cut(step.get('name',''), 13))}</text>
+<text x="164" y="{y+64}" font-family="{SANS}" font-size="23"
  fill="{C['muted']}">{esc(cut(step.get('desc',''), 34))}</text>"""
 
         if i < len(steps) - 1:
             body += f"""
-<line x1="136" y1="{y+82}" x2="136" y2="{y+row_h}" stroke="{C['line']}"
- stroke-width="3" stroke-dasharray="5 6"/>"""
+<line x1="88" y1="{y+row_h-24}" x2="{W-88}" y2="{y+row_h-24}"
+ stroke="{C['line']}" stroke-width="1" opacity="0.55"/>"""
 
     return f"""{_base()}
-{_tag(80, 84, "단계별 가이드")}
-<text x="80" y="196" font-family="{FONT}" font-size="46" font-weight="800"
- fill="{C['text']}">{esc(title)}</text>
+{_label("STEP BY STEP", 132)}
+{_title(title, 204)}
 {body}
-{_brand_mark()}
+{_footer(with_rule=False)}
 </svg>"""
 
 
@@ -297,31 +300,27 @@ def svg_summary(data):
     if not points:
         points = ["오늘 내용을 정리했습니다."]
 
-    start_y = 262
-    gap = 118
+    start_y = 278
+    gap = 112
     body = ""
 
     for i, point in enumerate(points):
         y = start_y + i * gap
-        body += f"""<rect x="80" y="{y}" width="{W-160}" height="96" rx="16"
- fill="{C['surface']}" stroke="{C['line']}" stroke-width="2"/>
-<rect x="80" y="{y}" width="7" height="96" rx="4" fill="url(#accGrad)"/>
-<circle cx="146" cy="{y+48}" r="21" fill="{C['good']}" opacity="0.18"/>
-<path d="M 138 {y+48} L 144 {y+55} L 155 {y+41}" stroke="{C['good']}" stroke-width="4"
- fill="none" stroke-linecap="round" stroke-linejoin="round"/>"""
+        lines = wrap(point, 30, 2)
 
-        for j, line in enumerate(wrap(point, 32, 2)):
-            ty = y + (58 if len(wrap(point, 32, 2)) == 1 else 42) + j * 36
+        body += f"""<line x1="88" y1="{y-34}" x2="88" y2="{y + (len(lines)-1)*40 + 12}"
+ stroke="{C['accent']}" stroke-width="2.5"/>"""
+
+        for j, line in enumerate(lines):
             body += f"""
-<text x="188" y="{ty}" font-family="{FONT}" font-size="28" font-weight="600"
- fill="{C['text']}">{esc(line)}</text>"""
+<text x="124" y="{y + j*40}" font-family="{SERIF}" font-size="30"
+ fill="{C['ink']}">{esc(line)}</text>"""
 
     return f"""{_base()}
-{_tag(80, 92, "핵심 요약")}
-<text x="80" y="206" font-family="{FONT}" font-size="46" font-weight="800"
- fill="{C['text']}">{esc(title)}</text>
+{_label("KEY POINTS", 146)}
+{_title(title, 218)}
 {body}
-{_brand_mark()}
+{_footer()}
 </svg>"""
 
 
