@@ -80,6 +80,11 @@ def run():
     slug = naver_builder.make_slug(article["title"])
     images = imagegen.render_all(article.get("images", {}), slug)
 
+    # 네이버 목록 썸네일은 정사각형으로 잘리므로 1:1 버전으로 교체
+    images["thumbnail"] = imagegen.render_square_thumbnail(
+        (article.get("images") or {}).get("thumbnail"), slug
+    )
+
     # 5. 복붙 페이지 저장
     print("\n[5/5] 복붙 페이지 생성")
     history.append({
