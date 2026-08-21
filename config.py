@@ -29,7 +29,7 @@ BLOGGER_BLOG_ID = os.environ.get("BLOGGER_BLOG_ID", "")
 # 무료 티어 모델명은 바뀔 수 있으니 여기서 한 번에 수정
 # 현재 사용 가능한 모델은 https://ai.google.dev/gemini-api/docs/models 확인
 # ─────────────────────────────────────────────
-GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-flash-lite-latest")
+GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-2.0-flash")
 GEMINI_ENDPOINT = (
     "https://generativelanguage.googleapis.com/v1beta/models/"
     "{model}:generateContent"
@@ -68,19 +68,22 @@ IMAGE_DIR = "docs/images"
 IMAGE_WIDTH = 1200
 IMAGE_HEIGHT = 675  # 16:9
 
-# 브랜드 컬러 (블로그 톤 통일)
+# 브랜드 컬러 — 딥 차콜 (따뜻한 검정 + 크림 + 골드)
 BRAND = {
-    "bg": "#0F1420",
-    "surface": "#1A2130",
-    "accent": "#4F8CFF",
-    "accent2": "#7C5CFF",
-    "text": "#F2F5FA",
-    "muted": "#94A3B8",
-    "line": "#2B3548",
-    "good": "#34D399",
-    "warn": "#FBBF24",
+    "bg": "#232120",       # 배경 (온기 있는 검정)
+    "bg2": "#1C1A19",      # 배경 그라데이션 끝
+    "surface": "#2A2725",  # 카드/박스 면
+    "accent": "#D9A441",   # 골드 액센트
+    "ink": "#F2EDE4",      # 본문 텍스트 (크림)
+    "dim": "#C9C1B5",      # 흐린 텍스트
+    "muted": "#8F877C",    # 보조 텍스트
+    "line": "#3C3835",     # 구분선
 }
 
 # cairosvg는 시스템에 실제 설치된 폰트명과 정확히 일치해야 한글이 렌더링된다.
-# GitHub Actions 워크플로우에서 fonts-noto-cjk / fonts-nanum 을 설치한다.
-FONT_FAMILY = "Noto Sans CJK KR, NanumGothic, Noto Sans KR, sans-serif"
+# GitHub Actions 워크플로우에서 fonts-noto-cjk 를 설치한다.
+FONT_SANS = "Noto Sans CJK KR, NanumGothic, sans-serif"
+FONT_SERIF = "Noto Serif CJK KR, serif"
+
+# 이전 버전 호환용
+FONT_FAMILY = FONT_SANS
