@@ -88,10 +88,12 @@ def build_html(article: dict, images: dict, topic_info: dict) -> str:
     source_link = topic_info.get("source_link", "")
     today = datetime.now().strftime("%Y년 %m월 %d일")
 
+    # 활용법 중심 글이므로 특정 기사를 인용하지 않는다.
+    # 소스 링크가 있을 때만 참고 표기를 남긴다.
     source_block = f'<div style="{SOURCE_STYLE}">'
     if source_title and source_link:
         source_block += (
-            f'참고 기사: <a href="{source_link}" target="_blank" '
+            f'참고: <a href="{source_link}" target="_blank" '
             f'rel="nofollow noopener">{source_title}</a><br>'
         )
     source_block += (
