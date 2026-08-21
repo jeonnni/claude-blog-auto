@@ -1,0 +1,176 @@
+"""
+네이버 블로그용 글 생성.
+
+블로그스팟용(writer.py)과 다른 점:
+  - HTML이 아니라 순수 텍스트 (네이버 에디터에 그대로 붙여넣기)
+  - 짧은 문장, 한 줄씩 줄바꿈
+  - 사진 자리를 명확히 표시해서 어디에 뭘 넣을지 바로 알 수 있게
+  - 태그를 별도로 뽑아줌
+"""
+import config
+from scripts import gemini
+
+
+# ─────────────────────────────────────────────
+# 주제 선정 (블로그스팟과 동일한 로직)
+# ─────────────────────────────────────────────
+SELECT_PROMPT = """당신은 블로그 콘텐츠 기획자입니다.
+
+아래는 최근 수집된 뉴스 기사 목록입니다.
+이 중에서 네이버 블로그 독자(일반인, 검색으로 유입되는 사람)에게
+가장 잘 읽힐 만한 소재 하나를 고르세요.
+
+[선정 기준]
+- 네이버에서 실제로 검색될 만한 주제
+- 일상이나 업무에 바로 써먹을 수 있는 내용
+- 지나치게 기술적이거나 기업 실적 위주인 것은 제외
+- 아래 "이미 다룬 주제"와 겹치지 않을 것
+
+[이미 다룬 주제]
+{history}
+
+[뉴스 후보]
+{candidates}
+
+[출력 형식]
+다른 설명 없이 아래 JSON만 출력하세요.
+
+{{
+  "topic": "글의 핵심 주제를 한 문장으로",
+  "angle": "어떤 관점으로 풀어낼지 한 문장으로",
+  "keywords": ["검색 키워드1", "키워드2", "키워드3", "키워드4", "키워드5"],
+  "source_title": "참고한 기사 제목",
+  "source_link": "참고한 기사 링크",
+  "reason": "이 주제를 고른 이유 한 문장"
+}}"""
+
+
+def select_topic(candidates, history):
+    cand_text = "\n".join(
+        f"{i+1}. {c['title']}\n   요약: {c['summary'][:120]}\n   링크: {c['link']}"
+        for i, c in enumerate(candidates[:30])
+    )
+    hist_text = "\n".join(f"- {h}" for h in history[-40:]) or "(없음)"
+
+    prompt = SELECT_PROMPT.format(history=hist_text, candidates=cand_text)
+    result = gemini.call_json(prompt, temperature=0.7)
+
+    result.setdefault("topic", "AI 활용 팁")
+    result.setdefault("angle", "초보자도 바로 써먹을 수 있는 관점")
+    result.setdefault("keywords", ["AI", "인공지능", "활용법"])
+    result.setdefault("source_title", "")
+    result.setdefault("source_link", "")
+    return result
+
+
+# ─────────────────────────────────────────────
+# 본문 생성 (네이버 스타일)
+# ─────────────────────────────────────────────
+ARTICLE_PROMPT = """당신은 네이버 블로그를 오래 운영해온 블로거입니다.
+아래 주제로 네이버 블로그 포스팅을 작성하세요.
+
+[오늘의 주제]
+- 주제: {topic}
+- 관점: {angle}
+- 키워드: {keywords}
+
+[네이버 블로그 글쓰기 스타일 — 반드시 지킬 것]
+1. 사진 중심 구성. 사진과 사진 사이에 짧은 글이 들어가는 형태입니다.
+2. 한 문장을 쓰고 줄바꿈합니다. 문단을 길게 붙여 쓰지 마세요.
+3. 가볍고 담백한 구어체를 씁니다.
+   "~다", "~는데", "~거다", "~더라", "~네" 를 섞어 씁니다.
+   "~습니다"체는 쓰지 마세요.
+4. 설명을 길게 늘어놓지 않습니다. 핵심만 툭툭 던지듯 씁니다.
+5. "안녕하세요 여러분!" 같은 뻔한 인사말은 쓰지 않습니다.
+6. 이모지는 문단 구분용으로 아주 가끔만 씁니다. 남발하지 마세요.
+7. 광고 티가 나지 않게, 실제로 써본 사람이 쓰는 느낌으로 씁니다.
+
+[좋은 예시]
+```
+요즘 AI로 문서 정리하는 사람들이 많다.
+근데 막상 써보면 원하는 대로 안 나올 때가 있는데.
+
+이유가 있더라.
+
+질문을 너무 짧게 던져서 그렇다.
+```
+
+[나쁜 예시 — 이렇게 쓰지 마세요]
+```
+안녕하세요 여러분! 오늘은 AI 활용법에 대해 알아보겠습니다.
+최근 인공지능 기술이 발전하면서 많은 분들이 업무에 활용하고 계시는데요,
+오늘은 그중에서도 문서 작업에 도움이 되는 방법을 상세히 소개해드리겠습니다.
+```
+
+[분량]
+- 전체 900자~1300자. 짧게 쓰세요.
+- 사진 자리는 5곳입니다.
+
+[사진 자리 표시]
+본문에 아래 표시를 각각 독립된 줄에 넣으세요.
+
+[[IMG:thumbnail]]   ← 맨 앞 (대표 사진)
+[[IMG:diagram]]     ← 구조나 흐름 설명이 필요한 곳
+[[IMG:compare]]     ← 비교나 차이 설명이 필요한 곳
+[[IMG:steps]]       ← 방법이나 순서를 설명하는 곳
+[[IMG:summary]]     ← 마무리 직전
+
+[출력 형식]
+다른 설명 없이 아래 JSON만 출력하세요.
+
+{{
+  "title_options": ["제목안1", "제목안2", "제목안3"],
+  "title": "최종 선택한 제목",
+  "tags": ["태그1", "태그2", "태그3", "태그4", "태그5", "태그6", "태그7"],
+  "body_text": "본문 전체 (줄바꿈은 \\n 으로)",
+  "images": {{
+    "thumbnail": {{
+      "headline": "사진에 넣을 큰 글자 (18자 이내)",
+      "sub": "작은 글자 (30자 이내)"
+    }},
+    "diagram": {{
+      "title": "제목 (20자 이내)",
+      "nodes": ["단계1", "단계2", "단계3", "단계4"],
+      "caption": "한 줄 설명 (40자 이내)"
+    }},
+    "compare": {{
+      "title": "제목 (20자 이내)",
+      "col_a": "왼쪽 항목 (10자 이내)",
+      "col_b": "오른쪽 항목 (10자 이내)",
+      "rows": [
+        {{"label": "기준 (10자 이내)", "a": "값 (16자 이내)", "b": "값 (16자 이내)"}},
+        {{"label": "기준", "a": "값", "b": "값"}},
+        {{"label": "기준", "a": "값", "b": "값"}},
+        {{"label": "기준", "a": "값", "b": "값"}}
+      ]
+    }},
+    "steps": {{
+      "title": "제목 (20자 이내)",
+      "steps": [
+        {{"name": "단계 이름 (12자 이내)", "desc": "설명 (28자 이내)"}},
+        {{"name": "단계 이름", "desc": "설명"}},
+        {{"name": "단계 이름", "desc": "설명"}}
+      ]
+    }},
+    "summary": {{
+      "title": "제목 (20자 이내)",
+      "points": ["핵심 1 (30자 이내)", "핵심 2", "핵심 3"]
+    }}
+  }}
+}}"""
+
+
+def write_article(topic_info):
+    prompt = ARTICLE_PROMPT.format(
+        topic=topic_info["topic"],
+        angle=topic_info["angle"],
+        keywords=", ".join(topic_info["keywords"]),
+    )
+    article = gemini.call_json(prompt, temperature=0.95)
+
+    if not article.get("title") or not article.get("body_text"):
+        raise gemini.GeminiError("글 생성 결과에 title 또는 body_text가 없습니다.")
+
+    article.setdefault("tags", ["AI", "인공지능", "AI활용법"])
+    article.setdefault("images", {})
+    return article
