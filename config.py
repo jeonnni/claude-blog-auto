@@ -29,7 +29,7 @@ BLOGGER_BLOG_ID = os.environ.get("BLOGGER_BLOG_ID", "")
 # 무료 티어 모델명은 바뀔 수 있으니 여기서 한 번에 수정
 # 현재 사용 가능한 모델은 https://ai.google.dev/gemini-api/docs/models 확인
 # ─────────────────────────────────────────────
-GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-3.6-flash")
+GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-2.0-flash")
 GEMINI_ENDPOINT = (
     "https://generativelanguage.googleapis.com/v1beta/models/"
     "{model}:generateContent"
@@ -38,12 +38,15 @@ GEMINI_ENDPOINT = (
 # ─────────────────────────────────────────────
 # 뉴스 수집 설정
 # ─────────────────────────────────────────────
+# 뉴스는 "무엇을 쓸지" 정하는 씨앗으로만 쓴다.
+# 글 자체는 속보 전달이 아니라 활용법·노하우로 쓰도록 프롬프트에서 지시한다.
 NEWS_KEYWORDS = [
-    "Claude AI",
-    "앤트로픽 클로드",
     "생성형 AI 활용",
-    "AI 챗봇 사용법",
-    "ChatGPT 제미나이 비교",
+    "AI 업무 활용",
+    "챗GPT 활용법",
+    "Claude AI",
+    "AI 도구 추천",
+    "인공지능 서비스",
 ]
 
 # Google News RSS (한국어)
