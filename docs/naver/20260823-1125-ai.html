@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>코딩 몰라도 됨! AI한테 대화로 프로그램 만드는 법 — 네이버 원고</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 24px 16px 80px;
+    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+                 "Malgun Gothic", sans-serif;
+    background: #F6F7F9; color: #1F2937; line-height: 1.75;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  .head {
+    background: #03C75A; color: #fff; padding: 20px 22px;
+    border-radius: 14px; margin-bottom: 20px;
+  }
+  .head h1 { margin: 0 0 6px; font-size: 20px; line-height: 1.45; }
+  .head .date { font-size: 13px; opacity: .9; }
+  .card {
+    background: #fff; border-radius: 14px; padding: 18px 20px;
+    margin-bottom: 16px; border: 1px solid #E5E7EB;
+  }
+  .card h2 {
+    margin: 0 0 12px; font-size: 15px; color: #6B7280;
+    font-weight: 700; letter-spacing: .3px;
+  }
+  ul { margin: 0; padding: 0; list-style: none; }
+  ul li {
+    display: flex; align-items: center; gap: 10px;
+    padding: 9px 0; border-bottom: 1px solid #F3F4F6;
+  }
+  ul li:last-child { border-bottom: 0; }
+  ul li .t { flex: 1; font-size: 15px; }
+  .copy {
+    border: 0; background: #EEF2FF; color: #4F46E5;
+    padding: 7px 13px; border-radius: 8px; font-size: 13px;
+    cursor: pointer; white-space: nowrap; font-weight: 600;
+  }
+  .copy:hover { background: #E0E7FF; }
+  .copy.done { background: #DCFCE7; color: #16A34A; }
+  .tags { color: #2563EB; font-size: 14px; word-break: keep-all; }
+  .block {
+    background: #fff; border: 1px solid #E5E7EB;
+    border-radius: 14px; padding: 16px 18px; margin-bottom: 12px;
+  }
+  .block.text .body { font-size: 15.5px; margin-bottom: 12px; }
+  .block.img { text-align: center; background: #FAFBFC; }
+  .block.img img {
+    width: 100%; height: auto; border-radius: 10px; display: block;
+  }
+  .imgno {
+    font-size: 12px; color: #9CA3AF; margin-bottom: 8px;
+    font-weight: 700; letter-spacing: .5px;
+  }
+  .fname {
+    font-size: 12px; color: #9CA3AF; margin-top: 8px;
+    font-family: ui-monospace, Menlo, monospace;
+  }
+  .dl {
+    display: inline-block; margin-top: 10px; padding: 8px 16px;
+    background: #F3F4F6; color: #374151; border-radius: 8px;
+    text-decoration: none; font-size: 13px; font-weight: 600;
+  }
+  .source {
+    font-size: 13px; color: #9CA3AF; margin-top: 22px;
+    padding-top: 14px; border-top: 1px solid #E5E7EB;
+  }
+  .source a { color: #6B7280; }
+  .allbar {
+    position: fixed; left: 0; right: 0; bottom: 0;
+    background: #fff; border-top: 1px solid #E5E7EB;
+    padding: 12px 16px; text-align: center;
+  }
+  .allbar button {
+    width: 100%; max-width: 720px; padding: 14px;
+    background: #03C75A; color: #fff; border: 0;
+    border-radius: 10px; font-size: 15px; font-weight: 700; cursor: pointer;
+  }
+  .allbar button.done { background: #16A34A; }
+  .guide {
+    background: #FFFBEB; border: 1px solid #FDE68A;
+    border-radius: 12px; padding: 14px 18px; margin-bottom: 16px;
+    font-size: 14px; color: #92400E;
+  }
+  .guide b { display: block; margin-bottom: 6px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="head">
+    <h1>코딩 몰라도 됨! AI한테 대화로 프로그램 만드는 법</h1>
+    <div class="date">2026년 08월 23일 11:25 생성</div>
+  </div>
+
+  <div class="guide">
+    <b>이렇게 쓰면 됩니다</b>
+    네이버 블로그 글쓰기를 연 뒤, 아래 본문을 순서대로 복사해 붙여넣고
+    사진 자리에는 저장한 이미지를 올리면 됩니다.
+  </div>
+
+  <div class="card">
+    <h2>제목 후보</h2>
+    <ul><li><span class="t">비개발자가 챗GPT로 업무 자동화 툴 만든 후기 (바이브코딩)</span><button class="copy" data-copy="비개발자가 챗GPT로 업무 자동화 툴 만든 후기 (바이브코딩)">복사</button></li><li><span class="t">코딩 몰라도 됨! AI한테 대화로 프로그램 만드는 법</span><button class="copy" data-copy="코딩 몰라도 됨! AI한테 대화로 프로그램 만드는 법">복사</button></li><li><span class="t">단순 반복 업무 끝, 비개발자의 바이브코딩 실전 활용법</span><button class="copy" data-copy="단순 반복 업무 끝, 비개발자의 바이브코딩 실전 활용법">복사</button></li></ul>
+  </div>
+
+  <div class="card">
+    <h2>태그</h2>
+    <div class="tags">#바이브코딩 #AI코딩활용법 #비개발자코딩 #챗GPT코딩 #업무자동화 #생산성향상 #AI활용</div>
+    <div style="margin-top:12px">
+      <button class="copy" data-copy="#바이브코딩 #AI코딩활용법 #비개발자코딩 #챗GPT코딩 #업무자동화 #생산성향상 #AI활용">태그 전체 복사</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>본문</h2>
+  </div>
+
+  <div class="block img"><div class="imgno">사진 1</div><img src="../images/20260823-1125-ai-thumbnail-sq.png" alt="대표 이미지"><div class="fname">20260823-1125-ai-thumbnail-sq.png</div><a class="dl" href="../images/20260823-1125-ai-thumbnail-sq.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">매일 반복되는 엑셀 작업이나 파일 정리.<br>솔직히 너무 귀찮다.<br><br>남들은 파이썬으로 자동화한다는데.<br>문과생에 비개발자라면 엄두도 안 나는 게 사실이다.<br><br>근데 요즘은 코드를 직접 안 짜도 된다.<br>그냥 AI한테 말로 설명만 하면 끝난다.<br><br>이걸 요즘 '바이브 코딩'이라고 부르더라.</div><button class="copy" data-copy="매일 반복되는 엑셀 작업이나 파일 정리.
+솔직히 너무 귀찮다.
+
+남들은 파이썬으로 자동화한다는데.
+문과생에 비개발자라면 엄두도 안 나는 게 사실이다.
+
+근데 요즘은 코드를 직접 안 짜도 된다.
+그냥 AI한테 말로 설명만 하면 끝난다.
+
+이걸 요즘 '바이브 코딩'이라고 부르더라.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 2</div><img src="../images/20260823-1125-ai-diagram.png" alt="동작 구조 다이어그램"><div class="fname">20260823-1125-ai-diagram.png</div><a class="dl" href="../images/20260823-1125-ai-diagram.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">바이브 코딩이 별거 없다.<br>진짜 말 그대로 느낌(Vibe)만 던져주는 거다.<br><br>"매일 아침 폴더에 들어오는 엑셀 파일들 합쳐줘"<br>"PDF에서 텍스트만 뽑아서 리스트로 만들어줘"<br><br>외주 개발자한테 요구사항 말하듯이 챗봇에 치면 알아서 코드를 짜준다.</div><button class="copy" data-copy="바이브 코딩이 별거 없다.
+진짜 말 그대로 느낌(Vibe)만 던져주는 거다.
+
+"매일 아침 폴더에 들어오는 엑셀 파일들 합쳐줘"
+"PDF에서 텍스트만 뽑아서 리스트로 만들어줘"
+
+외주 개발자한테 요구사항 말하듯이 챗봇에 치면 알아서 코드를 짜준다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 3</div><img src="../images/20260823-1125-ai-compare.png" alt="비교표"><div class="fname">20260823-1125-ai-compare.png</div><a class="dl" href="../images/20260823-1125-ai-compare.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">기존 코딩이랑 제일 큰 차이는 공부할 필요가 없다는 점이다.<br><br>예전엔 문법 배우고 환경 설정하다가 포기했는데.<br>이젠 질문 몇 번으로 바로 실행 가능한 도구가 나온다.<br><br>실제로 내가 써먹은 프롬프트는 이런 식이다.<br><br>"파이썬으로 특정 폴더 안의 이미지 파일명을 오늘 날짜로 싹 바꿔주는 프로그램 만들어줘. 실행 방법도 왕초보용으로 알려줘."<br><br>이렇게 보내면 알아서 코드랑 실행 방법까지 친절하게 알려준다.</div><button class="copy" data-copy="기존 코딩이랑 제일 큰 차이는 공부할 필요가 없다는 점이다.
+
+예전엔 문법 배우고 환경 설정하다가 포기했는데.
+이젠 질문 몇 번으로 바로 실행 가능한 도구가 나온다.
+
+실제로 내가 써먹은 프롬프트는 이런 식이다.
+
+"파이썬으로 특정 폴더 안의 이미지 파일명을 오늘 날짜로 싹 바꿔주는 프로그램 만들어줘. 실행 방법도 왕초보용으로 알려줘."
+
+이렇게 보내면 알아서 코드랑 실행 방법까지 친절하게 알려준다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 4</div><img src="../images/20260823-1125-ai-steps.png" alt="단계별 가이드"><div class="fname">20260823-1125-ai-steps.png</div><a class="dl" href="../images/20260823-1125-ai-steps.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">만약 에러가 난다?<br>그것도 걱정할 필요가 없다.<br><br>터미널이나 까만 창에 뜬 빨간 에러 메시지.<br>그냥 드래그해서 AI한테 다시 던지면 된다.<br><br>"이런 에러 나는데 어떻게 고쳐?"<br><br>그럼 AI가 자기 코드를 스스로 수정해 준다.<br>우리는 그냥 복사해서 붙여넣기만 계속하면 끝이다.</div><button class="copy" data-copy="만약 에러가 난다?
+그것도 걱정할 필요가 없다.
+
+터미널이나 까만 창에 뜬 빨간 에러 메시지.
+그냥 드래그해서 AI한테 다시 던지면 된다.
+
+"이런 에러 나는데 어떻게 고쳐?"
+
+그럼 AI가 자기 코드를 스스로 수정해 준다.
+우리는 그냥 복사해서 붙여넣기만 계속하면 끝이다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 5</div><img src="../images/20260823-1125-ai-summary.png" alt="핵심 요약"><div class="fname">20260823-1125-ai-summary.png</div><a class="dl" href="../images/20260823-1125-ai-summary.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">핵심은 거창한 프로그램을 만들려고 하지 않는 거다.<br>내 일상 업무 중에서 딱 10분 줄여줄 도구부터 시작하면 된다.<br><br>복잡한 언어 배운다고 책 사지 말고.<br>오늘 바로 AI한테 평소 귀찮았던 일 하나만 시켜보자.<br><br>삶의 질이 진짜 달라진다.</div><button class="copy" data-copy="핵심은 거창한 프로그램을 만들려고 하지 않는 거다.
+내 일상 업무 중에서 딱 10분 줄여줄 도구부터 시작하면 된다.
+
+복잡한 언어 배운다고 책 사지 말고.
+오늘 바로 AI한테 평소 귀찮았던 일 하나만 시켜보자.
+
+삶의 질이 진짜 달라진다.">이 부분 복사</button></div>
+
+  <div class="source">참고 기사: <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE1RMFRvWkZWaUhRUjk3YkZ4ZTd5dDhXX2dfSVV3SkhEb1ZqSEpfNGZFeHNxYVEzY1I1U1E3TGllTkJYRmI5eFpycjRSMmtjUVJSNFcyM2tGZm5JSUJrWFAyUElnM3dPQlZRaGVRT0U4X0JDeVE?oc=5" target="_blank" rel="noopener">유진기업, ‘바이브코딩’으로 AI 업무혁신</a></div>
+</div>
+
+<div class="allbar">
+  <button id="all" data-copy="( 사진 여기 — thumbnail )
+
+매일 반복되는 엑셀 작업이나 파일 정리.
+솔직히 너무 귀찮다.
+
+남들은 파이썬으로 자동화한다는데.
+문과생에 비개발자라면 엄두도 안 나는 게 사실이다.
+
+근데 요즘은 코드를 직접 안 짜도 된다.
+그냥 AI한테 말로 설명만 하면 끝난다.
+
+이걸 요즘 '바이브 코딩'이라고 부르더라.
+
+( 사진 여기 — diagram )
+
+바이브 코딩이 별거 없다.
+진짜 말 그대로 느낌(Vibe)만 던져주는 거다.
+
+"매일 아침 폴더에 들어오는 엑셀 파일들 합쳐줘"
+"PDF에서 텍스트만 뽑아서 리스트로 만들어줘"
+
+외주 개발자한테 요구사항 말하듯이 챗봇에 치면 알아서 코드를 짜준다.
+
+( 사진 여기 — compare )
+
+기존 코딩이랑 제일 큰 차이는 공부할 필요가 없다는 점이다.
+
+예전엔 문법 배우고 환경 설정하다가 포기했는데.
+이젠 질문 몇 번으로 바로 실행 가능한 도구가 나온다.
+
+실제로 내가 써먹은 프롬프트는 이런 식이다.
+
+"파이썬으로 특정 폴더 안의 이미지 파일명을 오늘 날짜로 싹 바꿔주는 프로그램 만들어줘. 실행 방법도 왕초보용으로 알려줘."
+
+이렇게 보내면 알아서 코드랑 실행 방법까지 친절하게 알려준다.
+
+( 사진 여기 — steps )
+
+만약 에러가 난다?
+그것도 걱정할 필요가 없다.
+
+터미널이나 까만 창에 뜬 빨간 에러 메시지.
+그냥 드래그해서 AI한테 다시 던지면 된다.
+
+"이런 에러 나는데 어떻게 고쳐?"
+
+그럼 AI가 자기 코드를 스스로 수정해 준다.
+우리는 그냥 복사해서 붙여넣기만 계속하면 끝이다.
+
+( 사진 여기 — summary )
+
+핵심은 거창한 프로그램을 만들려고 하지 않는 거다.
+내 일상 업무 중에서 딱 10분 줄여줄 도구부터 시작하면 된다.
+
+복잡한 언어 배운다고 책 사지 말고.
+오늘 바로 AI한테 평소 귀찮았던 일 하나만 시켜보자.
+
+삶의 질이 진짜 달라진다.">본문 전체 복사</button>
+</div>
+
+<script>
+document.addEventListener('click', function (e) {
+  var btn = e.target.closest('[data-copy]');
+  if (!btn) return;
+  var text = btn.getAttribute('data-copy');
+  var original = btn.textContent;
+
+  function done() {
+    btn.textContent = '복사됨';
+    btn.classList.add('done');
+    setTimeout(function () {
+      btn.textContent = original;
+      btn.classList.remove('done');
+    }, 1400);
+  }
+
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(text).then(done);
+  } else {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); done(); } catch (err) {}
+    document.body.removeChild(ta);
+  }
+});
+</script>
+</body>
+</html>
