@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>쏟아지는 슬랙 스레드, AI로 핵심만 쏙 뽑아내는 방법 — 네이버 원고</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 24px 16px 80px;
+    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+                 "Malgun Gothic", sans-serif;
+    background: #F6F7F9; color: #1F2937; line-height: 1.75;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  .head {
+    background: #03C75A; color: #fff; padding: 20px 22px;
+    border-radius: 14px; margin-bottom: 20px;
+  }
+  .head h1 { margin: 0 0 6px; font-size: 20px; line-height: 1.45; }
+  .head .date { font-size: 13px; opacity: .9; }
+  .card {
+    background: #fff; border-radius: 14px; padding: 18px 20px;
+    margin-bottom: 16px; border: 1px solid #E5E7EB;
+  }
+  .card h2 {
+    margin: 0 0 12px; font-size: 15px; color: #6B7280;
+    font-weight: 700; letter-spacing: .3px;
+  }
+  ul { margin: 0; padding: 0; list-style: none; }
+  ul li {
+    display: flex; align-items: center; gap: 10px;
+    padding: 9px 0; border-bottom: 1px solid #F3F4F6;
+  }
+  ul li:last-child { border-bottom: 0; }
+  ul li .t { flex: 1; font-size: 15px; }
+  .copy {
+    border: 0; background: #EEF2FF; color: #4F46E5;
+    padding: 7px 13px; border-radius: 8px; font-size: 13px;
+    cursor: pointer; white-space: nowrap; font-weight: 600;
+  }
+  .copy:hover { background: #E0E7FF; }
+  .copy.done { background: #DCFCE7; color: #16A34A; }
+  .tags { color: #2563EB; font-size: 14px; word-break: keep-all; }
+  .block {
+    background: #fff; border: 1px solid #E5E7EB;
+    border-radius: 14px; padding: 16px 18px; margin-bottom: 12px;
+  }
+  .block.text .body { font-size: 15.5px; margin-bottom: 12px; }
+  .block.img { text-align: center; background: #FAFBFC; }
+  .block.img img {
+    width: 100%; height: auto; border-radius: 10px; display: block;
+  }
+  .imgno {
+    font-size: 12px; color: #9CA3AF; margin-bottom: 8px;
+    font-weight: 700; letter-spacing: .5px;
+  }
+  .fname {
+    font-size: 12px; color: #9CA3AF; margin-top: 8px;
+    font-family: ui-monospace, Menlo, monospace;
+  }
+  .dl {
+    display: inline-block; margin-top: 10px; padding: 8px 16px;
+    background: #F3F4F6; color: #374151; border-radius: 8px;
+    text-decoration: none; font-size: 13px; font-weight: 600;
+  }
+  .source {
+    font-size: 13px; color: #9CA3AF; margin-top: 22px;
+    padding-top: 14px; border-top: 1px solid #E5E7EB;
+  }
+  .source a { color: #6B7280; }
+  .allbar {
+    position: fixed; left: 0; right: 0; bottom: 0;
+    background: #fff; border-top: 1px solid #E5E7EB;
+    padding: 12px 16px; text-align: center;
+  }
+  .allbar button {
+    width: 100%; max-width: 720px; padding: 14px;
+    background: #03C75A; color: #fff; border: 0;
+    border-radius: 10px; font-size: 15px; font-weight: 700; cursor: pointer;
+  }
+  .allbar button.done { background: #16A34A; }
+  .guide {
+    background: #FFFBEB; border: 1px solid #FDE68A;
+    border-radius: 12px; padding: 14px 18px; margin-bottom: 16px;
+    font-size: 14px; color: #92400E;
+  }
+  .guide b { display: block; margin-bottom: 6px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="head">
+    <h1>쏟아지는 슬랙 스레드, AI로 핵심만 쏙 뽑아내는 방법</h1>
+    <div class="date">2026년 08월 25일 23:29 생성</div>
+  </div>
+
+  <div class="guide">
+    <b>이렇게 쓰면 됩니다</b>
+    네이버 블로그 글쓰기를 연 뒤, 아래 본문을 순서대로 복사해 붙여넣고
+    사진 자리에는 저장한 이미지를 올리면 됩니다.
+  </div>
+
+  <div class="card">
+    <h2>제목 후보</h2>
+    <ul><li><span class="t">슬랙 대화방 3초 요약, AI 연동으로 업무 시간 반으로 줄이기</span><button class="copy" data-copy="슬랙 대화방 3초 요약, AI 연동으로 업무 시간 반으로 줄이기">복사</button></li><li><span class="t">쏟아지는 슬랙 스레드, AI로 핵심만 쏙 뽑아내는 방법</span><button class="copy" data-copy="쏟아지는 슬랙 스레드, AI로 핵심만 쏙 뽑아내는 방법">복사</button></li><li><span class="t">클로드 슬랙 연동해서 할 일 리스트 3초 만에 추출하기</span><button class="copy" data-copy="클로드 슬랙 연동해서 할 일 리스트 3초 만에 추출하기">복사</button></li></ul>
+  </div>
+
+  <div class="card">
+    <h2>태그</h2>
+    <div class="tags">#슬랙AI활용법 #클로드슬랙연동 #슬랙스레드요약 #업무생산성도구 #AI협업툴 #슬랙꿀팁 #업무자동화</div>
+    <div style="margin-top:12px">
+      <button class="copy" data-copy="#슬랙AI활용법 #클로드슬랙연동 #슬랙스레드요약 #업무생산성도구 #AI협업툴 #슬랙꿀팁 #업무자동화">태그 전체 복사</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>본문</h2>
+  </div>
+
+  <div class="block text"><div class="body">슬랙 스레드 좀 길어지면 읽기 싫어진다.<br>잠깐 자리 비운 사이에 댓글 30개 넘게 달려 있으면 한참 읽어야 하더라.<br>이거 일일이 다 안 읽고 3초 만에 요약하는 방법이 있다.</div><button class="copy" data-copy="슬랙 스레드 좀 길어지면 읽기 싫어진다.
+잠깐 자리 비운 사이에 댓글 30개 넘게 달려 있으면 한참 읽어야 하더라.
+이거 일일이 다 안 읽고 3초 만에 요약하는 방법이 있다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 1</div><img src="../images/20260825-2329-ai-thumbnail-sq.png" alt="대표 이미지"><div class="fname">20260825-2329-ai-thumbnail-sq.png</div><a class="dl" href="../images/20260825-2329-ai-thumbnail-sq.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">요즘은 팀 메신저에 AI를 연동해서 쓰는 사람이 진짜 많아졌다.<br>생각보다 설정도 쉽고 훨씬 편하다.<br>핵심 내용 정리뿐만 아니라 담당자별 할 일까지 알아서 뽑아준다.<br><br>보통 슬랙 대화방에서 일할 때 이런 흐름으로 진행된다.</div><button class="copy" data-copy="요즘은 팀 메신저에 AI를 연동해서 쓰는 사람이 진짜 많아졌다.
+생각보다 설정도 쉽고 훨씬 편하다.
+핵심 내용 정리뿐만 아니라 담당자별 할 일까지 알아서 뽑아준다.
+
+보통 슬랙 대화방에서 일할 때 이런 흐름으로 진행된다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 2</div><img src="../images/20260825-2329-ai-diagram.png" alt="동작 구조 다이어그램"><div class="fname">20260825-2329-ai-diagram.png</div><a class="dl" href="../images/20260825-2329-ai-diagram.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">대화가 길어지면 나중에 핵심 잡기가 진짜 힘들다.<br>실제로 AI 연동하기 전이랑 후를 비교해보면 체감이 확 난다.</div><button class="copy" data-copy="대화가 길어지면 나중에 핵심 잡기가 진짜 힘들다.
+실제로 AI 연동하기 전이랑 후를 비교해보면 체감이 확 난다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 3</div><img src="../images/20260825-2329-ai-compare.png" alt="비교표"><div class="fname">20260825-2329-ai-compare.png</div><a class="dl" href="../images/20260825-2329-ai-compare.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">직접 세팅하는 방법도 진짜 간단하다.<br>앱 연동하고 명령어 몇 개만 체크하면 끝이다.</div><button class="copy" data-copy="직접 세팅하는 방법도 진짜 간단하다.
+앱 연동하고 명령어 몇 개만 체크하면 끝이다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 4</div><img src="../images/20260825-2329-ai-steps.png" alt="단계별 가이드"><div class="fname">20260825-2329-ai-steps.png</div><a class="dl" href="../images/20260825-2329-ai-steps.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">세팅하고 나서 스레드에 명령어 하나만 치거나 AI를 호출하면 된다.<br>예를 들어 스레드 답글로 이렇게 프롬프트를 남겨보자.<br><br>"이 스레드 3줄 요약해주고, 담당자별 Action Item 리스트로 정리해줘."<br><br>그러면 AI가 대화 흐름을 읽고 이렇게 깔끔하게 답장으로 남겨준다.<br><br>1. 진행 상황: A 기능 개발 완료 및 QA 진행 중<br>2. 결정 사항: 출시 일정 다음 주 화요일로 연기<br>3. 할 일:<br>- @김철수: QA 버그 리스트 정리 후 전달<br>- @이영희: 변경된 일정 고객사 공유<br><br>댓글 50개 달린 긴 스레드도 이거 한 줄이면 3초 만에 정리 끝난다.<br>담당자 태그까지 딱 찍어서 할 일을 정리해주니까 서로 확인하기도 편하다.<br>직접 써보면 퇴근 시간이 달라지는 게 느껴지더라.</div><button class="copy" data-copy="세팅하고 나서 스레드에 명령어 하나만 치거나 AI를 호출하면 된다.
+예를 들어 스레드 답글로 이렇게 프롬프트를 남겨보자.
+
+"이 스레드 3줄 요약해주고, 담당자별 Action Item 리스트로 정리해줘."
+
+그러면 AI가 대화 흐름을 읽고 이렇게 깔끔하게 답장으로 남겨준다.
+
+1. 진행 상황: A 기능 개발 완료 및 QA 진행 중
+2. 결정 사항: 출시 일정 다음 주 화요일로 연기
+3. 할 일:
+- @김철수: QA 버그 리스트 정리 후 전달
+- @이영희: 변경된 일정 고객사 공유
+
+댓글 50개 달린 긴 스레드도 이거 한 줄이면 3초 만에 정리 끝난다.
+담당자 태그까지 딱 찍어서 할 일을 정리해주니까 서로 확인하기도 편하다.
+직접 써보면 퇴근 시간이 달라지는 게 느껴지더라.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 5</div><img src="../images/20260825-2329-ai-summary.png" alt="핵심 요약"><div class="fname">20260825-2329-ai-summary.png</div><a class="dl" href="../images/20260825-2329-ai-summary.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">팀 메신저 대화 쫓아가기 숨 찼던 사람들은 오늘 당장 적용해보자.<br>업무 생산성 올리는 가장 쉬운 방법이다.</div><button class="copy" data-copy="팀 메신저 대화 쫓아가기 숨 찼던 사람들은 오늘 당장 적용해보자.
+업무 생산성 올리는 가장 쉬운 방법이다.">이 부분 복사</button></div>
+
+  <div class="source">참고 기사: <a href="https://news.google.com/rss/articles/CBMiakFVX3lxTE9OaVJNaGFPbFoxazJHOGF2emN2cHBZSnNUZldoUUFqalpvaThTR2c0TW1Pc2l0OHIwSDBKd2k5SVhJVVpicS1Ca1d6V29ZdFdkN0lOQmdKUlpXN0pVNUJXOGxvZWdKNXJrRnc?oc=5" target="_blank" rel="noopener">앤트로픽, 슬랙용 에이전트 '클로드 태그' 강화..."대화 흐름 읽고 개입"</a></div>
+</div>
+
+<div class="allbar">
+  <button id="all" data-copy="슬랙 스레드 좀 길어지면 읽기 싫어진다.
+잠깐 자리 비운 사이에 댓글 30개 넘게 달려 있으면 한참 읽어야 하더라.
+이거 일일이 다 안 읽고 3초 만에 요약하는 방법이 있다.
+
+( 사진 여기 — thumbnail )
+
+요즘은 팀 메신저에 AI를 연동해서 쓰는 사람이 진짜 많아졌다.
+생각보다 설정도 쉽고 훨씬 편하다.
+핵심 내용 정리뿐만 아니라 담당자별 할 일까지 알아서 뽑아준다.
+
+보통 슬랙 대화방에서 일할 때 이런 흐름으로 진행된다.
+
+( 사진 여기 — diagram )
+
+대화가 길어지면 나중에 핵심 잡기가 진짜 힘들다.
+실제로 AI 연동하기 전이랑 후를 비교해보면 체감이 확 난다.
+
+( 사진 여기 — compare )
+
+직접 세팅하는 방법도 진짜 간단하다.
+앱 연동하고 명령어 몇 개만 체크하면 끝이다.
+
+( 사진 여기 — steps )
+
+세팅하고 나서 스레드에 명령어 하나만 치거나 AI를 호출하면 된다.
+예를 들어 스레드 답글로 이렇게 프롬프트를 남겨보자.
+
+"이 스레드 3줄 요약해주고, 담당자별 Action Item 리스트로 정리해줘."
+
+그러면 AI가 대화 흐름을 읽고 이렇게 깔끔하게 답장으로 남겨준다.
+
+1. 진행 상황: A 기능 개발 완료 및 QA 진행 중
+2. 결정 사항: 출시 일정 다음 주 화요일로 연기
+3. 할 일:
+- @김철수: QA 버그 리스트 정리 후 전달
+- @이영희: 변경된 일정 고객사 공유
+
+댓글 50개 달린 긴 스레드도 이거 한 줄이면 3초 만에 정리 끝난다.
+담당자 태그까지 딱 찍어서 할 일을 정리해주니까 서로 확인하기도 편하다.
+직접 써보면 퇴근 시간이 달라지는 게 느껴지더라.
+
+( 사진 여기 — summary )
+
+팀 메신저 대화 쫓아가기 숨 찼던 사람들은 오늘 당장 적용해보자.
+업무 생산성 올리는 가장 쉬운 방법이다.">본문 전체 복사</button>
+</div>
+
+<script>
+document.addEventListener('click', function (e) {
+  var btn = e.target.closest('[data-copy]');
+  if (!btn) return;
+  var text = btn.getAttribute('data-copy');
+  var original = btn.textContent;
+
+  function done() {
+    btn.textContent = '복사됨';
+    btn.classList.add('done');
+    setTimeout(function () {
+      btn.textContent = original;
+      btn.classList.remove('done');
+    }, 1400);
+  }
+
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(text).then(done);
+  } else {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); done(); } catch (err) {}
+    document.body.removeChild(ta);
+  }
+});
+</script>
+</body>
+</html>
