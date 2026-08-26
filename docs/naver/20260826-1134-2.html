@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>매번 프롬프트 길게 쓰지 마라: 업무 속도 2배 올리는 클로드 활용법 — 네이버 원고</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 24px 16px 80px;
+    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+                 "Malgun Gothic", sans-serif;
+    background: #F6F7F9; color: #1F2937; line-height: 1.75;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  .head {
+    background: #03C75A; color: #fff; padding: 20px 22px;
+    border-radius: 14px; margin-bottom: 20px;
+  }
+  .head h1 { margin: 0 0 6px; font-size: 20px; line-height: 1.45; }
+  .head .date { font-size: 13px; opacity: .9; }
+  .card {
+    background: #fff; border-radius: 14px; padding: 18px 20px;
+    margin-bottom: 16px; border: 1px solid #E5E7EB;
+  }
+  .card h2 {
+    margin: 0 0 12px; font-size: 15px; color: #6B7280;
+    font-weight: 700; letter-spacing: .3px;
+  }
+  ul { margin: 0; padding: 0; list-style: none; }
+  ul li {
+    display: flex; align-items: center; gap: 10px;
+    padding: 9px 0; border-bottom: 1px solid #F3F4F6;
+  }
+  ul li:last-child { border-bottom: 0; }
+  ul li .t { flex: 1; font-size: 15px; }
+  .copy {
+    border: 0; background: #EEF2FF; color: #4F46E5;
+    padding: 7px 13px; border-radius: 8px; font-size: 13px;
+    cursor: pointer; white-space: nowrap; font-weight: 600;
+  }
+  .copy:hover { background: #E0E7FF; }
+  .copy.done { background: #DCFCE7; color: #16A34A; }
+  .tags { color: #2563EB; font-size: 14px; word-break: keep-all; }
+  .block {
+    background: #fff; border: 1px solid #E5E7EB;
+    border-radius: 14px; padding: 16px 18px; margin-bottom: 12px;
+  }
+  .block.text .body { font-size: 15.5px; margin-bottom: 12px; }
+  .block.img { text-align: center; background: #FAFBFC; }
+  .block.img img {
+    width: 100%; height: auto; border-radius: 10px; display: block;
+  }
+  .imgno {
+    font-size: 12px; color: #9CA3AF; margin-bottom: 8px;
+    font-weight: 700; letter-spacing: .5px;
+  }
+  .fname {
+    font-size: 12px; color: #9CA3AF; margin-top: 8px;
+    font-family: ui-monospace, Menlo, monospace;
+  }
+  .dl {
+    display: inline-block; margin-top: 10px; padding: 8px 16px;
+    background: #F3F4F6; color: #374151; border-radius: 8px;
+    text-decoration: none; font-size: 13px; font-weight: 600;
+  }
+  .source {
+    font-size: 13px; color: #9CA3AF; margin-top: 22px;
+    padding-top: 14px; border-top: 1px solid #E5E7EB;
+  }
+  .source a { color: #6B7280; }
+  .allbar {
+    position: fixed; left: 0; right: 0; bottom: 0;
+    background: #fff; border-top: 1px solid #E5E7EB;
+    padding: 12px 16px; text-align: center;
+  }
+  .allbar button {
+    width: 100%; max-width: 720px; padding: 14px;
+    background: #03C75A; color: #fff; border: 0;
+    border-radius: 10px; font-size: 15px; font-weight: 700; cursor: pointer;
+  }
+  .allbar button.done { background: #16A34A; }
+  .guide {
+    background: #FFFBEB; border: 1px solid #FDE68A;
+    border-radius: 12px; padding: 14px 18px; margin-bottom: 16px;
+    font-size: 14px; color: #92400E;
+  }
+  .guide b { display: block; margin-bottom: 6px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="head">
+    <h1>매번 프롬프트 길게 쓰지 마라: 업무 속도 2배 올리는 클로드 활용법</h1>
+    <div class="date">2026년 08월 26일 11:34 생성</div>
+  </div>
+
+  <div class="guide">
+    <b>이렇게 쓰면 됩니다</b>
+    네이버 블로그 글쓰기를 연 뒤, 아래 본문을 순서대로 복사해 붙여넣고
+    사진 자리에는 저장한 이미지를 올리면 됩니다.
+  </div>
+
+  <div class="card">
+    <h2>제목 후보</h2>
+    <ul><li><span class="t">클로드 쓸 때 매번 배경 설명하기 귀찮다면? 프롬프트 단축 팁</span><button class="copy" data-copy="클로드 쓸 때 매번 배경 설명하기 귀찮다면? 프롬프트 단축 팁">복사</button></li><li><span class="t">Claude 메모리 기능으로 칼퇴하기: 내 직무 미리 입력해두는 법</span><button class="copy" data-copy="Claude 메모리 기능으로 칼퇴하기: 내 직무 미리 입력해두는 법">복사</button></li><li><span class="t">매번 프롬프트 길게 쓰지 마라: 업무 속도 2배 올리는 클로드 활용법</span><button class="copy" data-copy="매번 프롬프트 길게 쓰지 마라: 업무 속도 2배 올리는 클로드 활용법">복사</button></li></ul>
+  </div>
+
+  <div class="card">
+    <h2>태그</h2>
+    <div class="tags">#클로드사용법 #Claude활용법 #클로드메모리 #AI프롬프트작성법 #업무생산성AI #AI활용법 #칼퇴팁</div>
+    <div style="margin-top:12px">
+      <button class="copy" data-copy="#클로드사용법 #Claude활용법 #클로드메모리 #AI프롬프트작성법 #업무생산성AI #AI활용법 #칼퇴팁">태그 전체 복사</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>본문</h2>
+  </div>
+
+  <div class="block img"><div class="imgno">사진 1</div><img src="../images/20260826-1134-2-thumbnail-sq.png" alt="대표 이미지"><div class="fname">20260826-1134-2-thumbnail-sq.png</div><a class="dl" href="../images/20260826-1134-2-thumbnail-sq.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">AI한테 일 시킬 때마다 똑같은 말 반복하는 거.<br>진짜 귀찮더라.<br><br>"나는 5년 차 마케터고, 톤앤매너는 발랄하게, 글자 수는 500자 내외로 써줘."<br><br>매번 새로 창 열 때마다 이 작업을 하고 있다면?<br>업무 시간이 쓸데없이 낭비되는 거다.<br><br>요즘은 AI 서비스에 내 배경 정보를 미리 저장해둘 수 있다.<br>한 번 세팅해두면 매번 10줄씩 쓰던 프롬프트가 한 줄로 줄어든다.</div><button class="copy" data-copy="AI한테 일 시킬 때마다 똑같은 말 반복하는 거.
+진짜 귀찮더라.
+
+"나는 5년 차 마케터고, 톤앤매너는 발랄하게, 글자 수는 500자 내외로 써줘."
+
+매번 새로 창 열 때마다 이 작업을 하고 있다면?
+업무 시간이 쓸데없이 낭비되는 거다.
+
+요즘은 AI 서비스에 내 배경 정보를 미리 저장해둘 수 있다.
+한 번 세팅해두면 매번 10줄씩 쓰던 프롬프트가 한 줄로 줄어든다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 2</div><img src="../images/20260826-1134-2-diagram.png" alt="동작 구조 다이어그램"><div class="fname">20260826-1134-2-diagram.png</div><a class="dl" href="../images/20260826-1134-2-diagram.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">원리는 의외로 간단하다.<br><br>원래는 명령할 때 배경지식과 규칙, 질문을 다 입력해야 했다.<br>근데 기억 저장 기능을 써두면 배경이랑 규칙을 미리 AI가 물고 있다.<br><br>나는 그냥 본론만 툭 던지면 된다.<br>질문 하나 던졌을 뿐인데 나한테 딱 맞춘 답변이 나오는 거다.</div><button class="copy" data-copy="원리는 의외로 간단하다.
+
+원래는 명령할 때 배경지식과 규칙, 질문을 다 입력해야 했다.
+근데 기억 저장 기능을 써두면 배경이랑 규칙을 미리 AI가 물고 있다.
+
+나는 그냥 본론만 툭 던지면 된다.
+질문 하나 던졌을 뿐인데 나한테 딱 맞춘 답변이 나오는 거다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 3</div><img src="../images/20260826-1134-2-compare.png" alt="비교표"><div class="fname">20260826-1134-2-compare.png</div><a class="dl" href="../images/20260826-1134-2-compare.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">기존 방식이랑 비교해보면 차이가 확실하다.<br><br>전에는 매번 내 직무 설명하고, 답변 양식 지정하느라 오래 걸렸다.<br>지금은 단어 몇 개만 쳐도 내가 원하는 양식으로 착착 나온다.<br><br>입력 시간만 줄어드는 게 아니다.<br>AI가 딴소리할 확률도 확 줄어든다.</div><button class="copy" data-copy="기존 방식이랑 비교해보면 차이가 확실하다.
+
+전에는 매번 내 직무 설명하고, 답변 양식 지정하느라 오래 걸렸다.
+지금은 단어 몇 개만 쳐도 내가 원하는 양식으로 착착 나온다.
+
+입력 시간만 줄어드는 게 아니다.
+AI가 딴소리할 확률도 확 줄어든다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 4</div><img src="../images/20260826-1134-2-steps.png" alt="단계별 가이드"><div class="fname">20260826-1134-2-steps.png</div><a class="dl" href="../images/20260826-1134-2-steps.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">설정하는 방법도 별거 없다.<br><br>첫 번째, 내 직무랑 자주 하는 업무 상황을 정리한다.<br>"IT 서비스 기획자, 개발자와 공유할 문서 작성 용도" 이렇게.<br><br>두 번째, 선호하는 답변 스타일을 등록한다.<br>"불렛포인트로 정리, 전문 용어는 쉬운 말로 풀어서 작성" 같이 구체적일수록 좋다.<br><br>세 번째, 자주 쓰는 양식을 프롬프트 템플릿으로 고정한다.<br>이제 대화창 켜고 "오늘 회의록 정리해줘"라고만 치면 끝이다.<br><br>실제로 프롬프트를 이렇게 쓸 수 있다.<br><br>[기억 설정 예시]<br>- 직무: B2B 콘텐츠 마케터<br>- 톤앤매너: 명확하고 신뢰감 있는 구어체<br>- 작성 형식: 개요 -&gt; 본문 -&gt; 3줄 요약<br><br>[실제 입력]<br>"이 신제품 블로그 글 초안 써줘."<br><br>이렇게만 쳐도 알아서 B2B 마케터 톤으로 3줄 요약까지 맞춰서 써준다.</div><button class="copy" data-copy="설정하는 방법도 별거 없다.
+
+첫 번째, 내 직무랑 자주 하는 업무 상황을 정리한다.
+"IT 서비스 기획자, 개발자와 공유할 문서 작성 용도" 이렇게.
+
+두 번째, 선호하는 답변 스타일을 등록한다.
+"불렛포인트로 정리, 전문 용어는 쉬운 말로 풀어서 작성" 같이 구체적일수록 좋다.
+
+세 번째, 자주 쓰는 양식을 프롬프트 템플릿으로 고정한다.
+이제 대화창 켜고 "오늘 회의록 정리해줘"라고만 치면 끝이다.
+
+실제로 프롬프트를 이렇게 쓸 수 있다.
+
+[기억 설정 예시]
+- 직무: B2B 콘텐츠 마케터
+- 톤앤매너: 명확하고 신뢰감 있는 구어체
+- 작성 형식: 개요 -&gt; 본문 -&gt; 3줄 요약
+
+[실제 입력]
+"이 신제품 블로그 글 초안 써줘."
+
+이렇게만 쳐도 알아서 B2B 마케터 톤으로 3줄 요약까지 맞춰서 써준다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 5</div><img src="../images/20260826-1134-2-summary.png" alt="핵심 요약"><div class="fname">20260826-1134-2-summary.png</div><a class="dl" href="../images/20260826-1134-2-summary.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">AI를 잘 쓰는 건 질문을 길게 쓰는 게 아니다.<br>반복되는 조건을 얼마나 줄이느냐가 핵심이다.<br><br>매번 배경 설명하느라 진 빼지 말고.<br>기억 설정 잠깐 투자해서 세팅해보자.<br><br>퇴근 시간이 진짜 달라진다.</div><button class="copy" data-copy="AI를 잘 쓰는 건 질문을 길게 쓰는 게 아니다.
+반복되는 조건을 얼마나 줄이느냐가 핵심이다.
+
+매번 배경 설명하느라 진 빼지 말고.
+기억 설정 잠깐 투자해서 세팅해보자.
+
+퇴근 시간이 진짜 달라진다.">이 부분 복사</button></div>
+
+  <div class="source">참고 기사: <a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTE1YS1R3RVNNNHdZaVBlSlZyUFZtZlBBRW5jd1A3dERuNG1rLVFIaXk5RElHajR6YW5oTUVpOUtCaFdrbFVIN3RCRUFVNENnZEU?oc=5" target="_blank" rel="noopener">Claude, 채팅·Cowork 기억 하나로 통합…“같은 설명 반복할 필요 없다”</a></div>
+</div>
+
+<div class="allbar">
+  <button id="all" data-copy="( 사진 여기 — thumbnail )
+
+AI한테 일 시킬 때마다 똑같은 말 반복하는 거.
+진짜 귀찮더라.
+
+"나는 5년 차 마케터고, 톤앤매너는 발랄하게, 글자 수는 500자 내외로 써줘."
+
+매번 새로 창 열 때마다 이 작업을 하고 있다면?
+업무 시간이 쓸데없이 낭비되는 거다.
+
+요즘은 AI 서비스에 내 배경 정보를 미리 저장해둘 수 있다.
+한 번 세팅해두면 매번 10줄씩 쓰던 프롬프트가 한 줄로 줄어든다.
+
+( 사진 여기 — diagram )
+
+원리는 의외로 간단하다.
+
+원래는 명령할 때 배경지식과 규칙, 질문을 다 입력해야 했다.
+근데 기억 저장 기능을 써두면 배경이랑 규칙을 미리 AI가 물고 있다.
+
+나는 그냥 본론만 툭 던지면 된다.
+질문 하나 던졌을 뿐인데 나한테 딱 맞춘 답변이 나오는 거다.
+
+( 사진 여기 — compare )
+
+기존 방식이랑 비교해보면 차이가 확실하다.
+
+전에는 매번 내 직무 설명하고, 답변 양식 지정하느라 오래 걸렸다.
+지금은 단어 몇 개만 쳐도 내가 원하는 양식으로 착착 나온다.
+
+입력 시간만 줄어드는 게 아니다.
+AI가 딴소리할 확률도 확 줄어든다.
+
+( 사진 여기 — steps )
+
+설정하는 방법도 별거 없다.
+
+첫 번째, 내 직무랑 자주 하는 업무 상황을 정리한다.
+"IT 서비스 기획자, 개발자와 공유할 문서 작성 용도" 이렇게.
+
+두 번째, 선호하는 답변 스타일을 등록한다.
+"불렛포인트로 정리, 전문 용어는 쉬운 말로 풀어서 작성" 같이 구체적일수록 좋다.
+
+세 번째, 자주 쓰는 양식을 프롬프트 템플릿으로 고정한다.
+이제 대화창 켜고 "오늘 회의록 정리해줘"라고만 치면 끝이다.
+
+실제로 프롬프트를 이렇게 쓸 수 있다.
+
+[기억 설정 예시]
+- 직무: B2B 콘텐츠 마케터
+- 톤앤매너: 명확하고 신뢰감 있는 구어체
+- 작성 형식: 개요 -&gt; 본문 -&gt; 3줄 요약
+
+[실제 입력]
+"이 신제품 블로그 글 초안 써줘."
+
+이렇게만 쳐도 알아서 B2B 마케터 톤으로 3줄 요약까지 맞춰서 써준다.
+
+( 사진 여기 — summary )
+
+AI를 잘 쓰는 건 질문을 길게 쓰는 게 아니다.
+반복되는 조건을 얼마나 줄이느냐가 핵심이다.
+
+매번 배경 설명하느라 진 빼지 말고.
+기억 설정 잠깐 투자해서 세팅해보자.
+
+퇴근 시간이 진짜 달라진다.">본문 전체 복사</button>
+</div>
+
+<script>
+document.addEventListener('click', function (e) {
+  var btn = e.target.closest('[data-copy]');
+  if (!btn) return;
+  var text = btn.getAttribute('data-copy');
+  var original = btn.textContent;
+
+  function done() {
+    btn.textContent = '복사됨';
+    btn.classList.add('done');
+    setTimeout(function () {
+      btn.textContent = original;
+      btn.classList.remove('done');
+    }, 1400);
+  }
+
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(text).then(done);
+  } else {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); done(); } catch (err) {}
+    document.body.removeChild(ta);
+  }
+});
+</script>
+</body>
+</html>
