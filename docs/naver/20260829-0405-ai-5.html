@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>똑같은 AI 쓰는데 업무 속도 5배 차이 나는 이유 — 네이버 원고</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 24px 16px 80px;
+    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+                 "Malgun Gothic", sans-serif;
+    background: #F6F7F9; color: #1F2937; line-height: 1.75;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  .head {
+    background: #03C75A; color: #fff; padding: 20px 22px;
+    border-radius: 14px; margin-bottom: 20px;
+  }
+  .head h1 { margin: 0 0 6px; font-size: 20px; line-height: 1.45; }
+  .head .date { font-size: 13px; opacity: .9; }
+  .card {
+    background: #fff; border-radius: 14px; padding: 18px 20px;
+    margin-bottom: 16px; border: 1px solid #E5E7EB;
+  }
+  .card h2 {
+    margin: 0 0 12px; font-size: 15px; color: #6B7280;
+    font-weight: 700; letter-spacing: .3px;
+  }
+  ul { margin: 0; padding: 0; list-style: none; }
+  ul li {
+    display: flex; align-items: center; gap: 10px;
+    padding: 9px 0; border-bottom: 1px solid #F3F4F6;
+  }
+  ul li:last-child { border-bottom: 0; }
+  ul li .t { flex: 1; font-size: 15px; }
+  .copy {
+    border: 0; background: #EEF2FF; color: #4F46E5;
+    padding: 7px 13px; border-radius: 8px; font-size: 13px;
+    cursor: pointer; white-space: nowrap; font-weight: 600;
+  }
+  .copy:hover { background: #E0E7FF; }
+  .copy.done { background: #DCFCE7; color: #16A34A; }
+  .tags { color: #2563EB; font-size: 14px; word-break: keep-all; }
+  .block {
+    background: #fff; border: 1px solid #E5E7EB;
+    border-radius: 14px; padding: 16px 18px; margin-bottom: 12px;
+  }
+  .block.text .body { font-size: 15.5px; margin-bottom: 12px; }
+  .block.img { text-align: center; background: #FAFBFC; }
+  .block.img img {
+    width: 100%; height: auto; border-radius: 10px; display: block;
+  }
+  .imgno {
+    font-size: 12px; color: #9CA3AF; margin-bottom: 8px;
+    font-weight: 700; letter-spacing: .5px;
+  }
+  .fname {
+    font-size: 12px; color: #9CA3AF; margin-top: 8px;
+    font-family: ui-monospace, Menlo, monospace;
+  }
+  .dl {
+    display: inline-block; margin-top: 10px; padding: 8px 16px;
+    background: #F3F4F6; color: #374151; border-radius: 8px;
+    text-decoration: none; font-size: 13px; font-weight: 600;
+  }
+  .source {
+    font-size: 13px; color: #9CA3AF; margin-top: 22px;
+    padding-top: 14px; border-top: 1px solid #E5E7EB;
+  }
+  .source a { color: #6B7280; }
+  .allbar {
+    position: fixed; left: 0; right: 0; bottom: 0;
+    background: #fff; border-top: 1px solid #E5E7EB;
+    padding: 12px 16px; text-align: center;
+  }
+  .allbar button {
+    width: 100%; max-width: 720px; padding: 14px;
+    background: #03C75A; color: #fff; border: 0;
+    border-radius: 10px; font-size: 15px; font-weight: 700; cursor: pointer;
+  }
+  .allbar button.done { background: #16A34A; }
+  .guide {
+    background: #FFFBEB; border: 1px solid #FDE68A;
+    border-radius: 12px; padding: 14px 18px; margin-bottom: 16px;
+    font-size: 14px; color: #92400E;
+  }
+  .guide b { display: block; margin-bottom: 6px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="head">
+    <h1>똑같은 AI 쓰는데 업무 속도 5배 차이 나는 이유</h1>
+    <div class="date">2026년 08월 29일 04:05 생성</div>
+  </div>
+
+  <div class="guide">
+    <b>이렇게 쓰면 됩니다</b>
+    네이버 블로그 글쓰기를 연 뒤, 아래 본문을 순서대로 복사해 붙여넣고
+    사진 자리에는 저장한 이미지를 올리면 됩니다.
+  </div>
+
+  <div class="card">
+    <h2>제목 후보</h2>
+    <ul><li><span class="t">똑같은 AI 쓰는데 업무 속도 5배 차이 나는 이유</span><button class="copy" data-copy="똑같은 AI 쓰는데 업무 속도 5배 차이 나는 이유">복사</button></li><li><span class="t">AI 답변 재수정 없이 보고서로 바로 쓰는 3가지 루틴</span><button class="copy" data-copy="AI 답변 재수정 없이 보고서로 바로 쓰는 3가지 루틴">복사</button></li><li><span class="t">챗GPT로 칼퇴하는 사람들의 실무 활용 노하우 3가지</span><button class="copy" data-copy="챗GPT로 칼퇴하는 사람들의 실무 활용 노하우 3가지">복사</button></li></ul>
+  </div>
+
+  <div class="card">
+    <h2>태그</h2>
+    <div class="tags">#챗GPT업무활용 #AI생산성향상 #업무효율화 #챗GPT활용팁 #AI업무노하우 #칼퇴루틴 #보고서작성</div>
+    <div style="margin-top:12px">
+      <button class="copy" data-copy="#챗GPT업무활용 #AI생산성향상 #업무효율화 #챗GPT활용팁 #AI업무노하우 #칼퇴루틴 #보고서작성">태그 전체 복사</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>본문</h2>
+  </div>
+
+  <div class="block img"><div class="imgno">사진 1</div><img src="../images/20260829-0405-ai-5-thumbnail-sq.png" alt="대표 이미지"><div class="fname">20260829-0405-ai-5-thumbnail-sq.png</div><a class="dl" href="../images/20260829-0405-ai-5-thumbnail-sq.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">요즘 다들 AI 하나씩은 업무에 쓰고 있을 거다.<br>근데 이상하게 누구는 칼퇴하고, 누구는 AI 답변 수정하다가 야근하더라.<br><br>똑같은 챗GPT 써도 속도 차이가 5배는 나는 느낌.<br>직접 써보면서 터득한 실무 루틴 3가지를 정리해봤다.</div><button class="copy" data-copy="요즘 다들 AI 하나씩은 업무에 쓰고 있을 거다.
+근데 이상하게 누구는 칼퇴하고, 누구는 AI 답변 수정하다가 야근하더라.
+
+똑같은 챗GPT 써도 속도 차이가 5배는 나는 느낌.
+직접 써보면서 터득한 실무 루틴 3가지를 정리해봤다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 2</div><img src="../images/20260829-0405-ai-5-diagram.png" alt="동작 구조 다이어그램"><div class="fname">20260829-0405-ai-5-diagram.png</div><a class="dl" href="../images/20260829-0405-ai-5-diagram.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">첫 번째, 역할을 지정하고 '출력 형식'을 고정하는 거다.<br><br>보통 "이메일 써줘"라고만 입력하니까 이상한 어투로 길게 써준다.<br>수정하느라 시간이 더 걸림.<br><br>프롬프트를 이렇게 바꿔보자.<br>"너는 10년 차 마케팅 팀장이야. 사내 이메일용이고, [배경-핵심-요청사항] 3줄 요약 형태로 작성해 줘."<br><br>이렇게 형식부터 지정하면 수정할 필요 없이 복사해서 바로 쓸 수 있다.</div><button class="copy" data-copy="첫 번째, 역할을 지정하고 '출력 형식'을 고정하는 거다.
+
+보통 "이메일 써줘"라고만 입력하니까 이상한 어투로 길게 써준다.
+수정하느라 시간이 더 걸림.
+
+프롬프트를 이렇게 바꿔보자.
+"너는 10년 차 마케팅 팀장이야. 사내 이메일용이고, [배경-핵심-요청사항] 3줄 요약 형태로 작성해 줘."
+
+이렇게 형식부터 지정하면 수정할 필요 없이 복사해서 바로 쓸 수 있다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 3</div><img src="../images/20260829-0405-ai-5-compare.png" alt="비교표"><div class="fname">20260829-0405-ai-5-compare.png</div><a class="dl" href="../images/20260829-0405-ai-5-compare.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">두 번째, '임시 작성' 대신 '원문 피드백' 방식을 쓰는 거다.<br><br>빈 화면에서 처음부터 쓰라고 하면 이상한 소리를 한다.<br>차라리 내가 대충 적은 초안이나 과거 보고서를 던져주는 게 낫다.<br><br>"아래 초안에서 문맥이 어색한 부분 잡고, 비즈니스용 언어로 다듬어줘."<br>이렇게 요청하면 내 의도도 살리고 작성 시간도 절반 이하로 줄어든다.</div><button class="copy" data-copy="두 번째, '임시 작성' 대신 '원문 피드백' 방식을 쓰는 거다.
+
+빈 화면에서 처음부터 쓰라고 하면 이상한 소리를 한다.
+차라리 내가 대충 적은 초안이나 과거 보고서를 던져주는 게 낫다.
+
+"아래 초안에서 문맥이 어색한 부분 잡고, 비즈니스용 언어로 다듬어줘."
+이렇게 요청하면 내 의도도 살리고 작성 시간도 절반 이하로 줄어든다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 4</div><img src="../images/20260829-0405-ai-5-steps.png" alt="단계별 가이드"><div class="fname">20260829-0405-ai-5-steps.png</div><a class="dl" href="../images/20260829-0405-ai-5-steps.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">세 번째, 나만의 '템플릿 프롬프트'를 메모장에 저장해두는 루틴이다.<br><br>매번 새로 입력하려고 하면 귀찮아서 안 쓰게 되더라.<br>자주 쓰는 업무는 프롬프트를 미리 만들어둔다.<br><br>1단계: 업무 유형 파악 (보고서, 이메일, 회의록)<br>2단계: 필수 포함 항목 고정 (목적, 대상, 분량)<br>3단계: 명령어 저장 후 복붙 활용<br><br>이 루틴만 잡아둬도 일하는 속도가 확실히 달라진다.</div><button class="copy" data-copy="세 번째, 나만의 '템플릿 프롬프트'를 메모장에 저장해두는 루틴이다.
+
+매번 새로 입력하려고 하면 귀찮아서 안 쓰게 되더라.
+자주 쓰는 업무는 프롬프트를 미리 만들어둔다.
+
+1단계: 업무 유형 파악 (보고서, 이메일, 회의록)
+2단계: 필수 포함 항목 고정 (목적, 대상, 분량)
+3단계: 명령어 저장 후 복붙 활용
+
+이 루틴만 잡아둬도 일하는 속도가 확실히 달라진다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 5</div><img src="../images/20260829-0405-ai-5-summary.png" alt="핵심 요약"><div class="fname">20260829-0405-ai-5-summary.png</div><a class="dl" href="../images/20260829-0405-ai-5-summary.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">AI를 단순 검색창처럼 쓰면 계속 야근하게 된다.<br>내 업무 흐름에 맞춰서 양식을 지정하는 게 핵심이다.<br><br>오늘부터 자주 쓰는 문구 하나라도 템플릿으로 만들어보자.<br>퇴근 시간이 진짜 빨라진다.</div><button class="copy" data-copy="AI를 단순 검색창처럼 쓰면 계속 야근하게 된다.
+내 업무 흐름에 맞춰서 양식을 지정하는 게 핵심이다.
+
+오늘부터 자주 쓰는 문구 하나라도 템플릿으로 만들어보자.
+퇴근 시간이 진짜 빨라진다.">이 부분 복사</button></div>
+
+  <div class="source">참고 기사: <a href="https://news.google.com/rss/articles/CBMidkFVX3lxTE9KWWxYTW5kUDJwc3FPdlJHcXBEQ25oUHpQN2NqVDJBaWFPN3lJOFh2VHdFX1N3elNOaVFzaThqSDhaLWdyU2JDd2RDbjVZT0RRTlVyTk9HenBqbmtIa2QteEkzZlJpU0lXcHlkZEwzemt0SDRhLUE?oc=5" target="_blank" rel="noopener">"누군 10분 만에 끝내고 누군 며칠 걸려"···AI가 만든 새로운 '격차'</a></div>
+</div>
+
+<div class="allbar">
+  <button id="all" data-copy="( 사진 여기 — thumbnail )
+요즘 다들 AI 하나씩은 업무에 쓰고 있을 거다.
+근데 이상하게 누구는 칼퇴하고, 누구는 AI 답변 수정하다가 야근하더라.
+
+똑같은 챗GPT 써도 속도 차이가 5배는 나는 느낌.
+직접 써보면서 터득한 실무 루틴 3가지를 정리해봤다.
+
+( 사진 여기 — diagram )
+첫 번째, 역할을 지정하고 '출력 형식'을 고정하는 거다.
+
+보통 "이메일 써줘"라고만 입력하니까 이상한 어투로 길게 써준다.
+수정하느라 시간이 더 걸림.
+
+프롬프트를 이렇게 바꿔보자.
+"너는 10년 차 마케팅 팀장이야. 사내 이메일용이고, [배경-핵심-요청사항] 3줄 요약 형태로 작성해 줘."
+
+이렇게 형식부터 지정하면 수정할 필요 없이 복사해서 바로 쓸 수 있다.
+
+( 사진 여기 — compare )
+두 번째, '임시 작성' 대신 '원문 피드백' 방식을 쓰는 거다.
+
+빈 화면에서 처음부터 쓰라고 하면 이상한 소리를 한다.
+차라리 내가 대충 적은 초안이나 과거 보고서를 던져주는 게 낫다.
+
+"아래 초안에서 문맥이 어색한 부분 잡고, 비즈니스용 언어로 다듬어줘."
+이렇게 요청하면 내 의도도 살리고 작성 시간도 절반 이하로 줄어든다.
+
+( 사진 여기 — steps )
+세 번째, 나만의 '템플릿 프롬프트'를 메모장에 저장해두는 루틴이다.
+
+매번 새로 입력하려고 하면 귀찮아서 안 쓰게 되더라.
+자주 쓰는 업무는 프롬프트를 미리 만들어둔다.
+
+1단계: 업무 유형 파악 (보고서, 이메일, 회의록)
+2단계: 필수 포함 항목 고정 (목적, 대상, 분량)
+3단계: 명령어 저장 후 복붙 활용
+
+이 루틴만 잡아둬도 일하는 속도가 확실히 달라진다.
+
+( 사진 여기 — summary )
+AI를 단순 검색창처럼 쓰면 계속 야근하게 된다.
+내 업무 흐름에 맞춰서 양식을 지정하는 게 핵심이다.
+
+오늘부터 자주 쓰는 문구 하나라도 템플릿으로 만들어보자.
+퇴근 시간이 진짜 빨라진다.">본문 전체 복사</button>
+</div>
+
+<script>
+document.addEventListener('click', function (e) {
+  var btn = e.target.closest('[data-copy]');
+  if (!btn) return;
+  var text = btn.getAttribute('data-copy');
+  var original = btn.textContent;
+
+  function done() {
+    btn.textContent = '복사됨';
+    btn.classList.add('done');
+    setTimeout(function () {
+      btn.textContent = original;
+      btn.classList.remove('done');
+    }, 1400);
+  }
+
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(text).then(done);
+  } else {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); done(); } catch (err) {}
+    document.body.removeChild(ta);
+  }
+});
+</script>
+</body>
+</html>
