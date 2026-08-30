@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI 초안 그대로 냈다 피 본 직장인 필독! 3단계 리팩토링 프롬프트 — 네이버 원고</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 24px 16px 80px;
+    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+                 "Malgun Gothic", sans-serif;
+    background: #F6F7F9; color: #1F2937; line-height: 1.75;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  .head {
+    background: #03C75A; color: #fff; padding: 20px 22px;
+    border-radius: 14px; margin-bottom: 20px;
+  }
+  .head h1 { margin: 0 0 6px; font-size: 20px; line-height: 1.45; }
+  .head .date { font-size: 13px; opacity: .9; }
+  .card {
+    background: #fff; border-radius: 14px; padding: 18px 20px;
+    margin-bottom: 16px; border: 1px solid #E5E7EB;
+  }
+  .card h2 {
+    margin: 0 0 12px; font-size: 15px; color: #6B7280;
+    font-weight: 700; letter-spacing: .3px;
+  }
+  ul { margin: 0; padding: 0; list-style: none; }
+  ul li {
+    display: flex; align-items: center; gap: 10px;
+    padding: 9px 0; border-bottom: 1px solid #F3F4F6;
+  }
+  ul li:last-child { border-bottom: 0; }
+  ul li .t { flex: 1; font-size: 15px; }
+  .copy {
+    border: 0; background: #EEF2FF; color: #4F46E5;
+    padding: 7px 13px; border-radius: 8px; font-size: 13px;
+    cursor: pointer; white-space: nowrap; font-weight: 600;
+  }
+  .copy:hover { background: #E0E7FF; }
+  .copy.done { background: #DCFCE7; color: #16A34A; }
+  .tags { color: #2563EB; font-size: 14px; word-break: keep-all; }
+  .block {
+    background: #fff; border: 1px solid #E5E7EB;
+    border-radius: 14px; padding: 16px 18px; margin-bottom: 12px;
+  }
+  .block.text .body { font-size: 15.5px; margin-bottom: 12px; }
+  .block.img { text-align: center; background: #FAFBFC; }
+  .block.img img {
+    width: 100%; height: auto; border-radius: 10px; display: block;
+  }
+  .imgno {
+    font-size: 12px; color: #9CA3AF; margin-bottom: 8px;
+    font-weight: 700; letter-spacing: .5px;
+  }
+  .fname {
+    font-size: 12px; color: #9CA3AF; margin-top: 8px;
+    font-family: ui-monospace, Menlo, monospace;
+  }
+  .dl {
+    display: inline-block; margin-top: 10px; padding: 8px 16px;
+    background: #F3F4F6; color: #374151; border-radius: 8px;
+    text-decoration: none; font-size: 13px; font-weight: 600;
+  }
+  .source {
+    font-size: 13px; color: #9CA3AF; margin-top: 22px;
+    padding-top: 14px; border-top: 1px solid #E5E7EB;
+  }
+  .source a { color: #6B7280; }
+  .allbar {
+    position: fixed; left: 0; right: 0; bottom: 0;
+    background: #fff; border-top: 1px solid #E5E7EB;
+    padding: 12px 16px; text-align: center;
+  }
+  .allbar button {
+    width: 100%; max-width: 720px; padding: 14px;
+    background: #03C75A; color: #fff; border: 0;
+    border-radius: 10px; font-size: 15px; font-weight: 700; cursor: pointer;
+  }
+  .allbar button.done { background: #16A34A; }
+  .guide {
+    background: #FFFBEB; border: 1px solid #FDE68A;
+    border-radius: 12px; padding: 14px 18px; margin-bottom: 16px;
+    font-size: 14px; color: #92400E;
+  }
+  .guide b { display: block; margin-bottom: 6px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="head">
+    <h1>AI 초안 그대로 냈다 피 본 직장인 필독! 3단계 리팩토링 프롬프트</h1>
+    <div class="date">2026년 08월 30일 15:16 생성</div>
+  </div>
+
+  <div class="guide">
+    <b>이렇게 쓰면 됩니다</b>
+    네이버 블로그 글쓰기를 연 뒤, 아래 본문을 순서대로 복사해 붙여넣고
+    사진 자리에는 저장한 이미지를 올리면 됩니다.
+  </div>
+
+  <div class="card">
+    <h2>제목 후보</h2>
+    <ul><li><span class="t">AI가 쓴 어색한 보고서, 상사에게 욕 안 먹고 제출하는 3단계 검수법</span><button class="copy" data-copy="AI가 쓴 어색한 보고서, 상사에게 욕 안 먹고 제출하는 3단계 검수법">복사</button></li><li><span class="t">AI 초안 그대로 냈다 피 본 직장인 필독! 3단계 리팩토링 프롬프트</span><button class="copy" data-copy="AI 초안 그대로 냈다 피 본 직장인 필독! 3단계 리팩토링 프롬프트">복사</button></li><li><span class="t">AI 보고서 5분 만에 깔끔하게 다듬는 프롬프트 활용 꿀팁</span><button class="copy" data-copy="AI 보고서 5분 만에 깔끔하게 다듬는 프롬프트 활용 꿀팁">복사</button></li></ul>
+  </div>
+
+  <div class="card">
+    <h2>태그</h2>
+    <div class="tags">#AI업무활용 #AI보고서작성 #AI프롬프트작성법 #AI문장수정 #직장인AI활용 #보고서작성법 #업무효율화</div>
+    <div style="margin-top:12px">
+      <button class="copy" data-copy="#AI업무활용 #AI보고서작성 #AI프롬프트작성법 #AI문장수정 #직장인AI활용 #보고서작성법 #업무효율화">태그 전체 복사</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>본문</h2>
+  </div>
+
+  <div class="block img"><div class="imgno">사진 1</div><img src="../images/20260830-1516-ai-3-thumbnail-sq.png" alt="대표 이미지"><div class="fname">20260830-1516-ai-3-thumbnail-sq.png</div><a class="dl" href="../images/20260830-1516-ai-3-thumbnail-sq.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">요즘 보고서 쓸 때 AI 써본 분들 많을 거다.<br><br>초안 뚝딱 만들어주니까 편하긴 한데.<br><br>막상 출력해서 읽어보면 엄청 어색하다.<br><br>"~에 기여할 것으로 기대됩니다" 같은 번지르르한 말만 가득하고.<br><br>핵심 알맹이는 쏙 빠져있는 경우가 태반이다.<br><br>이대로 상사한테 제출했다간 바로 까인다.<br><br>AI가 만든 초안은 완제품이 아니라 원재료다.<br><br>진짜 다듬는 작업이 필요한데.<br><br>내가 직접 하나하나 수정하자니 시간 낭비다.<br><br>그럴 때 쓰는 3단계 리팩토링 프롬프트를 가져왔다.</div><button class="copy" data-copy="요즘 보고서 쓸 때 AI 써본 분들 많을 거다.
+
+초안 뚝딱 만들어주니까 편하긴 한데.
+
+막상 출력해서 읽어보면 엄청 어색하다.
+
+"~에 기여할 것으로 기대됩니다" 같은 번지르르한 말만 가득하고.
+
+핵심 알맹이는 쏙 빠져있는 경우가 태반이다.
+
+이대로 상사한테 제출했다간 바로 까인다.
+
+AI가 만든 초안은 완제품이 아니라 원재료다.
+
+진짜 다듬는 작업이 필요한데.
+
+내가 직접 하나하나 수정하자니 시간 낭비다.
+
+그럴 때 쓰는 3단계 리팩토링 프롬프트를 가져왔다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 2</div><img src="../images/20260830-1516-ai-3-diagram.png" alt="동작 구조 다이어그램"><div class="fname">20260830-1516-ai-3-diagram.png</div><a class="dl" href="../images/20260830-1516-ai-3-diagram.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">1단계는 논리 오류와 군더더기 잡기다.<br><br>AI는 했던 말을 또 하고, 앞뒤 안 맞는 논리를 펼칠 때가 있다.<br><br>이걸 먼저 쳐내는 게 우선이다.<br><br>프롬프트는 이렇게 써보자.<br><br>"아래 텍스트에서 중복되는 문장과 맥락에 맞지 않는 수식어를 전부 삭제해 줘. 논리적 비약이 있는 부분은 지적해 줘."<br><br>이렇게만 돌려도 분량이 반으로 줄면서 핵심만 남는다.</div><button class="copy" data-copy="1단계는 논리 오류와 군더더기 잡기다.
+
+AI는 했던 말을 또 하고, 앞뒤 안 맞는 논리를 펼칠 때가 있다.
+
+이걸 먼저 쳐내는 게 우선이다.
+
+프롬프트는 이렇게 써보자.
+
+"아래 텍스트에서 중복되는 문장과 맥락에 맞지 않는 수식어를 전부 삭제해 줘. 논리적 비약이 있는 부분은 지적해 줘."
+
+이렇게만 돌려도 분량이 반으로 줄면서 핵심만 남는다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 3</div><img src="../images/20260830-1516-ai-3-compare.png" alt="비교표"><div class="fname">20260830-1516-ai-3-compare.png</div><a class="dl" href="../images/20260830-1516-ai-3-compare.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">2단계는 보고서용 '직장인 말투' 변환이다.<br><br>AI 특유의 번역투나 감성적인 표현을 쳐내야 한다.<br><br>"매우 긍정적인 효과가 예상됨" 같은 건 당장 지워야 한다.<br><br>이때는 구체적인 지침을 줘야 한다.<br><br>"보고서에 어울리는 명확하고 단정한 어조로 바꿔 줘. '~함', '~음' 개조식으로 정리하고, 추상적인 단어는 제외해 줘."</div><button class="copy" data-copy="2단계는 보고서용 '직장인 말투' 변환이다.
+
+AI 특유의 번역투나 감성적인 표현을 쳐내야 한다.
+
+"매우 긍정적인 효과가 예상됨" 같은 건 당장 지워야 한다.
+
+이때는 구체적인 지침을 줘야 한다.
+
+"보고서에 어울리는 명확하고 단정한 어조로 바꿔 줘. '~함', '~음' 개조식으로 정리하고, 추상적인 단어는 제외해 줘."">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 4</div><img src="../images/20260830-1516-ai-3-steps.png" alt="단계별 가이드"><div class="fname">20260830-1516-ai-3-steps.png</div><a class="dl" href="../images/20260830-1516-ai-3-steps.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">3단계는 결론과 실행 계획 강조다.<br><br>상사가 보고서 볼 때 가장 먼저 보는 건 '그래서 뭘 해야 하는데?'다.<br><br>두두두 적힌 글을 한눈에 보이게 구조화해야 한다.<br><br>"이 내용을 바탕으로 [배경-문제점-해결책-향후 일정] 4단계 구조로 요약해 줘."<br><br>이렇게 돌려주면 비로소 상사 책상에 올릴 만한 보고서 형태가 갖춰진다.</div><button class="copy" data-copy="3단계는 결론과 실행 계획 강조다.
+
+상사가 보고서 볼 때 가장 먼저 보는 건 '그래서 뭘 해야 하는데?'다.
+
+두두두 적힌 글을 한눈에 보이게 구조화해야 한다.
+
+"이 내용을 바탕으로 [배경-문제점-해결책-향후 일정] 4단계 구조로 요약해 줘."
+
+이렇게 돌려주면 비로소 상사 책상에 올릴 만한 보고서 형태가 갖춰진다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 5</div><img src="../images/20260830-1516-ai-3-summary.png" alt="핵심 요약"><div class="fname">20260830-1516-ai-3-summary.png</div><a class="dl" href="../images/20260830-1516-ai-3-summary.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">AI는 아주 훌륭한 비서지만 최종 검수는 내 몫이다.<br><br>그냥 복붙해서 내지 말고 딱 3단계 프롬프트만 거쳐보자.<br><br>퇴근 속도가 달라진다.</div><button class="copy" data-copy="AI는 아주 훌륭한 비서지만 최종 검수는 내 몫이다.
+
+그냥 복붙해서 내지 말고 딱 3단계 프롬프트만 거쳐보자.
+
+퇴근 속도가 달라진다.">이 부분 복사</button></div>
+
+  <div class="source">참고 기사: <a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE8wdVo4aEtVS2lLMVZSTzdDUk0yak45OXFjRW5HTGo4Z3ZPRDc5NlNlQUFId3l2Rk5yWGVwWHlpZTVva1JhRzk1Z1NqV0dzOUJ0SDJ2XzhyODAwQdIBWEFVX3lxTE5UNHc1blo0VlZuem9SWUxNdEQwY21pamw1ekMxcGNhNGZMZG1UaXk4SnBhdU41dl9BUEFkWC1nMTAyN0VSemxRUnhiNkVycGlhY052YTNCMWM?oc=5" target="_blank" rel="noopener">직장인 90%가 내가 우리 회사 AI 활용 최고…시켜봤더니 25%만 제대로 활용 - 아주경제</a></div>
+</div>
+
+<div class="allbar">
+  <button id="all" data-copy="( 사진 여기 — thumbnail )
+
+요즘 보고서 쓸 때 AI 써본 분들 많을 거다.
+
+초안 뚝딱 만들어주니까 편하긴 한데.
+
+막상 출력해서 읽어보면 엄청 어색하다.
+
+"~에 기여할 것으로 기대됩니다" 같은 번지르르한 말만 가득하고.
+
+핵심 알맹이는 쏙 빠져있는 경우가 태반이다.
+
+이대로 상사한테 제출했다간 바로 까인다.
+
+AI가 만든 초안은 완제품이 아니라 원재료다.
+
+진짜 다듬는 작업이 필요한데.
+
+내가 직접 하나하나 수정하자니 시간 낭비다.
+
+그럴 때 쓰는 3단계 리팩토링 프롬프트를 가져왔다.
+
+( 사진 여기 — diagram )
+
+1단계는 논리 오류와 군더더기 잡기다.
+
+AI는 했던 말을 또 하고, 앞뒤 안 맞는 논리를 펼칠 때가 있다.
+
+이걸 먼저 쳐내는 게 우선이다.
+
+프롬프트는 이렇게 써보자.
+
+"아래 텍스트에서 중복되는 문장과 맥락에 맞지 않는 수식어를 전부 삭제해 줘. 논리적 비약이 있는 부분은 지적해 줘."
+
+이렇게만 돌려도 분량이 반으로 줄면서 핵심만 남는다.
+
+( 사진 여기 — compare )
+
+2단계는 보고서용 '직장인 말투' 변환이다.
+
+AI 특유의 번역투나 감성적인 표현을 쳐내야 한다.
+
+"매우 긍정적인 효과가 예상됨" 같은 건 당장 지워야 한다.
+
+이때는 구체적인 지침을 줘야 한다.
+
+"보고서에 어울리는 명확하고 단정한 어조로 바꿔 줘. '~함', '~음' 개조식으로 정리하고, 추상적인 단어는 제외해 줘."
+
+( 사진 여기 — steps )
+
+3단계는 결론과 실행 계획 강조다.
+
+상사가 보고서 볼 때 가장 먼저 보는 건 '그래서 뭘 해야 하는데?'다.
+
+두두두 적힌 글을 한눈에 보이게 구조화해야 한다.
+
+"이 내용을 바탕으로 [배경-문제점-해결책-향후 일정] 4단계 구조로 요약해 줘."
+
+이렇게 돌려주면 비로소 상사 책상에 올릴 만한 보고서 형태가 갖춰진다.
+
+( 사진 여기 — summary )
+
+AI는 아주 훌륭한 비서지만 최종 검수는 내 몫이다.
+
+그냥 복붙해서 내지 말고 딱 3단계 프롬프트만 거쳐보자.
+
+퇴근 속도가 달라진다.">본문 전체 복사</button>
+</div>
+
+<script>
+document.addEventListener('click', function (e) {
+  var btn = e.target.closest('[data-copy]');
+  if (!btn) return;
+  var text = btn.getAttribute('data-copy');
+  var original = btn.textContent;
+
+  function done() {
+    btn.textContent = '복사됨';
+    btn.classList.add('done');
+    setTimeout(function () {
+      btn.textContent = original;
+      btn.classList.remove('done');
+    }, 1400);
+  }
+
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(text).then(done);
+  } else {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); done(); } catch (err) {}
+    document.body.removeChild(ta);
+  }
+});
+</script>
+</body>
+</html>
