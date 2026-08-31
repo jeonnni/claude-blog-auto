@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>챗GPT 프롬프트 작성법, 일방적으로 지시하지 마세요 (역질문 노하우) — 네이버 원고</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 24px 16px 80px;
+    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+                 "Malgun Gothic", sans-serif;
+    background: #F6F7F9; color: #1F2937; line-height: 1.75;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  .head {
+    background: #03C75A; color: #fff; padding: 20px 22px;
+    border-radius: 14px; margin-bottom: 20px;
+  }
+  .head h1 { margin: 0 0 6px; font-size: 20px; line-height: 1.45; }
+  .head .date { font-size: 13px; opacity: .9; }
+  .card {
+    background: #fff; border-radius: 14px; padding: 18px 20px;
+    margin-bottom: 16px; border: 1px solid #E5E7EB;
+  }
+  .card h2 {
+    margin: 0 0 12px; font-size: 15px; color: #6B7280;
+    font-weight: 700; letter-spacing: .3px;
+  }
+  ul { margin: 0; padding: 0; list-style: none; }
+  ul li {
+    display: flex; align-items: center; gap: 10px;
+    padding: 9px 0; border-bottom: 1px solid #F3F4F6;
+  }
+  ul li:last-child { border-bottom: 0; }
+  ul li .t { flex: 1; font-size: 15px; }
+  .copy {
+    border: 0; background: #EEF2FF; color: #4F46E5;
+    padding: 7px 13px; border-radius: 8px; font-size: 13px;
+    cursor: pointer; white-space: nowrap; font-weight: 600;
+  }
+  .copy:hover { background: #E0E7FF; }
+  .copy.done { background: #DCFCE7; color: #16A34A; }
+  .tags { color: #2563EB; font-size: 14px; word-break: keep-all; }
+  .block {
+    background: #fff; border: 1px solid #E5E7EB;
+    border-radius: 14px; padding: 16px 18px; margin-bottom: 12px;
+  }
+  .block.text .body { font-size: 15.5px; margin-bottom: 12px; }
+  .block.img { text-align: center; background: #FAFBFC; }
+  .block.img img {
+    width: 100%; height: auto; border-radius: 10px; display: block;
+  }
+  .imgno {
+    font-size: 12px; color: #9CA3AF; margin-bottom: 8px;
+    font-weight: 700; letter-spacing: .5px;
+  }
+  .fname {
+    font-size: 12px; color: #9CA3AF; margin-top: 8px;
+    font-family: ui-monospace, Menlo, monospace;
+  }
+  .dl {
+    display: inline-block; margin-top: 10px; padding: 8px 16px;
+    background: #F3F4F6; color: #374151; border-radius: 8px;
+    text-decoration: none; font-size: 13px; font-weight: 600;
+  }
+  .source {
+    font-size: 13px; color: #9CA3AF; margin-top: 22px;
+    padding-top: 14px; border-top: 1px solid #E5E7EB;
+  }
+  .source a { color: #6B7280; }
+  .allbar {
+    position: fixed; left: 0; right: 0; bottom: 0;
+    background: #fff; border-top: 1px solid #E5E7EB;
+    padding: 12px 16px; text-align: center;
+  }
+  .allbar button {
+    width: 100%; max-width: 720px; padding: 14px;
+    background: #03C75A; color: #fff; border: 0;
+    border-radius: 10px; font-size: 15px; font-weight: 700; cursor: pointer;
+  }
+  .allbar button.done { background: #16A34A; }
+  .guide {
+    background: #FFFBEB; border: 1px solid #FDE68A;
+    border-radius: 12px; padding: 14px 18px; margin-bottom: 16px;
+    font-size: 14px; color: #92400E;
+  }
+  .guide b { display: block; margin-bottom: 6px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="head">
+    <h1>챗GPT 프롬프트 작성법, 일방적으로 지시하지 마세요 (역질문 노하우)</h1>
+    <div class="date">2026년 08월 31일 17:57 생성</div>
+  </div>
+
+  <div class="guide">
+    <b>이렇게 쓰면 됩니다</b>
+    네이버 블로그 글쓰기를 연 뒤, 아래 본문을 순서대로 복사해 붙여넣고
+    사진 자리에는 저장한 이미지를 올리면 됩니다.
+  </div>
+
+  <div class="card">
+    <h2>제목 후보</h2>
+    <ul><li><span class="t">AI한테 역질문 던지게 만들었더니 분석 퀄리티가 2배 뛰네</span><button class="copy" data-copy="AI한테 역질문 던지게 만들었더니 분석 퀄리티가 2배 뛰네">복사</button></li><li><span class="t">챗GPT 프롬프트 작성법, 일방적으로 지시하지 마세요 (역질문 노하우)</span><button class="copy" data-copy="챗GPT 프롬프트 작성법, 일방적으로 지시하지 마세요 (역질문 노하우)">복사</button></li><li><span class="t">AI 업무 활용 꿀팁: 역질문 하나로 답변 깊이 다르게 만드는 법</span><button class="copy" data-copy="AI 업무 활용 꿀팁: 역질문 하나로 답변 깊이 다르게 만드는 법">복사</button></li></ul>
+  </div>
+
+  <div class="card">
+    <h2>태그</h2>
+    <div class="tags">#챗GPT역질문 #AI프롬프트작성법 #챗GPT질문기법 #AI업무활용 #챗GPT분석노하우 #프롬프트지니 #생성형AI활용</div>
+    <div style="margin-top:12px">
+      <button class="copy" data-copy="#챗GPT역질문 #AI프롬프트작성법 #챗GPT질문기법 #AI업무활용 #챗GPT분석노하우 #프롬프트지니 #생성형AI활용">태그 전체 복사</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>본문</h2>
+  </div>
+
+  <div class="block img"><div class="imgno">사진 1</div><img src="../images/20260831-1757-gpt-thumbnail-sq.png" alt="대표 이미지"><div class="fname">20260831-1757-gpt-thumbnail-sq.png</div><a class="dl" href="../images/20260831-1757-gpt-thumbnail-sq.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">요즘 AI한테 질문 던지고 답변 받아서 업무에 쓰는 분들 많다.<br><br>근데 막상 써보면 결과물이 뻔하거나 겉핥기 수준으로 나와서 답답할 때가 있더라.<br><br>질문하는 방식을 약간만 바꾸면 답변 수준이 완전히 달라지는데.<br><br>핵심은 일방적으로 지시하는 게 아니라 AI가 나한테 역질문하게 만드는 거다.</div><button class="copy" data-copy="요즘 AI한테 질문 던지고 답변 받아서 업무에 쓰는 분들 많다.
+
+근데 막상 써보면 결과물이 뻔하거나 겉핥기 수준으로 나와서 답답할 때가 있더라.
+
+질문하는 방식을 약간만 바꾸면 답변 수준이 완전히 달라지는데.
+
+핵심은 일방적으로 지시하는 게 아니라 AI가 나한테 역질문하게 만드는 거다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 2</div><img src="../images/20260831-1757-gpt-diagram.png" alt="동작 구조 다이어그램"><div class="fname">20260831-1757-gpt-diagram.png</div><a class="dl" href="../images/20260831-1757-gpt-diagram.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">보통은 "이 시장 분석해서 보고서 써줘" 하고 끝낸다.<br><br>그러면 AI도 그냥 뻔한 정보만 긁어와서 대답하더라.<br><br>이때 문장 하나만 뒤에 덧붙여보면 분위기가 바뀐다.<br><br>"더 정확하게 분석하기 위해 나에게 필요한 맥락이나 정보를 3가지 역질문해줘."<br><br>이렇게 쓰면 AI가 내 의도와 상황을 파악하려고 질문을 던지기 시작한다.</div><button class="copy" data-copy="보통은 "이 시장 분석해서 보고서 써줘" 하고 끝낸다.
+
+그러면 AI도 그냥 뻔한 정보만 긁어와서 대답하더라.
+
+이때 문장 하나만 뒤에 덧붙여보면 분위기가 바뀐다.
+
+"더 정확하게 분석하기 위해 나에게 필요한 맥락이나 정보를 3가지 역질문해줘."
+
+이렇게 쓰면 AI가 내 의도와 상황을 파악하려고 질문을 던지기 시작한다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 3</div><img src="../images/20260831-1757-gpt-compare.png" alt="비교표"><div class="fname">20260831-1757-gpt-compare.png</div><a class="dl" href="../images/20260831-1757-gpt-compare.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">일반 지시와 역질문 유도의 차이는 생각보다 크다.<br><br>일반 지시는 AI가 혼자 추측해서 쓰다 보니 밋밋한 답변이 나온다.<br><br>반면에 역질문을 요청하면 내 목표, 타겟, 예산 같은 핵심 변수를 먼저 물어보더라.<br><br>내가 그 질문에 답을 주는 순간 분석의 정밀도가 확 올라간다.</div><button class="copy" data-copy="일반 지시와 역질문 유도의 차이는 생각보다 크다.
+
+일반 지시는 AI가 혼자 추측해서 쓰다 보니 밋밋한 답변이 나온다.
+
+반면에 역질문을 요청하면 내 목표, 타겟, 예산 같은 핵심 변수를 먼저 물어보더라.
+
+내가 그 질문에 답을 주는 순간 분석의 정밀도가 확 올라간다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 4</div><img src="../images/20260831-1757-gpt-steps.png" alt="단계별 가이드"><div class="fname">20260831-1757-gpt-steps.png</div><a class="dl" href="../images/20260831-1757-gpt-steps.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">실제로 쓸 때 이렇게 해보자.<br><br>첫째, 원하는 목표를 간단히 적는다.<br>예를 들면 "신규 서비스 마케팅 전략을 세우고 싶다" 정도면 충분하다.<br><br>둘째, 역질문 요청 문장을 붙인다.<br>"완벽한 전략을 짜기 위해 너에게 필요한 정보가 있다면 나한테 질문 5개를 먼저 해줘."<br><br>셋째, AI가 던진 질문에 솔직하고 구체적으로 답한다.<br><br>이렇게 주고받은 다음 결과물을 받아보면 전문 컨설턴트가 써준 것 같은 퀄리티가 나온다.</div><button class="copy" data-copy="실제로 쓸 때 이렇게 해보자.
+
+첫째, 원하는 목표를 간단히 적는다.
+예를 들면 "신규 서비스 마케팅 전략을 세우고 싶다" 정도면 충분하다.
+
+둘째, 역질문 요청 문장을 붙인다.
+"완벽한 전략을 짜기 위해 너에게 필요한 정보가 있다면 나한테 질문 5개를 먼저 해줘."
+
+셋째, AI가 던진 질문에 솔직하고 구체적으로 답한다.
+
+이렇게 주고받은 다음 결과물을 받아보면 전문 컨설턴트가 써준 것 같은 퀄리티가 나온다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 5</div><img src="../images/20260831-1757-gpt-summary.png" alt="핵심 요약"><div class="fname">20260831-1757-gpt-summary.png</div><a class="dl" href="../images/20260831-1757-gpt-summary.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">매번 길고 복잡한 프롬프트를 짤 필요도 없다.<br><br>질문의 주도권을 살짝 넘겨주는 것만으로도 작업 시간이 절반으로 줄어든다.<br><br>오늘 당장 업무나 조사 작업할 때 한 번 써보자.<br><br>결과물 깊이가 달라지는 걸 바로 느끼게 될 거다.</div><button class="copy" data-copy="매번 길고 복잡한 프롬프트를 짤 필요도 없다.
+
+질문의 주도권을 살짝 넘겨주는 것만으로도 작업 시간이 절반으로 줄어든다.
+
+오늘 당장 업무나 조사 작업할 때 한 번 써보자.
+
+결과물 깊이가 달라지는 걸 바로 느끼게 될 거다.">이 부분 복사</button></div>
+
+  <div class="source">참고 기사: <a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE1abkdBajh6NlVNNlFMSTZvWWNSNFZzMVRTdGRZaXNEdWo1UzBzanpsRTBITkJWOVRmWklWY2tXUUtyV1JsdDFGbEY0bldES2QxSnBGaG02VlRxRzVRYThSWWhUM0NGcTJZNUlwTjh4TlQ?oc=5" target="_blank" rel="noopener">챗GPT로 주식투자 이렇게 하세요! 애널리스트급 분석하는 ‘역질문’ 활용법 [1부 / 허성범 연구원]</a></div>
+</div>
+
+<div class="allbar">
+  <button id="all" data-copy="( 사진 여기 — thumbnail )
+
+요즘 AI한테 질문 던지고 답변 받아서 업무에 쓰는 분들 많다.
+
+근데 막상 써보면 결과물이 뻔하거나 겉핥기 수준으로 나와서 답답할 때가 있더라.
+
+질문하는 방식을 약간만 바꾸면 답변 수준이 완전히 달라지는데.
+
+핵심은 일방적으로 지시하는 게 아니라 AI가 나한테 역질문하게 만드는 거다.
+
+( 사진 여기 — diagram )
+
+보통은 "이 시장 분석해서 보고서 써줘" 하고 끝낸다.
+
+그러면 AI도 그냥 뻔한 정보만 긁어와서 대답하더라.
+
+이때 문장 하나만 뒤에 덧붙여보면 분위기가 바뀐다.
+
+"더 정확하게 분석하기 위해 나에게 필요한 맥락이나 정보를 3가지 역질문해줘."
+
+이렇게 쓰면 AI가 내 의도와 상황을 파악하려고 질문을 던지기 시작한다.
+
+( 사진 여기 — compare )
+
+일반 지시와 역질문 유도의 차이는 생각보다 크다.
+
+일반 지시는 AI가 혼자 추측해서 쓰다 보니 밋밋한 답변이 나온다.
+
+반면에 역질문을 요청하면 내 목표, 타겟, 예산 같은 핵심 변수를 먼저 물어보더라.
+
+내가 그 질문에 답을 주는 순간 분석의 정밀도가 확 올라간다.
+
+( 사진 여기 — steps )
+
+실제로 쓸 때 이렇게 해보자.
+
+첫째, 원하는 목표를 간단히 적는다.
+예를 들면 "신규 서비스 마케팅 전략을 세우고 싶다" 정도면 충분하다.
+
+둘째, 역질문 요청 문장을 붙인다.
+"완벽한 전략을 짜기 위해 너에게 필요한 정보가 있다면 나한테 질문 5개를 먼저 해줘."
+
+셋째, AI가 던진 질문에 솔직하고 구체적으로 답한다.
+
+이렇게 주고받은 다음 결과물을 받아보면 전문 컨설턴트가 써준 것 같은 퀄리티가 나온다.
+
+( 사진 여기 — summary )
+
+매번 길고 복잡한 프롬프트를 짤 필요도 없다.
+
+질문의 주도권을 살짝 넘겨주는 것만으로도 작업 시간이 절반으로 줄어든다.
+
+오늘 당장 업무나 조사 작업할 때 한 번 써보자.
+
+결과물 깊이가 달라지는 걸 바로 느끼게 될 거다.">본문 전체 복사</button>
+</div>
+
+<script>
+document.addEventListener('click', function (e) {
+  var btn = e.target.closest('[data-copy]');
+  if (!btn) return;
+  var text = btn.getAttribute('data-copy');
+  var original = btn.textContent;
+
+  function done() {
+    btn.textContent = '복사됨';
+    btn.classList.add('done');
+    setTimeout(function () {
+      btn.textContent = original;
+      btn.classList.remove('done');
+    }, 1400);
+  }
+
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(text).then(done);
+  } else {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); done(); } catch (err) {}
+    document.body.removeChild(ta);
+  }
+});
+</script>
+</body>
+</html>
