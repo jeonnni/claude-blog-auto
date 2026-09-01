@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>흩어진 엑셀 시트 합치기, 챗GPT 프롬프트 몇 줄이면 끝 — 네이버 원고</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 24px 16px 80px;
+    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+                 "Malgun Gothic", sans-serif;
+    background: #F6F7F9; color: #1F2937; line-height: 1.75;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  .head {
+    background: #03C75A; color: #fff; padding: 20px 22px;
+    border-radius: 14px; margin-bottom: 20px;
+  }
+  .head h1 { margin: 0 0 6px; font-size: 20px; line-height: 1.45; }
+  .head .date { font-size: 13px; opacity: .9; }
+  .card {
+    background: #fff; border-radius: 14px; padding: 18px 20px;
+    margin-bottom: 16px; border: 1px solid #E5E7EB;
+  }
+  .card h2 {
+    margin: 0 0 12px; font-size: 15px; color: #6B7280;
+    font-weight: 700; letter-spacing: .3px;
+  }
+  ul { margin: 0; padding: 0; list-style: none; }
+  ul li {
+    display: flex; align-items: center; gap: 10px;
+    padding: 9px 0; border-bottom: 1px solid #F3F4F6;
+  }
+  ul li:last-child { border-bottom: 0; }
+  ul li .t { flex: 1; font-size: 15px; }
+  .copy {
+    border: 0; background: #EEF2FF; color: #4F46E5;
+    padding: 7px 13px; border-radius: 8px; font-size: 13px;
+    cursor: pointer; white-space: nowrap; font-weight: 600;
+  }
+  .copy:hover { background: #E0E7FF; }
+  .copy.done { background: #DCFCE7; color: #16A34A; }
+  .tags { color: #2563EB; font-size: 14px; word-break: keep-all; }
+  .block {
+    background: #fff; border: 1px solid #E5E7EB;
+    border-radius: 14px; padding: 16px 18px; margin-bottom: 12px;
+  }
+  .block.text .body { font-size: 15.5px; margin-bottom: 12px; }
+  .block.img { text-align: center; background: #FAFBFC; }
+  .block.img img {
+    width: 100%; height: auto; border-radius: 10px; display: block;
+  }
+  .imgno {
+    font-size: 12px; color: #9CA3AF; margin-bottom: 8px;
+    font-weight: 700; letter-spacing: .5px;
+  }
+  .fname {
+    font-size: 12px; color: #9CA3AF; margin-top: 8px;
+    font-family: ui-monospace, Menlo, monospace;
+  }
+  .dl {
+    display: inline-block; margin-top: 10px; padding: 8px 16px;
+    background: #F3F4F6; color: #374151; border-radius: 8px;
+    text-decoration: none; font-size: 13px; font-weight: 600;
+  }
+  .source {
+    font-size: 13px; color: #9CA3AF; margin-top: 22px;
+    padding-top: 14px; border-top: 1px solid #E5E7EB;
+  }
+  .source a { color: #6B7280; }
+  .allbar {
+    position: fixed; left: 0; right: 0; bottom: 0;
+    background: #fff; border-top: 1px solid #E5E7EB;
+    padding: 12px 16px; text-align: center;
+  }
+  .allbar button {
+    width: 100%; max-width: 720px; padding: 14px;
+    background: #03C75A; color: #fff; border: 0;
+    border-radius: 10px; font-size: 15px; font-weight: 700; cursor: pointer;
+  }
+  .allbar button.done { background: #16A34A; }
+  .guide {
+    background: #FFFBEB; border: 1px solid #FDE68A;
+    border-radius: 12px; padding: 14px 18px; margin-bottom: 16px;
+    font-size: 14px; color: #92400E;
+  }
+  .guide b { display: block; margin-bottom: 6px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="head">
+    <h1>흩어진 엑셀 시트 합치기, 챗GPT 프롬프트 몇 줄이면 끝</h1>
+    <div class="date">2026년 09월 01일 15:27 생성</div>
+  </div>
+
+  <div class="guide">
+    <b>이렇게 쓰면 됩니다</b>
+    네이버 블로그 글쓰기를 연 뒤, 아래 본문을 순서대로 복사해 붙여넣고
+    사진 자리에는 저장한 이미지를 올리면 됩니다.
+  </div>
+
+  <div class="card">
+    <h2>제목 후보</h2>
+    <ul><li><span class="t">엑셀 수식 외우지 마라, 챗GPT로 3분 만에 취합하는 법</span><button class="copy" data-copy="엑셀 수식 외우지 마라, 챗GPT로 3분 만에 취합하는 법">복사</button></li><li><span class="t">흩어진 엑셀 시트 합치기, 챗GPT 프롬프트 몇 줄이면 끝</span><button class="copy" data-copy="흩어진 엑셀 시트 합치기, 챗GPT 프롬프트 몇 줄이면 끝">복사</button></li><li><span class="t">챗GPT 엑셀 활용법: 복잡한 파일 취합부터 보고서 표까지 한번에</span><button class="copy" data-copy="챗GPT 엑셀 활용법: 복잡한 파일 취합부터 보고서 표까지 한번에">복사</button></li></ul>
+  </div>
+
+  <div class="card">
+    <h2>태그</h2>
+    <div class="tags">#챗GPT엑셀활용 #엑셀데이터취합 #챗GPT업무자동화 #엑셀함수AI #엑셀보고서자동화 #업무효율화 #챗GPT프롬프트</div>
+    <div style="margin-top:12px">
+      <button class="copy" data-copy="#챗GPT엑셀활용 #엑셀데이터취합 #챗GPT업무자동화 #엑셀함수AI #엑셀보고서자동화 #업무효율화 #챗GPT프롬프트">태그 전체 복사</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>본문</h2>
+  </div>
+
+  <div class="block img"><div class="imgno">사진 1</div><img src="../images/20260901-1527-gpt-thumbnail-sq.png" alt="대표 이미지"><div class="fname">20260901-1527-gpt-thumbnail-sq.png</div><a class="dl" href="../images/20260901-1527-gpt-thumbnail-sq.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">월말만 되면 부서별로 흩어진 엑셀 파일 받아서 취합하느라 정신없다.<br>열 순서도 다르고 양식도 제각각이라 수동으로 붙여넣다 보면 1시간이 금방 지나가더라.<br><br>VLOOKUP이나 INDEX MATCH 같은 복잡한 함수 외울 필요 전혀 없다.<br>요즘은 챗GPT에 파일만 업로드하고 명령어 몇 줄 적으면 3분 만에 깔끔하게 합쳐준다.<br><br>매번 노가다 작업하느라 퇴근 늦어지던 사람한테는 진짜 신세계다.</div><button class="copy" data-copy="월말만 되면 부서별로 흩어진 엑셀 파일 받아서 취합하느라 정신없다.
+열 순서도 다르고 양식도 제각각이라 수동으로 붙여넣다 보면 1시간이 금방 지나가더라.
+
+VLOOKUP이나 INDEX MATCH 같은 복잡한 함수 외울 필요 전혀 없다.
+요즘은 챗GPT에 파일만 업로드하고 명령어 몇 줄 적으면 3분 만에 깔끔하게 합쳐준다.
+
+매번 노가다 작업하느라 퇴근 늦어지던 사람한테는 진짜 신세계다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 2</div><img src="../images/20260901-1527-gpt-diagram.png" alt="동작 구조 다이어그램"><div class="fname">20260901-1527-gpt-diagram.png</div><a class="dl" href="../images/20260901-1527-gpt-diagram.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">챗GPT 업무자동화의 핵심은 간단하다.<br>흩어져 있는 엑셀 시트들을 챗GPT가 읽고, 동일한 데이터 항목끼리 짝을 맞춰 보고서용 통합 표로 재구성하는 방식이다.<br><br>기존 수작업 방식이랑 비교해 보면 작업 시간 차이가 진짜 엄청나다.</div><button class="copy" data-copy="챗GPT 업무자동화의 핵심은 간단하다.
+흩어져 있는 엑셀 시트들을 챗GPT가 읽고, 동일한 데이터 항목끼리 짝을 맞춰 보고서용 통합 표로 재구성하는 방식이다.
+
+기존 수작업 방식이랑 비교해 보면 작업 시간 차이가 진짜 엄청나다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 3</div><img src="../images/20260901-1527-gpt-compare.png" alt="비교표"><div class="fname">20260901-1527-gpt-compare.png</div><a class="dl" href="../images/20260901-1527-gpt-compare.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">직접 수식 입력하고 피벗테이블 돌릴 때는 괄호 하나 틀려서 오류 찾아내느라 눈 빠지는 줄 알았다.<br>챗GPT 엑셀 활용법을 알고 나서는 텍스트 프롬프트 한 줄로 정제가 끝나버린다.<br><br>실제로 따라 할 수 있는 프롬프트 작성 순서를 정리해봤다.</div><button class="copy" data-copy="직접 수식 입력하고 피벗테이블 돌릴 때는 괄호 하나 틀려서 오류 찾아내느라 눈 빠지는 줄 알았다.
+챗GPT 엑셀 활용법을 알고 나서는 텍스트 프롬프트 한 줄로 정제가 끝나버린다.
+
+실제로 따라 할 수 있는 프롬프트 작성 순서를 정리해봤다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 4</div><img src="../images/20260901-1527-gpt-steps.png" alt="단계별 가이드"><div class="fname">20260901-1527-gpt-steps.png</div><a class="dl" href="../images/20260901-1527-gpt-steps.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">첫 번째, 취합할 엑셀 파일이나 시트 데이터를 챗GPT 대화창에 올린다.<br><br>두 번째, 내가 원하는 취합 규칙을 구체적으로 알려준다.<br>이때 예시 프롬프트를 이렇게 작성하면 좋다.<br><br>"첨부한 3개 시트의 데이터에서 '날짜', '지점명', '매출액' 열만 골라내서 하나로 합쳐줘. 그리고 지점별 합계를 구해서 내림차순 정렬된 표 형태로 보여줘."<br><br>세 번째, 챗GPT가 생성해 준 결과 표를 그대로 복사해서 엑셀에 붙여넣거나 CSV 파일로 다운로드하면 끝이다.</div><button class="copy" data-copy="첫 번째, 취합할 엑셀 파일이나 시트 데이터를 챗GPT 대화창에 올린다.
+
+두 번째, 내가 원하는 취합 규칙을 구체적으로 알려준다.
+이때 예시 프롬프트를 이렇게 작성하면 좋다.
+
+"첨부한 3개 시트의 데이터에서 '날짜', '지점명', '매출액' 열만 골라내서 하나로 합쳐줘. 그리고 지점별 합계를 구해서 내림차순 정렬된 표 형태로 보여줘."
+
+세 번째, 챗GPT가 생성해 준 결과 표를 그대로 복사해서 엑셀에 붙여넣거나 CSV 파일로 다운로드하면 끝이다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 5</div><img src="../images/20260901-1527-gpt-summary.png" alt="핵심 요약"><div class="fname">20260901-1527-gpt-summary.png</div><a class="dl" href="../images/20260901-1527-gpt-summary.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">복잡한 엑셀 함수 AI한테 맡기면 진짜 편해진다.<br>양식이 조금씩 달라도 챗GPT가 문맥을 이해해서 알아서 정리해 주니까 엑셀 보고서 자동화가 별거 아니더라.<br><br>오늘 퇴근 전 5분만 투자해서 바로 적용해봐라.<br>칼퇴 속도가 달라질 거다.</div><button class="copy" data-copy="복잡한 엑셀 함수 AI한테 맡기면 진짜 편해진다.
+양식이 조금씩 달라도 챗GPT가 문맥을 이해해서 알아서 정리해 주니까 엑셀 보고서 자동화가 별거 아니더라.
+
+오늘 퇴근 전 5분만 투자해서 바로 적용해봐라.
+칼퇴 속도가 달라질 거다.">이 부분 복사</button></div>
+
+  <div class="source">참고 기사: <a href="https://news.google.com/rss/articles/CBMiX0FVX3lxTE1EeE9hVlQtdEdnTEZWVEpQdEprSUJEa0F2VDBFWGtkQmx0akNkY3ExUGg4N1NORThManY3QUZZUHZaal9qLWVZQldhOGlJLWdVM0hnWHB3UVRTSzZjRFpZ?oc=5" target="_blank" rel="noopener">[산업AI EXPO 프리뷰] AI 업무 지능화 ⑨ | 엑셀 취합부터 생산보고까지, 트리니오 AI가 맡는다</a></div>
+</div>
+
+<div class="allbar">
+  <button id="all" data-copy="( 사진 여기 — thumbnail )
+월말만 되면 부서별로 흩어진 엑셀 파일 받아서 취합하느라 정신없다.
+열 순서도 다르고 양식도 제각각이라 수동으로 붙여넣다 보면 1시간이 금방 지나가더라.
+
+VLOOKUP이나 INDEX MATCH 같은 복잡한 함수 외울 필요 전혀 없다.
+요즘은 챗GPT에 파일만 업로드하고 명령어 몇 줄 적으면 3분 만에 깔끔하게 합쳐준다.
+
+매번 노가다 작업하느라 퇴근 늦어지던 사람한테는 진짜 신세계다.
+
+( 사진 여기 — diagram )
+챗GPT 업무자동화의 핵심은 간단하다.
+흩어져 있는 엑셀 시트들을 챗GPT가 읽고, 동일한 데이터 항목끼리 짝을 맞춰 보고서용 통합 표로 재구성하는 방식이다.
+
+기존 수작업 방식이랑 비교해 보면 작업 시간 차이가 진짜 엄청나다.
+
+( 사진 여기 — compare )
+직접 수식 입력하고 피벗테이블 돌릴 때는 괄호 하나 틀려서 오류 찾아내느라 눈 빠지는 줄 알았다.
+챗GPT 엑셀 활용법을 알고 나서는 텍스트 프롬프트 한 줄로 정제가 끝나버린다.
+
+실제로 따라 할 수 있는 프롬프트 작성 순서를 정리해봤다.
+
+( 사진 여기 — steps )
+첫 번째, 취합할 엑셀 파일이나 시트 데이터를 챗GPT 대화창에 올린다.
+
+두 번째, 내가 원하는 취합 규칙을 구체적으로 알려준다.
+이때 예시 프롬프트를 이렇게 작성하면 좋다.
+
+"첨부한 3개 시트의 데이터에서 '날짜', '지점명', '매출액' 열만 골라내서 하나로 합쳐줘. 그리고 지점별 합계를 구해서 내림차순 정렬된 표 형태로 보여줘."
+
+세 번째, 챗GPT가 생성해 준 결과 표를 그대로 복사해서 엑셀에 붙여넣거나 CSV 파일로 다운로드하면 끝이다.
+
+( 사진 여기 — summary )
+복잡한 엑셀 함수 AI한테 맡기면 진짜 편해진다.
+양식이 조금씩 달라도 챗GPT가 문맥을 이해해서 알아서 정리해 주니까 엑셀 보고서 자동화가 별거 아니더라.
+
+오늘 퇴근 전 5분만 투자해서 바로 적용해봐라.
+칼퇴 속도가 달라질 거다.">본문 전체 복사</button>
+</div>
+
+<script>
+document.addEventListener('click', function (e) {
+  var btn = e.target.closest('[data-copy]');
+  if (!btn) return;
+  var text = btn.getAttribute('data-copy');
+  var original = btn.textContent;
+
+  function done() {
+    btn.textContent = '복사됨';
+    btn.classList.add('done');
+    setTimeout(function () {
+      btn.textContent = original;
+      btn.classList.remove('done');
+    }, 1400);
+  }
+
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(text).then(done);
+  } else {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); done(); } catch (err) {}
+    document.body.removeChild(ta);
+  }
+});
+</script>
+</body>
+</html>
