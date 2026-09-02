@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI 시장조사 10분 컷, 실무 프롬프트 작성법 — 네이버 원고</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 24px 16px 80px;
+    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+                 "Malgun Gothic", sans-serif;
+    background: #F6F7F9; color: #1F2937; line-height: 1.75;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  .head {
+    background: #03C75A; color: #fff; padding: 20px 22px;
+    border-radius: 14px; margin-bottom: 20px;
+  }
+  .head h1 { margin: 0 0 6px; font-size: 20px; line-height: 1.45; }
+  .head .date { font-size: 13px; opacity: .9; }
+  .card {
+    background: #fff; border-radius: 14px; padding: 18px 20px;
+    margin-bottom: 16px; border: 1px solid #E5E7EB;
+  }
+  .card h2 {
+    margin: 0 0 12px; font-size: 15px; color: #6B7280;
+    font-weight: 700; letter-spacing: .3px;
+  }
+  ul { margin: 0; padding: 0; list-style: none; }
+  ul li {
+    display: flex; align-items: center; gap: 10px;
+    padding: 9px 0; border-bottom: 1px solid #F3F4F6;
+  }
+  ul li:last-child { border-bottom: 0; }
+  ul li .t { flex: 1; font-size: 15px; }
+  .copy {
+    border: 0; background: #EEF2FF; color: #4F46E5;
+    padding: 7px 13px; border-radius: 8px; font-size: 13px;
+    cursor: pointer; white-space: nowrap; font-weight: 600;
+  }
+  .copy:hover { background: #E0E7FF; }
+  .copy.done { background: #DCFCE7; color: #16A34A; }
+  .tags { color: #2563EB; font-size: 14px; word-break: keep-all; }
+  .block {
+    background: #fff; border: 1px solid #E5E7EB;
+    border-radius: 14px; padding: 16px 18px; margin-bottom: 12px;
+  }
+  .block.text .body { font-size: 15.5px; margin-bottom: 12px; }
+  .block.img { text-align: center; background: #FAFBFC; }
+  .block.img img {
+    width: 100%; height: auto; border-radius: 10px; display: block;
+  }
+  .imgno {
+    font-size: 12px; color: #9CA3AF; margin-bottom: 8px;
+    font-weight: 700; letter-spacing: .5px;
+  }
+  .fname {
+    font-size: 12px; color: #9CA3AF; margin-top: 8px;
+    font-family: ui-monospace, Menlo, monospace;
+  }
+  .dl {
+    display: inline-block; margin-top: 10px; padding: 8px 16px;
+    background: #F3F4F6; color: #374151; border-radius: 8px;
+    text-decoration: none; font-size: 13px; font-weight: 600;
+  }
+  .source {
+    font-size: 13px; color: #9CA3AF; margin-top: 22px;
+    padding-top: 14px; border-top: 1px solid #E5E7EB;
+  }
+  .source a { color: #6B7280; }
+  .allbar {
+    position: fixed; left: 0; right: 0; bottom: 0;
+    background: #fff; border-top: 1px solid #E5E7EB;
+    padding: 12px 16px; text-align: center;
+  }
+  .allbar button {
+    width: 100%; max-width: 720px; padding: 14px;
+    background: #03C75A; color: #fff; border: 0;
+    border-radius: 10px; font-size: 15px; font-weight: 700; cursor: pointer;
+  }
+  .allbar button.done { background: #16A34A; }
+  .guide {
+    background: #FFFBEB; border: 1px solid #FDE68A;
+    border-radius: 12px; padding: 14px 18px; margin-bottom: 16px;
+    font-size: 14px; color: #92400E;
+  }
+  .guide b { display: block; margin-bottom: 6px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="head">
+    <h1>AI 시장조사 10분 컷, 실무 프롬프트 작성법</h1>
+    <div class="date">2026년 09월 02일 00:55 생성</div>
+  </div>
+
+  <div class="guide">
+    <b>이렇게 쓰면 됩니다</b>
+    네이버 블로그 글쓰기를 연 뒤, 아래 본문을 순서대로 복사해 붙여넣고
+    사진 자리에는 저장한 이미지를 올리면 됩니다.
+  </div>
+
+  <div class="card">
+    <h2>제목 후보</h2>
+    <ul><li><span class="t">AI 시장조사 10분 컷, 실무 프롬프트 작성법</span><button class="copy" data-copy="AI 시장조사 10분 컷, 실무 프롬프트 작성법">복사</button></li><li><span class="t">칼퇴 당기는 챗GPT 시장분석 &amp; 경쟁사 분석 AI 프롬프트</span><button class="copy" data-copy="칼퇴 당기는 챗GPT 시장분석 &amp; 경쟁사 분석 AI 프롬프트">복사</button></li><li><span class="t">유료 툴 없이 AI 트렌드 분석 10분 만에 끝내기</span><button class="copy" data-copy="유료 툴 없이 AI 트렌드 분석 10분 만에 끝내기">복사</button></li></ul>
+  </div>
+
+  <div class="card">
+    <h2>태그</h2>
+    <div class="tags">#AI시장조사 #경쟁사분석AI #AI트렌드분석 #챗GPT시장분석 #프롬프트활용법 #생성형AI실무 #시장조사프롬프트</div>
+    <div style="margin-top:12px">
+      <button class="copy" data-copy="#AI시장조사 #경쟁사분석AI #AI트렌드분석 #챗GPT시장분석 #프롬프트활용법 #생성형AI실무 #시장조사프롬프트">태그 전체 복사</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>본문</h2>
+  </div>
+
+  <div class="block img"><div class="imgno">사진 1</div><img src="../images/20260902-0055-ai-10-thumbnail-sq.png" alt="대표 이미지"><div class="fname">20260902-0055-ai-10-thumbnail-sq.png</div><a class="dl" href="../images/20260902-0055-ai-10-thumbnail-sq.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">요즘 시장 조사할 때 다들 AI 쓰더라.<br>근데 그냥 "○○ 시장 조사해줘" 라고 치면 쓸모없는 겉핥기 답변만 나온다.<br>구체적으로 어떻게 프롬프트를 짜야 10분 만에 진짜 실무 자료가 나오는지 적어본다.<br>유료 툴 없이 무료 생성형 AI로도 충분히 되더라.<br>핵심은 AI한테 '역할'과 '출력 형식'을 정확하게 정해주는 거다.</div><button class="copy" data-copy="요즘 시장 조사할 때 다들 AI 쓰더라.
+근데 그냥 "○○ 시장 조사해줘" 라고 치면 쓸모없는 겉핥기 답변만 나온다.
+구체적으로 어떻게 프롬프트를 짜야 10분 만에 진짜 실무 자료가 나오는지 적어본다.
+유료 툴 없이 무료 생성형 AI로도 충분히 되더라.
+핵심은 AI한테 '역할'과 '출력 형식'을 정확하게 정해주는 거다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 2</div><img src="../images/20260902-0055-ai-10-diagram.png" alt="동작 구조 다이어그램"><div class="fname">20260902-0055-ai-10-diagram.png</div><a class="dl" href="../images/20260902-0055-ai-10-diagram.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">보통 AI 시장조사가 망하는 이유는 간단하다.<br>맥락 없이 너무 넓게 물어봐서 그렇다.<br>예를 들어 경쟁사 분석할 때 그냥 장단점 물어보면 누구나 아는 소리만 나온다.<br>이럴 때는 3단계 구조로 프롬프트를 작성해야 된다.<br>1단계로 역할을 부여하고, 2단계로 수집 범위를 지정하고, 3단계로 출력 양식을 고정하는 거다.<br>이렇게 던지면 결과물 수준이 완전히 달라진다.</div><button class="copy" data-copy="보통 AI 시장조사가 망하는 이유는 간단하다.
+맥락 없이 너무 넓게 물어봐서 그렇다.
+예를 들어 경쟁사 분석할 때 그냥 장단점 물어보면 누구나 아는 소리만 나온다.
+이럴 때는 3단계 구조로 프롬프트를 작성해야 된다.
+1단계로 역할을 부여하고, 2단계로 수집 범위를 지정하고, 3단계로 출력 양식을 고정하는 거다.
+이렇게 던지면 결과물 수준이 완전히 달라진다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 3</div><img src="../images/20260902-0055-ai-10-compare.png" alt="비교표"><div class="fname">20260902-0055-ai-10-compare.png</div><a class="dl" href="../images/20260902-0055-ai-10-compare.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">대충 물어볼 때랑 프롬프트를 구조화해서 넣을 때 차이가 크다.<br>그냥 물어보면 뻔한 인터넷 뉴스 요약본처럼 나온다.<br>반면에 역할을 주고 표 형태로 출력하게 하면 바로 보고서에 넣을 수 있는 수준이 된다.<br>실무자가 원하는 핵심 정보만 쏙쏙 뽑아내는 기술이 필요한 거다.<br>실무에서 바로 복사해서 쓸 수 있는 프롬프트 템플릿을 공유해본다.</div><button class="copy" data-copy="대충 물어볼 때랑 프롬프트를 구조화해서 넣을 때 차이가 크다.
+그냥 물어보면 뻔한 인터넷 뉴스 요약본처럼 나온다.
+반면에 역할을 주고 표 형태로 출력하게 하면 바로 보고서에 넣을 수 있는 수준이 된다.
+실무자가 원하는 핵심 정보만 쏙쏙 뽑아내는 기술이 필요한 거다.
+실무에서 바로 복사해서 쓸 수 있는 프롬프트 템플릿을 공유해본다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 4</div><img src="../images/20260902-0055-ai-10-steps.png" alt="단계별 가이드"><div class="fname">20260902-0055-ai-10-steps.png</div><a class="dl" href="../images/20260902-0055-ai-10-steps.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">첫째, 시장 트렌드 수집용 프롬프트다.<br>"너는 시장 분석가다. 목표 시장의 최근 주요 키워드 5개와 각 키워드가 주목받는 이유를 표로 요약해줘."<br>둘째, 경쟁사 전략 분석용 프롬프트다.<br>"A사와 B사의 주요 제품 특징, 타깃 고객, 마케팅 포인트를 비교 분석해줘."<br>셋째, 인사이트 도출용 프롬프트다.<br>"위 분석을 바탕으로 우리가 공략할 수 있는 니치 시장 3가지를 제안해줘."<br>이 순서대로 입력하면 10분 만에 기본 뼈대가 완성된다.</div><button class="copy" data-copy="첫째, 시장 트렌드 수집용 프롬프트다.
+"너는 시장 분석가다. 목표 시장의 최근 주요 키워드 5개와 각 키워드가 주목받는 이유를 표로 요약해줘."
+둘째, 경쟁사 전략 분석용 프롬프트다.
+"A사와 B사의 주요 제품 특징, 타깃 고객, 마케팅 포인트를 비교 분석해줘."
+셋째, 인사이트 도출용 프롬프트다.
+"위 분석을 바탕으로 우리가 공략할 수 있는 니치 시장 3가지를 제안해줘."
+이 순서대로 입력하면 10분 만에 기본 뼈대가 완성된다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 5</div><img src="../images/20260902-0055-ai-10-summary.png" alt="핵심 요약"><div class="fname">20260902-0055-ai-10-summary.png</div><a class="dl" href="../images/20260902-0055-ai-10-summary.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">검색하고 정리하느라 밤새울 필요가 전혀 없다.<br>결국 프롬프트는 AI한테 일 시키는 지시서다.<br>얼마나 명확하게 판을 짜주느냐에 따라 칼퇴 여부가 갈린다.<br>오늘 알려준 프롬프트 템플릿 그대로 복사해서 일할 때 써보자.<br>시간 절약이 엄청나게 될 거다.</div><button class="copy" data-copy="검색하고 정리하느라 밤새울 필요가 전혀 없다.
+결국 프롬프트는 AI한테 일 시키는 지시서다.
+얼마나 명확하게 판을 짜주느냐에 따라 칼퇴 여부가 갈린다.
+오늘 알려준 프롬프트 템플릿 그대로 복사해서 일할 때 써보자.
+시간 절약이 엄청나게 될 거다.">이 부분 복사</button></div>
+
+  <div class="source">참고 기사: <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE1mUGpMTGQyNVFTYTU3SmpvZ3NCbE5ieXpOeGNfN2VrSzY5MnI3Ykt2SGtCX2RuNXEtOE9rTnhwcDlIZXowcEJUMjBCMTNPd0dWSmIxREc5YUVaaGh3SGtTMjZ1dnhhX3VYdFM5OWU4VjUxYjA?oc=5" target="_blank" rel="noopener">빗썸, AI 기반 시장 분석 서비스 출시 - 디지털투데이</a></div>
+</div>
+
+<div class="allbar">
+  <button id="all" data-copy="( 사진 여기 — thumbnail )
+요즘 시장 조사할 때 다들 AI 쓰더라.
+근데 그냥 "○○ 시장 조사해줘" 라고 치면 쓸모없는 겉핥기 답변만 나온다.
+구체적으로 어떻게 프롬프트를 짜야 10분 만에 진짜 실무 자료가 나오는지 적어본다.
+유료 툴 없이 무료 생성형 AI로도 충분히 되더라.
+핵심은 AI한테 '역할'과 '출력 형식'을 정확하게 정해주는 거다.
+
+( 사진 여기 — diagram )
+보통 AI 시장조사가 망하는 이유는 간단하다.
+맥락 없이 너무 넓게 물어봐서 그렇다.
+예를 들어 경쟁사 분석할 때 그냥 장단점 물어보면 누구나 아는 소리만 나온다.
+이럴 때는 3단계 구조로 프롬프트를 작성해야 된다.
+1단계로 역할을 부여하고, 2단계로 수집 범위를 지정하고, 3단계로 출력 양식을 고정하는 거다.
+이렇게 던지면 결과물 수준이 완전히 달라진다.
+
+( 사진 여기 — compare )
+대충 물어볼 때랑 프롬프트를 구조화해서 넣을 때 차이가 크다.
+그냥 물어보면 뻔한 인터넷 뉴스 요약본처럼 나온다.
+반면에 역할을 주고 표 형태로 출력하게 하면 바로 보고서에 넣을 수 있는 수준이 된다.
+실무자가 원하는 핵심 정보만 쏙쏙 뽑아내는 기술이 필요한 거다.
+실무에서 바로 복사해서 쓸 수 있는 프롬프트 템플릿을 공유해본다.
+
+( 사진 여기 — steps )
+첫째, 시장 트렌드 수집용 프롬프트다.
+"너는 시장 분석가다. 목표 시장의 최근 주요 키워드 5개와 각 키워드가 주목받는 이유를 표로 요약해줘."
+둘째, 경쟁사 전략 분석용 프롬프트다.
+"A사와 B사의 주요 제품 특징, 타깃 고객, 마케팅 포인트를 비교 분석해줘."
+셋째, 인사이트 도출용 프롬프트다.
+"위 분석을 바탕으로 우리가 공략할 수 있는 니치 시장 3가지를 제안해줘."
+이 순서대로 입력하면 10분 만에 기본 뼈대가 완성된다.
+
+( 사진 여기 — summary )
+검색하고 정리하느라 밤새울 필요가 전혀 없다.
+결국 프롬프트는 AI한테 일 시키는 지시서다.
+얼마나 명확하게 판을 짜주느냐에 따라 칼퇴 여부가 갈린다.
+오늘 알려준 프롬프트 템플릿 그대로 복사해서 일할 때 써보자.
+시간 절약이 엄청나게 될 거다.">본문 전체 복사</button>
+</div>
+
+<script>
+document.addEventListener('click', function (e) {
+  var btn = e.target.closest('[data-copy]');
+  if (!btn) return;
+  var text = btn.getAttribute('data-copy');
+  var original = btn.textContent;
+
+  function done() {
+    btn.textContent = '복사됨';
+    btn.classList.add('done');
+    setTimeout(function () {
+      btn.textContent = original;
+      btn.classList.remove('done');
+    }, 1400);
+  }
+
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(text).then(done);
+  } else {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); done(); } catch (err) {}
+    document.body.removeChild(ta);
+  }
+});
+</script>
+</body>
+</html>
