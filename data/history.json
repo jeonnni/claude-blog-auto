@@ -257,5 +257,12 @@
     "url": "https://aispoonkr.blogspot.com/2026/09/ai-ms-10.html",
     "slug": "20260905-1805-ai-ms-10",
     "published_at": "2026-09-05T18:05:53"
+  },
+  {
+    "topic": "AI 서비스와 외부 도구 연동 시 API 키와 비밀번호 유출을 막는 보안 관리 노하우",
+    "title": "AI 챗봇에 비밀번호 직접 입력하시나요? API 키와 계정 정보 안전하게 지키는 AI 보안 꿀팁",
+    "url": "https://aispoonkr.blogspot.com/2026/09/ai-api-ai.html",
+    "slug": "20260906-1205-ai-api-ai",
+    "published_at": "2026-09-06T12:05:45"
   }
 ]
