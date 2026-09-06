@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI로 계약서 독소 조항 10분 만에 찾는 실무 프롬프트 — 네이버 원고</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 24px 16px 80px;
+    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+                 "Malgun Gothic", sans-serif;
+    background: #F6F7F9; color: #1F2937; line-height: 1.75;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  .head {
+    background: #03C75A; color: #fff; padding: 20px 22px;
+    border-radius: 14px; margin-bottom: 20px;
+  }
+  .head h1 { margin: 0 0 6px; font-size: 20px; line-height: 1.45; }
+  .head .date { font-size: 13px; opacity: .9; }
+  .card {
+    background: #fff; border-radius: 14px; padding: 18px 20px;
+    margin-bottom: 16px; border: 1px solid #E5E7EB;
+  }
+  .card h2 {
+    margin: 0 0 12px; font-size: 15px; color: #6B7280;
+    font-weight: 700; letter-spacing: .3px;
+  }
+  ul { margin: 0; padding: 0; list-style: none; }
+  ul li {
+    display: flex; align-items: center; gap: 10px;
+    padding: 9px 0; border-bottom: 1px solid #F3F4F6;
+  }
+  ul li:last-child { border-bottom: 0; }
+  ul li .t { flex: 1; font-size: 15px; }
+  .copy {
+    border: 0; background: #EEF2FF; color: #4F46E5;
+    padding: 7px 13px; border-radius: 8px; font-size: 13px;
+    cursor: pointer; white-space: nowrap; font-weight: 600;
+  }
+  .copy:hover { background: #E0E7FF; }
+  .copy.done { background: #DCFCE7; color: #16A34A; }
+  .tags { color: #2563EB; font-size: 14px; word-break: keep-all; }
+  .block {
+    background: #fff; border: 1px solid #E5E7EB;
+    border-radius: 14px; padding: 16px 18px; margin-bottom: 12px;
+  }
+  .block.text .body { font-size: 15.5px; margin-bottom: 12px; }
+  .block.img { text-align: center; background: #FAFBFC; }
+  .block.img img {
+    width: 100%; height: auto; border-radius: 10px; display: block;
+  }
+  .imgno {
+    font-size: 12px; color: #9CA3AF; margin-bottom: 8px;
+    font-weight: 700; letter-spacing: .5px;
+  }
+  .fname {
+    font-size: 12px; color: #9CA3AF; margin-top: 8px;
+    font-family: ui-monospace, Menlo, monospace;
+  }
+  .dl {
+    display: inline-block; margin-top: 10px; padding: 8px 16px;
+    background: #F3F4F6; color: #374151; border-radius: 8px;
+    text-decoration: none; font-size: 13px; font-weight: 600;
+  }
+  .source {
+    font-size: 13px; color: #9CA3AF; margin-top: 22px;
+    padding-top: 14px; border-top: 1px solid #E5E7EB;
+  }
+  .source a { color: #6B7280; }
+  .allbar {
+    position: fixed; left: 0; right: 0; bottom: 0;
+    background: #fff; border-top: 1px solid #E5E7EB;
+    padding: 12px 16px; text-align: center;
+  }
+  .allbar button {
+    width: 100%; max-width: 720px; padding: 14px;
+    background: #03C75A; color: #fff; border: 0;
+    border-radius: 10px; font-size: 15px; font-weight: 700; cursor: pointer;
+  }
+  .allbar button.done { background: #16A34A; }
+  .guide {
+    background: #FFFBEB; border: 1px solid #FDE68A;
+    border-radius: 12px; padding: 14px 18px; margin-bottom: 16px;
+    font-size: 14px; color: #92400E;
+  }
+  .guide b { display: block; margin-bottom: 6px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="head">
+    <h1>AI로 계약서 독소 조항 10분 만에 찾는 실무 프롬프트</h1>
+    <div class="date">2026년 09월 06일 14:04 생성</div>
+  </div>
+
+  <div class="guide">
+    <b>이렇게 쓰면 됩니다</b>
+    네이버 블로그 글쓰기를 연 뒤, 아래 본문을 순서대로 복사해 붙여넣고
+    사진 자리에는 저장한 이미지를 올리면 됩니다.
+  </div>
+
+  <div class="card">
+    <h2>제목 후보</h2>
+    <ul><li><span class="t">AI로 계약서 독소 조항 10분 만에 찾는 실무 프롬프트</span><button class="copy" data-copy="AI로 계약서 독소 조항 10분 만에 찾는 실무 프롬프트">복사</button></li><li><span class="t">복잡한 입찰 제안서 비교 분석 AI로 쉽게 하는 법</span><button class="copy" data-copy="복잡한 입찰 제안서 비교 분석 AI로 쉽게 하는 법">복사</button></li><li><span class="t">챗GPT 클로드로 계약서 위험 조항 사전 감지하는 노하우</span><button class="copy" data-copy="챗GPT 클로드로 계약서 위험 조항 사전 감지하는 노하우">복사</button></li></ul>
+  </div>
+
+  <div class="card">
+    <h2>태그</h2>
+    <div class="tags">#AI계약서검토 #제안서AI분석 #챗GPT계약서분석 #클로드문서분석 #AI실무활용 #계약서독소조항 #입찰제안서비교</div>
+    <div style="margin-top:12px">
+      <button class="copy" data-copy="#AI계약서검토 #제안서AI분석 #챗GPT계약서분석 #클로드문서분석 #AI실무활용 #계약서독소조항 #입찰제안서비교">태그 전체 복사</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>본문</h2>
+  </div>
+
+  <div class="block img"><div class="imgno">사진 1</div><img src="../images/20260906-1404-ai-10-thumbnail-sq.png" alt="대표 이미지"><div class="fname">20260906-1404-ai-10-thumbnail-sq.png</div><a class="dl" href="../images/20260906-1404-ai-10-thumbnail-sq.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">계약서나 입찰 제안서 검토할 때 페이지 수 많으면 머리부터 아프다.<br>글자도 빼곡해서 중요한 독소 조항 놓치기 십상인데.<br>요즘은 AI 활용해서 10분 만에 싹 훑는 편이다.<br>실무에서 바로 쓰는 프롬프트랑 노하우 몇 개 정리해봤다.</div><button class="copy" data-copy="계약서나 입찰 제안서 검토할 때 페이지 수 많으면 머리부터 아프다.
+글자도 빼곡해서 중요한 독소 조항 놓치기 십상인데.
+요즘은 AI 활용해서 10분 만에 싹 훑는 편이다.
+실무에서 바로 쓰는 프롬프트랑 노하우 몇 개 정리해봤다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 2</div><img src="../images/20260906-1404-ai-10-diagram.png" alt="동작 구조 다이어그램"><div class="fname">20260906-1404-ai-10-diagram.png</div><a class="dl" href="../images/20260906-1404-ai-10-diagram.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">우선 긴 계약서 전체를 그냥 던져주면 AI도 헛소리한다.<br>역할을 확실하게 정해줘야 답이 깔끔하게 나오더라.<br>"너는 10년 차 법무 실무자야. 수주사에 불리한 독소 조항만 찾아줘" 이렇게 지시하는 거다.<br>특히 손해배상 책임이나 지체상금 같은 부분은 금액 한도가 없는 경우가 많다.<br>프롬프트에 "무제한 책임, 일방적 계약 해지 조건 위주로 찾아줘"라고 적으면 바로 잡아낸다.</div><button class="copy" data-copy="우선 긴 계약서 전체를 그냥 던져주면 AI도 헛소리한다.
+역할을 확실하게 정해줘야 답이 깔끔하게 나오더라.
+"너는 10년 차 법무 실무자야. 수주사에 불리한 독소 조항만 찾아줘" 이렇게 지시하는 거다.
+특히 손해배상 책임이나 지체상금 같은 부분은 금액 한도가 없는 경우가 많다.
+프롬프트에 "무제한 책임, 일방적 계약 해지 조건 위주로 찾아줘"라고 적으면 바로 잡아낸다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 3</div><img src="../images/20260906-1404-ai-10-compare.png" alt="비교표"><div class="fname">20260906-1404-ai-10-compare.png</div><a class="dl" href="../images/20260906-1404-ai-10-compare.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">입찰 제안서 비교할 때도 엄청 유용하다.<br>여러 업체 제안서를 표 하나로 정리해달라고 하면 금방 끝난다.<br>"A업체와 B업체의 기술 스펙, 단가, 유지보수 조건을 마크다운 비교표로 만들어줘"<br>이렇게 요청하면 눈에 쏙 들어오게 정리해주네.<br>사람이 눈으로 일일이 비교하면 서너 시간 걸릴 분량인데 1~2분이면 되더라.</div><button class="copy" data-copy="입찰 제안서 비교할 때도 엄청 유용하다.
+여러 업체 제안서를 표 하나로 정리해달라고 하면 금방 끝난다.
+"A업체와 B업체의 기술 스펙, 단가, 유지보수 조건을 마크다운 비교표로 만들어줘"
+이렇게 요청하면 눈에 쏙 들어오게 정리해주네.
+사람이 눈으로 일일이 비교하면 서너 시간 걸릴 분량인데 1~2분이면 되더라.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 4</div><img src="../images/20260906-1404-ai-10-steps.png" alt="단계별 가이드"><div class="fname">20260906-1404-ai-10-steps.png</div><a class="dl" href="../images/20260906-1404-ai-10-steps.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">내가 주로 쓰는 검토 순서는 딱 3단계다.<br>1단계, 문서 파일(PDF나 텍스트)을 올리고 전체 요약을 요청한다.<br>2단계, 독소 조항 및 불리한 조건 추출 프롬프트를 입력한다.<br>3단계, AI가 걸러낸 위험 항목만 사람이 직접 원문과 대조한다.<br>AI가 찾아준 조항만 골라서 읽으니 검토 시간이 말도 안 되게 줄어든다.</div><button class="copy" data-copy="내가 주로 쓰는 검토 순서는 딱 3단계다.
+1단계, 문서 파일(PDF나 텍스트)을 올리고 전체 요약을 요청한다.
+2단계, 독소 조항 및 불리한 조건 추출 프롬프트를 입력한다.
+3단계, AI가 걸러낸 위험 항목만 사람이 직접 원문과 대조한다.
+AI가 찾아준 조항만 골라서 읽으니 검토 시간이 말도 안 되게 줄어든다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 5</div><img src="../images/20260906-1404-ai-10-summary.png" alt="핵심 요약"><div class="fname">20260906-1404-ai-10-summary.png</div><a class="dl" href="../images/20260906-1404-ai-10-summary.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">당연히 AI가 100% 완벽한 건 아니다.<br>대외비나 민감한 개인정보는 반드시 마스킹하고 올리는 게 안전하다.<br>최종 서명 전에는 법무팀이나 전문가 확인도 필수고.<br>그래도 1차 필터링용으로 활용해보면 칼퇴 확률이 대폭 올라간다.<br>오늘 처리해야 할 계약서나 제안서가 있다면 바로 한번 테스트해보자.</div><button class="copy" data-copy="당연히 AI가 100% 완벽한 건 아니다.
+대외비나 민감한 개인정보는 반드시 마스킹하고 올리는 게 안전하다.
+최종 서명 전에는 법무팀이나 전문가 확인도 필수고.
+그래도 1차 필터링용으로 활용해보면 칼퇴 확률이 대폭 올라간다.
+오늘 처리해야 할 계약서나 제안서가 있다면 바로 한번 테스트해보자.">이 부분 복사</button></div>
+
+  <div class="source">참고 기사: <a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTFAyOGdjaDFTc004Z3hwRGQ3VWxPd2wwSERkcWg0aDlOSUpGZWpJUmlGOEpzNXZ0YmMtd0lJSlNfVkNKVjIzOHVXQ1M1d1RlVVhydENQVzh0d1NyY05UaTY3dtIBYEFVX3lxTFAyOGdjaDFTc004Z3hwRGQ3VWxPd2wwSERkcWg0aDlOSUpGZWpJUmlGOEpzNXZ0YmMtd0lJSlNfVkNKVjIzOHVXQ1M1d1RlVVhydENQVzh0d1NyY05UaTYzdg?oc=5" target="_blank" rel="noopener">전남광주시, AI 활용 '협상계약 시스템' 자체 개발</a></div>
+</div>
+
+<div class="allbar">
+  <button id="all" data-copy="( 사진 여기 — thumbnail )
+계약서나 입찰 제안서 검토할 때 페이지 수 많으면 머리부터 아프다.
+글자도 빼곡해서 중요한 독소 조항 놓치기 십상인데.
+요즘은 AI 활용해서 10분 만에 싹 훑는 편이다.
+실무에서 바로 쓰는 프롬프트랑 노하우 몇 개 정리해봤다.
+
+( 사진 여기 — diagram )
+우선 긴 계약서 전체를 그냥 던져주면 AI도 헛소리한다.
+역할을 확실하게 정해줘야 답이 깔끔하게 나오더라.
+"너는 10년 차 법무 실무자야. 수주사에 불리한 독소 조항만 찾아줘" 이렇게 지시하는 거다.
+특히 손해배상 책임이나 지체상금 같은 부분은 금액 한도가 없는 경우가 많다.
+프롬프트에 "무제한 책임, 일방적 계약 해지 조건 위주로 찾아줘"라고 적으면 바로 잡아낸다.
+
+( 사진 여기 — compare )
+입찰 제안서 비교할 때도 엄청 유용하다.
+여러 업체 제안서를 표 하나로 정리해달라고 하면 금방 끝난다.
+"A업체와 B업체의 기술 스펙, 단가, 유지보수 조건을 마크다운 비교표로 만들어줘"
+이렇게 요청하면 눈에 쏙 들어오게 정리해주네.
+사람이 눈으로 일일이 비교하면 서너 시간 걸릴 분량인데 1~2분이면 되더라.
+
+( 사진 여기 — steps )
+내가 주로 쓰는 검토 순서는 딱 3단계다.
+1단계, 문서 파일(PDF나 텍스트)을 올리고 전체 요약을 요청한다.
+2단계, 독소 조항 및 불리한 조건 추출 프롬프트를 입력한다.
+3단계, AI가 걸러낸 위험 항목만 사람이 직접 원문과 대조한다.
+AI가 찾아준 조항만 골라서 읽으니 검토 시간이 말도 안 되게 줄어든다.
+
+( 사진 여기 — summary )
+당연히 AI가 100% 완벽한 건 아니다.
+대외비나 민감한 개인정보는 반드시 마스킹하고 올리는 게 안전하다.
+최종 서명 전에는 법무팀이나 전문가 확인도 필수고.
+그래도 1차 필터링용으로 활용해보면 칼퇴 확률이 대폭 올라간다.
+오늘 처리해야 할 계약서나 제안서가 있다면 바로 한번 테스트해보자.">본문 전체 복사</button>
+</div>
+
+<script>
+document.addEventListener('click', function (e) {
+  var btn = e.target.closest('[data-copy]');
+  if (!btn) return;
+  var text = btn.getAttribute('data-copy');
+  var original = btn.textContent;
+
+  function done() {
+    btn.textContent = '복사됨';
+    btn.classList.add('done');
+    setTimeout(function () {
+      btn.textContent = original;
+      btn.classList.remove('done');
+    }, 1400);
+  }
+
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(text).then(done);
+  } else {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); done(); } catch (err) {}
+    document.body.removeChild(ta);
+  }
+});
+</script>
+</body>
+</html>
