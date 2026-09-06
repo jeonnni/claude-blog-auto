@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI 답변 전체 다시 쓰지 마세요: 틀린 부분만 콕 집는 피드백 프롬프트 노하우 — 네이버 원고</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 24px 16px 80px;
+    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+                 "Malgun Gothic", sans-serif;
+    background: #F6F7F9; color: #1F2937; line-height: 1.75;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  .head {
+    background: #03C75A; color: #fff; padding: 20px 22px;
+    border-radius: 14px; margin-bottom: 20px;
+  }
+  .head h1 { margin: 0 0 6px; font-size: 20px; line-height: 1.45; }
+  .head .date { font-size: 13px; opacity: .9; }
+  .card {
+    background: #fff; border-radius: 14px; padding: 18px 20px;
+    margin-bottom: 16px; border: 1px solid #E5E7EB;
+  }
+  .card h2 {
+    margin: 0 0 12px; font-size: 15px; color: #6B7280;
+    font-weight: 700; letter-spacing: .3px;
+  }
+  ul { margin: 0; padding: 0; list-style: none; }
+  ul li {
+    display: flex; align-items: center; gap: 10px;
+    padding: 9px 0; border-bottom: 1px solid #F3F4F6;
+  }
+  ul li:last-child { border-bottom: 0; }
+  ul li .t { flex: 1; font-size: 15px; }
+  .copy {
+    border: 0; background: #EEF2FF; color: #4F46E5;
+    padding: 7px 13px; border-radius: 8px; font-size: 13px;
+    cursor: pointer; white-space: nowrap; font-weight: 600;
+  }
+  .copy:hover { background: #E0E7FF; }
+  .copy.done { background: #DCFCE7; color: #16A34A; }
+  .tags { color: #2563EB; font-size: 14px; word-break: keep-all; }
+  .block {
+    background: #fff; border: 1px solid #E5E7EB;
+    border-radius: 14px; padding: 16px 18px; margin-bottom: 12px;
+  }
+  .block.text .body { font-size: 15.5px; margin-bottom: 12px; }
+  .block.img { text-align: center; background: #FAFBFC; }
+  .block.img img {
+    width: 100%; height: auto; border-radius: 10px; display: block;
+  }
+  .imgno {
+    font-size: 12px; color: #9CA3AF; margin-bottom: 8px;
+    font-weight: 700; letter-spacing: .5px;
+  }
+  .fname {
+    font-size: 12px; color: #9CA3AF; margin-top: 8px;
+    font-family: ui-monospace, Menlo, monospace;
+  }
+  .dl {
+    display: inline-block; margin-top: 10px; padding: 8px 16px;
+    background: #F3F4F6; color: #374151; border-radius: 8px;
+    text-decoration: none; font-size: 13px; font-weight: 600;
+  }
+  .source {
+    font-size: 13px; color: #9CA3AF; margin-top: 22px;
+    padding-top: 14px; border-top: 1px solid #E5E7EB;
+  }
+  .source a { color: #6B7280; }
+  .allbar {
+    position: fixed; left: 0; right: 0; bottom: 0;
+    background: #fff; border-top: 1px solid #E5E7EB;
+    padding: 12px 16px; text-align: center;
+  }
+  .allbar button {
+    width: 100%; max-width: 720px; padding: 14px;
+    background: #03C75A; color: #fff; border: 0;
+    border-radius: 10px; font-size: 15px; font-weight: 700; cursor: pointer;
+  }
+  .allbar button.done { background: #16A34A; }
+  .guide {
+    background: #FFFBEB; border: 1px solid #FDE68A;
+    border-radius: 12px; padding: 14px 18px; margin-bottom: 16px;
+    font-size: 14px; color: #92400E;
+  }
+  .guide b { display: block; margin-bottom: 6px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="head">
+    <h1>AI 답변 전체 다시 쓰지 마세요: 틀린 부분만 콕 집는 피드백 프롬프트 노하우</h1>
+    <div class="date">2026년 09월 06일 00:45 생성</div>
+  </div>
+
+  <div class="guide">
+    <b>이렇게 쓰면 됩니다</b>
+    네이버 블로그 글쓰기를 연 뒤, 아래 본문을 순서대로 복사해 붙여넣고
+    사진 자리에는 저장한 이미지를 올리면 됩니다.
+  </div>
+
+  <div class="card">
+    <h2>제목 후보</h2>
+    <ul><li><span class="t">AI 답변 전체 다시 쓰지 마세요: 틀린 부분만 콕 집는 피드백 프롬프트 노하우</span><button class="copy" data-copy="AI 답변 전체 다시 쓰지 마세요: 틀린 부분만 콕 집는 피드백 프롬프트 노하우">복사</button></li><li><span class="t">챗GPT 클로드 프롬프트 팁: 맥락 유지하고 특정 문장만 정밀 수정하는 방법</span><button class="copy" data-copy="챗GPT 클로드 프롬프트 팁: 맥락 유지하고 특정 문장만 정밀 수정하는 방법">복사</button></li><li><span class="t">AI 답변 교정 끝판왕: 프레임은 살리고 오답만 고치는 3단계 피드백 기술</span><button class="copy" data-copy="AI 답변 교정 끝판왕: 프레임은 살리고 오답만 고치는 3단계 피드백 기술">복사</button></li></ul>
+  </div>
+
+  <div class="card">
+    <h2>태그</h2>
+    <div class="tags">#AI피드백프롬프트 #챗GPT답변수정 #클로드프롬프트노하우 #AI답변교정 #AI업무생산성 #프롬프트엔지니어링 #AI활용법</div>
+    <div style="margin-top:12px">
+      <button class="copy" data-copy="#AI피드백프롬프트 #챗GPT답변수정 #클로드프롬프트노하우 #AI답변교정 #AI업무생산성 #프롬프트엔지니어링 #AI활용법">태그 전체 복사</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>본문</h2>
+  </div>
+
+  <div class="block text"><div class="body">챗GPT나 클로드 쓰다 보면 글은 참 잘 썼는데 한 줄만 틀릴 때가 있다.<br><br>이때 답답해서 "다시 작성해줘" 했다가 전체 맥락이 엉뚱하게 바뀌어서 당황한 적 있을 거다.<br><br>처음부터 다시 검수해야 하니 시간만 더 걸리더라.</div><button class="copy" data-copy="챗GPT나 클로드 쓰다 보면 글은 참 잘 썼는데 한 줄만 틀릴 때가 있다.
+
+이때 답답해서 "다시 작성해줘" 했다가 전체 맥락이 엉뚱하게 바뀌어서 당황한 적 있을 거다.
+
+처음부터 다시 검수해야 하니 시간만 더 걸리더라.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 1</div><img src="../images/20260906-0045-ai-thumbnail-sq.png" alt="대표 이미지"><div class="fname">20260906-0045-ai-thumbnail-sq.png</div><a class="dl" href="../images/20260906-0045-ai-thumbnail-sq.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">AI가 잘 잡아둔 전체 프레임은 그대로 유지하면서,<br>잘못된 부분만 콕 집어서 고치는 방법이 있다.<br><br>이렇게 하면 작업 흐름도 안 끊기고 업무 생산성이 진짜 많이 오른다.</div><button class="copy" data-copy="AI가 잘 잡아둔 전체 프레임은 그대로 유지하면서,
+잘못된 부분만 콕 집어서 고치는 방법이 있다.
+
+이렇게 하면 작업 흐름도 안 끊기고 업무 생산성이 진짜 많이 오른다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 2</div><img src="../images/20260906-0045-ai-diagram.png" alt="동작 구조 다이어그램"><div class="fname">20260906-0045-ai-diagram.png</div><a class="dl" href="../images/20260906-0045-ai-diagram.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">핵심은 '나머지 부분은 고정하라'는 명령을 먼저 내리는 거다.<br><br>AI는 별다른 지시가 없으면 답변 전체를 새로 생성하는 습성이 있거든.<br><br>그래서 전체 흐름을 잠금 장치로 걸어두고 정밀 교정을 들어가야 한다.</div><button class="copy" data-copy="핵심은 '나머지 부분은 고정하라'는 명령을 먼저 내리는 거다.
+
+AI는 별다른 지시가 없으면 답변 전체를 새로 생성하는 습성이 있거든.
+
+그래서 전체 흐름을 잠금 장치로 걸어두고 정밀 교정을 들어가야 한다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 3</div><img src="../images/20260906-0045-ai-compare.png" alt="비교표"><div class="fname">20260906-0045-ai-compare.png</div><a class="dl" href="../images/20260906-0045-ai-compare.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">보통 실패하는 피드백과 성공하는 피드백을 비교해 보면 차이가 확실하다.<br><br>그냥 "이 내용 좀 이상한데 수정해줘"라고 던지면 문체까지 싹 바뀌어 버린다.<br><br>반면에 위치와 교정 방향을 구체적으로 찍어주면 딱 그 단락만 깔끔하게 고쳐준다.</div><button class="copy" data-copy="보통 실패하는 피드백과 성공하는 피드백을 비교해 보면 차이가 확실하다.
+
+그냥 "이 내용 좀 이상한데 수정해줘"라고 던지면 문체까지 싹 바뀌어 버린다.
+
+반면에 위치와 교정 방향을 구체적으로 찍어주면 딱 그 단락만 깔끔하게 고쳐준다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 4</div><img src="../images/20260906-0045-ai-steps.png" alt="단계별 가이드"><div class="fname">20260906-0045-ai-steps.png</div><a class="dl" href="../images/20260906-0045-ai-steps.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">내가 실제로 써먹는 정밀 피드백 3단계 프롬프트 구조다.<br><br>1단계: "기존 답변의 구조, 톤앤매너, 나머지 문단은 절대 수정하지 마."<br>2단계: "3번째 문단의 '비용 절감' 언급 부분만 집중해."<br>3단계: "해당 부분만 '시간 단축' 관점으로 내용 개편해줘."<br><br>이렇게 세 단계로 나누어 요청하면 AI가 딴소리를 못 한다.<br><br>원하던 맥락 그대로 유지되면서 오답만 깔끔하게 교정되네.</div><button class="copy" data-copy="내가 실제로 써먹는 정밀 피드백 3단계 프롬프트 구조다.
+
+1단계: "기존 답변의 구조, 톤앤매너, 나머지 문단은 절대 수정하지 마."
+2단계: "3번째 문단의 '비용 절감' 언급 부분만 집중해."
+3단계: "해당 부분만 '시간 단축' 관점으로 내용 개편해줘."
+
+이렇게 세 단계로 나누어 요청하면 AI가 딴소리를 못 한다.
+
+원하던 맥락 그대로 유지되면서 오답만 깔끔하게 교정되네.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 5</div><img src="../images/20260906-0045-ai-summary.png" alt="핵심 요약"><div class="fname">20260906-0045-ai-summary.png</div><a class="dl" href="../images/20260906-0045-ai-summary.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">AI 답변 교정은 결국 판을 전체 다 엎을 거냐, 핀셋으로 뽑아낼 거냐의 차이다.<br><br>잘못된 답변 나왔다고 처음부터 질문 다시 던지지 말자.<br><br>오늘 알려준 피드백 프롬프트 틀만 기억해 두면 수정 작업이 훨씬 편해질 거다.</div><button class="copy" data-copy="AI 답변 교정은 결국 판을 전체 다 엎을 거냐, 핀셋으로 뽑아낼 거냐의 차이다.
+
+잘못된 답변 나왔다고 처음부터 질문 다시 던지지 말자.
+
+오늘 알려준 피드백 프롬프트 틀만 기억해 두면 수정 작업이 훨씬 편해질 거다.">이 부분 복사</button></div>
+
+  <div class="source">참고 기사: <a href="https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9MeGJWZGNXU3hfMjVxWXVHYVh3b2dZSGdoZVRLYjF4Mm8tYkx0UWw3QlJPeFZreFpySXBkNFZQSmphSUJnMUJSdGROWUlLMmxIX3NxaG1DQnpMWnZFREtpQ3BmQmhGbVk?oc=5" target="_blank" rel="noopener">"AI 업무비서, 실수해도‘처음부터 다시’ 없다"…KAIST ‘세이프큐엘’, 틀린 곳만 고친다 - aitimes.kr</a></div>
+</div>
+
+<div class="allbar">
+  <button id="all" data-copy="챗GPT나 클로드 쓰다 보면 글은 참 잘 썼는데 한 줄만 틀릴 때가 있다.
+
+이때 답답해서 "다시 작성해줘" 했다가 전체 맥락이 엉뚱하게 바뀌어서 당황한 적 있을 거다.
+
+처음부터 다시 검수해야 하니 시간만 더 걸리더라.
+
+( 사진 여기 — thumbnail )
+
+AI가 잘 잡아둔 전체 프레임은 그대로 유지하면서,
+잘못된 부분만 콕 집어서 고치는 방법이 있다.
+
+이렇게 하면 작업 흐름도 안 끊기고 업무 생산성이 진짜 많이 오른다.
+
+( 사진 여기 — diagram )
+
+핵심은 '나머지 부분은 고정하라'는 명령을 먼저 내리는 거다.
+
+AI는 별다른 지시가 없으면 답변 전체를 새로 생성하는 습성이 있거든.
+
+그래서 전체 흐름을 잠금 장치로 걸어두고 정밀 교정을 들어가야 한다.
+
+( 사진 여기 — compare )
+
+보통 실패하는 피드백과 성공하는 피드백을 비교해 보면 차이가 확실하다.
+
+그냥 "이 내용 좀 이상한데 수정해줘"라고 던지면 문체까지 싹 바뀌어 버린다.
+
+반면에 위치와 교정 방향을 구체적으로 찍어주면 딱 그 단락만 깔끔하게 고쳐준다.
+
+( 사진 여기 — steps )
+
+내가 실제로 써먹는 정밀 피드백 3단계 프롬프트 구조다.
+
+1단계: "기존 답변의 구조, 톤앤매너, 나머지 문단은 절대 수정하지 마."
+2단계: "3번째 문단의 '비용 절감' 언급 부분만 집중해."
+3단계: "해당 부분만 '시간 단축' 관점으로 내용 개편해줘."
+
+이렇게 세 단계로 나누어 요청하면 AI가 딴소리를 못 한다.
+
+원하던 맥락 그대로 유지되면서 오답만 깔끔하게 교정되네.
+
+( 사진 여기 — summary )
+
+AI 답변 교정은 결국 판을 전체 다 엎을 거냐, 핀셋으로 뽑아낼 거냐의 차이다.
+
+잘못된 답변 나왔다고 처음부터 질문 다시 던지지 말자.
+
+오늘 알려준 피드백 프롬프트 틀만 기억해 두면 수정 작업이 훨씬 편해질 거다.">본문 전체 복사</button>
+</div>
+
+<script>
+document.addEventListener('click', function (e) {
+  var btn = e.target.closest('[data-copy]');
+  if (!btn) return;
+  var text = btn.getAttribute('data-copy');
+  var original = btn.textContent;
+
+  function done() {
+    btn.textContent = '복사됨';
+    btn.classList.add('done');
+    setTimeout(function () {
+      btn.textContent = original;
+      btn.classList.remove('done');
+    }, 1400);
+  }
+
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(text).then(done);
+  } else {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); done(); } catch (err) {}
+    document.body.removeChild(ta);
+  }
+});
+</script>
+</body>
+</html>
