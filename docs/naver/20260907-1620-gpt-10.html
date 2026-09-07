@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>챗GPT 캔바 연동으로 카드뉴스 10분 만에 만들기 — 네이버 원고</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 24px 16px 80px;
+    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+                 "Malgun Gothic", sans-serif;
+    background: #F6F7F9; color: #1F2937; line-height: 1.75;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  .head {
+    background: #03C75A; color: #fff; padding: 20px 22px;
+    border-radius: 14px; margin-bottom: 20px;
+  }
+  .head h1 { margin: 0 0 6px; font-size: 20px; line-height: 1.45; }
+  .head .date { font-size: 13px; opacity: .9; }
+  .card {
+    background: #fff; border-radius: 14px; padding: 18px 20px;
+    margin-bottom: 16px; border: 1px solid #E5E7EB;
+  }
+  .card h2 {
+    margin: 0 0 12px; font-size: 15px; color: #6B7280;
+    font-weight: 700; letter-spacing: .3px;
+  }
+  ul { margin: 0; padding: 0; list-style: none; }
+  ul li {
+    display: flex; align-items: center; gap: 10px;
+    padding: 9px 0; border-bottom: 1px solid #F3F4F6;
+  }
+  ul li:last-child { border-bottom: 0; }
+  ul li .t { flex: 1; font-size: 15px; }
+  .copy {
+    border: 0; background: #EEF2FF; color: #4F46E5;
+    padding: 7px 13px; border-radius: 8px; font-size: 13px;
+    cursor: pointer; white-space: nowrap; font-weight: 600;
+  }
+  .copy:hover { background: #E0E7FF; }
+  .copy.done { background: #DCFCE7; color: #16A34A; }
+  .tags { color: #2563EB; font-size: 14px; word-break: keep-all; }
+  .block {
+    background: #fff; border: 1px solid #E5E7EB;
+    border-radius: 14px; padding: 16px 18px; margin-bottom: 12px;
+  }
+  .block.text .body { font-size: 15.5px; margin-bottom: 12px; }
+  .block.img { text-align: center; background: #FAFBFC; }
+  .block.img img {
+    width: 100%; height: auto; border-radius: 10px; display: block;
+  }
+  .imgno {
+    font-size: 12px; color: #9CA3AF; margin-bottom: 8px;
+    font-weight: 700; letter-spacing: .5px;
+  }
+  .fname {
+    font-size: 12px; color: #9CA3AF; margin-top: 8px;
+    font-family: ui-monospace, Menlo, monospace;
+  }
+  .dl {
+    display: inline-block; margin-top: 10px; padding: 8px 16px;
+    background: #F3F4F6; color: #374151; border-radius: 8px;
+    text-decoration: none; font-size: 13px; font-weight: 600;
+  }
+  .source {
+    font-size: 13px; color: #9CA3AF; margin-top: 22px;
+    padding-top: 14px; border-top: 1px solid #E5E7EB;
+  }
+  .source a { color: #6B7280; }
+  .allbar {
+    position: fixed; left: 0; right: 0; bottom: 0;
+    background: #fff; border-top: 1px solid #E5E7EB;
+    padding: 12px 16px; text-align: center;
+  }
+  .allbar button {
+    width: 100%; max-width: 720px; padding: 14px;
+    background: #03C75A; color: #fff; border: 0;
+    border-radius: 10px; font-size: 15px; font-weight: 700; cursor: pointer;
+  }
+  .allbar button.done { background: #16A34A; }
+  .guide {
+    background: #FFFBEB; border: 1px solid #FDE68A;
+    border-radius: 12px; padding: 14px 18px; margin-bottom: 16px;
+    font-size: 14px; color: #92400E;
+  }
+  .guide b { display: block; margin-bottom: 6px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="head">
+    <h1>챗GPT 캔바 연동으로 카드뉴스 10분 만에 만들기</h1>
+    <div class="date">2026년 09월 07일 16:20 생성</div>
+  </div>
+
+  <div class="guide">
+    <b>이렇게 쓰면 됩니다</b>
+    네이버 블로그 글쓰기를 연 뒤, 아래 본문을 순서대로 복사해 붙여넣고
+    사진 자리에는 저장한 이미지를 올리면 됩니다.
+  </div>
+
+  <div class="card">
+    <h2>제목 후보</h2>
+    <ul><li><span class="t">챗GPT 캔바 연동으로 카드뉴스 10분 만에 만들기</span><button class="copy" data-copy="챗GPT 캔바 연동으로 카드뉴스 10분 만에 만들기">복사</button></li><li><span class="t">디자이너 없이 SNS 카드뉴스 뚝딱 만드는 AI 활용법</span><button class="copy" data-copy="디자이너 없이 SNS 카드뉴스 뚝딱 만드는 AI 활용법">복사</button></li><li><span class="t">챗GPT와 캔바로 끝내는 초간단 카드뉴스 제작 루틴</span><button class="copy" data-copy="챗GPT와 캔바로 끝내는 초간단 카드뉴스 제작 루틴">복사</button></li></ul>
+  </div>
+
+  <div class="card">
+    <h2>태그</h2>
+    <div class="tags">#챗GPT캔바연동 #AI카드뉴스제작 #캔바AI활용법 #SNS홍보콘텐츠 #카드뉴스만들기 #카드뉴스디자인 #콘텐츠제작</div>
+    <div style="margin-top:12px">
+      <button class="copy" data-copy="#챗GPT캔바연동 #AI카드뉴스제작 #캔바AI활용법 #SNS홍보콘텐츠 #카드뉴스만들기 #카드뉴스디자인 #콘텐츠제작">태그 전체 복사</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>본문</h2>
+  </div>
+
+  <div class="block img"><div class="imgno">사진 1</div><img src="../images/20260907-1620-gpt-10-thumbnail-sq.png" alt="대표 이미지"><div class="fname">20260907-1620-gpt-10-thumbnail-sq.png</div><a class="dl" href="../images/20260907-1620-gpt-10-thumbnail-sq.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">매번 SNS 카드뉴스 만들 때마다 기획하고 글 쓰고 디자인까지 하려니 머리가 아팠다.<br><br>디자이너가 없는 1인 크리에이터나 담당자라면 다들 공감할 거다.<br><br>요즘은 AI 조합으로 몇 분 만에 뚝딱 만드는 방법이 있더라.<br><br>챗GPT로 내용을 뽑고 캔바(Canva)로 넘겨서 일괄로 돌려버리는 방식이다.<br><br>직접 써보니 작업 시간이 대폭 줄어들어서 공유해본다.</div><button class="copy" data-copy="매번 SNS 카드뉴스 만들 때마다 기획하고 글 쓰고 디자인까지 하려니 머리가 아팠다.
+
+디자이너가 없는 1인 크리에이터나 담당자라면 다들 공감할 거다.
+
+요즘은 AI 조합으로 몇 분 만에 뚝딱 만드는 방법이 있더라.
+
+챗GPT로 내용을 뽑고 캔바(Canva)로 넘겨서 일괄로 돌려버리는 방식이다.
+
+직접 써보니 작업 시간이 대폭 줄어들어서 공유해본다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 2</div><img src="../images/20260907-1620-gpt-10-diagram.png" alt="동작 구조 다이어그램"><div class="fname">20260907-1620-gpt-10-diagram.png</div><a class="dl" href="../images/20260907-1620-gpt-10-diagram.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">전체적인 흐름은 생각보다 훨씬 간단하다.<br><br>주제 정하기부터 카피 작성, 템플릿 대입까지 한 줄기로 연결된다.<br><br>핵심은 챗GPT에서 나온 결과물을 캔바의 일괄 작업 기능에 밀어 넣는 거다.<br><br>우선 챗GPT를 열고 프롬프트를 이렇게 던져보자.<br><br>"SNS 홍보용 5장 카드뉴스 기획해줘."<br>"표 형태로 [페이지, 헤드라인, 본문] 칼럼 나눠서 작성해줘."<br><br>이렇게 요청하면 데이터로 옮기기 딱 좋은 표 형태로 깔끔하게 뽑아준다.</div><button class="copy" data-copy="전체적인 흐름은 생각보다 훨씬 간단하다.
+
+주제 정하기부터 카피 작성, 템플릿 대입까지 한 줄기로 연결된다.
+
+핵심은 챗GPT에서 나온 결과물을 캔바의 일괄 작업 기능에 밀어 넣는 거다.
+
+우선 챗GPT를 열고 프롬프트를 이렇게 던져보자.
+
+"SNS 홍보용 5장 카드뉴스 기획해줘."
+"표 형태로 [페이지, 헤드라인, 본문] 칼럼 나눠서 작성해줘."
+
+이렇게 요청하면 데이터로 옮기기 딱 좋은 표 형태로 깔끔하게 뽑아준다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 3</div><img src="../images/20260907-1620-gpt-10-compare.png" alt="비교표"><div class="fname">20260907-1620-gpt-10-compare.png</div><a class="dl" href="../images/20260907-1620-gpt-10-compare.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">예전에는 템플릿 하나에 텍스트 하나씩 복사해서 붙여넣고 위치 맞추느라 시간 다 보냈다.<br><br>오타라도 나면 일일이 수정하느라 은근히 번거로웠는데.<br><br>AI를 활용해서 대량 생성 기능을 써보니 수작업할 이유가 전혀 없더라.<br><br>디자인 감각이 없어도 템플릿만 잘 골라두면 고퀄리티로 완성된다.</div><button class="copy" data-copy="예전에는 템플릿 하나에 텍스트 하나씩 복사해서 붙여넣고 위치 맞추느라 시간 다 보냈다.
+
+오타라도 나면 일일이 수정하느라 은근히 번거로웠는데.
+
+AI를 활용해서 대량 생성 기능을 써보니 수작업할 이유가 전혀 없더라.
+
+디자인 감각이 없어도 템플릿만 잘 골라두면 고퀄리티로 완성된다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 4</div><img src="../images/20260907-1620-gpt-10-steps.png" alt="단계별 가이드"><div class="fname">20260907-1620-gpt-10-steps.png</div><a class="dl" href="../images/20260907-1620-gpt-10-steps.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">실제 제작 순서는 딱 세 단계다.<br><br>1. 챗GPT가 만든 표 데이터를 복사한다.<br>2. 캔바에서 마음에 드는 카드뉴스 템플릿을 하나 연다.<br>3. 왼쪽 앱 메뉴에서 '일괄 작성'을 찾아 데이터를 넣고 텍스트 상자와 연결한다.<br><br>페이지 생성 버튼만 누르면 5장짜리 카드뉴스가 순식간에 들어찬다.<br><br>어색한 폰트 크기나 줄바꿈만 살짝 다듬어주면 끝이네.</div><button class="copy" data-copy="실제 제작 순서는 딱 세 단계다.
+
+1. 챗GPT가 만든 표 데이터를 복사한다.
+2. 캔바에서 마음에 드는 카드뉴스 템플릿을 하나 연다.
+3. 왼쪽 앱 메뉴에서 '일괄 작성'을 찾아 데이터를 넣고 텍스트 상자와 연결한다.
+
+페이지 생성 버튼만 누르면 5장짜리 카드뉴스가 순식간에 들어찬다.
+
+어색한 폰트 크기나 줄바꿈만 살짝 다듬어주면 끝이네.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 5</div><img src="../images/20260907-1620-gpt-10-summary.png" alt="핵심 요약"><div class="fname">20260907-1620-gpt-10-summary.png</div><a class="dl" href="../images/20260907-1620-gpt-10-summary.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">이제 디자이너 없다고 콘텐츠 제작 미룰 필요가 없다.<br><br>주제 기획부터 카피, 디자인 배치까지 10분이면 충분하다.<br><br>매번 카드뉴스 만들 때마다 스트레스받았다면 이 루틴대로 꼭 한번 해봐라.<br><br>퇴근 시간이 확실히 빨라진다.</div><button class="copy" data-copy="이제 디자이너 없다고 콘텐츠 제작 미룰 필요가 없다.
+
+주제 기획부터 카피, 디자인 배치까지 10분이면 충분하다.
+
+매번 카드뉴스 만들 때마다 스트레스받았다면 이 루틴대로 꼭 한번 해봐라.
+
+퇴근 시간이 확실히 빨라진다.">이 부분 복사</button></div>
+
+  <div class="source">참고 기사: <a href="https://news.google.com/rss/articles/CBMia0FVX3lxTFAwNExsa3ZCVW9wekhtejBnS3FGSDI1X1dmanVZdk9RWTFHTXBOd2xVXzZlWDZnR3cwQ3ltaGx2bjVwbEdreWp4SG5DeXNFYzJTWTdsU1VHM1djQlJsbjV5SHNFWVBVa1MzRkJV?oc=5" target="_blank" rel="noopener">인천여성가족재단, 챗GPT·캔바 활용 ‘AI 홍보 콘텐츠 제작’ 무료 특강 - 연합시민의소리</a></div>
+</div>
+
+<div class="allbar">
+  <button id="all" data-copy="( 사진 여기 — thumbnail )
+
+매번 SNS 카드뉴스 만들 때마다 기획하고 글 쓰고 디자인까지 하려니 머리가 아팠다.
+
+디자이너가 없는 1인 크리에이터나 담당자라면 다들 공감할 거다.
+
+요즘은 AI 조합으로 몇 분 만에 뚝딱 만드는 방법이 있더라.
+
+챗GPT로 내용을 뽑고 캔바(Canva)로 넘겨서 일괄로 돌려버리는 방식이다.
+
+직접 써보니 작업 시간이 대폭 줄어들어서 공유해본다.
+
+( 사진 여기 — diagram )
+
+전체적인 흐름은 생각보다 훨씬 간단하다.
+
+주제 정하기부터 카피 작성, 템플릿 대입까지 한 줄기로 연결된다.
+
+핵심은 챗GPT에서 나온 결과물을 캔바의 일괄 작업 기능에 밀어 넣는 거다.
+
+우선 챗GPT를 열고 프롬프트를 이렇게 던져보자.
+
+"SNS 홍보용 5장 카드뉴스 기획해줘."
+"표 형태로 [페이지, 헤드라인, 본문] 칼럼 나눠서 작성해줘."
+
+이렇게 요청하면 데이터로 옮기기 딱 좋은 표 형태로 깔끔하게 뽑아준다.
+
+( 사진 여기 — compare )
+
+예전에는 템플릿 하나에 텍스트 하나씩 복사해서 붙여넣고 위치 맞추느라 시간 다 보냈다.
+
+오타라도 나면 일일이 수정하느라 은근히 번거로웠는데.
+
+AI를 활용해서 대량 생성 기능을 써보니 수작업할 이유가 전혀 없더라.
+
+디자인 감각이 없어도 템플릿만 잘 골라두면 고퀄리티로 완성된다.
+
+( 사진 여기 — steps )
+
+실제 제작 순서는 딱 세 단계다.
+
+1. 챗GPT가 만든 표 데이터를 복사한다.
+2. 캔바에서 마음에 드는 카드뉴스 템플릿을 하나 연다.
+3. 왼쪽 앱 메뉴에서 '일괄 작성'을 찾아 데이터를 넣고 텍스트 상자와 연결한다.
+
+페이지 생성 버튼만 누르면 5장짜리 카드뉴스가 순식간에 들어찬다.
+
+어색한 폰트 크기나 줄바꿈만 살짝 다듬어주면 끝이네.
+
+( 사진 여기 — summary )
+
+이제 디자이너 없다고 콘텐츠 제작 미룰 필요가 없다.
+
+주제 기획부터 카피, 디자인 배치까지 10분이면 충분하다.
+
+매번 카드뉴스 만들 때마다 스트레스받았다면 이 루틴대로 꼭 한번 해봐라.
+
+퇴근 시간이 확실히 빨라진다.">본문 전체 복사</button>
+</div>
+
+<script>
+document.addEventListener('click', function (e) {
+  var btn = e.target.closest('[data-copy]');
+  if (!btn) return;
+  var text = btn.getAttribute('data-copy');
+  var original = btn.textContent;
+
+  function done() {
+    btn.textContent = '복사됨';
+    btn.classList.add('done');
+    setTimeout(function () {
+      btn.textContent = original;
+      btn.classList.remove('done');
+    }, 1400);
+  }
+
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(text).then(done);
+  } else {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); done(); } catch (err) {}
+    document.body.removeChild(ta);
+  }
+});
+</script>
+</body>
+</html>
