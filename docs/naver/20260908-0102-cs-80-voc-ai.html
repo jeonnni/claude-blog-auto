@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CS 응대 시간 80% 줄이는 VOC AI 분석 및 답변 프롬프트 — 네이버 원고</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 24px 16px 80px;
+    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+                 "Malgun Gothic", sans-serif;
+    background: #F6F7F9; color: #1F2937; line-height: 1.75;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  .head {
+    background: #03C75A; color: #fff; padding: 20px 22px;
+    border-radius: 14px; margin-bottom: 20px;
+  }
+  .head h1 { margin: 0 0 6px; font-size: 20px; line-height: 1.45; }
+  .head .date { font-size: 13px; opacity: .9; }
+  .card {
+    background: #fff; border-radius: 14px; padding: 18px 20px;
+    margin-bottom: 16px; border: 1px solid #E5E7EB;
+  }
+  .card h2 {
+    margin: 0 0 12px; font-size: 15px; color: #6B7280;
+    font-weight: 700; letter-spacing: .3px;
+  }
+  ul { margin: 0; padding: 0; list-style: none; }
+  ul li {
+    display: flex; align-items: center; gap: 10px;
+    padding: 9px 0; border-bottom: 1px solid #F3F4F6;
+  }
+  ul li:last-child { border-bottom: 0; }
+  ul li .t { flex: 1; font-size: 15px; }
+  .copy {
+    border: 0; background: #EEF2FF; color: #4F46E5;
+    padding: 7px 13px; border-radius: 8px; font-size: 13px;
+    cursor: pointer; white-space: nowrap; font-weight: 600;
+  }
+  .copy:hover { background: #E0E7FF; }
+  .copy.done { background: #DCFCE7; color: #16A34A; }
+  .tags { color: #2563EB; font-size: 14px; word-break: keep-all; }
+  .block {
+    background: #fff; border: 1px solid #E5E7EB;
+    border-radius: 14px; padding: 16px 18px; margin-bottom: 12px;
+  }
+  .block.text .body { font-size: 15.5px; margin-bottom: 12px; }
+  .block.img { text-align: center; background: #FAFBFC; }
+  .block.img img {
+    width: 100%; height: auto; border-radius: 10px; display: block;
+  }
+  .imgno {
+    font-size: 12px; color: #9CA3AF; margin-bottom: 8px;
+    font-weight: 700; letter-spacing: .5px;
+  }
+  .fname {
+    font-size: 12px; color: #9CA3AF; margin-top: 8px;
+    font-family: ui-monospace, Menlo, monospace;
+  }
+  .dl {
+    display: inline-block; margin-top: 10px; padding: 8px 16px;
+    background: #F3F4F6; color: #374151; border-radius: 8px;
+    text-decoration: none; font-size: 13px; font-weight: 600;
+  }
+  .source {
+    font-size: 13px; color: #9CA3AF; margin-top: 22px;
+    padding-top: 14px; border-top: 1px solid #E5E7EB;
+  }
+  .source a { color: #6B7280; }
+  .allbar {
+    position: fixed; left: 0; right: 0; bottom: 0;
+    background: #fff; border-top: 1px solid #E5E7EB;
+    padding: 12px 16px; text-align: center;
+  }
+  .allbar button {
+    width: 100%; max-width: 720px; padding: 14px;
+    background: #03C75A; color: #fff; border: 0;
+    border-radius: 10px; font-size: 15px; font-weight: 700; cursor: pointer;
+  }
+  .allbar button.done { background: #16A34A; }
+  .guide {
+    background: #FFFBEB; border: 1px solid #FDE68A;
+    border-radius: 12px; padding: 14px 18px; margin-bottom: 16px;
+    font-size: 14px; color: #92400E;
+  }
+  .guide b { display: block; margin-bottom: 6px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="head">
+    <h1>CS 응대 시간 80% 줄이는 VOC AI 분석 및 답변 프롬프트</h1>
+    <div class="date">2026년 09월 08일 01:02 생성</div>
+  </div>
+
+  <div class="guide">
+    <b>이렇게 쓰면 됩니다</b>
+    네이버 블로그 글쓰기를 연 뒤, 아래 본문을 순서대로 복사해 붙여넣고
+    사진 자리에는 저장한 이미지를 올리면 됩니다.
+  </div>
+
+  <div class="card">
+    <h2>제목 후보</h2>
+    <ul><li><span class="t">매일 쌓이는 고객 민원, 챗GPT로 CS 업무 자동화하는 방법</span><button class="copy" data-copy="매일 쌓이는 고객 민원, 챗GPT로 CS 업무 자동화하는 방법">복사</button></li><li><span class="t">CS 응대 시간 80% 줄이는 VOC AI 분석 및 답변 프롬프트</span><button class="copy" data-copy="CS 응대 시간 80% 줄이는 VOC AI 분석 및 답변 프롬프트">복사</button></li><li><span class="t">반복되는 고객 문의, AI로 분류하고 초안 작성까지 끝내기</span><button class="copy" data-copy="반복되는 고객 문의, AI로 분류하고 초안 작성까지 끝내기">복사</button></li></ul>
+  </div>
+
+  <div class="card">
+    <h2>태그</h2>
+    <div class="tags">#VOCAI분석 #고객민원AI #CS업무자동화 #챗GPT고객응대 #민원답변프롬프트 #CS자동화 #AI활용법</div>
+    <div style="margin-top:12px">
+      <button class="copy" data-copy="#VOCAI분석 #고객민원AI #CS업무자동화 #챗GPT고객응대 #민원답변프롬프트 #CS자동화 #AI활용법">태그 전체 복사</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>본문</h2>
+  </div>
+
+  <div class="block img"><div class="imgno">사진 1</div><img src="../images/20260908-0102-cs-80-voc-ai-thumbnail-sq.png" alt="대표 이미지"><div class="fname">20260908-0102-cs-80-voc-ai-thumbnail-sq.png</div><a class="dl" href="../images/20260908-0102-cs-80-voc-ai-thumbnail-sq.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">매일 아침 출근해서 고객 문의함 열어보면 답답할 때가 많다.<br>배송 지연, 환불 요청, 단순 사용법 문의까지 수십 개씩 쌓여 있으니까.<br>하나하나 읽고 답변 쓰다 보면 오전에 할 일이 다 끝난다.<br><br>근데 요즘은 AI로 VOC 분류랑 초안 작성을 한 번에 처리하고 있다.<br>실제로 해보니 응대 시간이 80% 이상은 줄어들더라.</div><button class="copy" data-copy="매일 아침 출근해서 고객 문의함 열어보면 답답할 때가 많다.
+배송 지연, 환불 요청, 단순 사용법 문의까지 수십 개씩 쌓여 있으니까.
+하나하나 읽고 답변 쓰다 보면 오전에 할 일이 다 끝난다.
+
+근데 요즘은 AI로 VOC 분류랑 초안 작성을 한 번에 처리하고 있다.
+실제로 해보니 응대 시간이 80% 이상은 줄어들더라.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 2</div><img src="../images/20260908-0102-cs-80-voc-ai-diagram.png" alt="동작 구조 다이어그램"><div class="fname">20260908-0102-cs-80-voc-ai-diagram.png</div><a class="dl" href="../images/20260908-0102-cs-80-voc-ai-diagram.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">원리는 진짜 단순하다.<br>고객 문의가 들어오면 AI가 유형을 분류하고, 그에 맞는 답변 초안을 바로 뽑아준다.<br>우리는 내용 검토하고 전송만 누르면 끝난다.<br><br>특히 챗GPT나 뤼튼 같은 AI에 프롬프트만 잘 잡아두면 꽤 똑똑하게 일한다.</div><button class="copy" data-copy="원리는 진짜 단순하다.
+고객 문의가 들어오면 AI가 유형을 분류하고, 그에 맞는 답변 초안을 바로 뽑아준다.
+우리는 내용 검토하고 전송만 누르면 끝난다.
+
+특히 챗GPT나 뤼튼 같은 AI에 프롬프트만 잘 잡아두면 꽤 똑똑하게 일한다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 3</div><img src="../images/20260908-0102-cs-80-voc-ai-compare.png" alt="비교표"><div class="fname">20260908-0102-cs-80-voc-ai-compare.png</div><a class="dl" href="../images/20260908-0102-cs-80-voc-ai-compare.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">직접 손으로 쓸 때랑 비교하면 차이가 크다.<br>예전엔 담당자 기분에 따라 답변 말투도 바뀌고 실수도 종종 나왔다.<br>지금은 AI가 기본 틀을 맞춰주니까 응대 품질이 전체적으로 평준화되더라.<br><br>시간도 아끼고 CS 품질도 올려주니 안 쓸 이유가 없다.</div><button class="copy" data-copy="직접 손으로 쓸 때랑 비교하면 차이가 크다.
+예전엔 담당자 기분에 따라 답변 말투도 바뀌고 실수도 종종 나왔다.
+지금은 AI가 기본 틀을 맞춰주니까 응대 품질이 전체적으로 평준화되더라.
+
+시간도 아끼고 CS 품질도 올려주니 안 쓸 이유가 없다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 4</div><img src="../images/20260908-0102-cs-80-voc-ai-steps.png" alt="단계별 가이드"><div class="fname">20260908-0102-cs-80-voc-ai-steps.png</div><a class="dl" href="../images/20260908-0102-cs-80-voc-ai-steps.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">그럼 실제로 어떻게 써야 할까?<br>그냥 "이 문의에 답장 써줘" 라고 하면 엉뚱한 말이 나온다.<br>프롬프트를 이렇게 작성해보자.<br><br>---<br>[역할] 너는 친절하고 전문적인 쇼핑몰 CS 담당자야.<br>[문의 내용] {고객 문의글}<br>[지시 사항]<br>1. 이 문의의 유형(배송/환불/상품문의/기타)을 분류해줘.<br>2. 불만 원인을 한 줄로 요약해줘.<br>3. 정중하고 정제된 톤으로 답변 초안을 300자 이내로 써줘.<br>---<br><br>이렇게 틀을 정해주면 입력할 때마다 기깔나게 분류하고 답장을 써준다.<br>자주 나오는 민원은 가이드라인 문서를 같이 첨부해두면 더 정확하다.</div><button class="copy" data-copy="그럼 실제로 어떻게 써야 할까?
+그냥 "이 문의에 답장 써줘" 라고 하면 엉뚱한 말이 나온다.
+프롬프트를 이렇게 작성해보자.
+
+---
+[역할] 너는 친절하고 전문적인 쇼핑몰 CS 담당자야.
+[문의 내용] {고객 문의글}
+[지시 사항]
+1. 이 문의의 유형(배송/환불/상품문의/기타)을 분류해줘.
+2. 불만 원인을 한 줄로 요약해줘.
+3. 정중하고 정제된 톤으로 답변 초안을 300자 이내로 써줘.
+---
+
+이렇게 틀을 정해주면 입력할 때마다 기깔나게 분류하고 답장을 써준다.
+자주 나오는 민원은 가이드라인 문서를 같이 첨부해두면 더 정확하다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 5</div><img src="../images/20260908-0102-cs-80-voc-ai-summary.png" alt="핵심 요약"><div class="fname">20260908-0102-cs-80-voc-ai-summary.png</div><a class="dl" href="../images/20260908-0102-cs-80-voc-ai-summary.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">매일 반복되는 민원 응대에 치여 본업을 못 하고 있었다면 꼭 써보길 바란다.<br>프롬프트 하나 세팅해두는 것만으로 일하는 속도가 완전히 달라진다.<br>오늘 당장 자주 들어오는 문의 3개만 넣어서 테스트해보자.</div><button class="copy" data-copy="매일 반복되는 민원 응대에 치여 본업을 못 하고 있었다면 꼭 써보길 바란다.
+프롬프트 하나 세팅해두는 것만으로 일하는 속도가 완전히 달라진다.
+오늘 당장 자주 들어오는 문의 3개만 넣어서 테스트해보자.">이 부분 복사</button></div>
+
+  <div class="source">참고 기사: <a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE5kZUZzVzVlWW1URDc1cGttMjFzLWRDQjdCam9kVTMzYzA3Q3poS1hfUDkyYUM4UmRyai10UU9lbWx4Q3Etd2FFcWhoRF9DWE9SM1VvYnp0R1Vld9IBX0FVX3lxTE5WLXNjaFdmdFA3NllHNV_axoaaamI3z8cG69-jg2ThbZPFUNWTbwGHC_IX9TBmQU3Kxrfo1lW5Y_XP3nm57cWmrtPmcGHDs?oc=5" target="_blank" rel="noopener">민원관리·광고심의, 내부문서 검토까지…생보협회 AI 업무 활용 본격화 - 경향신문</a></div>
+</div>
+
+<div class="allbar">
+  <button id="all" data-copy="( 사진 여기 — thumbnail )
+매일 아침 출근해서 고객 문의함 열어보면 답답할 때가 많다.
+배송 지연, 환불 요청, 단순 사용법 문의까지 수십 개씩 쌓여 있으니까.
+하나하나 읽고 답변 쓰다 보면 오전에 할 일이 다 끝난다.
+
+근데 요즘은 AI로 VOC 분류랑 초안 작성을 한 번에 처리하고 있다.
+실제로 해보니 응대 시간이 80% 이상은 줄어들더라.
+
+( 사진 여기 — diagram )
+원리는 진짜 단순하다.
+고객 문의가 들어오면 AI가 유형을 분류하고, 그에 맞는 답변 초안을 바로 뽑아준다.
+우리는 내용 검토하고 전송만 누르면 끝난다.
+
+특히 챗GPT나 뤼튼 같은 AI에 프롬프트만 잘 잡아두면 꽤 똑똑하게 일한다.
+
+( 사진 여기 — compare )
+직접 손으로 쓸 때랑 비교하면 차이가 크다.
+예전엔 담당자 기분에 따라 답변 말투도 바뀌고 실수도 종종 나왔다.
+지금은 AI가 기본 틀을 맞춰주니까 응대 품질이 전체적으로 평준화되더라.
+
+시간도 아끼고 CS 품질도 올려주니 안 쓸 이유가 없다.
+
+( 사진 여기 — steps )
+그럼 실제로 어떻게 써야 할까?
+그냥 "이 문의에 답장 써줘" 라고 하면 엉뚱한 말이 나온다.
+프롬프트를 이렇게 작성해보자.
+
+---
+[역할] 너는 친절하고 전문적인 쇼핑몰 CS 담당자야.
+[문의 내용] {고객 문의글}
+[지시 사항]
+1. 이 문의의 유형(배송/환불/상품문의/기타)을 분류해줘.
+2. 불만 원인을 한 줄로 요약해줘.
+3. 정중하고 정제된 톤으로 답변 초안을 300자 이내로 써줘.
+---
+
+이렇게 틀을 정해주면 입력할 때마다 기깔나게 분류하고 답장을 써준다.
+자주 나오는 민원은 가이드라인 문서를 같이 첨부해두면 더 정확하다.
+
+( 사진 여기 — summary )
+매일 반복되는 민원 응대에 치여 본업을 못 하고 있었다면 꼭 써보길 바란다.
+프롬프트 하나 세팅해두는 것만으로 일하는 속도가 완전히 달라진다.
+오늘 당장 자주 들어오는 문의 3개만 넣어서 테스트해보자.">본문 전체 복사</button>
+</div>
+
+<script>
+document.addEventListener('click', function (e) {
+  var btn = e.target.closest('[data-copy]');
+  if (!btn) return;
+  var text = btn.getAttribute('data-copy');
+  var original = btn.textContent;
+
+  function done() {
+    btn.textContent = '복사됨';
+    btn.classList.add('done');
+    setTimeout(function () {
+      btn.textContent = original;
+      btn.classList.remove('done');
+    }, 1400);
+  }
+
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(text).then(done);
+  } else {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); done(); } catch (err) {}
+    document.body.removeChild(ta);
+  }
+});
+</script>
+</body>
+</html>
