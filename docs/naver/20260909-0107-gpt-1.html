@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>블로그 저품질 키워드 챗GPT로 1분 만에 검수하는 프롬프트 — 네이버 원고</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 24px 16px 80px;
+    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+                 "Malgun Gothic", sans-serif;
+    background: #F6F7F9; color: #1F2937; line-height: 1.75;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  .head {
+    background: #03C75A; color: #fff; padding: 20px 22px;
+    border-radius: 14px; margin-bottom: 20px;
+  }
+  .head h1 { margin: 0 0 6px; font-size: 20px; line-height: 1.45; }
+  .head .date { font-size: 13px; opacity: .9; }
+  .card {
+    background: #fff; border-radius: 14px; padding: 18px 20px;
+    margin-bottom: 16px; border: 1px solid #E5E7EB;
+  }
+  .card h2 {
+    margin: 0 0 12px; font-size: 15px; color: #6B7280;
+    font-weight: 700; letter-spacing: .3px;
+  }
+  ul { margin: 0; padding: 0; list-style: none; }
+  ul li {
+    display: flex; align-items: center; gap: 10px;
+    padding: 9px 0; border-bottom: 1px solid #F3F4F6;
+  }
+  ul li:last-child { border-bottom: 0; }
+  ul li .t { flex: 1; font-size: 15px; }
+  .copy {
+    border: 0; background: #EEF2FF; color: #4F46E5;
+    padding: 7px 13px; border-radius: 8px; font-size: 13px;
+    cursor: pointer; white-space: nowrap; font-weight: 600;
+  }
+  .copy:hover { background: #E0E7FF; }
+  .copy.done { background: #DCFCE7; color: #16A34A; }
+  .tags { color: #2563EB; font-size: 14px; word-break: keep-all; }
+  .block {
+    background: #fff; border: 1px solid #E5E7EB;
+    border-radius: 14px; padding: 16px 18px; margin-bottom: 12px;
+  }
+  .block.text .body { font-size: 15.5px; margin-bottom: 12px; }
+  .block.img { text-align: center; background: #FAFBFC; }
+  .block.img img {
+    width: 100%; height: auto; border-radius: 10px; display: block;
+  }
+  .imgno {
+    font-size: 12px; color: #9CA3AF; margin-bottom: 8px;
+    font-weight: 700; letter-spacing: .5px;
+  }
+  .fname {
+    font-size: 12px; color: #9CA3AF; margin-top: 8px;
+    font-family: ui-monospace, Menlo, monospace;
+  }
+  .dl {
+    display: inline-block; margin-top: 10px; padding: 8px 16px;
+    background: #F3F4F6; color: #374151; border-radius: 8px;
+    text-decoration: none; font-size: 13px; font-weight: 600;
+  }
+  .source {
+    font-size: 13px; color: #9CA3AF; margin-top: 22px;
+    padding-top: 14px; border-top: 1px solid #E5E7EB;
+  }
+  .source a { color: #6B7280; }
+  .allbar {
+    position: fixed; left: 0; right: 0; bottom: 0;
+    background: #fff; border-top: 1px solid #E5E7EB;
+    padding: 12px 16px; text-align: center;
+  }
+  .allbar button {
+    width: 100%; max-width: 720px; padding: 14px;
+    background: #03C75A; color: #fff; border: 0;
+    border-radius: 10px; font-size: 15px; font-weight: 700; cursor: pointer;
+  }
+  .allbar button.done { background: #16A34A; }
+  .guide {
+    background: #FFFBEB; border: 1px solid #FDE68A;
+    border-radius: 12px; padding: 14px 18px; margin-bottom: 16px;
+    font-size: 14px; color: #92400E;
+  }
+  .guide b { display: block; margin-bottom: 6px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="head">
+    <h1>블로그 저품질 키워드 챗GPT로 1분 만에 검수하는 프롬프트</h1>
+    <div class="date">2026년 09월 09일 01:07 생성</div>
+  </div>
+
+  <div class="guide">
+    <b>이렇게 쓰면 됩니다</b>
+    네이버 블로그 글쓰기를 연 뒤, 아래 본문을 순서대로 복사해 붙여넣고
+    사진 자리에는 저장한 이미지를 올리면 됩니다.
+  </div>
+
+  <div class="card">
+    <h2>제목 후보</h2>
+    <ul><li><span class="t">블로그 저품질 키워드 챗GPT로 1분 만에 검수하는 프롬프트</span><button class="copy" data-copy="블로그 저품질 키워드 챗GPT로 1분 만에 검수하는 프롬프트">복사</button></li><li><span class="t">SNS 마케팅 카피 발행 전 과장 광고 위험 미리 잡는 법</span><button class="copy" data-copy="SNS 마케팅 카피 발행 전 과장 광고 위험 미리 잡는 법">복사</button></li><li><span class="t">AI 마케팅 활용법: 저품질 제재 없는 카피 자가 검수 루틴</span><button class="copy" data-copy="AI 마케팅 활용법: 저품질 제재 없는 카피 자가 검수 루틴">복사</button></li></ul>
+  </div>
+
+  <div class="card">
+    <h2>태그</h2>
+    <div class="tags">#AI마케팅활용 #AI광고심의 #마케팅카피검수 #블로그저품질키워드 #챗GPT마케팅 #블로그운영팁 #마케팅문구</div>
+    <div style="margin-top:12px">
+      <button class="copy" data-copy="#AI마케팅활용 #AI광고심의 #마케팅카피검수 #블로그저품질키워드 #챗GPT마케팅 #블로그운영팁 #마케팅문구">태그 전체 복사</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>본문</h2>
+  </div>
+
+  <div class="block img"><div class="imgno">사진 1</div><img src="../images/20260909-0107-gpt-1-thumbnail-sq.png" alt="대표 이미지"><div class="fname">20260909-0107-gpt-1-thumbnail-sq.png</div><a class="dl" href="../images/20260909-0107-gpt-1-thumbnail-sq.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">블로그 포스팅이나 SNS 카피 쓸 때 제일 찝찝한 순간이 있다.<br><br>'이 표현 썼다가 저품질 걸리는 거 아니야?'<br>'과장 광고로 제재당하면 어쩌지?'<br><br>나도 예전에 최고, 무조건, 100% 같은 단어 막 썼다가 골치 아팠던 적이 있다.<br><br>요즘은 AI로 발행 전에 위험 키워드를 미리 검수하는 편이다.<br><br>생각보다 훨씬 꼼꼼하게 잘 잡아내더라.</div><button class="copy" data-copy="블로그 포스팅이나 SNS 카피 쓸 때 제일 찝찝한 순간이 있다.
+
+'이 표현 썼다가 저품질 걸리는 거 아니야?'
+'과장 광고로 제재당하면 어쩌지?'
+
+나도 예전에 최고, 무조건, 100% 같은 단어 막 썼다가 골치 아팠던 적이 있다.
+
+요즘은 AI로 발행 전에 위험 키워드를 미리 검수하는 편이다.
+
+생각보다 훨씬 꼼꼼하게 잘 잡아내더라.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 2</div><img src="../images/20260909-0107-gpt-1-diagram.png" alt="동작 구조 다이어그램"><div class="fname">20260909-0107-gpt-1-diagram.png</div><a class="dl" href="../images/20260909-0107-gpt-1-diagram.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">보통 마케팅 카피 검수는 이런 순서로 진행된다.<br><br>내가 작성한 원고를 준비하고,<br>AI 검수 프롬프트를 입력한 뒤,<br>위험 키워드 수정안을 반영해서 포스팅하는 거다.<br><br>과정이 복잡해 보여도 프롬프트 하나만 저장해두면 1분도 안 걸린다.</div><button class="copy" data-copy="보통 마케팅 카피 검수는 이런 순서로 진행된다.
+
+내가 작성한 원고를 준비하고,
+AI 검수 프롬프트를 입력한 뒤,
+위험 키워드 수정안을 반영해서 포스팅하는 거다.
+
+과정이 복잡해 보여도 프롬프트 하나만 저장해두면 1분도 안 걸린다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 3</div><img src="../images/20260909-0107-gpt-1-compare.png" alt="비교표"><div class="fname">20260909-0107-gpt-1-compare.png</div><a class="dl" href="../images/20260909-0107-gpt-1-compare.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">그냥 무작정 '이 글 검수해줘'라고 하면 AI가 일반적인 맞춤법만 고쳐준다.<br><br>우리가 원하는 건 과장 광고 방지랑 플랫폼 제재 회피다.<br><br>일반 맞춤법 검사랑 마케팅 심의 검수는 접근 방식부터 완전히 다르다.<br><br>구체적인 검수 기준을 프롬프트에 넣어줘야 진짜 위험한 단어를 골라낸다.</div><button class="copy" data-copy="그냥 무작정 '이 글 검수해줘'라고 하면 AI가 일반적인 맞춤법만 고쳐준다.
+
+우리가 원하는 건 과장 광고 방지랑 플랫폼 제재 회피다.
+
+일반 맞춤법 검사랑 마케팅 심의 검수는 접근 방식부터 완전히 다르다.
+
+구체적인 검수 기준을 프롬프트에 넣어줘야 진짜 위험한 단어를 골라낸다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 4</div><img src="../images/20260909-0107-gpt-1-steps.png" alt="단계별 가이드"><div class="fname">20260909-0107-gpt-1-steps.png</div><a class="dl" href="../images/20260909-0107-gpt-1-steps.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">내가 실제로 자주 사용하는 챗GPT 마케팅 검수 프롬프트다.<br><br>그대로 복사해서 쓰면 된다.<br><br>---<br>[프롬프트 예시]<br>"다음 마케팅 원고에서 법적 과장 광고 위험 단어(최상급 표현, 확정적 표현)와 블로그 저품질 유발 키워드를 찾아서 지적해줘. 그리고 대체 가능한 담백한 표현을 추천해줘."<br>---<br><br>원고를 넣으면 위험 단어, 위험 이유, 대체 표현까지 보기 좋게 정리해준다.<br><br>'100% 효과 보장' 같은 문구를 넣으면 '확정적 표현 위험'이라고 딱 집어주더라.<br><br>대신 '사용 만족도가 높은 편' 같은 담백한 문장으로 바꿔준다.</div><button class="copy" data-copy="내가 실제로 자주 사용하는 챗GPT 마케팅 검수 프롬프트다.
+
+그대로 복사해서 쓰면 된다.
+
+---
+[프롬프트 예시]
+"다음 마케팅 원고에서 법적 과장 광고 위험 단어(최상급 표현, 확정적 표현)와 블로그 저품질 유발 키워드를 찾아서 지적해줘. 그리고 대체 가능한 담백한 표현을 추천해줘."
+---
+
+원고를 넣으면 위험 단어, 위험 이유, 대체 표현까지 보기 좋게 정리해준다.
+
+'100% 효과 보장' 같은 문구를 넣으면 '확정적 표현 위험'이라고 딱 집어주더라.
+
+대신 '사용 만족도가 높은 편' 같은 담백한 문장으로 바꿔준다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 5</div><img src="../images/20260909-0107-gpt-1-summary.png" alt="핵심 요약"><div class="fname">20260909-0107-gpt-1-summary.png</div><a class="dl" href="../images/20260909-0107-gpt-1-summary.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">글 하나 잘못 올려서 블로그 저품질 오거나 경고 받으면 손해가 너무 크다.<br><br>발행 버튼 누르기 전에 AI로 1분만 돌려보는 습관을 들여보자.<br><br>글 쓸 때 느껴지던 불안함도 확실히 줄어들고 마음 편하게 발행할 수 있다.<br><br>마케팅 카피 검수 프롬프트 하나로 안심하고 포스팅해보자.</div><button class="copy" data-copy="글 하나 잘못 올려서 블로그 저품질 오거나 경고 받으면 손해가 너무 크다.
+
+발행 버튼 누르기 전에 AI로 1분만 돌려보는 습관을 들여보자.
+
+글 쓸 때 느껴지던 불안함도 확실히 줄어들고 마음 편하게 발행할 수 있다.
+
+마케팅 카피 검수 프롬프트 하나로 안심하고 포스팅해보자.">이 부분 복사</button></div>
+
+  <div class="source">참고 기사: <a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE5kZUZzVzVlWW1URDc1cGttMjFzLWRDQjdCam9kVTMzYzA3Q3poS1hfUDkyYUM4UmRyai10UU9lbWx4Q3Etd2FFcWhoRF9DWE9SM1VvYnp0R1Vld9IBX0FVX3lxTE5WLXNjaFdmdFA3NllHNV9heG9hYW1Jd3o4Y0c2OS1qZzJUaGJaUEZVTldUYndHSENfSVg5VEJtUVUzS3hyZm8xbFc1WV9YUDNubTU3Y1dtcnRQbWNHSERz?oc=5" target="_blank" rel="noopener">민원관리·광고심의, 내부문서 검토까지…생보협회 AI 업무 활용 본격화 - 경향신문</a></div>
+</div>
+
+<div class="allbar">
+  <button id="all" data-copy="( 사진 여기 — thumbnail )
+
+블로그 포스팅이나 SNS 카피 쓸 때 제일 찝찝한 순간이 있다.
+
+'이 표현 썼다가 저품질 걸리는 거 아니야?'
+'과장 광고로 제재당하면 어쩌지?'
+
+나도 예전에 최고, 무조건, 100% 같은 단어 막 썼다가 골치 아팠던 적이 있다.
+
+요즘은 AI로 발행 전에 위험 키워드를 미리 검수하는 편이다.
+
+생각보다 훨씬 꼼꼼하게 잘 잡아내더라.
+
+( 사진 여기 — diagram )
+
+보통 마케팅 카피 검수는 이런 순서로 진행된다.
+
+내가 작성한 원고를 준비하고,
+AI 검수 프롬프트를 입력한 뒤,
+위험 키워드 수정안을 반영해서 포스팅하는 거다.
+
+과정이 복잡해 보여도 프롬프트 하나만 저장해두면 1분도 안 걸린다.
+
+( 사진 여기 — compare )
+
+그냥 무작정 '이 글 검수해줘'라고 하면 AI가 일반적인 맞춤법만 고쳐준다.
+
+우리가 원하는 건 과장 광고 방지랑 플랫폼 제재 회피다.
+
+일반 맞춤법 검사랑 마케팅 심의 검수는 접근 방식부터 완전히 다르다.
+
+구체적인 검수 기준을 프롬프트에 넣어줘야 진짜 위험한 단어를 골라낸다.
+
+( 사진 여기 — steps )
+
+내가 실제로 자주 사용하는 챗GPT 마케팅 검수 프롬프트다.
+
+그대로 복사해서 쓰면 된다.
+
+---
+[프롬프트 예시]
+"다음 마케팅 원고에서 법적 과장 광고 위험 단어(최상급 표현, 확정적 표현)와 블로그 저품질 유발 키워드를 찾아서 지적해줘. 그리고 대체 가능한 담백한 표현을 추천해줘."
+---
+
+원고를 넣으면 위험 단어, 위험 이유, 대체 표현까지 보기 좋게 정리해준다.
+
+'100% 효과 보장' 같은 문구를 넣으면 '확정적 표현 위험'이라고 딱 집어주더라.
+
+대신 '사용 만족도가 높은 편' 같은 담백한 문장으로 바꿔준다.
+
+( 사진 여기 — summary )
+
+글 하나 잘못 올려서 블로그 저품질 오거나 경고 받으면 손해가 너무 크다.
+
+발행 버튼 누르기 전에 AI로 1분만 돌려보는 습관을 들여보자.
+
+글 쓸 때 느껴지던 불안함도 확실히 줄어들고 마음 편하게 발행할 수 있다.
+
+마케팅 카피 검수 프롬프트 하나로 안심하고 포스팅해보자.">본문 전체 복사</button>
+</div>
+
+<script>
+document.addEventListener('click', function (e) {
+  var btn = e.target.closest('[data-copy]');
+  if (!btn) return;
+  var text = btn.getAttribute('data-copy');
+  var original = btn.textContent;
+
+  function done() {
+    btn.textContent = '복사됨';
+    btn.classList.add('done');
+    setTimeout(function () {
+      btn.textContent = original;
+      btn.classList.remove('done');
+    }, 1400);
+  }
+
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(text).then(done);
+  } else {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); done(); } catch (err) {}
+    document.body.removeChild(ta);
+  }
+});
+</script>
+</body>
+</html>
