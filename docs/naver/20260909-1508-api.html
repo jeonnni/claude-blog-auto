@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>클로드 토큰 무단 소진 막는 API 키 보안 및 비용 한도 설정법 — 네이버 원고</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 24px 16px 80px;
+    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+                 "Malgun Gothic", sans-serif;
+    background: #F6F7F9; color: #1F2937; line-height: 1.75;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  .head {
+    background: #03C75A; color: #fff; padding: 20px 22px;
+    border-radius: 14px; margin-bottom: 20px;
+  }
+  .head h1 { margin: 0 0 6px; font-size: 20px; line-height: 1.45; }
+  .head .date { font-size: 13px; opacity: .9; }
+  .card {
+    background: #fff; border-radius: 14px; padding: 18px 20px;
+    margin-bottom: 16px; border: 1px solid #E5E7EB;
+  }
+  .card h2 {
+    margin: 0 0 12px; font-size: 15px; color: #6B7280;
+    font-weight: 700; letter-spacing: .3px;
+  }
+  ul { margin: 0; padding: 0; list-style: none; }
+  ul li {
+    display: flex; align-items: center; gap: 10px;
+    padding: 9px 0; border-bottom: 1px solid #F3F4F6;
+  }
+  ul li:last-child { border-bottom: 0; }
+  ul li .t { flex: 1; font-size: 15px; }
+  .copy {
+    border: 0; background: #EEF2FF; color: #4F46E5;
+    padding: 7px 13px; border-radius: 8px; font-size: 13px;
+    cursor: pointer; white-space: nowrap; font-weight: 600;
+  }
+  .copy:hover { background: #E0E7FF; }
+  .copy.done { background: #DCFCE7; color: #16A34A; }
+  .tags { color: #2563EB; font-size: 14px; word-break: keep-all; }
+  .block {
+    background: #fff; border: 1px solid #E5E7EB;
+    border-radius: 14px; padding: 16px 18px; margin-bottom: 12px;
+  }
+  .block.text .body { font-size: 15.5px; margin-bottom: 12px; }
+  .block.img { text-align: center; background: #FAFBFC; }
+  .block.img img {
+    width: 100%; height: auto; border-radius: 10px; display: block;
+  }
+  .imgno {
+    font-size: 12px; color: #9CA3AF; margin-bottom: 8px;
+    font-weight: 700; letter-spacing: .5px;
+  }
+  .fname {
+    font-size: 12px; color: #9CA3AF; margin-top: 8px;
+    font-family: ui-monospace, Menlo, monospace;
+  }
+  .dl {
+    display: inline-block; margin-top: 10px; padding: 8px 16px;
+    background: #F3F4F6; color: #374151; border-radius: 8px;
+    text-decoration: none; font-size: 13px; font-weight: 600;
+  }
+  .source {
+    font-size: 13px; color: #9CA3AF; margin-top: 22px;
+    padding-top: 14px; border-top: 1px solid #E5E7EB;
+  }
+  .source a { color: #6B7280; }
+  .allbar {
+    position: fixed; left: 0; right: 0; bottom: 0;
+    background: #fff; border-top: 1px solid #E5E7EB;
+    padding: 12px 16px; text-align: center;
+  }
+  .allbar button {
+    width: 100%; max-width: 720px; padding: 14px;
+    background: #03C75A; color: #fff; border: 0;
+    border-radius: 10px; font-size: 15px; font-weight: 700; cursor: pointer;
+  }
+  .allbar button.done { background: #16A34A; }
+  .guide {
+    background: #FFFBEB; border: 1px solid #FDE68A;
+    border-radius: 12px; padding: 14px 18px; margin-bottom: 16px;
+    font-size: 14px; color: #92400E;
+  }
+  .guide b { display: block; margin-bottom: 6px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="head">
+    <h1>클로드 토큰 무단 소진 막는 API 키 보안 및 비용 한도 설정법</h1>
+    <div class="date">2026년 09월 09일 15:08 생성</div>
+  </div>
+
+  <div class="guide">
+    <b>이렇게 쓰면 됩니다</b>
+    네이버 블로그 글쓰기를 연 뒤, 아래 본문을 순서대로 복사해 붙여넣고
+    사진 자리에는 저장한 이미지를 올리면 됩니다.
+  </div>
+
+  <div class="card">
+    <h2>제목 후보</h2>
+    <ul><li><span class="t">클로드 API 키 유출로 요금 폭탄 맞기 전에 설정할 것들</span><button class="copy" data-copy="클로드 API 키 유출로 요금 폭탄 맞기 전에 설정할 것들">복사</button></li><li><span class="t">클로드 토큰 무단 소진 막는 API 키 보안 및 비용 한도 설정법</span><button class="copy" data-copy="클로드 토큰 무단 소진 막는 API 키 보안 및 비용 한도 설정법">복사</button></li><li><span class="t">클로드 계정 보안 필수! API 키 관리와 지출 한도 설정 가이드</span><button class="copy" data-copy="클로드 계정 보안 필수! API 키 관리와 지출 한도 설정 가이드">복사</button></li></ul>
+  </div>
+
+  <div class="card">
+    <h2>태그</h2>
+    <div class="tags">#클로드API키 #클로드토큰소진 #AIAPI보안 #클로드비용한도설정 #클로드계정보안 #API키유출 #클로드보안</div>
+    <div style="margin-top:12px">
+      <button class="copy" data-copy="#클로드API키 #클로드토큰소진 #AIAPI보안 #클로드비용한도설정 #클로드계정보안 #API키유출 #클로드보안">태그 전체 복사</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>본문</h2>
+  </div>
+
+  <div class="block text"><div class="body">개발하다 보면 AI API 키를 프로젝트에 등록해서 쓸 일이 많다.<br>근데 GitHub 같은 곳에 실수로 코드 올렸다가 API 키 유출되는 경우가 생각보다 흔하다.<br><br>자고 일어났더니 토큰 엄청 소진되어 있고 결제 폭탄 맞았다는 글도 꽤 보인다.<br>미리 보안 설정이랑 지출 한도만 잡아둬도 이런 참사는 충분히 막을 수 있다.</div><button class="copy" data-copy="개발하다 보면 AI API 키를 프로젝트에 등록해서 쓸 일이 많다.
+근데 GitHub 같은 곳에 실수로 코드 올렸다가 API 키 유출되는 경우가 생각보다 흔하다.
+
+자고 일어났더니 토큰 엄청 소진되어 있고 결제 폭탄 맞았다는 글도 꽤 보인다.
+미리 보안 설정이랑 지출 한도만 잡아둬도 이런 참사는 충분히 막을 수 있다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 1</div><img src="../images/20260909-1508-api-thumbnail-sq.png" alt="대표 이미지"><div class="fname">20260909-1508-api-thumbnail-sq.png</div><a class="dl" href="../images/20260909-1508-api-thumbnail-sq.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">기본적으로 API 키는 절대 코드 안에 직접 하드코딩하면 안 된다.<br>보통 실수하는 경로가 코드를 저장소에 공유하거나 올릴 때 키값까지 같이 올려버리는 거다.<br><br>환경 변수 파일인 .env 파일에 키를 따로 보관하는 게 기본이다.<br>그리고 .gitignore 파일에 .env를 꼭 추가해둬야 커밋할 때 안 올라간다.</div><button class="copy" data-copy="기본적으로 API 키는 절대 코드 안에 직접 하드코딩하면 안 된다.
+보통 실수하는 경로가 코드를 저장소에 공유하거나 올릴 때 키값까지 같이 올려버리는 거다.
+
+환경 변수 파일인 .env 파일에 키를 따로 보관하는 게 기본이다.
+그리고 .gitignore 파일에 .env를 꼭 추가해둬야 커밋할 때 안 올라간다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 2</div><img src="../images/20260909-1508-api-diagram.png" alt="동작 구조 다이어그램"><div class="fname">20260909-1508-api-diagram.png</div><a class="dl" href="../images/20260909-1508-api-diagram.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">비밀번호처럼 지켜야 하는 게 API 키다.<br>하지만 단순히 숨기는 걸로만 끝내면 살짝 불안하다.<br><br>만약 실수로 유출되더라도 피해를 최소화하는 장치가 필요하다.<br>그게 바로 비용 한도 설정(Spending Limit)이랑 주기적인 키 재발급이다.<br><br>한도 설정을 안 해두면 계정에 연결된 카드로 무단 자동 결제가 계속 들어간다.<br>반대로 한도를 걸어두면 일정 금액 이상 쓰였을 때 자동으로 차단된다.</div><button class="copy" data-copy="비밀번호처럼 지켜야 하는 게 API 키다.
+하지만 단순히 숨기는 걸로만 끝내면 살짝 불안하다.
+
+만약 실수로 유출되더라도 피해를 최소화하는 장치가 필요하다.
+그게 바로 비용 한도 설정(Spending Limit)이랑 주기적인 키 재발급이다.
+
+한도 설정을 안 해두면 계정에 연결된 카드로 무단 자동 결제가 계속 들어간다.
+반대로 한도를 걸어두면 일정 금액 이상 쓰였을 때 자동으로 차단된다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 3</div><img src="../images/20260909-1508-api-compare.png" alt="비교표"><div class="fname">20260909-1508-api-compare.png</div><a class="dl" href="../images/20260909-1508-api-compare.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">설정하는 방법도 생각보다 엄청 간단하더라.<br><br>1. 콘솔 페이지 로그인 후 빌딩(Billing) 메뉴 접속<br>2. 한도 설정(Limits) 항목에서 월별 최대 지출 금액 입력<br>3. 기존 사용하던 API 키 주기에 맞춰 삭제하고 재발급<br><br>코드 예시도 간단하게 남겨둔다.<br><br>```<br># .env 파일<br>CLAUDE_API_KEY=your_api_key_here<br>```<br><br>```<br># .gitignore 파일<br>.env<br>```<br><br>이렇게 세팅해두면 개발할 때도 안전하고 키를 외부로 흘릴 일도 없다.</div><button class="copy" data-copy="설정하는 방법도 생각보다 엄청 간단하더라.
+
+1. 콘솔 페이지 로그인 후 빌딩(Billing) 메뉴 접속
+2. 한도 설정(Limits) 항목에서 월별 최대 지출 금액 입력
+3. 기존 사용하던 API 키 주기에 맞춰 삭제하고 재발급
+
+코드 예시도 간단하게 남겨둔다.
+
+```
+# .env 파일
+CLAUDE_API_KEY=your_api_key_here
+```
+
+```
+# .gitignore 파일
+.env
+```
+
+이렇게 세팅해두면 개발할 때도 안전하고 키를 외부로 흘릴 일도 없다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 4</div><img src="../images/20260909-1508-api-steps.png" alt="단계별 가이드"><div class="fname">20260909-1508-api-steps.png</div><a class="dl" href="../images/20260909-1508-api-steps.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">실수로 유출되어도 한도 설정만 되어 있으면 요금 폭탄은 피할 수 있다.<br>내 계정과 통장은 내가 스스로 지켜야 한다.<br><br>방심하다가 토큰 낭비하고 쓸데없는 비용 내지 말자.<br>지금 바로 콘솔 접속해서 내 계정 한도부터 확인해 보는 걸 추천한다.</div><button class="copy" data-copy="실수로 유출되어도 한도 설정만 되어 있으면 요금 폭탄은 피할 수 있다.
+내 계정과 통장은 내가 스스로 지켜야 한다.
+
+방심하다가 토큰 낭비하고 쓸데없는 비용 내지 말자.
+지금 바로 콘솔 접속해서 내 계정 한도부터 확인해 보는 걸 추천한다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 5</div><img src="../images/20260909-1508-api-summary.png" alt="핵심 요약"><div class="fname">20260909-1508-api-summary.png</div><a class="dl" href="../images/20260909-1508-api-summary.png" download>사진 저장</a></div>
+
+  <div class="source">참고 기사: <a href="https://news.google.com/rss/articles/CBMiU0FVX3lxTFBEUUZZcm10Rl9ZcUgzSmtNSlpRM1A3MjczZmRiMjMtcTVHcVlHZ0JmaHRVSEhBNng2TFFkR3JqWVNNQkRsRXNuUjVCdzBWR09pejI4?oc=5" target="_blank" rel="noopener">"내가 안 썼는데 토큰 사라졌다"…앤트로픽 클로드 토큰 무단 소진 피해 확산 - Nate News</a></div>
+</div>
+
+<div class="allbar">
+  <button id="all" data-copy="개발하다 보면 AI API 키를 프로젝트에 등록해서 쓸 일이 많다.
+근데 GitHub 같은 곳에 실수로 코드 올렸다가 API 키 유출되는 경우가 생각보다 흔하다.
+
+자고 일어났더니 토큰 엄청 소진되어 있고 결제 폭탄 맞았다는 글도 꽤 보인다.
+미리 보안 설정이랑 지출 한도만 잡아둬도 이런 참사는 충분히 막을 수 있다.
+
+( 사진 여기 — thumbnail )
+
+기본적으로 API 키는 절대 코드 안에 직접 하드코딩하면 안 된다.
+보통 실수하는 경로가 코드를 저장소에 공유하거나 올릴 때 키값까지 같이 올려버리는 거다.
+
+환경 변수 파일인 .env 파일에 키를 따로 보관하는 게 기본이다.
+그리고 .gitignore 파일에 .env를 꼭 추가해둬야 커밋할 때 안 올라간다.
+
+( 사진 여기 — diagram )
+
+비밀번호처럼 지켜야 하는 게 API 키다.
+하지만 단순히 숨기는 걸로만 끝내면 살짝 불안하다.
+
+만약 실수로 유출되더라도 피해를 최소화하는 장치가 필요하다.
+그게 바로 비용 한도 설정(Spending Limit)이랑 주기적인 키 재발급이다.
+
+한도 설정을 안 해두면 계정에 연결된 카드로 무단 자동 결제가 계속 들어간다.
+반대로 한도를 걸어두면 일정 금액 이상 쓰였을 때 자동으로 차단된다.
+
+( 사진 여기 — compare )
+
+설정하는 방법도 생각보다 엄청 간단하더라.
+
+1. 콘솔 페이지 로그인 후 빌딩(Billing) 메뉴 접속
+2. 한도 설정(Limits) 항목에서 월별 최대 지출 금액 입력
+3. 기존 사용하던 API 키 주기에 맞춰 삭제하고 재발급
+
+코드 예시도 간단하게 남겨둔다.
+
+```
+# .env 파일
+CLAUDE_API_KEY=your_api_key_here
+```
+
+```
+# .gitignore 파일
+.env
+```
+
+이렇게 세팅해두면 개발할 때도 안전하고 키를 외부로 흘릴 일도 없다.
+
+( 사진 여기 — steps )
+
+실수로 유출되어도 한도 설정만 되어 있으면 요금 폭탄은 피할 수 있다.
+내 계정과 통장은 내가 스스로 지켜야 한다.
+
+방심하다가 토큰 낭비하고 쓸데없는 비용 내지 말자.
+지금 바로 콘솔 접속해서 내 계정 한도부터 확인해 보는 걸 추천한다.
+
+( 사진 여기 — summary )">본문 전체 복사</button>
+</div>
+
+<script>
+document.addEventListener('click', function (e) {
+  var btn = e.target.closest('[data-copy]');
+  if (!btn) return;
+  var text = btn.getAttribute('data-copy');
+  var original = btn.textContent;
+
+  function done() {
+    btn.textContent = '복사됨';
+    btn.classList.add('done');
+    setTimeout(function () {
+      btn.textContent = original;
+      btn.classList.remove('done');
+    }, 1400);
+  }
+
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(text).then(done);
+  } else {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); done(); } catch (err) {}
+    document.body.removeChild(ta);
+  }
+});
+</script>
+</body>
+</html>
