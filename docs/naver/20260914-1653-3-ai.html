@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>수많은 업무 서류 오탈자 3초 만에 잡아내는 AI 프롬프트 작성법 — 네이버 원고</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 24px 16px 80px;
+    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+                 "Malgun Gothic", sans-serif;
+    background: #F6F7F9; color: #1F2937; line-height: 1.75;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  .head {
+    background: #03C75A; color: #fff; padding: 20px 22px;
+    border-radius: 14px; margin-bottom: 20px;
+  }
+  .head h1 { margin: 0 0 6px; font-size: 20px; line-height: 1.45; }
+  .head .date { font-size: 13px; opacity: .9; }
+  .card {
+    background: #fff; border-radius: 14px; padding: 18px 20px;
+    margin-bottom: 16px; border: 1px solid #E5E7EB;
+  }
+  .card h2 {
+    margin: 0 0 12px; font-size: 15px; color: #6B7280;
+    font-weight: 700; letter-spacing: .3px;
+  }
+  ul { margin: 0; padding: 0; list-style: none; }
+  ul li {
+    display: flex; align-items: center; gap: 10px;
+    padding: 9px 0; border-bottom: 1px solid #F3F4F6;
+  }
+  ul li:last-child { border-bottom: 0; }
+  ul li .t { flex: 1; font-size: 15px; }
+  .copy {
+    border: 0; background: #EEF2FF; color: #4F46E5;
+    padding: 7px 13px; border-radius: 8px; font-size: 13px;
+    cursor: pointer; white-space: nowrap; font-weight: 600;
+  }
+  .copy:hover { background: #E0E7FF; }
+  .copy.done { background: #DCFCE7; color: #16A34A; }
+  .tags { color: #2563EB; font-size: 14px; word-break: keep-all; }
+  .block {
+    background: #fff; border: 1px solid #E5E7EB;
+    border-radius: 14px; padding: 16px 18px; margin-bottom: 12px;
+  }
+  .block.text .body { font-size: 15.5px; margin-bottom: 12px; }
+  .block.img { text-align: center; background: #FAFBFC; }
+  .block.img img {
+    width: 100%; height: auto; border-radius: 10px; display: block;
+  }
+  .imgno {
+    font-size: 12px; color: #9CA3AF; margin-bottom: 8px;
+    font-weight: 700; letter-spacing: .5px;
+  }
+  .fname {
+    font-size: 12px; color: #9CA3AF; margin-top: 8px;
+    font-family: ui-monospace, Menlo, monospace;
+  }
+  .dl {
+    display: inline-block; margin-top: 10px; padding: 8px 16px;
+    background: #F3F4F6; color: #374151; border-radius: 8px;
+    text-decoration: none; font-size: 13px; font-weight: 600;
+  }
+  .source {
+    font-size: 13px; color: #9CA3AF; margin-top: 22px;
+    padding-top: 14px; border-top: 1px solid #E5E7EB;
+  }
+  .source a { color: #6B7280; }
+  .allbar {
+    position: fixed; left: 0; right: 0; bottom: 0;
+    background: #fff; border-top: 1px solid #E5E7EB;
+    padding: 12px 16px; text-align: center;
+  }
+  .allbar button {
+    width: 100%; max-width: 720px; padding: 14px;
+    background: #03C75A; color: #fff; border: 0;
+    border-radius: 10px; font-size: 15px; font-weight: 700; cursor: pointer;
+  }
+  .allbar button.done { background: #16A34A; }
+  .guide {
+    background: #FFFBEB; border: 1px solid #FDE68A;
+    border-radius: 12px; padding: 14px 18px; margin-bottom: 16px;
+    font-size: 14px; color: #92400E;
+  }
+  .guide b { display: block; margin-bottom: 6px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="head">
+    <h1>수많은 업무 서류 오탈자 3초 만에 잡아내는 AI 프롬프트 작성법</h1>
+    <div class="date">2026년 09월 14일 16:53 생성</div>
+  </div>
+
+  <div class="guide">
+    <b>이렇게 쓰면 됩니다</b>
+    네이버 블로그 글쓰기를 연 뒤, 아래 본문을 순서대로 복사해 붙여넣고
+    사진 자리에는 저장한 이미지를 올리면 됩니다.
+  </div>
+
+  <div class="card">
+    <h2>제목 후보</h2>
+    <ul><li><span class="t">수많은 업무 서류 오탈자 3초 만에 잡아내는 AI 프롬프트 작성법</span><button class="copy" data-copy="수많은 업무 서류 오탈자 3초 만에 잡아내는 AI 프롬프트 작성법">복사</button></li><li><span class="t">아직도 눈으로 서류 검수하나? AI로 90% 시간 아끼는 법</span><button class="copy" data-copy="아직도 눈으로 서류 검수하나? AI로 90% 시간 아끼는 법">복사</button></li><li><span class="t">보고서 숫자 불일치와 오탈자 다 잡아내는 AI 서류 검수 꿀팁</span><button class="copy" data-copy="보고서 숫자 불일치와 오탈자 다 잡아내는 AI 서류 검수 꿀팁">복사</button></li></ul>
+  </div>
+
+  <div class="card">
+    <h2>태그</h2>
+    <div class="tags">#AI서류검수 #챗GPT문서검토 #업무자동화프롬프트 #보고서오탈자검사 #생성형AI업무활용 #칼퇴꿀팁 #프롬프트작성법</div>
+    <div style="margin-top:12px">
+      <button class="copy" data-copy="#AI서류검수 #챗GPT문서검토 #업무자동화프롬프트 #보고서오탈자검사 #생성형AI업무활용 #칼퇴꿀팁 #프롬프트작성법">태그 전체 복사</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>본문</h2>
+  </div>
+
+  <div class="block img"><div class="imgno">사진 1</div><img src="../images/20260914-1653-3-ai-thumbnail-sq.png" alt="대표 이미지"><div class="fname">20260914-1653-3-ai-thumbnail-sq.png</div><a class="dl" href="../images/20260914-1653-3-ai-thumbnail-sq.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">수많은 서류에 영수증, 증빙 자료까지 대조하다 보면 눈도 피로하고 오탈자 꼭 하나씩 놓치더라.<br><br>사람이 직접 하면 한 시간 넘게 걸리는 서류 검수.<br>AI한테 맡기면 단 3초 만에 끝난다.<br><br>근데 그냥 "서류 검수해줘" 하면 제대로 안 잡아준다.<br>원하는 핵심을 딱 집어서 프롬프트를 짜야 된다.</div><button class="copy" data-copy="수많은 서류에 영수증, 증빙 자료까지 대조하다 보면 눈도 피로하고 오탈자 꼭 하나씩 놓치더라.
+
+사람이 직접 하면 한 시간 넘게 걸리는 서류 검수.
+AI한테 맡기면 단 3초 만에 끝난다.
+
+근데 그냥 "서류 검수해줘" 하면 제대로 안 잡아준다.
+원하는 핵심을 딱 집어서 프롬프트를 짜야 된다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 2</div><img src="../images/20260914-1653-3-ai-diagram.png" alt="동작 구조 다이어그램"><div class="fname">20260914-1653-3-ai-diagram.png</div><a class="dl" href="../images/20260914-1653-3-ai-diagram.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">AI 서류 검수 흐름은 생각보다 간단하다.<br>원본 데이터와 비교 대상을 붙여넣고 검토 기준만 명확히 지정해 주면 끝이다.<br><br>어려운 코딩 같은 거 몰라도 된다.<br>텍스트만 복사해서 던져주면 알아서 오탈자랑 숫자 불일치를 찾아낸다.</div><button class="copy" data-copy="AI 서류 검수 흐름은 생각보다 간단하다.
+원본 데이터와 비교 대상을 붙여넣고 검토 기준만 명확히 지정해 주면 끝이다.
+
+어려운 코딩 같은 거 몰라도 된다.
+텍스트만 복사해서 던져주면 알아서 오탈자랑 숫자 불일치를 찾아낸다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 3</div><img src="../images/20260914-1653-3-ai-compare.png" alt="비교표"><div class="fname">20260914-1653-3-ai-compare.png</div><a class="dl" href="../images/20260914-1653-3-ai-compare.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">눈으로 일일이 볼 때랑 AI를 쓸 때 차이가 너무 크더라.<br>특히 금액 숫자가 맞는지 대조할 때 진짜 편하다.<br><br>실제로 활용하기 좋은 프롬프트 구조를 공유해본다.<br>그대로 복사해서 업무에 써먹어보자.</div><button class="copy" data-copy="눈으로 일일이 볼 때랑 AI를 쓸 때 차이가 너무 크더라.
+특히 금액 숫자가 맞는지 대조할 때 진짜 편하다.
+
+실제로 활용하기 좋은 프롬프트 구조를 공유해본다.
+그대로 복사해서 업무에 써먹어보자.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 4</div><img src="../images/20260914-1653-3-ai-steps.png" alt="단계별 가이드"><div class="fname">20260914-1653-3-ai-steps.png</div><a class="dl" href="../images/20260914-1653-3-ai-steps.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">[프롬프트 작성 방법]<br><br>1. 역할 부여: "너는 꼼꼼한 문서 검수 전문가야."<br><br>2. 검수 대상 제공: [원본 서류 내용] / [비교 서류 내용]<br><br>3. 검수 항목 지정:<br>- 인적사항(이름, 연락처) 불일치 여부<br>- 금액 및 날짜 오탈자<br>- 표 양식이나 단위 오류<br><br>4. 출력 형식 지정: "오류 위치 / 수정 전 / 수정 후 / 사유를 표로 정리해줘."<br><br>이렇게 구체적으로 지시하면 오류만 쏙쏙 골라내서 표로 만들어 준다.<br><br>확실히 작업 시간이 90% 이상 줄어드는 게 체감된다.<br>퇴근 시간이 달라지더라.</div><button class="copy" data-copy="[프롬프트 작성 방법]
+
+1. 역할 부여: "너는 꼼꼼한 문서 검수 전문가야."
+
+2. 검수 대상 제공: [원본 서류 내용] / [비교 서류 내용]
+
+3. 검수 항목 지정:
+- 인적사항(이름, 연락처) 불일치 여부
+- 금액 및 날짜 오탈자
+- 표 양식이나 단위 오류
+
+4. 출력 형식 지정: "오류 위치 / 수정 전 / 수정 후 / 사유를 표로 정리해줘."
+
+이렇게 구체적으로 지시하면 오류만 쏙쏙 골라내서 표로 만들어 준다.
+
+확실히 작업 시간이 90% 이상 줄어드는 게 체감된다.
+퇴근 시간이 달라지더라.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 5</div><img src="../images/20260914-1653-3-ai-summary.png" alt="핵심 요약"><div class="fname">20260914-1653-3-ai-summary.png</div><a class="dl" href="../images/20260914-1653-3-ai-summary.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">문서 검수할 때 더 이상 눈 아프게 고생하지 말자.<br>프롬프트 하나 제대로 만들어 두고 템플릿처럼 돌려쓰면 끝이다.<br><br>오늘 당장 업무 서류 하나 복사해서 테스트해봐라.<br>결과 보면 진짜 놀랄 거다.</div><button class="copy" data-copy="문서 검수할 때 더 이상 눈 아프게 고생하지 말자.
+프롬프트 하나 제대로 만들어 두고 템플릿처럼 돌려쓰면 끝이다.
+
+오늘 당장 업무 서류 하나 복사해서 테스트해봐라.
+결과 보면 진짜 놀랄 거다.">이 부분 복사</button></div>
+
+  <div class="source">참고 기사: <a href="https://news.google.com/rss/articles/CBMickFVX3lxTFBObnJsbk5sZ2xKYXpwNENlUk1zSkl4MjIzM3dlem5SMHdHOTFuNkZ0cUs2bE8xLTVMbk45OGN0Z3EybTdWMThNY29RaXpGcEVQRFVndkI2eTEyYnFRZzlFZHZBQWR6ZlQ3UXc0XzhNNkdEQQ?oc=5" target="_blank" rel="noopener">용인특례시의회, 행정사무감사에 생성형 AI 활용…검증 역량 강화 - 디스커버리뉴스(DISCOVERYNEWS)</a></div>
+</div>
+
+<div class="allbar">
+  <button id="all" data-copy="( 사진 여기 — thumbnail )
+
+수많은 서류에 영수증, 증빙 자료까지 대조하다 보면 눈도 피로하고 오탈자 꼭 하나씩 놓치더라.
+
+사람이 직접 하면 한 시간 넘게 걸리는 서류 검수.
+AI한테 맡기면 단 3초 만에 끝난다.
+
+근데 그냥 "서류 검수해줘" 하면 제대로 안 잡아준다.
+원하는 핵심을 딱 집어서 프롬프트를 짜야 된다.
+
+( 사진 여기 — diagram )
+
+AI 서류 검수 흐름은 생각보다 간단하다.
+원본 데이터와 비교 대상을 붙여넣고 검토 기준만 명확히 지정해 주면 끝이다.
+
+어려운 코딩 같은 거 몰라도 된다.
+텍스트만 복사해서 던져주면 알아서 오탈자랑 숫자 불일치를 찾아낸다.
+
+( 사진 여기 — compare )
+
+눈으로 일일이 볼 때랑 AI를 쓸 때 차이가 너무 크더라.
+특히 금액 숫자가 맞는지 대조할 때 진짜 편하다.
+
+실제로 활용하기 좋은 프롬프트 구조를 공유해본다.
+그대로 복사해서 업무에 써먹어보자.
+
+( 사진 여기 — steps )
+
+[프롬프트 작성 방법]
+
+1. 역할 부여: "너는 꼼꼼한 문서 검수 전문가야."
+
+2. 검수 대상 제공: [원본 서류 내용] / [비교 서류 내용]
+
+3. 검수 항목 지정:
+- 인적사항(이름, 연락처) 불일치 여부
+- 금액 및 날짜 오탈자
+- 표 양식이나 단위 오류
+
+4. 출력 형식 지정: "오류 위치 / 수정 전 / 수정 후 / 사유를 표로 정리해줘."
+
+이렇게 구체적으로 지시하면 오류만 쏙쏙 골라내서 표로 만들어 준다.
+
+확실히 작업 시간이 90% 이상 줄어드는 게 체감된다.
+퇴근 시간이 달라지더라.
+
+( 사진 여기 — summary )
+
+문서 검수할 때 더 이상 눈 아프게 고생하지 말자.
+프롬프트 하나 제대로 만들어 두고 템플릿처럼 돌려쓰면 끝이다.
+
+오늘 당장 업무 서류 하나 복사해서 테스트해봐라.
+결과 보면 진짜 놀랄 거다.">본문 전체 복사</button>
+</div>
+
+<script>
+document.addEventListener('click', function (e) {
+  var btn = e.target.closest('[data-copy]');
+  if (!btn) return;
+  var text = btn.getAttribute('data-copy');
+  var original = btn.textContent;
+
+  function done() {
+    btn.textContent = '복사됨';
+    btn.classList.add('done');
+    setTimeout(function () {
+      btn.textContent = original;
+      btn.classList.remove('done');
+    }, 1400);
+  }
+
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(text).then(done);
+  } else {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); done(); } catch (err) {}
+    document.body.removeChild(ta);
+  }
+});
+</script>
+</body>
+</html>
