@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>복잡한 건강검진 수치 챗GPT로 해석해서 의사 질문 3가지 뽑기 — 네이버 원고</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 24px 16px 80px;
+    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+                 "Malgun Gothic", sans-serif;
+    background: #F6F7F9; color: #1F2937; line-height: 1.75;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  .head {
+    background: #03C75A; color: #fff; padding: 20px 22px;
+    border-radius: 14px; margin-bottom: 20px;
+  }
+  .head h1 { margin: 0 0 6px; font-size: 20px; line-height: 1.45; }
+  .head .date { font-size: 13px; opacity: .9; }
+  .card {
+    background: #fff; border-radius: 14px; padding: 18px 20px;
+    margin-bottom: 16px; border: 1px solid #E5E7EB;
+  }
+  .card h2 {
+    margin: 0 0 12px; font-size: 15px; color: #6B7280;
+    font-weight: 700; letter-spacing: .3px;
+  }
+  ul { margin: 0; padding: 0; list-style: none; }
+  ul li {
+    display: flex; align-items: center; gap: 10px;
+    padding: 9px 0; border-bottom: 1px solid #F3F4F6;
+  }
+  ul li:last-child { border-bottom: 0; }
+  ul li .t { flex: 1; font-size: 15px; }
+  .copy {
+    border: 0; background: #EEF2FF; color: #4F46E5;
+    padding: 7px 13px; border-radius: 8px; font-size: 13px;
+    cursor: pointer; white-space: nowrap; font-weight: 600;
+  }
+  .copy:hover { background: #E0E7FF; }
+  .copy.done { background: #DCFCE7; color: #16A34A; }
+  .tags { color: #2563EB; font-size: 14px; word-break: keep-all; }
+  .block {
+    background: #fff; border: 1px solid #E5E7EB;
+    border-radius: 14px; padding: 16px 18px; margin-bottom: 12px;
+  }
+  .block.text .body { font-size: 15.5px; margin-bottom: 12px; }
+  .block.img { text-align: center; background: #FAFBFC; }
+  .block.img img {
+    width: 100%; height: auto; border-radius: 10px; display: block;
+  }
+  .imgno {
+    font-size: 12px; color: #9CA3AF; margin-bottom: 8px;
+    font-weight: 700; letter-spacing: .5px;
+  }
+  .fname {
+    font-size: 12px; color: #9CA3AF; margin-top: 8px;
+    font-family: ui-monospace, Menlo, monospace;
+  }
+  .dl {
+    display: inline-block; margin-top: 10px; padding: 8px 16px;
+    background: #F3F4F6; color: #374151; border-radius: 8px;
+    text-decoration: none; font-size: 13px; font-weight: 600;
+  }
+  .source {
+    font-size: 13px; color: #9CA3AF; margin-top: 22px;
+    padding-top: 14px; border-top: 1px solid #E5E7EB;
+  }
+  .source a { color: #6B7280; }
+  .allbar {
+    position: fixed; left: 0; right: 0; bottom: 0;
+    background: #fff; border-top: 1px solid #E5E7EB;
+    padding: 12px 16px; text-align: center;
+  }
+  .allbar button {
+    width: 100%; max-width: 720px; padding: 14px;
+    background: #03C75A; color: #fff; border: 0;
+    border-radius: 10px; font-size: 15px; font-weight: 700; cursor: pointer;
+  }
+  .allbar button.done { background: #16A34A; }
+  .guide {
+    background: #FFFBEB; border: 1px solid #FDE68A;
+    border-radius: 12px; padding: 14px 18px; margin-bottom: 16px;
+    font-size: 14px; color: #92400E;
+  }
+  .guide b { display: block; margin-bottom: 6px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="head">
+    <h1>복잡한 건강검진 수치 챗GPT로 해석해서 의사 질문 3가지 뽑기</h1>
+    <div class="date">2026년 09월 16일 15:23 생성</div>
+  </div>
+
+  <div class="guide">
+    <b>이렇게 쓰면 됩니다</b>
+    네이버 블로그 글쓰기를 연 뒤, 아래 본문을 순서대로 복사해 붙여넣고
+    사진 자리에는 저장한 이미지를 올리면 됩니다.
+  </div>
+
+  <div class="card">
+    <h2>제목 후보</h2>
+    <ul><li><span class="t">건강검진 결과지 AI로 해독하고 병원 진료 200% 활용하는 법</span><button class="copy" data-copy="건강검진 결과지 AI로 해독하고 병원 진료 200% 활용하는 법">복사</button></li><li><span class="t">복잡한 건강검진 수치 챗GPT로 해석해서 의사 질문 3가지 뽑기</span><button class="copy" data-copy="복잡한 건강검진 수치 챗GPT로 해석해서 의사 질문 3가지 뽑기">복사</button></li><li><span class="t">건강검진 결과지 AI 찍어서 올리면? 진료 전 꼭 챙겨야 할 질문 리스트</span><button class="copy" data-copy="건강검진 결과지 AI 찍어서 올리면? 진료 전 꼭 챙겨야 할 질문 리스트">복사</button></li></ul>
+  </div>
+
+  <div class="card">
+    <h2>태그</h2>
+    <div class="tags">#건강검진결과해석 #AI건강검진 #챗GPT의학용어 #건강검진수치 #병원진료질문 #건강검진팁 #AI활용법</div>
+    <div style="margin-top:12px">
+      <button class="copy" data-copy="#건강검진결과해석 #AI건강검진 #챗GPT의학용어 #건강검진수치 #병원진료질문 #건강검진팁 #AI활용법">태그 전체 복사</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>본문</h2>
+  </div>
+
+  <div class="block img"><div class="imgno">사진 1</div><img src="../images/20260916-1523-gpt-3-thumbnail-sq.png" alt="대표 이미지"><div class="fname">20260916-1523-gpt-3-thumbnail-sq.png</div><a class="dl" href="../images/20260916-1523-gpt-3-thumbnail-sq.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">건강검진 받고 나면 수치랑 의학용어 때문에 머리 아프다.<br>ALT, AST, eGFR... 영어도 많고 수치 하나에 쓸데없이 불안해지기도 한다.<br>의사 선생님 만나면 3분 만에 진료 끝나는 경험 다들 있을 거다.<br>질문할 시간도 부족하고 뭘 물어봐야 할지도 몰라 멍하니 나오게 된다.<br><br>요즘은 AI로 건강검진 결과지 내용을 정리하는 사람들이 많아졌다.<br>어려운 결과지를 찍어서 올리거나 텍스트로 넣으면 금방 분석해준다.</div><button class="copy" data-copy="건강검진 받고 나면 수치랑 의학용어 때문에 머리 아프다.
+ALT, AST, eGFR... 영어도 많고 수치 하나에 쓸데없이 불안해지기도 한다.
+의사 선생님 만나면 3분 만에 진료 끝나는 경험 다들 있을 거다.
+질문할 시간도 부족하고 뭘 물어봐야 할지도 몰라 멍하니 나오게 된다.
+
+요즘은 AI로 건강검진 결과지 내용을 정리하는 사람들이 많아졌다.
+어려운 결과지를 찍어서 올리거나 텍스트로 넣으면 금방 분석해준다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 2</div><img src="../images/20260916-1523-gpt-3-diagram.png" alt="동작 구조 다이어그램"><div class="fname">20260916-1523-gpt-3-diagram.png</div><a class="dl" href="../images/20260916-1523-gpt-3-diagram.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">근데 그냥 "이거 해석해줘"라고 던지면 너무 원론적인 소리만 나온다.<br>원하는 정보를 제대로 얻으려면 질문 프롬프트를 잘 써야 한다.<br>내 수치에 맞는 설명과 함께 진료실에서 쓸 질문을 뽑아달라고 해야 한다.</div><button class="copy" data-copy="근데 그냥 "이거 해석해줘"라고 던지면 너무 원론적인 소리만 나온다.
+원하는 정보를 제대로 얻으려면 질문 프롬프트를 잘 써야 한다.
+내 수치에 맞는 설명과 함께 진료실에서 쓸 질문을 뽑아달라고 해야 한다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 3</div><img src="../images/20260916-1523-gpt-3-compare.png" alt="비교표"><div class="fname">20260916-1523-gpt-3-compare.png</div><a class="dl" href="../images/20260916-1523-gpt-3-compare.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">실제로 내가 써먹고 있는 질문 프롬프트 양식이다.<br><br>"내 건강검진 결과지 내용을 입력할게. 정상 범위를 벗어난 주요 항목을 쉬운 용어로 설명해주고, 다음 진료 때 의사 선생님께 물어봐야 할 핵심 질문 3가지를 정리해줘."<br><br>이렇게 물어보면 용어 풀이는 물론이고 진료용 질문까지 깔끔하게 정리해준다.</div><button class="copy" data-copy="실제로 내가 써먹고 있는 질문 프롬프트 양식이다.
+
+"내 건강검진 결과지 내용을 입력할게. 정상 범위를 벗어난 주요 항목을 쉬운 용어로 설명해주고, 다음 진료 때 의사 선생님께 물어봐야 할 핵심 질문 3가지를 정리해줘."
+
+이렇게 물어보면 용어 풀이는 물론이고 진료용 질문까지 깔끔하게 정리해준다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 4</div><img src="../images/20260916-1523-gpt-3-steps.png" alt="단계별 가이드"><div class="fname">20260916-1523-gpt-3-steps.png</div><a class="dl" href="../images/20260916-1523-gpt-3-steps.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">질문 3가지가 나오면 핸드폰 메모장에 그대로 적어둔다.<br>예를 들어 "수치가 살짝 높은데 추적 관찰 주기는 어떻게 잡아야 하나요?" 같은 식이다.<br>진료실 들어갈 때 이 질문 리스트를 들고 가면 진료 시간을 200% 활용할 수 있다.<br>의사 선생님도 질문이 명확하니까 훨씬 구체적으로 설명해준다.</div><button class="copy" data-copy="질문 3가지가 나오면 핸드폰 메모장에 그대로 적어둔다.
+예를 들어 "수치가 살짝 높은데 추적 관찰 주기는 어떻게 잡아야 하나요?" 같은 식이다.
+진료실 들어갈 때 이 질문 리스트를 들고 가면 진료 시간을 200% 활용할 수 있다.
+의사 선생님도 질문이 명확하니까 훨씬 구체적으로 설명해준다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 5</div><img src="../images/20260916-1523-gpt-3-summary.png" alt="핵심 요약"><div class="fname">20260916-1523-gpt-3-summary.png</div><a class="dl" href="../images/20260916-1523-gpt-3-summary.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">물론 AI 분석 결과가 의사의 진단을 대신할 수는 없다.<br>어디까지나 내 몸 상태를 미리 공부하고 진료를 준비하는 보조 도구다.<br>올해 검진 결과지 받아둔 게 있다면 지금 바로 AI에 넣어보자.<br>3분 진료 시간이 완전히 달라지는 걸 느낄 수 있다.</div><button class="copy" data-copy="물론 AI 분석 결과가 의사의 진단을 대신할 수는 없다.
+어디까지나 내 몸 상태를 미리 공부하고 진료를 준비하는 보조 도구다.
+올해 검진 결과지 받아둔 게 있다면 지금 바로 AI에 넣어보자.
+3분 진료 시간이 완전히 달라지는 걸 느낄 수 있다.">이 부분 복사</button></div>
+
+  <div class="source">참고 기사: <a href="https://news.google.com/rss/articles/CBMibEFVX3lxTE10NFJET2ZxMHUwTGZQUV9XRHFySmVpV21rWUFIVGlaRXJ6TkZIN3Q4UTRpZS03Y25aQjhFZVNHV2VlQ2VVUmpWSl9wSDlVdWliQ0hWRFhlT19rVjBDUUJFOXFzSUxaX1Fmb1BrNg?oc=5" target="_blank" rel="noopener">환자·보호자 92.3% "질환·치료 정보 검색에 생성형 AI 활용" - 팜뉴스</a></div>
+</div>
+
+<div class="allbar">
+  <button id="all" data-copy="( 사진 여기 — thumbnail )
+건강검진 받고 나면 수치랑 의학용어 때문에 머리 아프다.
+ALT, AST, eGFR... 영어도 많고 수치 하나에 쓸데없이 불안해지기도 한다.
+의사 선생님 만나면 3분 만에 진료 끝나는 경험 다들 있을 거다.
+질문할 시간도 부족하고 뭘 물어봐야 할지도 몰라 멍하니 나오게 된다.
+
+요즘은 AI로 건강검진 결과지 내용을 정리하는 사람들이 많아졌다.
+어려운 결과지를 찍어서 올리거나 텍스트로 넣으면 금방 분석해준다.
+
+( 사진 여기 — diagram )
+근데 그냥 "이거 해석해줘"라고 던지면 너무 원론적인 소리만 나온다.
+원하는 정보를 제대로 얻으려면 질문 프롬프트를 잘 써야 한다.
+내 수치에 맞는 설명과 함께 진료실에서 쓸 질문을 뽑아달라고 해야 한다.
+
+( 사진 여기 — compare )
+실제로 내가 써먹고 있는 질문 프롬프트 양식이다.
+
+"내 건강검진 결과지 내용을 입력할게. 정상 범위를 벗어난 주요 항목을 쉬운 용어로 설명해주고, 다음 진료 때 의사 선생님께 물어봐야 할 핵심 질문 3가지를 정리해줘."
+
+이렇게 물어보면 용어 풀이는 물론이고 진료용 질문까지 깔끔하게 정리해준다.
+
+( 사진 여기 — steps )
+질문 3가지가 나오면 핸드폰 메모장에 그대로 적어둔다.
+예를 들어 "수치가 살짝 높은데 추적 관찰 주기는 어떻게 잡아야 하나요?" 같은 식이다.
+진료실 들어갈 때 이 질문 리스트를 들고 가면 진료 시간을 200% 활용할 수 있다.
+의사 선생님도 질문이 명확하니까 훨씬 구체적으로 설명해준다.
+
+( 사진 여기 — summary )
+물론 AI 분석 결과가 의사의 진단을 대신할 수는 없다.
+어디까지나 내 몸 상태를 미리 공부하고 진료를 준비하는 보조 도구다.
+올해 검진 결과지 받아둔 게 있다면 지금 바로 AI에 넣어보자.
+3분 진료 시간이 완전히 달라지는 걸 느낄 수 있다.">본문 전체 복사</button>
+</div>
+
+<script>
+document.addEventListener('click', function (e) {
+  var btn = e.target.closest('[data-copy]');
+  if (!btn) return;
+  var text = btn.getAttribute('data-copy');
+  var original = btn.textContent;
+
+  function done() {
+    btn.textContent = '복사됨';
+    btn.classList.add('done');
+    setTimeout(function () {
+      btn.textContent = original;
+      btn.classList.remove('done');
+    }, 1400);
+  }
+
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(text).then(done);
+  } else {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); done(); } catch (err) {}
+    document.body.removeChild(ta);
+  }
+});
+</script>
+</body>
+</html>
