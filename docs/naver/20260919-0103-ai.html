@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>기획부터 완성까지 한 번에 끝내는 AI 프롬프트 체이닝 설계 노하우 — 네이버 원고</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 24px 16px 80px;
+    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+                 "Malgun Gothic", sans-serif;
+    background: #F6F7F9; color: #1F2937; line-height: 1.75;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  .head {
+    background: #03C75A; color: #fff; padding: 20px 22px;
+    border-radius: 14px; margin-bottom: 20px;
+  }
+  .head h1 { margin: 0 0 6px; font-size: 20px; line-height: 1.45; }
+  .head .date { font-size: 13px; opacity: .9; }
+  .card {
+    background: #fff; border-radius: 14px; padding: 18px 20px;
+    margin-bottom: 16px; border: 1px solid #E5E7EB;
+  }
+  .card h2 {
+    margin: 0 0 12px; font-size: 15px; color: #6B7280;
+    font-weight: 700; letter-spacing: .3px;
+  }
+  ul { margin: 0; padding: 0; list-style: none; }
+  ul li {
+    display: flex; align-items: center; gap: 10px;
+    padding: 9px 0; border-bottom: 1px solid #F3F4F6;
+  }
+  ul li:last-child { border-bottom: 0; }
+  ul li .t { flex: 1; font-size: 15px; }
+  .copy {
+    border: 0; background: #EEF2FF; color: #4F46E5;
+    padding: 7px 13px; border-radius: 8px; font-size: 13px;
+    cursor: pointer; white-space: nowrap; font-weight: 600;
+  }
+  .copy:hover { background: #E0E7FF; }
+  .copy.done { background: #DCFCE7; color: #16A34A; }
+  .tags { color: #2563EB; font-size: 14px; word-break: keep-all; }
+  .block {
+    background: #fff; border: 1px solid #E5E7EB;
+    border-radius: 14px; padding: 16px 18px; margin-bottom: 12px;
+  }
+  .block.text .body { font-size: 15.5px; margin-bottom: 12px; }
+  .block.img { text-align: center; background: #FAFBFC; }
+  .block.img img {
+    width: 100%; height: auto; border-radius: 10px; display: block;
+  }
+  .imgno {
+    font-size: 12px; color: #9CA3AF; margin-bottom: 8px;
+    font-weight: 700; letter-spacing: .5px;
+  }
+  .fname {
+    font-size: 12px; color: #9CA3AF; margin-top: 8px;
+    font-family: ui-monospace, Menlo, monospace;
+  }
+  .dl {
+    display: inline-block; margin-top: 10px; padding: 8px 16px;
+    background: #F3F4F6; color: #374151; border-radius: 8px;
+    text-decoration: none; font-size: 13px; font-weight: 600;
+  }
+  .source {
+    font-size: 13px; color: #9CA3AF; margin-top: 22px;
+    padding-top: 14px; border-top: 1px solid #E5E7EB;
+  }
+  .source a { color: #6B7280; }
+  .allbar {
+    position: fixed; left: 0; right: 0; bottom: 0;
+    background: #fff; border-top: 1px solid #E5E7EB;
+    padding: 12px 16px; text-align: center;
+  }
+  .allbar button {
+    width: 100%; max-width: 720px; padding: 14px;
+    background: #03C75A; color: #fff; border: 0;
+    border-radius: 10px; font-size: 15px; font-weight: 700; cursor: pointer;
+  }
+  .allbar button.done { background: #16A34A; }
+  .guide {
+    background: #FFFBEB; border: 1px solid #FDE68A;
+    border-radius: 12px; padding: 14px 18px; margin-bottom: 16px;
+    font-size: 14px; color: #92400E;
+  }
+  .guide b { display: block; margin-bottom: 6px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="head">
+    <h1>기획부터 완성까지 한 번에 끝내는 AI 프롬프트 체이닝 설계 노하우</h1>
+    <div class="date">2026년 09월 19일 01:03 생성</div>
+  </div>
+
+  <div class="guide">
+    <b>이렇게 쓰면 됩니다</b>
+    네이버 블로그 글쓰기를 연 뒤, 아래 본문을 순서대로 복사해 붙여넣고
+    사진 자리에는 저장한 이미지를 올리면 됩니다.
+  </div>
+
+  <div class="card">
+    <h2>제목 후보</h2>
+    <ul><li><span class="t">챗GPT 일회성 질문은 이제 그만, 프롬프트 체이닝 만드는 법</span><button class="copy" data-copy="챗GPT 일회성 질문은 이제 그만, 프롬프트 체이닝 만드는 법">복사</button></li><li><span class="t">기획부터 완성까지 한 번에 끝내는 AI 프롬프트 체이닝 설계 노하우</span><button class="copy" data-copy="기획부터 완성까지 한 번에 끝내는 AI 프롬프트 체이닝 설계 노하우">복사</button></li><li><span class="t">단순 답변을 넘어 복잡한 업무를 자동화하는 프롬프트 연결 기술</span><button class="copy" data-copy="단순 답변을 넘어 복잡한 업무를 자동화하는 프롬프트 연결 기술">복사</button></li></ul>
+  </div>
+
+  <div class="card">
+    <h2>태그</h2>
+    <div class="tags">#프롬프트체이닝 #AI에이전트 #챗GPT업무활용 #클로드프롬프트 #AI업무자동화 #업무효율화 #프롬프트엔지니어링</div>
+    <div style="margin-top:12px">
+      <button class="copy" data-copy="#프롬프트체이닝 #AI에이전트 #챗GPT업무활용 #클로드프롬프트 #AI업무자동화 #업무효율화 #프롬프트엔지니어링">태그 전체 복사</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>본문</h2>
+  </div>
+
+  <div class="block img"><div class="imgno">사진 1</div><img src="../images/20260919-0103-ai-thumbnail-sq.png" alt="대표 이미지"><div class="fname">20260919-0103-ai-thumbnail-sq.png</div><a class="dl" href="../images/20260919-0103-ai-thumbnail-sq.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">챗GPT나 클로드 쓰면서 답답했던 적 많을 거다.<br><br>원하는 보고서나 기획서를 뽑아내고 싶은데, 맨날 영혼 없는 요약만 해주니까.<br><br>나도 처음엔 그랬다.<br>질문 하나 던져두고 결과물이 별로라며 불평하곤 했다.<br><br>근데 문제의 원인은 AI가 아니라 내 질문 방식에 있더라.<br><br>복잡한 업무일수록 질문 하나로 끝내려 하면 안 된다.<br>단계를 쪼개서 앞 단계 출력이 다음 단계 입력이 되게 만드는 기술이 필요하다.<br><br>이걸 바로 '프롬프트 체이닝'이라고 부른다.</div><button class="copy" data-copy="챗GPT나 클로드 쓰면서 답답했던 적 많을 거다.
+
+원하는 보고서나 기획서를 뽑아내고 싶은데, 맨날 영혼 없는 요약만 해주니까.
+
+나도 처음엔 그랬다.
+질문 하나 던져두고 결과물이 별로라며 불평하곤 했다.
+
+근데 문제의 원인은 AI가 아니라 내 질문 방식에 있더라.
+
+복잡한 업무일수록 질문 하나로 끝내려 하면 안 된다.
+단계를 쪼개서 앞 단계 출력이 다음 단계 입력이 되게 만드는 기술이 필요하다.
+
+이걸 바로 '프롬프트 체이닝'이라고 부른다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 2</div><img src="../images/20260919-0103-ai-compare.png" alt="비교표"><div class="fname">20260919-0103-ai-compare.png</div><a class="dl" href="../images/20260919-0103-ai-compare.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">단발성 질문과 프롬프트 체이닝은 차원이 다르다.<br><br>보통은 "블로그 글 하나 써줘"라고 한 번에 요청한다.<br>그러면 당연히 어디서 본 듯한 흔하고 뻔한 글이 나온다.<br><br>반면에 체이닝을 쓰면 흐름이 이렇게 간다.<br>1단계에서 시장 조사 및 페르소나 분석.<br>2단계에서 분석 결과를 바탕으로 개요 작성.<br>3단계에서 개요별 상세 내용을 작성하고 검수.<br><br>이렇게 업무를 잘라주면 AI가 사람처럼 단계별로 사고하기 시작한다.</div><button class="copy" data-copy="단발성 질문과 프롬프트 체이닝은 차원이 다르다.
+
+보통은 "블로그 글 하나 써줘"라고 한 번에 요청한다.
+그러면 당연히 어디서 본 듯한 흔하고 뻔한 글이 나온다.
+
+반면에 체이닝을 쓰면 흐름이 이렇게 간다.
+1단계에서 시장 조사 및 페르소나 분석.
+2단계에서 분석 결과를 바탕으로 개요 작성.
+3단계에서 개요별 상세 내용을 작성하고 검수.
+
+이렇게 업무를 잘라주면 AI가 사람처럼 단계별로 사고하기 시작한다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 3</div><img src="../images/20260919-0103-ai-diagram.png" alt="동작 구조 다이어그램"><div class="fname">20260919-0103-ai-diagram.png</div><a class="dl" href="../images/20260919-0103-ai-diagram.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">그럼 실제로 프롬프트 체이닝을 어떻게 설계해야 할까?<br>구조는 의외로 간단하다.<br><br>1단계: 자료 수집 및 입력 데이터 정리<br>2단계: 핵심 인사이트 추출 및 구조화<br>3단계: 초안 작성 및 톤앤매너 설정<br>4단계: 검수 및 최종 정제<br><br>전 단계의 출력을 복사해서 다음 프롬프트의 [참고 자료]로 넣어주기만 하면 된다.</div><button class="copy" data-copy="그럼 실제로 프롬프트 체이닝을 어떻게 설계해야 할까?
+구조는 의외로 간단하다.
+
+1단계: 자료 수집 및 입력 데이터 정리
+2단계: 핵심 인사이트 추출 및 구조화
+3단계: 초안 작성 및 톤앤매너 설정
+4단계: 검수 및 최종 정제
+
+전 단계의 출력을 복사해서 다음 프롬프트의 [참고 자료]로 넣어주기만 하면 된다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 4</div><img src="../images/20260919-0103-ai-steps.png" alt="단계별 가이드"><div class="fname">20260919-0103-ai-steps.png</div><a class="dl" href="../images/20260919-0103-ai-steps.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">내가 실제로 자주 쓰는 3단계 체이닝 예시를 들려주겠다.<br><br>첫 번째 프롬프트.<br>"아래 텍스트에서 주요 타겟층의 고민거리 3가지를 정리해줘."<br><br>두 번째 프롬프트 (첫 번째 답변을 아래에 붙이고).<br>"위에서 정리한 고민거리를 해결하는 마케팅 문구 5개를 작성해줘."<br><br>세 번째 프롬프트 (두 번째 답변을 붙이고).<br>"이 마케팅 문구를 활용해서 SNS에 올릴 카드뉴스 스크립트를 작성해줘."<br><br>이렇게 꼬리를 물고 넘어가면 원하는 수준의 고품질 결과물이 그대로 나온다.<br>마치 AI 에이전트 한 명을 옆에 두고 일하는 느낌이다.</div><button class="copy" data-copy="내가 실제로 자주 쓰는 3단계 체이닝 예시를 들려주겠다.
+
+첫 번째 프롬프트.
+"아래 텍스트에서 주요 타겟층의 고민거리 3가지를 정리해줘."
+
+두 번째 프롬프트 (첫 번째 답변을 아래에 붙이고).
+"위에서 정리한 고민거리를 해결하는 마케팅 문구 5개를 작성해줘."
+
+세 번째 프롬프트 (두 번째 답변을 붙이고).
+"이 마케팅 문구를 활용해서 SNS에 올릴 카드뉴스 스크립트를 작성해줘."
+
+이렇게 꼬리를 물고 넘어가면 원하는 수준의 고품질 결과물이 그대로 나온다.
+마치 AI 에이전트 한 명을 옆에 두고 일하는 느낌이다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 5</div><img src="../images/20260919-0103-ai-summary.png" alt="핵심 요약"><div class="fname">20260919-0103-ai-summary.png</div><a class="dl" href="../images/20260919-0103-ai-summary.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">핵심은 한 번에 다 시키지 않는 거다.<br>작게 쪼개고, 연결하고, 검수받는 흐름을 만드는 것.<br><br>오늘 당장 처리해야 할 복잡한 업무가 있다면 한번 프롬프트를 3개로 쪼개서 넣어보자.<br>일하는 속도와 퀄리티가 완전히 달라질 거다.</div><button class="copy" data-copy="핵심은 한 번에 다 시키지 않는 거다.
+작게 쪼개고, 연결하고, 검수받는 흐름을 만드는 것.
+
+오늘 당장 처리해야 할 복잡한 업무가 있다면 한번 프롬프트를 3개로 쪼개서 넣어보자.
+일하는 속도와 퀄리티가 완전히 달라질 거다.">이 부분 복사</button></div>
+
+  <div class="source">참고 기사: <a href="https://news.google.com/rss/articles/CBMiakFVX3lxTE9BSGRrdVF6aUI5UHdvNEVxMkFxRWZVZ2ZwYjBid2dvcnppcHJOV3llaC1JdzhtaHhUUjVDQkd0ZXo4NF9UOFBtbkhVdWVSZHVvXzl5RVc2eGFVUl82WjlBTWJuSXQ1TmlBWEHSAW9BVV95cUxOZFJ3bVVKam5Sd182ZmdneUctWUEzRGlYeVhuMHBCcUVIdHJSck5yUE16ZHNZd2VZNm9iUk9QSTNMS2plVHpRQVVQckVsaE5LcklpVHpoSVZJZFpmanJTN3RkUW4xZmJzc3hPLVdfams?oc=5" target="_blank" rel="noopener">"AI 서비스, 챗봇 지고 '이것' 뜬다"…구글이 주목한 다음 시장은 - 머니투데이</a></div>
+</div>
+
+<div class="allbar">
+  <button id="all" data-copy="( 사진 여기 — thumbnail )
+
+챗GPT나 클로드 쓰면서 답답했던 적 많을 거다.
+
+원하는 보고서나 기획서를 뽑아내고 싶은데, 맨날 영혼 없는 요약만 해주니까.
+
+나도 처음엔 그랬다.
+질문 하나 던져두고 결과물이 별로라며 불평하곤 했다.
+
+근데 문제의 원인은 AI가 아니라 내 질문 방식에 있더라.
+
+복잡한 업무일수록 질문 하나로 끝내려 하면 안 된다.
+단계를 쪼개서 앞 단계 출력이 다음 단계 입력이 되게 만드는 기술이 필요하다.
+
+이걸 바로 '프롬프트 체이닝'이라고 부른다.
+
+( 사진 여기 — compare )
+
+단발성 질문과 프롬프트 체이닝은 차원이 다르다.
+
+보통은 "블로그 글 하나 써줘"라고 한 번에 요청한다.
+그러면 당연히 어디서 본 듯한 흔하고 뻔한 글이 나온다.
+
+반면에 체이닝을 쓰면 흐름이 이렇게 간다.
+1단계에서 시장 조사 및 페르소나 분석.
+2단계에서 분석 결과를 바탕으로 개요 작성.
+3단계에서 개요별 상세 내용을 작성하고 검수.
+
+이렇게 업무를 잘라주면 AI가 사람처럼 단계별로 사고하기 시작한다.
+
+( 사진 여기 — diagram )
+
+그럼 실제로 프롬프트 체이닝을 어떻게 설계해야 할까?
+구조는 의외로 간단하다.
+
+1단계: 자료 수집 및 입력 데이터 정리
+2단계: 핵심 인사이트 추출 및 구조화
+3단계: 초안 작성 및 톤앤매너 설정
+4단계: 검수 및 최종 정제
+
+전 단계의 출력을 복사해서 다음 프롬프트의 [참고 자료]로 넣어주기만 하면 된다.
+
+( 사진 여기 — steps )
+
+내가 실제로 자주 쓰는 3단계 체이닝 예시를 들려주겠다.
+
+첫 번째 프롬프트.
+"아래 텍스트에서 주요 타겟층의 고민거리 3가지를 정리해줘."
+
+두 번째 프롬프트 (첫 번째 답변을 아래에 붙이고).
+"위에서 정리한 고민거리를 해결하는 마케팅 문구 5개를 작성해줘."
+
+세 번째 프롬프트 (두 번째 답변을 붙이고).
+"이 마케팅 문구를 활용해서 SNS에 올릴 카드뉴스 스크립트를 작성해줘."
+
+이렇게 꼬리를 물고 넘어가면 원하는 수준의 고품질 결과물이 그대로 나온다.
+마치 AI 에이전트 한 명을 옆에 두고 일하는 느낌이다.
+
+( 사진 여기 — summary )
+
+핵심은 한 번에 다 시키지 않는 거다.
+작게 쪼개고, 연결하고, 검수받는 흐름을 만드는 것.
+
+오늘 당장 처리해야 할 복잡한 업무가 있다면 한번 프롬프트를 3개로 쪼개서 넣어보자.
+일하는 속도와 퀄리티가 완전히 달라질 거다.">본문 전체 복사</button>
+</div>
+
+<script>
+document.addEventListener('click', function (e) {
+  var btn = e.target.closest('[data-copy]');
+  if (!btn) return;
+  var text = btn.getAttribute('data-copy');
+  var original = btn.textContent;
+
+  function done() {
+    btn.textContent = '복사됨';
+    btn.classList.add('done');
+    setTimeout(function () {
+      btn.textContent = original;
+      btn.classList.remove('done');
+    }, 1400);
+  }
+
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(text).then(done);
+  } else {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); done(); } catch (err) {}
+    document.body.removeChild(ta);
+  }
+});
+</script>
+</body>
+</html>
