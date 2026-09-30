@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>내가 쓴 글에 AI가 얼마나 들어갔을까? 셀프 검수 및 개입도 표기법 — 네이버 원고</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 24px 16px 80px;
+    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+                 "Malgun Gothic", sans-serif;
+    background: #F6F7F9; color: #1F2937; line-height: 1.75;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  .head {
+    background: #03C75A; color: #fff; padding: 20px 22px;
+    border-radius: 14px; margin-bottom: 20px;
+  }
+  .head h1 { margin: 0 0 6px; font-size: 20px; line-height: 1.45; }
+  .head .date { font-size: 13px; opacity: .9; }
+  .card {
+    background: #fff; border-radius: 14px; padding: 18px 20px;
+    margin-bottom: 16px; border: 1px solid #E5E7EB;
+  }
+  .card h2 {
+    margin: 0 0 12px; font-size: 15px; color: #6B7280;
+    font-weight: 700; letter-spacing: .3px;
+  }
+  ul { margin: 0; padding: 0; list-style: none; }
+  ul li {
+    display: flex; align-items: center; gap: 10px;
+    padding: 9px 0; border-bottom: 1px solid #F3F4F6;
+  }
+  ul li:last-child { border-bottom: 0; }
+  ul li .t { flex: 1; font-size: 15px; }
+  .copy {
+    border: 0; background: #EEF2FF; color: #4F46E5;
+    padding: 7px 13px; border-radius: 8px; font-size: 13px;
+    cursor: pointer; white-space: nowrap; font-weight: 600;
+  }
+  .copy:hover { background: #E0E7FF; }
+  .copy.done { background: #DCFCE7; color: #16A34A; }
+  .tags { color: #2563EB; font-size: 14px; word-break: keep-all; }
+  .block {
+    background: #fff; border: 1px solid #E5E7EB;
+    border-radius: 14px; padding: 16px 18px; margin-bottom: 12px;
+  }
+  .block.text .body { font-size: 15.5px; margin-bottom: 12px; }
+  .block.img { text-align: center; background: #FAFBFC; }
+  .block.img img {
+    width: 100%; height: auto; border-radius: 10px; display: block;
+  }
+  .imgno {
+    font-size: 12px; color: #9CA3AF; margin-bottom: 8px;
+    font-weight: 700; letter-spacing: .5px;
+  }
+  .fname {
+    font-size: 12px; color: #9CA3AF; margin-top: 8px;
+    font-family: ui-monospace, Menlo, monospace;
+  }
+  .dl {
+    display: inline-block; margin-top: 10px; padding: 8px 16px;
+    background: #F3F4F6; color: #374151; border-radius: 8px;
+    text-decoration: none; font-size: 13px; font-weight: 600;
+  }
+  .source {
+    font-size: 13px; color: #9CA3AF; margin-top: 22px;
+    padding-top: 14px; border-top: 1px solid #E5E7EB;
+  }
+  .source a { color: #6B7280; }
+  .allbar {
+    position: fixed; left: 0; right: 0; bottom: 0;
+    background: #fff; border-top: 1px solid #E5E7EB;
+    padding: 12px 16px; text-align: center;
+  }
+  .allbar button {
+    width: 100%; max-width: 720px; padding: 14px;
+    background: #03C75A; color: #fff; border: 0;
+    border-radius: 10px; font-size: 15px; font-weight: 700; cursor: pointer;
+  }
+  .allbar button.done { background: #16A34A; }
+  .guide {
+    background: #FFFBEB; border: 1px solid #FDE68A;
+    border-radius: 12px; padding: 14px 18px; margin-bottom: 16px;
+    font-size: 14px; color: #92400E;
+  }
+  .guide b { display: block; margin-bottom: 6px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="head">
+    <h1>내가 쓴 글에 AI가 얼마나 들어갔을까? 셀프 검수 및 개입도 표기법</h1>
+    <div class="date">2026년 09월 30일 01:55 생성</div>
+  </div>
+
+  <div class="guide">
+    <b>이렇게 쓰면 됩니다</b>
+    네이버 블로그 글쓰기를 연 뒤, 아래 본문을 순서대로 복사해 붙여넣고
+    사진 자리에는 저장한 이미지를 올리면 됩니다.
+  </div>
+
+  <div class="card">
+    <h2>제목 후보</h2>
+    <ul><li><span class="t">내가 쓴 글에 AI가 얼마나 들어갔을까? 셀프 검수 및 개입도 표기법</span><button class="copy" data-copy="내가 쓴 글에 AI가 얼마나 들어갔을까? 셀프 검수 및 개입도 표기법">복사</button></li><li><span class="t">AI로 쓴 글, 제재 피하고 신뢰 높이는 올바른 표기 기준</span><button class="copy" data-copy="AI로 쓴 글, 제재 피하고 신뢰 높이는 올바른 표기 기준">복사</button></li><li><span class="t">AI 글쓰기 무조건 숨겨야 할까? AI 사용 개입도 표기 가이드</span><button class="copy" data-copy="AI 글쓰기 무조건 숨겨야 할까? AI 사용 개입도 표기 가이드">복사</button></li></ul>
+  </div>
+
+  <div class="card">
+    <h2>태그</h2>
+    <div class="tags">#AI사용표기기준 #AI글쓰기검수 #AI생성물표기 #AI원고작성법 #생성형AI윤리 #블로그글쓰기 #AI원고검수</div>
+    <div style="margin-top:12px">
+      <button class="copy" data-copy="#AI사용표기기준 #AI글쓰기검수 #AI생성물표기 #AI원고작성법 #생성형AI윤리 #블로그글쓰기 #AI원고검수">태그 전체 복사</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>본문</h2>
+  </div>
+
+  <div class="block img"><div class="imgno">사진 1</div><img src="../images/20260930-0155-ai-thumbnail-sq.png" alt="대표 이미지"><div class="fname">20260930-0155-ai-thumbnail-sq.png</div><a class="dl" href="../images/20260930-0155-ai-thumbnail-sq.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">요즘 AI로 원고 작성하는 사람들이 진짜 많다.<br>초안 잡기도 편하고 자료 조사도 금방 되니까.<br><br>근데 무작정 복사해서 쓰다 보면 뭔가 찝찝하다.<br>플랫폼에서 불이익을 주지 않을까 불안하기도 하고.<br><br>핵심은 AI를 썼냐 안 썼냐가 아니다.<br>얼마나 개입했는지 스스로 판별하고 올바르게 표기하는 거다.</div><button class="copy" data-copy="요즘 AI로 원고 작성하는 사람들이 진짜 많다.
+초안 잡기도 편하고 자료 조사도 금방 되니까.
+
+근데 무작정 복사해서 쓰다 보면 뭔가 찝찝하다.
+플랫폼에서 불이익을 주지 않을까 불안하기도 하고.
+
+핵심은 AI를 썼냐 안 썼냐가 아니다.
+얼마나 개입했는지 스스로 판별하고 올바르게 표기하는 거다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 2</div><img src="../images/20260930-0155-ai-diagram.png" alt="동작 구조 다이어그램"><div class="fname">20260930-0155-ai-diagram.png</div><a class="dl" href="../images/20260930-0155-ai-diagram.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">보통 AI 개입도는 3단계로 나눠서 보면 편하다.<br><br>1단계는 단순히 아이디어 떠올리기나 오타 교정.<br>2단계는 초안 작성이나 부분 문장 생성.<br>3단계는 AI가 전체 글을 대부분 다 쓴 경우다.<br><br>단계별로 표기 방법이 달라져야 독자도 믿고 읽는다.</div><button class="copy" data-copy="보통 AI 개입도는 3단계로 나눠서 보면 편하다.
+
+1단계는 단순히 아이디어 떠올리기나 오타 교정.
+2단계는 초안 작성이나 부분 문장 생성.
+3단계는 AI가 전체 글을 대부분 다 쓴 경우다.
+
+단계별로 표기 방법이 달라져야 독자도 믿고 읽는다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 3</div><img src="../images/20260930-0155-ai-compare.png" alt="비교표"><div class="fname">20260930-0155-ai-compare.png</div><a class="dl" href="../images/20260930-0155-ai-compare.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">AI 개입도에 따른 차이를 보자.<br><br>단순 교정만 했다면 굳이 AI 작성이라고 쓸 필요 없다.<br>하지만 AI가 뼈대를 잡았거나 대부분을 썼다면 얘기가 다르다.<br><br>숨기는 것보다 "AI와 함께 작성한 글입니다"라고 밝히는 게 훨씬 신뢰를 준다.<br>오히려 숨기다가 AI 특유의 말투나 오류 때문에 걸리면 검색 노출에서 밀리기 쉽더라.</div><button class="copy" data-copy="AI 개입도에 따른 차이를 보자.
+
+단순 교정만 했다면 굳이 AI 작성이라고 쓸 필요 없다.
+하지만 AI가 뼈대를 잡았거나 대부분을 썼다면 얘기가 다르다.
+
+숨기는 것보다 "AI와 함께 작성한 글입니다"라고 밝히는 게 훨씬 신뢰를 준다.
+오히려 숨기다가 AI 특유의 말투나 오류 때문에 걸리면 검색 노출에서 밀리기 쉽더라.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 4</div><img src="../images/20260930-0155-ai-steps.png" alt="단계별 가이드"><div class="fname">20260930-0155-ai-steps.png</div><a class="dl" href="../images/20260930-0155-ai-steps.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">그럼 실제로 원고 검수하고 표기하는 순서를 알려준다.<br><br>첫째, AI가 쓴 문장 비율 확인하기.<br>프롬프트로 초안을 뽑았다면 내가 수정한 비율이 얼마나 되는지 체크한다.<br><br>둘째, AI 특유의 상투적 표현 다듬기.<br>"~에 대해 알아보겠습니다", "중요한 역할을 합니다" 같은 문장은 지우는 게 좋다.<br><br>셋째, 하단에 개입도 표기 남기기.<br>글 맨 아래에 짧게 한 줄 적어주는 거다.<br><br>💡 실제로 따라 해볼 수 있는 검수 프롬프트 예시다.<br><br>"이 원고에서 AI가 생성한 티가 나는 상투적인 문장을 찾아주고, 내 경험담을 넣을 자리를 추천해줘."<br><br>이렇게 AI한테 역으로 검수를 맡기면 어색한 문장 지우기가 훨씬 쉽더라.</div><button class="copy" data-copy="그럼 실제로 원고 검수하고 표기하는 순서를 알려준다.
+
+첫째, AI가 쓴 문장 비율 확인하기.
+프롬프트로 초안을 뽑았다면 내가 수정한 비율이 얼마나 되는지 체크한다.
+
+둘째, AI 특유의 상투적 표현 다듬기.
+"~에 대해 알아보겠습니다", "중요한 역할을 합니다" 같은 문장은 지우는 게 좋다.
+
+셋째, 하단에 개입도 표기 남기기.
+글 맨 아래에 짧게 한 줄 적어주는 거다.
+
+💡 실제로 따라 해볼 수 있는 검수 프롬프트 예시다.
+
+"이 원고에서 AI가 생성한 티가 나는 상투적인 문장을 찾아주고, 내 경험담을 넣을 자리를 추천해줘."
+
+이렇게 AI한테 역으로 검수를 맡기면 어색한 문장 지우기가 훨씬 쉽더라.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 5</div><img src="../images/20260930-0155-ai-summary.png" alt="핵심 요약"><div class="fname">20260930-0155-ai-summary.png</div><a class="dl" href="../images/20260930-0155-ai-summary.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">정리해보자.<br><br>AI를 활용하는 건 더 이상 감출 일이 아니다.<br>하지만 AI가 쓴 걸 내가 100% 다 쓴 것처럼 속이는 건 위험하다.<br><br>스스로 개입도를 검수하고 솔직하게 표기해보자.<br>글의 신뢰도도 올라가고 제재 걱정도 덜게 된다.<br><br>오늘 당장 작성 중인 원고 하단에 개입도 한 줄을 추가해보는 건 어떨까?</div><button class="copy" data-copy="정리해보자.
+
+AI를 활용하는 건 더 이상 감출 일이 아니다.
+하지만 AI가 쓴 걸 내가 100% 다 쓴 것처럼 속이는 건 위험하다.
+
+스스로 개입도를 검수하고 솔직하게 표기해보자.
+글의 신뢰도도 올라가고 제재 걱정도 덜게 된다.
+
+오늘 당장 작성 중인 원고 하단에 개입도 한 줄을 추가해보는 건 어떨까?">이 부분 복사</button></div>
+
+  <div class="source">참고 기사: <a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTE5ydDhzVTlUQ2JoVDZ6Y2lSSE5wZUl6YVd5TW5ZZEo3R2YwcnJYR2NNWmd1RmwzcGFGWFYzLWUzMDlNTUZlOU1ieFl2LU8zYUE?oc=5" target="_blank" rel="noopener">책도 'AI 사용 여부' 표시한다…출판계가 만든 3단계 기준 - v.daum.net</a></div>
+</div>
+
+<div class="allbar">
+  <button id="all" data-copy="( 사진 여기 — thumbnail )
+요즘 AI로 원고 작성하는 사람들이 진짜 많다.
+초안 잡기도 편하고 자료 조사도 금방 되니까.
+
+근데 무작정 복사해서 쓰다 보면 뭔가 찝찝하다.
+플랫폼에서 불이익을 주지 않을까 불안하기도 하고.
+
+핵심은 AI를 썼냐 안 썼냐가 아니다.
+얼마나 개입했는지 스스로 판별하고 올바르게 표기하는 거다.
+
+( 사진 여기 — diagram )
+보통 AI 개입도는 3단계로 나눠서 보면 편하다.
+
+1단계는 단순히 아이디어 떠올리기나 오타 교정.
+2단계는 초안 작성이나 부분 문장 생성.
+3단계는 AI가 전체 글을 대부분 다 쓴 경우다.
+
+단계별로 표기 방법이 달라져야 독자도 믿고 읽는다.
+
+( 사진 여기 — compare )
+AI 개입도에 따른 차이를 보자.
+
+단순 교정만 했다면 굳이 AI 작성이라고 쓸 필요 없다.
+하지만 AI가 뼈대를 잡았거나 대부분을 썼다면 얘기가 다르다.
+
+숨기는 것보다 "AI와 함께 작성한 글입니다"라고 밝히는 게 훨씬 신뢰를 준다.
+오히려 숨기다가 AI 특유의 말투나 오류 때문에 걸리면 검색 노출에서 밀리기 쉽더라.
+
+( 사진 여기 — steps )
+그럼 실제로 원고 검수하고 표기하는 순서를 알려준다.
+
+첫째, AI가 쓴 문장 비율 확인하기.
+프롬프트로 초안을 뽑았다면 내가 수정한 비율이 얼마나 되는지 체크한다.
+
+둘째, AI 특유의 상투적 표현 다듬기.
+"~에 대해 알아보겠습니다", "중요한 역할을 합니다" 같은 문장은 지우는 게 좋다.
+
+셋째, 하단에 개입도 표기 남기기.
+글 맨 아래에 짧게 한 줄 적어주는 거다.
+
+💡 실제로 따라 해볼 수 있는 검수 프롬프트 예시다.
+
+"이 원고에서 AI가 생성한 티가 나는 상투적인 문장을 찾아주고, 내 경험담을 넣을 자리를 추천해줘."
+
+이렇게 AI한테 역으로 검수를 맡기면 어색한 문장 지우기가 훨씬 쉽더라.
+
+( 사진 여기 — summary )
+정리해보자.
+
+AI를 활용하는 건 더 이상 감출 일이 아니다.
+하지만 AI가 쓴 걸 내가 100% 다 쓴 것처럼 속이는 건 위험하다.
+
+스스로 개입도를 검수하고 솔직하게 표기해보자.
+글의 신뢰도도 올라가고 제재 걱정도 덜게 된다.
+
+오늘 당장 작성 중인 원고 하단에 개입도 한 줄을 추가해보는 건 어떨까?">본문 전체 복사</button>
+</div>
+
+<script>
+document.addEventListener('click', function (e) {
+  var btn = e.target.closest('[data-copy]');
+  if (!btn) return;
+  var text = btn.getAttribute('data-copy');
+  var original = btn.textContent;
+
+  function done() {
+    btn.textContent = '복사됨';
+    btn.classList.add('done');
+    setTimeout(function () {
+      btn.textContent = original;
+      btn.classList.remove('done');
+    }, 1400);
+  }
+
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(text).then(done);
+  } else {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); done(); } catch (err) {}
+    document.body.removeChild(ta);
+  }
+});
+</script>
+</body>
+</html>
