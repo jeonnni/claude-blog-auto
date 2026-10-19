@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>엑셀 데이터 대조 10초 만에 끝내는 AI 프롬프트 작성법 — 네이버 원고</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 24px 16px 80px;
+    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+                 "Malgun Gothic", sans-serif;
+    background: #F6F7F9; color: #1F2937; line-height: 1.75;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  .head {
+    background: #03C75A; color: #fff; padding: 20px 22px;
+    border-radius: 14px; margin-bottom: 20px;
+  }
+  .head h1 { margin: 0 0 6px; font-size: 20px; line-height: 1.45; }
+  .head .date { font-size: 13px; opacity: .9; }
+  .card {
+    background: #fff; border-radius: 14px; padding: 18px 20px;
+    margin-bottom: 16px; border: 1px solid #E5E7EB;
+  }
+  .card h2 {
+    margin: 0 0 12px; font-size: 15px; color: #6B7280;
+    font-weight: 700; letter-spacing: .3px;
+  }
+  ul { margin: 0; padding: 0; list-style: none; }
+  ul li {
+    display: flex; align-items: center; gap: 10px;
+    padding: 9px 0; border-bottom: 1px solid #F3F4F6;
+  }
+  ul li:last-child { border-bottom: 0; }
+  ul li .t { flex: 1; font-size: 15px; }
+  .copy {
+    border: 0; background: #EEF2FF; color: #4F46E5;
+    padding: 7px 13px; border-radius: 8px; font-size: 13px;
+    cursor: pointer; white-space: nowrap; font-weight: 600;
+  }
+  .copy:hover { background: #E0E7FF; }
+  .copy.done { background: #DCFCE7; color: #16A34A; }
+  .tags { color: #2563EB; font-size: 14px; word-break: keep-all; }
+  .block {
+    background: #fff; border: 1px solid #E5E7EB;
+    border-radius: 14px; padding: 16px 18px; margin-bottom: 12px;
+  }
+  .block.text .body { font-size: 15.5px; margin-bottom: 12px; }
+  .block.img { text-align: center; background: #FAFBFC; }
+  .block.img img {
+    width: 100%; height: auto; border-radius: 10px; display: block;
+  }
+  .imgno {
+    font-size: 12px; color: #9CA3AF; margin-bottom: 8px;
+    font-weight: 700; letter-spacing: .5px;
+  }
+  .fname {
+    font-size: 12px; color: #9CA3AF; margin-top: 8px;
+    font-family: ui-monospace, Menlo, monospace;
+  }
+  .dl {
+    display: inline-block; margin-top: 10px; padding: 8px 16px;
+    background: #F3F4F6; color: #374151; border-radius: 8px;
+    text-decoration: none; font-size: 13px; font-weight: 600;
+  }
+  .source {
+    font-size: 13px; color: #9CA3AF; margin-top: 22px;
+    padding-top: 14px; border-top: 1px solid #E5E7EB;
+  }
+  .source a { color: #6B7280; }
+  .allbar {
+    position: fixed; left: 0; right: 0; bottom: 0;
+    background: #fff; border-top: 1px solid #E5E7EB;
+    padding: 12px 16px; text-align: center;
+  }
+  .allbar button {
+    width: 100%; max-width: 720px; padding: 14px;
+    background: #03C75A; color: #fff; border: 0;
+    border-radius: 10px; font-size: 15px; font-weight: 700; cursor: pointer;
+  }
+  .allbar button.done { background: #16A34A; }
+  .guide {
+    background: #FFFBEB; border: 1px solid #FDE68A;
+    border-radius: 12px; padding: 14px 18px; margin-bottom: 16px;
+    font-size: 14px; color: #92400E;
+  }
+  .guide b { display: block; margin-bottom: 6px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="head">
+    <h1>엑셀 데이터 대조 10초 만에 끝내는 AI 프롬프트 작성법</h1>
+    <div class="date">2026년 10월 19일 17:25 생성</div>
+  </div>
+
+  <div class="guide">
+    <b>이렇게 쓰면 됩니다</b>
+    네이버 블로그 글쓰기를 연 뒤, 아래 본문을 순서대로 복사해 붙여넣고
+    사진 자리에는 저장한 이미지를 올리면 됩니다.
+  </div>
+
+  <div class="card">
+    <h2>제목 후보</h2>
+    <ul><li><span class="t">엑셀 데이터 대조 10초 만에 끝내는 AI 프롬프트 작성법</span><button class="copy" data-copy="엑셀 데이터 대조 10초 만에 끝내는 AI 프롬프트 작성법">복사</button></li><li><span class="t">영업 매출과 출고 내역 불일치, AI로 싹 잡아내는 법</span><button class="copy" data-copy="영업 매출과 출고 내역 불일치, AI로 싹 잡아내는 법">복사</button></li><li><span class="t">챗GPT로 엑셀 숫자가 안 맞을 때 오차만 추출하는 프롬프트</span><button class="copy" data-copy="챗GPT로 엑셀 숫자가 안 맞을 때 오차만 추출하는 프롬프트">복사</button></li></ul>
+  </div>
+
+  <div class="card">
+    <h2>태그</h2>
+    <div class="tags">#AI엑셀대조 #챗GPT데이터비교 #엑셀불일치찾기 #데이터검수프롬프트 #AI업무자동화 #엑셀검수 #생산성팁</div>
+    <div style="margin-top:12px">
+      <button class="copy" data-copy="#AI엑셀대조 #챗GPT데이터비교 #엑셀불일치찾기 #데이터검수프롬프트 #AI업무자동화 #엑셀검수 #생산성팁">태그 전체 복사</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>본문</h2>
+  </div>
+
+  <div class="block img"><div class="imgno">사진 1</div><img src="../images/20261019-1725-10-ai-thumbnail-sq.png" alt="대표 이미지"><div class="fname">20261019-1725-10-ai-thumbnail-sq.png</div><a class="dl" href="../images/20261019-1725-10-ai-thumbnail-sq.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">영업 매출표랑 물류 출고 내역 대조할 때 아직도 눈으로 하나씩 보는지 모르겠다.<br>VLOOKUP 돌려도 수량이나 금액 살짝 틀린 건 일일이 확인하기 귀찮더라.<br><br>요즘은 AI 활용해서 복사해 넣기만 하면 불일치 오차만 바로 뽑아낼 수 있다.<br>10초면 안 맞는 항목과 숫자가 다 나온다.</div><button class="copy" data-copy="영업 매출표랑 물류 출고 내역 대조할 때 아직도 눈으로 하나씩 보는지 모르겠다.
+VLOOKUP 돌려도 수량이나 금액 살짝 틀린 건 일일이 확인하기 귀찮더라.
+
+요즘은 AI 활용해서 복사해 넣기만 하면 불일치 오차만 바로 뽑아낼 수 있다.
+10초면 안 맞는 항목과 숫자가 다 나온다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 2</div><img src="../images/20261019-1725-10-ai-diagram.png" alt="동작 구조 다이어그램"><div class="fname">20261019-1725-10-ai-diagram.png</div><a class="dl" href="../images/20261019-1725-10-ai-diagram.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">원리는 진짜 단순하다.<br>서로 다른 두 데이터를 AI한테 주고 "안 맞는 것만 찾아서 표로 만들어줘"라고 명령하는 거다.<br><br>근데 그냥 "대조해줘"라고만 입력하면 가끔 AI가 헛소리를 하더라.<br>그래서 오차만 정확히 짚어내도록 지시하는 검수 프롬프트가 필수다.</div><button class="copy" data-copy="원리는 진짜 단순하다.
+서로 다른 두 데이터를 AI한테 주고 "안 맞는 것만 찾아서 표로 만들어줘"라고 명령하는 거다.
+
+근데 그냥 "대조해줘"라고만 입력하면 가끔 AI가 헛소리를 하더라.
+그래서 오차만 정확히 짚어내도록 지시하는 검수 프롬프트가 필수다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 3</div><img src="../images/20261019-1725-10-ai-compare.png" alt="비교표"><div class="fname">20261019-1725-10-ai-compare.png</div><a class="dl" href="../images/20261019-1725-10-ai-compare.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">기존 수작업 방식이랑 AI 검수 방식을 비교해보면 차이가 확 난다.<br>직접 찾아낼 때는 수량 틀린 거 눈 빠지게 찾다가 놓치기 일쑤였다.<br>AI를 쓰면 불일치하는 품목이랑 수량 차이까지 표 한 장으로 깔끔하게 정리해준다.<br><br>내가 실제 데이터 대조할 때 쓰는 프롬프트 구조를 공유해본다.<br>필요할 때 복사해서 그대로 쓰면 된다.</div><button class="copy" data-copy="기존 수작업 방식이랑 AI 검수 방식을 비교해보면 차이가 확 난다.
+직접 찾아낼 때는 수량 틀린 거 눈 빠지게 찾다가 놓치기 일쑤였다.
+AI를 쓰면 불일치하는 품목이랑 수량 차이까지 표 한 장으로 깔끔하게 정리해준다.
+
+내가 실제 데이터 대조할 때 쓰는 프롬프트 구조를 공유해본다.
+필요할 때 복사해서 그대로 쓰면 된다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 4</div><img src="../images/20261019-1725-10-ai-steps.png" alt="단계별 가이드"><div class="fname">20261019-1725-10-ai-steps.png</div><a class="dl" href="../images/20261019-1725-10-ai-steps.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">작성 방법은 3단계만 기억하면 된다.<br><br>첫째, 역할 정의<br>"너는 10년 차 데이터 검수 전문가다. 제시된 두 자료를 엄격하게 비교해라."<br><br>둘째, 데이터 입력<br>[영업 매출 내역]과 [물류 출고 내역] 엑셀 데이터 전체를 텍스트로 붙여넣는다.<br><br>셋째, 조건 및 출력 형식 지정<br>"두 내역에서 품목명이 같지만 수량이나 금액이 일치하지 않는 항목만 찾아라.<br>결과는 [품목명 / 매출 수량 / 출고 수량 / 오차 / 비고] 형태의 표로 정리해라.<br>수량이 완벽히 일치하는 항목은 출력에서 완전히 제외해라."<br><br>이렇게 조건만 확실하게 적어주면 안 맞는 숫자가 10초 만에 튀어나온다.</div><button class="copy" data-copy="작성 방법은 3단계만 기억하면 된다.
+
+첫째, 역할 정의
+"너는 10년 차 데이터 검수 전문가다. 제시된 두 자료를 엄격하게 비교해라."
+
+둘째, 데이터 입력
+[영업 매출 내역]과 [물류 출고 내역] 엑셀 데이터 전체를 텍스트로 붙여넣는다.
+
+셋째, 조건 및 출력 형식 지정
+"두 내역에서 품목명이 같지만 수량이나 금액이 일치하지 않는 항목만 찾아라.
+결과는 [품목명 / 매출 수량 / 출고 수량 / 오차 / 비고] 형태의 표로 정리해라.
+수량이 완벽히 일치하는 항목은 출력에서 완전히 제외해라."
+
+이렇게 조건만 확실하게 적어주면 안 맞는 숫자가 10초 만에 튀어나온다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 5</div><img src="../images/20261019-1725-10-ai-summary.png" alt="핵심 요약"><div class="fname">20261019-1725-10-ai-summary.png</div><a class="dl" href="../images/20261019-1725-10-ai-summary.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">월말마다 영업 매출이랑 출고 내역 안 맞아서 야근했다면 꼭 써봐라.<br>괜히 엑셀 함수 복잡하게 꼬아서 만드느라 고생할 필요가 전혀 없다.<br>프롬프트 하나만 템플릿으로 저장해두면 칼퇴할 수 있다.<br>오늘 당장 엑셀 데이터 긁어서 테스트해보자.</div><button class="copy" data-copy="월말마다 영업 매출이랑 출고 내역 안 맞아서 야근했다면 꼭 써봐라.
+괜히 엑셀 함수 복잡하게 꼬아서 만드느라 고생할 필요가 전혀 없다.
+프롬프트 하나만 템플릿으로 저장해두면 칼퇴할 수 있다.
+오늘 당장 엑셀 데이터 긁어서 테스트해보자.">이 부분 복사</button></div>
+
+  <div class="source">참고 기사: <a href="https://news.google.com/rss/articles/CBMiX0FVX3lxTE54LXh1OFRfYWQ1WXlqRkQ2UHljbnJadWMzSlVMNWJLckRPYmJ0alpXYmt1MEVTMm1mYnhIMFVoUzNQMnFWUUtyWURLRWtCX3dra09IMm9PR0hyZGNJS2xr?oc=5" target="_blank" rel="noopener">[산업AI EXPO 프리뷰] AI 업무 지능화 ⑳ | “영업 매출 ‘100’, 물류 출고 ‘98’” 숫자 안 맞는 지점부터 AI가 찾아내 - 헬로티</a></div>
+</div>
+
+<div class="allbar">
+  <button id="all" data-copy="( 사진 여기 — thumbnail )
+영업 매출표랑 물류 출고 내역 대조할 때 아직도 눈으로 하나씩 보는지 모르겠다.
+VLOOKUP 돌려도 수량이나 금액 살짝 틀린 건 일일이 확인하기 귀찮더라.
+
+요즘은 AI 활용해서 복사해 넣기만 하면 불일치 오차만 바로 뽑아낼 수 있다.
+10초면 안 맞는 항목과 숫자가 다 나온다.
+
+( 사진 여기 — diagram )
+원리는 진짜 단순하다.
+서로 다른 두 데이터를 AI한테 주고 "안 맞는 것만 찾아서 표로 만들어줘"라고 명령하는 거다.
+
+근데 그냥 "대조해줘"라고만 입력하면 가끔 AI가 헛소리를 하더라.
+그래서 오차만 정확히 짚어내도록 지시하는 검수 프롬프트가 필수다.
+
+( 사진 여기 — compare )
+기존 수작업 방식이랑 AI 검수 방식을 비교해보면 차이가 확 난다.
+직접 찾아낼 때는 수량 틀린 거 눈 빠지게 찾다가 놓치기 일쑤였다.
+AI를 쓰면 불일치하는 품목이랑 수량 차이까지 표 한 장으로 깔끔하게 정리해준다.
+
+내가 실제 데이터 대조할 때 쓰는 프롬프트 구조를 공유해본다.
+필요할 때 복사해서 그대로 쓰면 된다.
+
+( 사진 여기 — steps )
+작성 방법은 3단계만 기억하면 된다.
+
+첫째, 역할 정의
+"너는 10년 차 데이터 검수 전문가다. 제시된 두 자료를 엄격하게 비교해라."
+
+둘째, 데이터 입력
+[영업 매출 내역]과 [물류 출고 내역] 엑셀 데이터 전체를 텍스트로 붙여넣는다.
+
+셋째, 조건 및 출력 형식 지정
+"두 내역에서 품목명이 같지만 수량이나 금액이 일치하지 않는 항목만 찾아라.
+결과는 [품목명 / 매출 수량 / 출고 수량 / 오차 / 비고] 형태의 표로 정리해라.
+수량이 완벽히 일치하는 항목은 출력에서 완전히 제외해라."
+
+이렇게 조건만 확실하게 적어주면 안 맞는 숫자가 10초 만에 튀어나온다.
+
+( 사진 여기 — summary )
+월말마다 영업 매출이랑 출고 내역 안 맞아서 야근했다면 꼭 써봐라.
+괜히 엑셀 함수 복잡하게 꼬아서 만드느라 고생할 필요가 전혀 없다.
+프롬프트 하나만 템플릿으로 저장해두면 칼퇴할 수 있다.
+오늘 당장 엑셀 데이터 긁어서 테스트해보자.">본문 전체 복사</button>
+</div>
+
+<script>
+document.addEventListener('click', function (e) {
+  var btn = e.target.closest('[data-copy]');
+  if (!btn) return;
+  var text = btn.getAttribute('data-copy');
+  var original = btn.textContent;
+
+  function done() {
+    btn.textContent = '복사됨';
+    btn.classList.add('done');
+    setTimeout(function () {
+      btn.textContent = original;
+      btn.classList.remove('done');
+    }, 1400);
+  }
+
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(text).then(done);
+  } else {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); done(); } catch (err) {}
+    document.body.removeChild(ta);
+  }
+});
+</script>
+</body>
+</html>
