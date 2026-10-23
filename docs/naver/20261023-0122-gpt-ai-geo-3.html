@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>챗GPT가 내 글을 인용하게 만드는 AI 검색 최적화(GEO) 글쓰기 3가지 — 네이버 원고</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 24px 16px 80px;
+    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+                 "Malgun Gothic", sans-serif;
+    background: #F6F7F9; color: #1F2937; line-height: 1.75;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  .head {
+    background: #03C75A; color: #fff; padding: 20px 22px;
+    border-radius: 14px; margin-bottom: 20px;
+  }
+  .head h1 { margin: 0 0 6px; font-size: 20px; line-height: 1.45; }
+  .head .date { font-size: 13px; opacity: .9; }
+  .card {
+    background: #fff; border-radius: 14px; padding: 18px 20px;
+    margin-bottom: 16px; border: 1px solid #E5E7EB;
+  }
+  .card h2 {
+    margin: 0 0 12px; font-size: 15px; color: #6B7280;
+    font-weight: 700; letter-spacing: .3px;
+  }
+  ul { margin: 0; padding: 0; list-style: none; }
+  ul li {
+    display: flex; align-items: center; gap: 10px;
+    padding: 9px 0; border-bottom: 1px solid #F3F4F6;
+  }
+  ul li:last-child { border-bottom: 0; }
+  ul li .t { flex: 1; font-size: 15px; }
+  .copy {
+    border: 0; background: #EEF2FF; color: #4F46E5;
+    padding: 7px 13px; border-radius: 8px; font-size: 13px;
+    cursor: pointer; white-space: nowrap; font-weight: 600;
+  }
+  .copy:hover { background: #E0E7FF; }
+  .copy.done { background: #DCFCE7; color: #16A34A; }
+  .tags { color: #2563EB; font-size: 14px; word-break: keep-all; }
+  .block {
+    background: #fff; border: 1px solid #E5E7EB;
+    border-radius: 14px; padding: 16px 18px; margin-bottom: 12px;
+  }
+  .block.text .body { font-size: 15.5px; margin-bottom: 12px; }
+  .block.img { text-align: center; background: #FAFBFC; }
+  .block.img img {
+    width: 100%; height: auto; border-radius: 10px; display: block;
+  }
+  .imgno {
+    font-size: 12px; color: #9CA3AF; margin-bottom: 8px;
+    font-weight: 700; letter-spacing: .5px;
+  }
+  .fname {
+    font-size: 12px; color: #9CA3AF; margin-top: 8px;
+    font-family: ui-monospace, Menlo, monospace;
+  }
+  .dl {
+    display: inline-block; margin-top: 10px; padding: 8px 16px;
+    background: #F3F4F6; color: #374151; border-radius: 8px;
+    text-decoration: none; font-size: 13px; font-weight: 600;
+  }
+  .source {
+    font-size: 13px; color: #9CA3AF; margin-top: 22px;
+    padding-top: 14px; border-top: 1px solid #E5E7EB;
+  }
+  .source a { color: #6B7280; }
+  .allbar {
+    position: fixed; left: 0; right: 0; bottom: 0;
+    background: #fff; border-top: 1px solid #E5E7EB;
+    padding: 12px 16px; text-align: center;
+  }
+  .allbar button {
+    width: 100%; max-width: 720px; padding: 14px;
+    background: #03C75A; color: #fff; border: 0;
+    border-radius: 10px; font-size: 15px; font-weight: 700; cursor: pointer;
+  }
+  .allbar button.done { background: #16A34A; }
+  .guide {
+    background: #FFFBEB; border: 1px solid #FDE68A;
+    border-radius: 12px; padding: 14px 18px; margin-bottom: 16px;
+    font-size: 14px; color: #92400E;
+  }
+  .guide b { display: block; margin-bottom: 6px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="head">
+    <h1>챗GPT가 내 글을 인용하게 만드는 AI 검색 최적화(GEO) 글쓰기 3가지</h1>
+    <div class="date">2026년 10월 23일 01:22 생성</div>
+  </div>
+
+  <div class="guide">
+    <b>이렇게 쓰면 됩니다</b>
+    네이버 블로그 글쓰기를 연 뒤, 아래 본문을 순서대로 복사해 붙여넣고
+    사진 자리에는 저장한 이미지를 올리면 됩니다.
+  </div>
+
+  <div class="card">
+    <h2>제목 후보</h2>
+    <ul><li><span class="t">챗GPT가 내 글을 인용하게 만드는 AI 검색 최적화(GEO) 글쓰기 3가지</span><button class="copy" data-copy="챗GPT가 내 글을 인용하게 만드는 AI 검색 최적화(GEO) 글쓰기 3가지">복사</button></li><li><span class="t">퍼플렉시티 추천 답변에 뽑히는 블로그 GEO 글쓰기 노하우</span><button class="copy" data-copy="퍼플렉시티 추천 답변에 뽑히는 블로그 GEO 글쓰기 노하우">복사</button></li><li><span class="t">AI 검색 최적화 실전 가이드, 내 블로그 글 출처 뽑히는 수칙 3가지</span><button class="copy" data-copy="AI 검색 최적화 실전 가이드, 내 블로그 글 출처 뽑히는 수칙 3가지">복사</button></li></ul>
+  </div>
+
+  <div class="card">
+    <h2>태그</h2>
+    <div class="tags">#AI검색최적화 #GEO글쓰기 #챗GPT출처인용 #퍼플렉시티검색 #블로그마케팅 #블로그최적화 #AI마케팅</div>
+    <div style="margin-top:12px">
+      <button class="copy" data-copy="#AI검색최적화 #GEO글쓰기 #챗GPT출처인용 #퍼플렉시티검색 #블로그마케팅 #블로그최적화 #AI마케팅">태그 전체 복사</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>본문</h2>
+  </div>
+
+  <div class="block img"><div class="imgno">사진 1</div><img src="../images/20261023-0122-gpt-ai-geo-3-thumbnail-sq.png" alt="대표 이미지"><div class="fname">20261023-0122-gpt-ai-geo-3-thumbnail-sq.png</div><a class="dl" href="../images/20261023-0122-gpt-ai-geo-3-thumbnail-sq.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">요즘 챗GPT나 퍼플렉시티 같은 AI로 정보 검색하는 사람들이 진짜 많아졌다.<br>검색창에 키워드 치는 대신 AI한테 질문하고 답을 얻는 거다.<br><br>근데 AI가 답변을 줄 때 내 블로그 글을 출처로 인용하면 어떻게 될까.<br>일반 키워드 노출보다 훨씬 높은 신뢰도와 유입을 가져오더라.<br><br>이걸 AI 검색 최적화, 줄여서 GEO 글쓰기라고 부른다.<br>AI가 내 글을 핵심 출처로 콕 집어 가져가게 만드는 3가지 수칙을 정리해봤다.</div><button class="copy" data-copy="요즘 챗GPT나 퍼플렉시티 같은 AI로 정보 검색하는 사람들이 진짜 많아졌다.
+검색창에 키워드 치는 대신 AI한테 질문하고 답을 얻는 거다.
+
+근데 AI가 답변을 줄 때 내 블로그 글을 출처로 인용하면 어떻게 될까.
+일반 키워드 노출보다 훨씬 높은 신뢰도와 유입을 가져오더라.
+
+이걸 AI 검색 최적화, 줄여서 GEO 글쓰기라고 부른다.
+AI가 내 글을 핵심 출처로 콕 집어 가져가게 만드는 3가지 수칙을 정리해봤다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 2</div><img src="../images/20261023-0122-gpt-ai-geo-3-diagram.png" alt="동작 구조 다이어그램"><div class="fname">20261023-0122-gpt-ai-geo-3-diagram.png</div><a class="dl" href="../images/20261023-0122-gpt-ai-geo-3-diagram.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">첫 번째 수칙, 모호한 설명 대신 구체적 수치와 맥락을 넣어야 한다.<br><br>"방문자가 많이 늘었다" 대신 "3주 동안 적용해보니 유입이 20% 늘었다"처럼 쓰는 거다.<br>AI는 수치와 전후 맥락이 명확한 문장을 훨씬 신뢰도 높은 정보로 판단하더라.<br><br>그냥 좋다는 식의 주관적인 감상은 AI가 인용하지 않는다.<br>조건과 결과가 숫자로 찍힌 데이터가 핵심이다.</div><button class="copy" data-copy="첫 번째 수칙, 모호한 설명 대신 구체적 수치와 맥락을 넣어야 한다.
+
+"방문자가 많이 늘었다" 대신 "3주 동안 적용해보니 유입이 20% 늘었다"처럼 쓰는 거다.
+AI는 수치와 전후 맥락이 명확한 문장을 훨씬 신뢰도 높은 정보로 판단하더라.
+
+그냥 좋다는 식의 주관적인 감상은 AI가 인용하지 않는다.
+조건과 결과가 숫자로 찍힌 데이터가 핵심이다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 3</div><img src="../images/20261023-0122-gpt-ai-geo-3-compare.png" alt="비교표"><div class="fname">20261023-0122-gpt-ai-geo-3-compare.png</div><a class="dl" href="../images/20261023-0122-gpt-ai-geo-3-compare.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">두 번째 수칙, AI가 답변으로 가져가기 쉽게 Q&amp;A 구조를 만들어라.<br><br>소제목을 질문 형태로 던지는 게 팁이다.<br>"AI 검색 최적화가 필요한 이유는?" 이렇게 쓰고 바로 밑에 한 두 문장으로 핵심을 답변해 주는 식이다.<br><br>질문과 답변이 명확하게 짝을 이루면 AI 로봇이 텍스트를 파악하기 쉽다.<br>문단이 길고 늘어지면 무슨 소리인지 못 알아보고 그냥 넘어가더라.</div><button class="copy" data-copy="두 번째 수칙, AI가 답변으로 가져가기 쉽게 Q&amp;A 구조를 만들어라.
+
+소제목을 질문 형태로 던지는 게 팁이다.
+"AI 검색 최적화가 필요한 이유는?" 이렇게 쓰고 바로 밑에 한 두 문장으로 핵심을 답변해 주는 식이다.
+
+질문과 답변이 명확하게 짝을 이루면 AI 로봇이 텍스트를 파악하기 쉽다.
+문단이 길고 늘어지면 무슨 소리인지 못 알아보고 그냥 넘어가더라.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 4</div><img src="../images/20261023-0122-gpt-ai-geo-3-steps.png" alt="단계별 가이드"><div class="fname">20261023-0122-gpt-ai-geo-3-steps.png</div><a class="dl" href="../images/20261023-0122-gpt-ai-geo-3-steps.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">세 번째 수칙, 독자가 당장 쓸 수 있는 예시와 프롬프트를 보여줘라.<br><br>AI는 단순 정보보다 실제 적용 가능한 예시가 포함된 글을 우선해서 인용한다.<br>글 안에 들어갈 입력과 출력 예시를 직접 박아두는 게 좋다.<br><br>예시를 쓸 때는 이렇게 써보자.<br><br>질문 예시:<br>"GEO 글쓰기에서 가장 중요한 요소 한 가지만 알려줘."<br><br>답변 예시:<br>"구체적인 수치와 명확한 맥락이 포함된 Q&amp;A 구조의 문장 작성이다."<br><br>이렇게 확실한 예시 형태가 갖춰져야 AI가 '실용적인 출처'로 인식하더라.</div><button class="copy" data-copy="세 번째 수칙, 독자가 당장 쓸 수 있는 예시와 프롬프트를 보여줘라.
+
+AI는 단순 정보보다 실제 적용 가능한 예시가 포함된 글을 우선해서 인용한다.
+글 안에 들어갈 입력과 출력 예시를 직접 박아두는 게 좋다.
+
+예시를 쓸 때는 이렇게 써보자.
+
+질문 예시:
+"GEO 글쓰기에서 가장 중요한 요소 한 가지만 알려줘."
+
+답변 예시:
+"구체적인 수치와 명확한 맥락이 포함된 Q&amp;A 구조의 문장 작성이다."
+
+이렇게 확실한 예시 형태가 갖춰져야 AI가 '실용적인 출처'로 인식하더라.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 5</div><img src="../images/20261023-0122-gpt-ai-geo-3-summary.png" alt="핵심 요약"><div class="fname">20261023-0122-gpt-ai-geo-3-summary.png</div><a class="dl" href="../images/20261023-0122-gpt-ai-geo-3-summary.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">오늘 내용을 딱 3가지로 요약해 본다.<br><br>1. 감상 대신 숫자와 맥락 넣기.<br>2. 소제목을 질문과 답변 형태로 짜기.<br>3. 바로 따라 할 수 있는 프롬프트 예시 보여주기.<br><br>이 3가지만 지켜서 글을 써보자.<br>AI가 내 글을 출처로 삼고 추천 답변에 띄워주는 걸 경험할 수 있을 거다.<br><br>오늘 작성할 글부터 하나씩 적용해보자.</div><button class="copy" data-copy="오늘 내용을 딱 3가지로 요약해 본다.
+
+1. 감상 대신 숫자와 맥락 넣기.
+2. 소제목을 질문과 답변 형태로 짜기.
+3. 바로 따라 할 수 있는 프롬프트 예시 보여주기.
+
+이 3가지만 지켜서 글을 써보자.
+AI가 내 글을 출처로 삼고 추천 답변에 띄워주는 걸 경험할 수 있을 거다.
+
+오늘 작성할 글부터 하나씩 적용해보자.">이 부분 복사</button></div>
+
+  <div class="source">참고 기사: <a href="https://news.google.com/rss/articles/CBMiZEFVX3lxTE5sa3F3SXBGZTN2ZTBvakdVMlhBRlM1cWxIa0pGd2E4elJqSzBOQ0swNG9Id1lSU3pZNW93NUFobklGdDhLS0FQU0tUckt6SWFiZ1NxbTlSMXhVUENUREhsS2E1ejQ?oc=5" target="_blank" rel="noopener">생성형 AI 답변 선택받는 글, 구체적 수치·맥락이 좌우 - 매일일보</a></div>
+</div>
+
+<div class="allbar">
+  <button id="all" data-copy="( 사진 여기 — thumbnail )
+
+요즘 챗GPT나 퍼플렉시티 같은 AI로 정보 검색하는 사람들이 진짜 많아졌다.
+검색창에 키워드 치는 대신 AI한테 질문하고 답을 얻는 거다.
+
+근데 AI가 답변을 줄 때 내 블로그 글을 출처로 인용하면 어떻게 될까.
+일반 키워드 노출보다 훨씬 높은 신뢰도와 유입을 가져오더라.
+
+이걸 AI 검색 최적화, 줄여서 GEO 글쓰기라고 부른다.
+AI가 내 글을 핵심 출처로 콕 집어 가져가게 만드는 3가지 수칙을 정리해봤다.
+
+( 사진 여기 — diagram )
+
+첫 번째 수칙, 모호한 설명 대신 구체적 수치와 맥락을 넣어야 한다.
+
+"방문자가 많이 늘었다" 대신 "3주 동안 적용해보니 유입이 20% 늘었다"처럼 쓰는 거다.
+AI는 수치와 전후 맥락이 명확한 문장을 훨씬 신뢰도 높은 정보로 판단하더라.
+
+그냥 좋다는 식의 주관적인 감상은 AI가 인용하지 않는다.
+조건과 결과가 숫자로 찍힌 데이터가 핵심이다.
+
+( 사진 여기 — compare )
+
+두 번째 수칙, AI가 답변으로 가져가기 쉽게 Q&amp;A 구조를 만들어라.
+
+소제목을 질문 형태로 던지는 게 팁이다.
+"AI 검색 최적화가 필요한 이유는?" 이렇게 쓰고 바로 밑에 한 두 문장으로 핵심을 답변해 주는 식이다.
+
+질문과 답변이 명확하게 짝을 이루면 AI 로봇이 텍스트를 파악하기 쉽다.
+문단이 길고 늘어지면 무슨 소리인지 못 알아보고 그냥 넘어가더라.
+
+( 사진 여기 — steps )
+
+세 번째 수칙, 독자가 당장 쓸 수 있는 예시와 프롬프트를 보여줘라.
+
+AI는 단순 정보보다 실제 적용 가능한 예시가 포함된 글을 우선해서 인용한다.
+글 안에 들어갈 입력과 출력 예시를 직접 박아두는 게 좋다.
+
+예시를 쓸 때는 이렇게 써보자.
+
+질문 예시:
+"GEO 글쓰기에서 가장 중요한 요소 한 가지만 알려줘."
+
+답변 예시:
+"구체적인 수치와 명확한 맥락이 포함된 Q&amp;A 구조의 문장 작성이다."
+
+이렇게 확실한 예시 형태가 갖춰져야 AI가 '실용적인 출처'로 인식하더라.
+
+( 사진 여기 — summary )
+
+오늘 내용을 딱 3가지로 요약해 본다.
+
+1. 감상 대신 숫자와 맥락 넣기.
+2. 소제목을 질문과 답변 형태로 짜기.
+3. 바로 따라 할 수 있는 프롬프트 예시 보여주기.
+
+이 3가지만 지켜서 글을 써보자.
+AI가 내 글을 출처로 삼고 추천 답변에 띄워주는 걸 경험할 수 있을 거다.
+
+오늘 작성할 글부터 하나씩 적용해보자.">본문 전체 복사</button>
+</div>
+
+<script>
+document.addEventListener('click', function (e) {
+  var btn = e.target.closest('[data-copy]');
+  if (!btn) return;
+  var text = btn.getAttribute('data-copy');
+  var original = btn.textContent;
+
+  function done() {
+    btn.textContent = '복사됨';
+    btn.classList.add('done');
+    setTimeout(function () {
+      btn.textContent = original;
+      btn.classList.remove('done');
+    }, 1400);
+  }
+
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(text).then(done);
+  } else {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); done(); } catch (err) {}
+    document.body.removeChild(ta);
+  }
+});
+</script>
+</body>
+</html>
