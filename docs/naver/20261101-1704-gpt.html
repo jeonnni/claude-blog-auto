@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>챗GPT 대화창 길어지면 느려지는 이유와 해결법 — 네이버 원고</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 24px 16px 80px;
+    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+                 "Malgun Gothic", sans-serif;
+    background: #F6F7F9; color: #1F2937; line-height: 1.75;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  .head {
+    background: #03C75A; color: #fff; padding: 20px 22px;
+    border-radius: 14px; margin-bottom: 20px;
+  }
+  .head h1 { margin: 0 0 6px; font-size: 20px; line-height: 1.45; }
+  .head .date { font-size: 13px; opacity: .9; }
+  .card {
+    background: #fff; border-radius: 14px; padding: 18px 20px;
+    margin-bottom: 16px; border: 1px solid #E5E7EB;
+  }
+  .card h2 {
+    margin: 0 0 12px; font-size: 15px; color: #6B7280;
+    font-weight: 700; letter-spacing: .3px;
+  }
+  ul { margin: 0; padding: 0; list-style: none; }
+  ul li {
+    display: flex; align-items: center; gap: 10px;
+    padding: 9px 0; border-bottom: 1px solid #F3F4F6;
+  }
+  ul li:last-child { border-bottom: 0; }
+  ul li .t { flex: 1; font-size: 15px; }
+  .copy {
+    border: 0; background: #EEF2FF; color: #4F46E5;
+    padding: 7px 13px; border-radius: 8px; font-size: 13px;
+    cursor: pointer; white-space: nowrap; font-weight: 600;
+  }
+  .copy:hover { background: #E0E7FF; }
+  .copy.done { background: #DCFCE7; color: #16A34A; }
+  .tags { color: #2563EB; font-size: 14px; word-break: keep-all; }
+  .block {
+    background: #fff; border: 1px solid #E5E7EB;
+    border-radius: 14px; padding: 16px 18px; margin-bottom: 12px;
+  }
+  .block.text .body { font-size: 15.5px; margin-bottom: 12px; }
+  .block.img { text-align: center; background: #FAFBFC; }
+  .block.img img {
+    width: 100%; height: auto; border-radius: 10px; display: block;
+  }
+  .imgno {
+    font-size: 12px; color: #9CA3AF; margin-bottom: 8px;
+    font-weight: 700; letter-spacing: .5px;
+  }
+  .fname {
+    font-size: 12px; color: #9CA3AF; margin-top: 8px;
+    font-family: ui-monospace, Menlo, monospace;
+  }
+  .dl {
+    display: inline-block; margin-top: 10px; padding: 8px 16px;
+    background: #F3F4F6; color: #374151; border-radius: 8px;
+    text-decoration: none; font-size: 13px; font-weight: 600;
+  }
+  .source {
+    font-size: 13px; color: #9CA3AF; margin-top: 22px;
+    padding-top: 14px; border-top: 1px solid #E5E7EB;
+  }
+  .source a { color: #6B7280; }
+  .allbar {
+    position: fixed; left: 0; right: 0; bottom: 0;
+    background: #fff; border-top: 1px solid #E5E7EB;
+    padding: 12px 16px; text-align: center;
+  }
+  .allbar button {
+    width: 100%; max-width: 720px; padding: 14px;
+    background: #03C75A; color: #fff; border: 0;
+    border-radius: 10px; font-size: 15px; font-weight: 700; cursor: pointer;
+  }
+  .allbar button.done { background: #16A34A; }
+  .guide {
+    background: #FFFBEB; border: 1px solid #FDE68A;
+    border-radius: 12px; padding: 14px 18px; margin-bottom: 16px;
+    font-size: 14px; color: #92400E;
+  }
+  .guide b { display: block; margin-bottom: 6px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="head">
+    <h1>챗GPT 대화창 길어지면 느려지는 이유와 해결법</h1>
+    <div class="date">2026년 11월 01일 17:04 생성</div>
+  </div>
+
+  <div class="guide">
+    <b>이렇게 쓰면 됩니다</b>
+    네이버 블로그 글쓰기를 연 뒤, 아래 본문을 순서대로 복사해 붙여넣고
+    사진 자리에는 저장한 이미지를 올리면 됩니다.
+  </div>
+
+  <div class="card">
+    <h2>제목 후보</h2>
+    <ul><li><span class="t">챗GPT 대화창 길어지면 느려지는 이유와 해결법</span><button class="copy" data-copy="챗GPT 대화창 길어지면 느려지는 이유와 해결법">복사</button></li><li><span class="t">클로드 챗GPT 토큰 절약하는 문맥 관리 노하우</span><button class="copy" data-copy="클로드 챗GPT 토큰 절약하는 문맥 관리 노하우">복사</button></li><li><span class="t">느려진 AI 답변 속도 10초 만에 살리는 꿀팁</span><button class="copy" data-copy="느려진 AI 답변 속도 10초 만에 살리는 꿀팁">복사</button></li></ul>
+  </div>
+
+  <div class="card">
+    <h2>태그</h2>
+    <div class="tags">#챗GPT느려짐 #챗GPT토큰절약 #클로드토큰관리 #AI답변속도개선 #프롬프트문맥관리 #AI활용팁 #챗GPT꿀팁</div>
+    <div style="margin-top:12px">
+      <button class="copy" data-copy="#챗GPT느려짐 #챗GPT토큰절약 #클로드토큰관리 #AI답변속도개선 #프롬프트문맥관리 #AI활용팁 #챗GPT꿀팁">태그 전체 복사</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>본문</h2>
+  </div>
+
+  <div class="block img"><div class="imgno">사진 1</div><img src="../images/20261101-1704-gpt-thumbnail-sq.png" alt="대표 이미지"><div class="fname">20261101-1704-gpt-thumbnail-sq.png</div><a class="dl" href="../images/20261101-1704-gpt-thumbnail-sq.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">챗GPT나 클로드로 작업하다 보면 어느 순간 렉이 걸린다.<br><br>처음엔 답변이 1초 만에 딱 튀어나왔는데.<br>대화가 길어지니까 한참 멈춰 있다가 느릿느릿 나온다.<br><br>심지어 답변 품질까지 떨어지는 경우가 많다.<br><br>이거 기계 오류나 서버 문제가 아니다.<br>원인은 생각보다 단순하다.<br><br>AI는 대화를 나눌 때마다 이전 대화 기록을 처음부터 끝까지 다 다시 읽는다.<br>질문 하나를 던져도 수만 자의 문맥을 매번 같이 처리하는 거다.<br><br>대화가 쌓일수록 읽어야 할 토큰량이 늘어나니 속도가 느려질 수밖에 없다.<br>당연히 비용이나 토큰 소모도 급격하게 커진다.</div><button class="copy" data-copy="챗GPT나 클로드로 작업하다 보면 어느 순간 렉이 걸린다.
+
+처음엔 답변이 1초 만에 딱 튀어나왔는데.
+대화가 길어지니까 한참 멈춰 있다가 느릿느릿 나온다.
+
+심지어 답변 품질까지 떨어지는 경우가 많다.
+
+이거 기계 오류나 서버 문제가 아니다.
+원인은 생각보다 단순하다.
+
+AI는 대화를 나눌 때마다 이전 대화 기록을 처음부터 끝까지 다 다시 읽는다.
+질문 하나를 던져도 수만 자의 문맥을 매번 같이 처리하는 거다.
+
+대화가 쌓일수록 읽어야 할 토큰량이 늘어나니 속도가 느려질 수밖에 없다.
+당연히 비용이나 토큰 소모도 급격하게 커진다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 2</div><img src="../images/20261101-1704-gpt-diagram.png" alt="동작 구조 다이어그램"><div class="fname">20261101-1704-gpt-diagram.png</div><a class="dl" href="../images/20261101-1704-gpt-diagram.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">해결책은 의외로 간단하다.<br>'문맥 압축 및 새 창 이관'이다.<br><br>대화창 하나를 무한정 끌고 가는 게 아니라.<br>핵심 맥락만 요약해서 새 대화창으로 옮겨 타는 거다.<br><br>이렇게 하면 AI가 읽어야 할 과거 대화가 싹 사라진다.<br>새 창에서는 가벼운 상태로 다시 빠르게 동작하게 된다.</div><button class="copy" data-copy="해결책은 의외로 간단하다.
+'문맥 압축 및 새 창 이관'이다.
+
+대화창 하나를 무한정 끌고 가는 게 아니라.
+핵심 맥락만 요약해서 새 대화창으로 옮겨 타는 거다.
+
+이렇게 하면 AI가 읽어야 할 과거 대화가 싹 사라진다.
+새 창에서는 가벼운 상태로 다시 빠르게 동작하게 된다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 3</div><img src="../images/20261101-1704-gpt-compare.png" alt="비교표"><div class="fname">20261101-1704-gpt-compare.png</div><a class="dl" href="../images/20261101-1704-gpt-compare.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">그냥 오래된 대화창을 유지하는 것과 새 창으로 이관하는 것은 차이가 크다.<br><br>오래된 창은 속도가 느리고 쓸데없는 토큰 소모가 심하다.<br>게다가 예전에 했던 말에 얽매여서 헛소리를 뱉기도 한다.<br><br>반면 새 창으로 옮기면 반응 속도가 다시 초기 상태처럼 빠르다.<br>필요한 정보만 들고 왔으니 답변 정확도도 훨씬 높아진다.</div><button class="copy" data-copy="그냥 오래된 대화창을 유지하는 것과 새 창으로 이관하는 것은 차이가 크다.
+
+오래된 창은 속도가 느리고 쓸데없는 토큰 소모가 심하다.
+게다가 예전에 했던 말에 얽매여서 헛소리를 뱉기도 한다.
+
+반면 새 창으로 옮기면 반응 속도가 다시 초기 상태처럼 빠르다.
+필요한 정보만 들고 왔으니 답변 정확도도 훨씬 높아진다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 4</div><img src="../images/20261101-1704-gpt-steps.png" alt="단계별 가이드"><div class="fname">20261101-1704-gpt-steps.png</div><a class="dl" href="../images/20261101-1704-gpt-steps.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">실제로 따라 할 수 있는 3단계 이관 방법이다.<br><br>첫째, 기존 대화창에 요약 요청 프롬프트를 입력한다.<br><br>"지금까지 우리 대화에서 확정된 핵심 설정과 가이드라인, 그리고 남아있는 과제만 리스트로 요약해줘."<br><br>둘째, AI가 출력해 준 요약 텍스트를 복사한다.<br><br>셋째, 새 대화창을 열고 복사한 내용을 붙여넣으며 질문한다.<br><br>"이전 대화의 핵심 요약이야: [복사한 내용]<br>이 맥락을 바탕으로 다음 작업을 진행해줘."<br><br>이렇게 던져주면 AI가 이전 맥락을 완전히 이해한 채로 바로 작업에 들어간다.</div><button class="copy" data-copy="실제로 따라 할 수 있는 3단계 이관 방법이다.
+
+첫째, 기존 대화창에 요약 요청 프롬프트를 입력한다.
+
+"지금까지 우리 대화에서 확정된 핵심 설정과 가이드라인, 그리고 남아있는 과제만 리스트로 요약해줘."
+
+둘째, AI가 출력해 준 요약 텍스트를 복사한다.
+
+셋째, 새 대화창을 열고 복사한 내용을 붙여넣으며 질문한다.
+
+"이전 대화의 핵심 요약이야: [복사한 내용]
+이 맥락을 바탕으로 다음 작업을 진행해줘."
+
+이렇게 던져주면 AI가 이전 맥락을 완전히 이해한 채로 바로 작업에 들어간다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 5</div><img src="../images/20261101-1704-gpt-summary.png" alt="핵심 요약"><div class="fname">20261101-1704-gpt-summary.png</div><a class="dl" href="../images/20261101-1704-gpt-summary.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">AI 대화창 하나로 몇 날 며칠씩 작업하는 습관은 버리는 게 좋다.<br><br>답변이 느려지거나 헛소리가 늘어난다 싶으면 바로 텍스트 요약 요청부터 하자.<br>그리고 새 창을 열어 이관하면 작업 효율이 몇 배는 올라간다.<br><br>챗GPT든 클로드든 똑같이 적용되는 방식이다.<br>오늘 대화창이 버벅거린다면 지금 당장 새 창으로 갈아타보자.</div><button class="copy" data-copy="AI 대화창 하나로 몇 날 며칠씩 작업하는 습관은 버리는 게 좋다.
+
+답변이 느려지거나 헛소리가 늘어난다 싶으면 바로 텍스트 요약 요청부터 하자.
+그리고 새 창을 열어 이관하면 작업 효율이 몇 배는 올라간다.
+
+챗GPT든 클로드든 똑같이 적용되는 방식이다.
+오늘 대화창이 버벅거린다면 지금 당장 새 창으로 갈아타보자.">이 부분 복사</button></div>
+
+  <div class="source">참고 기사: <a href="https://news.google.com/rss/articles/CBMiS0FVX3lxTE1uNEtiWllhS09RQ3ZPT1BaeVZlLVBSaTJJQ0VpV2l4RUNNeGU5ekRTTTZ5RDNPaWJCWW4zTG85VTVnZlh1cGg4YWloVQ?oc=5" target="_blank" rel="noopener">Show GN: cc-token-ledger - Claude Code 토큰 사용량을 날짜-에이전트-모델별 표로 보여 주는 CLI - GeekNews</a></div>
+</div>
+
+<div class="allbar">
+  <button id="all" data-copy="( 사진 여기 — thumbnail )
+
+챗GPT나 클로드로 작업하다 보면 어느 순간 렉이 걸린다.
+
+처음엔 답변이 1초 만에 딱 튀어나왔는데.
+대화가 길어지니까 한참 멈춰 있다가 느릿느릿 나온다.
+
+심지어 답변 품질까지 떨어지는 경우가 많다.
+
+이거 기계 오류나 서버 문제가 아니다.
+원인은 생각보다 단순하다.
+
+AI는 대화를 나눌 때마다 이전 대화 기록을 처음부터 끝까지 다 다시 읽는다.
+질문 하나를 던져도 수만 자의 문맥을 매번 같이 처리하는 거다.
+
+대화가 쌓일수록 읽어야 할 토큰량이 늘어나니 속도가 느려질 수밖에 없다.
+당연히 비용이나 토큰 소모도 급격하게 커진다.
+
+( 사진 여기 — diagram )
+
+해결책은 의외로 간단하다.
+'문맥 압축 및 새 창 이관'이다.
+
+대화창 하나를 무한정 끌고 가는 게 아니라.
+핵심 맥락만 요약해서 새 대화창으로 옮겨 타는 거다.
+
+이렇게 하면 AI가 읽어야 할 과거 대화가 싹 사라진다.
+새 창에서는 가벼운 상태로 다시 빠르게 동작하게 된다.
+
+( 사진 여기 — compare )
+
+그냥 오래된 대화창을 유지하는 것과 새 창으로 이관하는 것은 차이가 크다.
+
+오래된 창은 속도가 느리고 쓸데없는 토큰 소모가 심하다.
+게다가 예전에 했던 말에 얽매여서 헛소리를 뱉기도 한다.
+
+반면 새 창으로 옮기면 반응 속도가 다시 초기 상태처럼 빠르다.
+필요한 정보만 들고 왔으니 답변 정확도도 훨씬 높아진다.
+
+( 사진 여기 — steps )
+
+실제로 따라 할 수 있는 3단계 이관 방법이다.
+
+첫째, 기존 대화창에 요약 요청 프롬프트를 입력한다.
+
+"지금까지 우리 대화에서 확정된 핵심 설정과 가이드라인, 그리고 남아있는 과제만 리스트로 요약해줘."
+
+둘째, AI가 출력해 준 요약 텍스트를 복사한다.
+
+셋째, 새 대화창을 열고 복사한 내용을 붙여넣으며 질문한다.
+
+"이전 대화의 핵심 요약이야: [복사한 내용]
+이 맥락을 바탕으로 다음 작업을 진행해줘."
+
+이렇게 던져주면 AI가 이전 맥락을 완전히 이해한 채로 바로 작업에 들어간다.
+
+( 사진 여기 — summary )
+
+AI 대화창 하나로 몇 날 며칠씩 작업하는 습관은 버리는 게 좋다.
+
+답변이 느려지거나 헛소리가 늘어난다 싶으면 바로 텍스트 요약 요청부터 하자.
+그리고 새 창을 열어 이관하면 작업 효율이 몇 배는 올라간다.
+
+챗GPT든 클로드든 똑같이 적용되는 방식이다.
+오늘 대화창이 버벅거린다면 지금 당장 새 창으로 갈아타보자.">본문 전체 복사</button>
+</div>
+
+<script>
+document.addEventListener('click', function (e) {
+  var btn = e.target.closest('[data-copy]');
+  if (!btn) return;
+  var text = btn.getAttribute('data-copy');
+  var original = btn.textContent;
+
+  function done() {
+    btn.textContent = '복사됨';
+    btn.classList.add('done');
+    setTimeout(function () {
+      btn.textContent = original;
+      btn.classList.remove('done');
+    }, 1400);
+  }
+
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(text).then(done);
+  } else {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); done(); } catch (err) {}
+    document.body.removeChild(ta);
+  }
+});
+</script>
+</body>
+</html>
