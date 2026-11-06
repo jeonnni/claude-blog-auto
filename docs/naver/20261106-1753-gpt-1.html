@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>챗GPT로 1분 만에 블로그 움짤 만들기 (프롬프트 공유) — 네이버 원고</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 24px 16px 80px;
+    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+                 "Malgun Gothic", sans-serif;
+    background: #F6F7F9; color: #1F2937; line-height: 1.75;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  .head {
+    background: #03C75A; color: #fff; padding: 20px 22px;
+    border-radius: 14px; margin-bottom: 20px;
+  }
+  .head h1 { margin: 0 0 6px; font-size: 20px; line-height: 1.45; }
+  .head .date { font-size: 13px; opacity: .9; }
+  .card {
+    background: #fff; border-radius: 14px; padding: 18px 20px;
+    margin-bottom: 16px; border: 1px solid #E5E7EB;
+  }
+  .card h2 {
+    margin: 0 0 12px; font-size: 15px; color: #6B7280;
+    font-weight: 700; letter-spacing: .3px;
+  }
+  ul { margin: 0; padding: 0; list-style: none; }
+  ul li {
+    display: flex; align-items: center; gap: 10px;
+    padding: 9px 0; border-bottom: 1px solid #F3F4F6;
+  }
+  ul li:last-child { border-bottom: 0; }
+  ul li .t { flex: 1; font-size: 15px; }
+  .copy {
+    border: 0; background: #EEF2FF; color: #4F46E5;
+    padding: 7px 13px; border-radius: 8px; font-size: 13px;
+    cursor: pointer; white-space: nowrap; font-weight: 600;
+  }
+  .copy:hover { background: #E0E7FF; }
+  .copy.done { background: #DCFCE7; color: #16A34A; }
+  .tags { color: #2563EB; font-size: 14px; word-break: keep-all; }
+  .block {
+    background: #fff; border: 1px solid #E5E7EB;
+    border-radius: 14px; padding: 16px 18px; margin-bottom: 12px;
+  }
+  .block.text .body { font-size: 15.5px; margin-bottom: 12px; }
+  .block.img { text-align: center; background: #FAFBFC; }
+  .block.img img {
+    width: 100%; height: auto; border-radius: 10px; display: block;
+  }
+  .imgno {
+    font-size: 12px; color: #9CA3AF; margin-bottom: 8px;
+    font-weight: 700; letter-spacing: .5px;
+  }
+  .fname {
+    font-size: 12px; color: #9CA3AF; margin-top: 8px;
+    font-family: ui-monospace, Menlo, monospace;
+  }
+  .dl {
+    display: inline-block; margin-top: 10px; padding: 8px 16px;
+    background: #F3F4F6; color: #374151; border-radius: 8px;
+    text-decoration: none; font-size: 13px; font-weight: 600;
+  }
+  .source {
+    font-size: 13px; color: #9CA3AF; margin-top: 22px;
+    padding-top: 14px; border-top: 1px solid #E5E7EB;
+  }
+  .source a { color: #6B7280; }
+  .allbar {
+    position: fixed; left: 0; right: 0; bottom: 0;
+    background: #fff; border-top: 1px solid #E5E7EB;
+    padding: 12px 16px; text-align: center;
+  }
+  .allbar button {
+    width: 100%; max-width: 720px; padding: 14px;
+    background: #03C75A; color: #fff; border: 0;
+    border-radius: 10px; font-size: 15px; font-weight: 700; cursor: pointer;
+  }
+  .allbar button.done { background: #16A34A; }
+  .guide {
+    background: #FFFBEB; border: 1px solid #FDE68A;
+    border-radius: 12px; padding: 14px 18px; margin-bottom: 16px;
+    font-size: 14px; color: #92400E;
+  }
+  .guide b { display: block; margin-bottom: 6px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="head">
+    <h1>챗GPT로 1분 만에 블로그 움짤 만들기 (프롬프트 공유)</h1>
+    <div class="date">2026년 11월 06일 17:53 생성</div>
+  </div>
+
+  <div class="guide">
+    <b>이렇게 쓰면 됩니다</b>
+    네이버 블로그 글쓰기를 연 뒤, 아래 본문을 순서대로 복사해 붙여넣고
+    사진 자리에는 저장한 이미지를 올리면 됩니다.
+  </div>
+
+  <div class="card">
+    <h2>제목 후보</h2>
+    <ul><li><span class="t">챗GPT로 1분 만에 블로그 움짤 만들기 (프롬프트 공유)</span><button class="copy" data-copy="챗GPT로 1분 만에 블로그 움짤 만들기 (프롬프트 공유)">복사</button></li><li><span class="t">포토샵 없이 챗GPT로 시선강탈 GIF 짤방 만드는 법</span><button class="copy" data-copy="포토샵 없이 챗GPT로 시선강탈 GIF 짤방 만드는 법">복사</button></li><li><span class="t">AI로 블로그 마케팅용 GIF 만드는 가장 쉬운 방법</span><button class="copy" data-copy="AI로 블로그 마케팅용 GIF 만드는 가장 쉬운 방법">복사</button></li></ul>
+  </div>
+
+  <div class="card">
+    <h2>태그</h2>
+    <div class="tags">#챗GPTGIF #챗GPT움짤만들기 #AIGIF생성 #블로그짤방제작 #챗GPT이미지생성 #블로그마케팅 #AI활용법</div>
+    <div style="margin-top:12px">
+      <button class="copy" data-copy="#챗GPTGIF #챗GPT움짤만들기 #AIGIF생성 #블로그짤방제작 #챗GPT이미지생성 #블로그마케팅 #AI활용법">태그 전체 복사</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>본문</h2>
+  </div>
+
+  <div class="block img"><div class="imgno">사진 1</div><img src="../images/20261106-1753-gpt-1-thumbnail-sq.png" alt="대표 이미지"><div class="fname">20261106-1753-gpt-1-thumbnail-sq.png</div><a class="dl" href="../images/20261106-1753-gpt-1-thumbnail-sq.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">블로그 글 쓸 때 글자만 길게 있으면 아무도 안 읽는다.<br><br>중간중간 시선을 잡아주는 짤방이 꼭 필요한 이유다.<br><br>근데 매번 포토샵 켜고 프레임 나누는 게 은근 일이다.<br><br>요즘은 챗GPT로 1분 만에 움짤 만드는 게 되더라.</div><button class="copy" data-copy="블로그 글 쓸 때 글자만 길게 있으면 아무도 안 읽는다.
+
+중간중간 시선을 잡아주는 짤방이 꼭 필요한 이유다.
+
+근데 매번 포토샵 켜고 프레임 나누는 게 은근 일이다.
+
+요즘은 챗GPT로 1분 만에 움짤 만드는 게 되더라.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 2</div><img src="../images/20261106-1753-gpt-1-diagram.png" alt="동작 구조 다이어그램"><div class="fname">20261106-1753-gpt-1-diagram.png</div><a class="dl" href="../images/20261106-1753-gpt-1-diagram.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">복잡한 동영상 편집 프로그램은 쳐다볼 필요도 없다.<br><br>챗GPT한테 원하는 장면만 텍스트로 써주면 알아서 움직이는 GIF로 만들어준다.<br><br>작업 흐름도 진짜 간단하다.<br><br>아이디어 짜고, 프롬프트 입력하고, 다운로드 받으면 끝이다.</div><button class="copy" data-copy="복잡한 동영상 편집 프로그램은 쳐다볼 필요도 없다.
+
+챗GPT한테 원하는 장면만 텍스트로 써주면 알아서 움직이는 GIF로 만들어준다.
+
+작업 흐름도 진짜 간단하다.
+
+아이디어 짜고, 프롬프트 입력하고, 다운로드 받으면 끝이다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 3</div><img src="../images/20261106-1753-gpt-1-compare.png" alt="비교표"><div class="fname">20261106-1753-gpt-1-compare.png</div><a class="dl" href="../images/20261106-1753-gpt-1-compare.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">기존 작업 방식이랑 비교해보면 차이가 확실히 난다.<br><br>예전엔 프레임 이미지 준비하고 연출하느라 30분 넘게 걸렸다.<br><br>지금은 프롬프트 한 줄 던지면 10초 만에 시안이 나온다.<br><br>마케팅용 짤방 제작 시간이 진짜 말도 안 되게 줄어든다.</div><button class="copy" data-copy="기존 작업 방식이랑 비교해보면 차이가 확실히 난다.
+
+예전엔 프레임 이미지 준비하고 연출하느라 30분 넘게 걸렸다.
+
+지금은 프롬프트 한 줄 던지면 10초 만에 시안이 나온다.
+
+마케팅용 짤방 제작 시간이 진짜 말도 안 되게 줄어든다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 4</div><img src="../images/20261106-1753-gpt-1-steps.png" alt="단계별 가이드"><div class="fname">20261106-1753-gpt-1-steps.png</div><a class="dl" href="../images/20261106-1753-gpt-1-steps.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">실제 내가 쓰는 프롬프트 작성법이다.<br><br>📌 핵심 프롬프트 예시<br>"블로그 마케팅용 움직이는 GIF 제작해줘. 주제는 '통장 잔고 보고 놀라는 직장인'이야. 2D 카툰 스타일로 동작을 자연스럽게 3초 길이로 표현해줘."<br><br>이렇게 대상, 행동, 스타일, 길이를 구체적으로 적어주는 게 포인트다.<br><br>대충 써주면 멈춰있는 이미지만 나오니까 꼭 움직임을 명시해야 한다.</div><button class="copy" data-copy="실제 내가 쓰는 프롬프트 작성법이다.
+
+📌 핵심 프롬프트 예시
+"블로그 마케팅용 움직이는 GIF 제작해줘. 주제는 '통장 잔고 보고 놀라는 직장인'이야. 2D 카툰 스타일로 동작을 자연스럽게 3초 길이로 표현해줘."
+
+이렇게 대상, 행동, 스타일, 길이를 구체적으로 적어주는 게 포인트다.
+
+대충 써주면 멈춰있는 이미지만 나오니까 꼭 움직임을 명시해야 한다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 5</div><img src="../images/20261106-1753-gpt-1-summary.png" alt="핵심 요약"><div class="fname">20261106-1753-gpt-1-summary.png</div><a class="dl" href="../images/20261106-1753-gpt-1-summary.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">블로그 포스팅 품질 올리는 데 움짤만 한 게 없다.<br><br>더 이상 툴 배우느라 시간 쓰지 마라.<br><br>오늘 당장 챗GPT 켜서 프롬프트 입력하고 블로그에 올려보길 추천한다.</div><button class="copy" data-copy="블로그 포스팅 품질 올리는 데 움짤만 한 게 없다.
+
+더 이상 툴 배우느라 시간 쓰지 마라.
+
+오늘 당장 챗GPT 켜서 프롬프트 입력하고 블로그에 올려보길 추천한다.">이 부분 복사</button></div>
+
+  <div class="source">참고 기사: <a href="https://news.google.com/rss/articles/CBMiS0FVX3lxTFBlVVh2dV9ySTU5T194aDNCc1U2eUxGXzkwR21UWEVHcEV3dzVTd0hXaC14ZEZiY3NkRmx4MG4xNVVCZ2RzdlJZMGVpMA?oc=5" target="_blank" rel="noopener">챗GPT 이미지스 2.6, GIF와 움짤 만드는 법 - 티스토리</a></div>
+</div>
+
+<div class="allbar">
+  <button id="all" data-copy="( 사진 여기 — thumbnail )
+블로그 글 쓸 때 글자만 길게 있으면 아무도 안 읽는다.
+
+중간중간 시선을 잡아주는 짤방이 꼭 필요한 이유다.
+
+근데 매번 포토샵 켜고 프레임 나누는 게 은근 일이다.
+
+요즘은 챗GPT로 1분 만에 움짤 만드는 게 되더라.
+
+( 사진 여기 — diagram )
+복잡한 동영상 편집 프로그램은 쳐다볼 필요도 없다.
+
+챗GPT한테 원하는 장면만 텍스트로 써주면 알아서 움직이는 GIF로 만들어준다.
+
+작업 흐름도 진짜 간단하다.
+
+아이디어 짜고, 프롬프트 입력하고, 다운로드 받으면 끝이다.
+
+( 사진 여기 — compare )
+기존 작업 방식이랑 비교해보면 차이가 확실히 난다.
+
+예전엔 프레임 이미지 준비하고 연출하느라 30분 넘게 걸렸다.
+
+지금은 프롬프트 한 줄 던지면 10초 만에 시안이 나온다.
+
+마케팅용 짤방 제작 시간이 진짜 말도 안 되게 줄어든다.
+
+( 사진 여기 — steps )
+실제 내가 쓰는 프롬프트 작성법이다.
+
+📌 핵심 프롬프트 예시
+"블로그 마케팅용 움직이는 GIF 제작해줘. 주제는 '통장 잔고 보고 놀라는 직장인'이야. 2D 카툰 스타일로 동작을 자연스럽게 3초 길이로 표현해줘."
+
+이렇게 대상, 행동, 스타일, 길이를 구체적으로 적어주는 게 포인트다.
+
+대충 써주면 멈춰있는 이미지만 나오니까 꼭 움직임을 명시해야 한다.
+
+( 사진 여기 — summary )
+블로그 포스팅 품질 올리는 데 움짤만 한 게 없다.
+
+더 이상 툴 배우느라 시간 쓰지 마라.
+
+오늘 당장 챗GPT 켜서 프롬프트 입력하고 블로그에 올려보길 추천한다.">본문 전체 복사</button>
+</div>
+
+<script>
+document.addEventListener('click', function (e) {
+  var btn = e.target.closest('[data-copy]');
+  if (!btn) return;
+  var text = btn.getAttribute('data-copy');
+  var original = btn.textContent;
+
+  function done() {
+    btn.textContent = '복사됨';
+    btn.classList.add('done');
+    setTimeout(function () {
+      btn.textContent = original;
+      btn.classList.remove('done');
+    }, 1400);
+  }
+
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(text).then(done);
+  } else {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); done(); } catch (err) {}
+    document.body.removeChild(ta);
+  }
+});
+</script>
+</body>
+</html>
