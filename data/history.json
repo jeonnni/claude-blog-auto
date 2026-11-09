@@ -712,5 +712,12 @@
     "url": "https://aispoonkr.blogspot.com/2026/11/gpt-1.html",
     "slug": "20261108-1458-gpt-1",
     "published_at": "2026-11-08T14:58:02"
+  },
+  {
+    "topic": "AI 코딩 도구 사용 시 API 키와 비밀번호 유출을 막는 안전한 환경변수 설정 및 보안 관리법",
+    "title": "AI 코딩 도구 쓰다 API 키 털렸다고? 환경변수로 내 계정 완전하게 지키는 법",
+    "url": "https://aispoonkr.blogspot.com/2026/11/ai-api.html",
+    "slug": "20261109-0552-ai-api",
+    "published_at": "2026-11-09T05:52:22"
   }
 ]
