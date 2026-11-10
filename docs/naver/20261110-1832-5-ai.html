@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>팀원 인사평가 피드백, 감정 빼고 5분 만에 다듬는 AI 프롬프트 — 네이버 원고</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 24px 16px 80px;
+    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+                 "Malgun Gothic", sans-serif;
+    background: #F6F7F9; color: #1F2937; line-height: 1.75;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  .head {
+    background: #03C75A; color: #fff; padding: 20px 22px;
+    border-radius: 14px; margin-bottom: 20px;
+  }
+  .head h1 { margin: 0 0 6px; font-size: 20px; line-height: 1.45; }
+  .head .date { font-size: 13px; opacity: .9; }
+  .card {
+    background: #fff; border-radius: 14px; padding: 18px 20px;
+    margin-bottom: 16px; border: 1px solid #E5E7EB;
+  }
+  .card h2 {
+    margin: 0 0 12px; font-size: 15px; color: #6B7280;
+    font-weight: 700; letter-spacing: .3px;
+  }
+  ul { margin: 0; padding: 0; list-style: none; }
+  ul li {
+    display: flex; align-items: center; gap: 10px;
+    padding: 9px 0; border-bottom: 1px solid #F3F4F6;
+  }
+  ul li:last-child { border-bottom: 0; }
+  ul li .t { flex: 1; font-size: 15px; }
+  .copy {
+    border: 0; background: #EEF2FF; color: #4F46E5;
+    padding: 7px 13px; border-radius: 8px; font-size: 13px;
+    cursor: pointer; white-space: nowrap; font-weight: 600;
+  }
+  .copy:hover { background: #E0E7FF; }
+  .copy.done { background: #DCFCE7; color: #16A34A; }
+  .tags { color: #2563EB; font-size: 14px; word-break: keep-all; }
+  .block {
+    background: #fff; border: 1px solid #E5E7EB;
+    border-radius: 14px; padding: 16px 18px; margin-bottom: 12px;
+  }
+  .block.text .body { font-size: 15.5px; margin-bottom: 12px; }
+  .block.img { text-align: center; background: #FAFBFC; }
+  .block.img img {
+    width: 100%; height: auto; border-radius: 10px; display: block;
+  }
+  .imgno {
+    font-size: 12px; color: #9CA3AF; margin-bottom: 8px;
+    font-weight: 700; letter-spacing: .5px;
+  }
+  .fname {
+    font-size: 12px; color: #9CA3AF; margin-top: 8px;
+    font-family: ui-monospace, Menlo, monospace;
+  }
+  .dl {
+    display: inline-block; margin-top: 10px; padding: 8px 16px;
+    background: #F3F4F6; color: #374151; border-radius: 8px;
+    text-decoration: none; font-size: 13px; font-weight: 600;
+  }
+  .source {
+    font-size: 13px; color: #9CA3AF; margin-top: 22px;
+    padding-top: 14px; border-top: 1px solid #E5E7EB;
+  }
+  .source a { color: #6B7280; }
+  .allbar {
+    position: fixed; left: 0; right: 0; bottom: 0;
+    background: #fff; border-top: 1px solid #E5E7EB;
+    padding: 12px 16px; text-align: center;
+  }
+  .allbar button {
+    width: 100%; max-width: 720px; padding: 14px;
+    background: #03C75A; color: #fff; border: 0;
+    border-radius: 10px; font-size: 15px; font-weight: 700; cursor: pointer;
+  }
+  .allbar button.done { background: #16A34A; }
+  .guide {
+    background: #FFFBEB; border: 1px solid #FDE68A;
+    border-radius: 12px; padding: 14px 18px; margin-bottom: 16px;
+    font-size: 14px; color: #92400E;
+  }
+  .guide b { display: block; margin-bottom: 6px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="head">
+    <h1>팀원 인사평가 피드백, 감정 빼고 5분 만에 다듬는 AI 프롬프트</h1>
+    <div class="date">2026년 11월 10일 18:32 생성</div>
+  </div>
+
+  <div class="guide">
+    <b>이렇게 쓰면 됩니다</b>
+    네이버 블로그 글쓰기를 연 뒤, 아래 본문을 순서대로 복사해 붙여넣고
+    사진 자리에는 저장한 이미지를 올리면 됩니다.
+  </div>
+
+  <div class="card">
+    <h2>제목 후보</h2>
+    <ul><li><span class="t">팀원 인사평가 피드백, 감정 빼고 5분 만에 다듬는 AI 프롬프트</span><button class="copy" data-copy="팀원 인사평가 피드백, 감정 빼고 5분 만에 다듬는 AI 프롬프트">복사</button></li><li><span class="t">성과 피드백 작성할 때 주관을 빼주는 AI 비즈니스 글쓰기 팁</span><button class="copy" data-copy="성과 피드백 작성할 때 주관을 빼주는 AI 비즈니스 글쓰기 팁">복사</button></li><li><span class="t">인사평가 작성 스트레스 끝! AI로 객관적인 피드백 완성하기</span><button class="copy" data-copy="인사평가 작성 스트레스 끝! AI로 객관적인 피드백 완성하기">복사</button></li></ul>
+  </div>
+
+  <div class="card">
+    <h2>태그</h2>
+    <div class="tags">#인사평가AI #성과피드백작성 #AI업무활용 #팀원피드백프롬프트 #비즈니스글쓰기 #성과평가 #피드백팁</div>
+    <div style="margin-top:12px">
+      <button class="copy" data-copy="#인사평가AI #성과피드백작성 #AI업무활용 #팀원피드백프롬프트 #비즈니스글쓰기 #성과평가 #피드백팁">태그 전체 복사</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>본문</h2>
+  </div>
+
+  <div class="block img"><div class="imgno">사진 1</div><img src="../images/20261110-1832-5-ai-thumbnail-sq.png" alt="대표 이미지"><div class="fname">20261110-1832-5-ai-thumbnail-sq.png</div><a class="dl" href="../images/20261110-1832-5-ai-thumbnail-sq.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">연말이나 분기 말만 되면 인사평가 시즌이 찾아온다.<br>팀원들 성과 피드백 쓰다 보면 은근히 머리가 아프다.<br><br>괜히 주관적인 감정이 들어간 것 같기도 하고.<br>비즈니스 언어로 깔끔하게 정리하기가 생각보다 어렵더라.<br><br>"일처리가 답답함", "소통이 부족함" 이렇게 쓸 수는 없으니까.</div><button class="copy" data-copy="연말이나 분기 말만 되면 인사평가 시즌이 찾아온다.
+팀원들 성과 피드백 쓰다 보면 은근히 머리가 아프다.
+
+괜히 주관적인 감정이 들어간 것 같기도 하고.
+비즈니스 언어로 깔끔하게 정리하기가 생각보다 어렵더라.
+
+"일처리가 답답함", "소통이 부족함" 이렇게 쓸 수는 없으니까.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 2</div><img src="../images/20261110-1832-5-ai-diagram.png" alt="동작 구조 다이어그램"><div class="fname">20261110-1832-5-ai-diagram.png</div><a class="dl" href="../images/20261110-1832-5-ai-diagram.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">결국 피드백의 핵심은 팩트 중심의 객관화다.<br>구체적인 행동과 데이터만 남기고 감정적인 표현은 싹 덜어내야 한다.<br><br>이걸 매번 고민해서 쓰려면 시간도 오래 걸리는데.<br>요즘은 AI 프롬프트 하나로 5분 만에 정리하곤 한다.</div><button class="copy" data-copy="결국 피드백의 핵심은 팩트 중심의 객관화다.
+구체적인 행동과 데이터만 남기고 감정적인 표현은 싹 덜어내야 한다.
+
+이걸 매번 고민해서 쓰려면 시간도 오래 걸리는데.
+요즘은 AI 프롬프트 하나로 5분 만에 정리하곤 한다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 3</div><img src="../images/20261110-1832-5-ai-compare.png" alt="비교표"><div class="fname">20261110-1832-5-ai-compare.png</div><a class="dl" href="../images/20261110-1832-5-ai-compare.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">일반적인 내 생각을 적은 텍스트와 AI를 거친 텍스트의 차이는 생각보다 크다.<br><br>예를 들어 "팀원 A는 보고서 작성이 늦고 오탈자가 많음" 이렇게 적어서 AI에 넣는다.<br>그러면 AI가 바로 건조하고 건설적인 비즈니스 언어로 바꿔준다.<br><br>"기한 내 보고서 제출율 향상이 필요하며, 문서 정밀도 검수 프로세스 보완이 권장됨"처럼 다듬어진다.</div><button class="copy" data-copy="일반적인 내 생각을 적은 텍스트와 AI를 거친 텍스트의 차이는 생각보다 크다.
+
+예를 들어 "팀원 A는 보고서 작성이 늦고 오탈자가 많음" 이렇게 적어서 AI에 넣는다.
+그러면 AI가 바로 건조하고 건설적인 비즈니스 언어로 바꿔준다.
+
+"기한 내 보고서 제출율 향상이 필요하며, 문서 정밀도 검수 프로세스 보완이 권장됨"처럼 다듬어진다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 4</div><img src="../images/20261110-1832-5-ai-steps.png" alt="단계별 가이드"><div class="fname">20261110-1832-5-ai-steps.png</div><a class="dl" href="../images/20261110-1832-5-ai-steps.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">직접 써먹기 좋은 프롬프트 작성 순서다.<br><br>첫째, 팀원의 주요 성과 데이터와 아쉬운 점을 메모하듯 적는다.<br>둘째, 프롬프트에 '감정 배제', '건설적 피드백', '비즈니스 톤' 조건을 넣는다.<br>셋째, 출력된 초안을 보고 실제 상황에 맞게 살짝 수정만 하면 끝이다.<br><br>프롬프트 예시:<br>"아래 메모를 기반으로 인사평가 피드백을 작성해줘.<br>조건: 1. 주관적 판단이나 감정 표현 제외 2. 팩트 기반의 객관적 비즈니스 언어 사용 3. 향후 개선 방향 포함"</div><button class="copy" data-copy="직접 써먹기 좋은 프롬프트 작성 순서다.
+
+첫째, 팀원의 주요 성과 데이터와 아쉬운 점을 메모하듯 적는다.
+둘째, 프롬프트에 '감정 배제', '건설적 피드백', '비즈니스 톤' 조건을 넣는다.
+셋째, 출력된 초안을 보고 실제 상황에 맞게 살짝 수정만 하면 끝이다.
+
+프롬프트 예시:
+"아래 메모를 기반으로 인사평가 피드백을 작성해줘.
+조건: 1. 주관적 판단이나 감정 표현 제외 2. 팩트 기반의 객관적 비즈니스 언어 사용 3. 향후 개선 방향 포함"">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 5</div><img src="../images/20261110-1832-5-ai-summary.png" alt="핵심 요약"><div class="fname">20261110-1832-5-ai-summary.png</div><a class="dl" href="../images/20261110-1832-5-ai-summary.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">솔직히 피드백 쓰는 시간이 절반 이하로 줄었다.<br>무엇보다 피드백받는 팀원도 기분 상하지 않고 수긍하게 되더라.<br><br>이번 평가 시즌에는 끙끙 앓지 말고 AI 프롬프트를 활용해 보자.<br>퇴근 시간이 확실히 달라진다.</div><button class="copy" data-copy="솔직히 피드백 쓰는 시간이 절반 이하로 줄었다.
+무엇보다 피드백받는 팀원도 기분 상하지 않고 수긍하게 되더라.
+
+이번 평가 시즌에는 끙끙 앓지 말고 AI 프롬프트를 활용해 보자.
+퇴근 시간이 확실히 달라진다.">이 부분 복사</button></div>
+
+  <div class="source">참고 기사: <a href="https://news.google.com/rss/articles/CBMiWEFVX3lxTE03cEF2dFhHZmg3NzZmTmV6cXhCY1RUSFY5V1ZlVU5oSTdvY01ibjdBRXJfdlVaZ3gwT2NuOHBSWndFTFhCZTB6UzgwR1dGaF9YeE1IdUFoTjk?oc=5" target="_blank" rel="noopener">포항상의, AI 활용 인사관리 교육 실시</a></div>
+</div>
+
+<div class="allbar">
+  <button id="all" data-copy="( 사진 여기 — thumbnail )
+연말이나 분기 말만 되면 인사평가 시즌이 찾아온다.
+팀원들 성과 피드백 쓰다 보면 은근히 머리가 아프다.
+
+괜히 주관적인 감정이 들어간 것 같기도 하고.
+비즈니스 언어로 깔끔하게 정리하기가 생각보다 어렵더라.
+
+"일처리가 답답함", "소통이 부족함" 이렇게 쓸 수는 없으니까.
+
+( 사진 여기 — diagram )
+결국 피드백의 핵심은 팩트 중심의 객관화다.
+구체적인 행동과 데이터만 남기고 감정적인 표현은 싹 덜어내야 한다.
+
+이걸 매번 고민해서 쓰려면 시간도 오래 걸리는데.
+요즘은 AI 프롬프트 하나로 5분 만에 정리하곤 한다.
+
+( 사진 여기 — compare )
+일반적인 내 생각을 적은 텍스트와 AI를 거친 텍스트의 차이는 생각보다 크다.
+
+예를 들어 "팀원 A는 보고서 작성이 늦고 오탈자가 많음" 이렇게 적어서 AI에 넣는다.
+그러면 AI가 바로 건조하고 건설적인 비즈니스 언어로 바꿔준다.
+
+"기한 내 보고서 제출율 향상이 필요하며, 문서 정밀도 검수 프로세스 보완이 권장됨"처럼 다듬어진다.
+
+( 사진 여기 — steps )
+직접 써먹기 좋은 프롬프트 작성 순서다.
+
+첫째, 팀원의 주요 성과 데이터와 아쉬운 점을 메모하듯 적는다.
+둘째, 프롬프트에 '감정 배제', '건설적 피드백', '비즈니스 톤' 조건을 넣는다.
+셋째, 출력된 초안을 보고 실제 상황에 맞게 살짝 수정만 하면 끝이다.
+
+프롬프트 예시:
+"아래 메모를 기반으로 인사평가 피드백을 작성해줘.
+조건: 1. 주관적 판단이나 감정 표현 제외 2. 팩트 기반의 객관적 비즈니스 언어 사용 3. 향후 개선 방향 포함"
+
+( 사진 여기 — summary )
+솔직히 피드백 쓰는 시간이 절반 이하로 줄었다.
+무엇보다 피드백받는 팀원도 기분 상하지 않고 수긍하게 되더라.
+
+이번 평가 시즌에는 끙끙 앓지 말고 AI 프롬프트를 활용해 보자.
+퇴근 시간이 확실히 달라진다.">본문 전체 복사</button>
+</div>
+
+<script>
+document.addEventListener('click', function (e) {
+  var btn = e.target.closest('[data-copy]');
+  if (!btn) return;
+  var text = btn.getAttribute('data-copy');
+  var original = btn.textContent;
+
+  function done() {
+    btn.textContent = '복사됨';
+    btn.classList.add('done');
+    setTimeout(function () {
+      btn.textContent = original;
+      btn.classList.remove('done');
+    }, 1400);
+  }
+
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(text).then(done);
+  } else {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); done(); } catch (err) {}
+    document.body.removeChild(ta);
+  }
+});
+</script>
+</body>
+</html>
