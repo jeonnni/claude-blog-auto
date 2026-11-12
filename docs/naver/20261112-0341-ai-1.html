@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>복잡한 당직 스케줄표, AI 프롬프트 하나로 1분 만에 끝내는 법 — 네이버 원고</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 24px 16px 80px;
+    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+                 "Malgun Gothic", sans-serif;
+    background: #F6F7F9; color: #1F2937; line-height: 1.75;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  .head {
+    background: #03C75A; color: #fff; padding: 20px 22px;
+    border-radius: 14px; margin-bottom: 20px;
+  }
+  .head h1 { margin: 0 0 6px; font-size: 20px; line-height: 1.45; }
+  .head .date { font-size: 13px; opacity: .9; }
+  .card {
+    background: #fff; border-radius: 14px; padding: 18px 20px;
+    margin-bottom: 16px; border: 1px solid #E5E7EB;
+  }
+  .card h2 {
+    margin: 0 0 12px; font-size: 15px; color: #6B7280;
+    font-weight: 700; letter-spacing: .3px;
+  }
+  ul { margin: 0; padding: 0; list-style: none; }
+  ul li {
+    display: flex; align-items: center; gap: 10px;
+    padding: 9px 0; border-bottom: 1px solid #F3F4F6;
+  }
+  ul li:last-child { border-bottom: 0; }
+  ul li .t { flex: 1; font-size: 15px; }
+  .copy {
+    border: 0; background: #EEF2FF; color: #4F46E5;
+    padding: 7px 13px; border-radius: 8px; font-size: 13px;
+    cursor: pointer; white-space: nowrap; font-weight: 600;
+  }
+  .copy:hover { background: #E0E7FF; }
+  .copy.done { background: #DCFCE7; color: #16A34A; }
+  .tags { color: #2563EB; font-size: 14px; word-break: keep-all; }
+  .block {
+    background: #fff; border: 1px solid #E5E7EB;
+    border-radius: 14px; padding: 16px 18px; margin-bottom: 12px;
+  }
+  .block.text .body { font-size: 15.5px; margin-bottom: 12px; }
+  .block.img { text-align: center; background: #FAFBFC; }
+  .block.img img {
+    width: 100%; height: auto; border-radius: 10px; display: block;
+  }
+  .imgno {
+    font-size: 12px; color: #9CA3AF; margin-bottom: 8px;
+    font-weight: 700; letter-spacing: .5px;
+  }
+  .fname {
+    font-size: 12px; color: #9CA3AF; margin-top: 8px;
+    font-family: ui-monospace, Menlo, monospace;
+  }
+  .dl {
+    display: inline-block; margin-top: 10px; padding: 8px 16px;
+    background: #F3F4F6; color: #374151; border-radius: 8px;
+    text-decoration: none; font-size: 13px; font-weight: 600;
+  }
+  .source {
+    font-size: 13px; color: #9CA3AF; margin-top: 22px;
+    padding-top: 14px; border-top: 1px solid #E5E7EB;
+  }
+  .source a { color: #6B7280; }
+  .allbar {
+    position: fixed; left: 0; right: 0; bottom: 0;
+    background: #fff; border-top: 1px solid #E5E7EB;
+    padding: 12px 16px; text-align: center;
+  }
+  .allbar button {
+    width: 100%; max-width: 720px; padding: 14px;
+    background: #03C75A; color: #fff; border: 0;
+    border-radius: 10px; font-size: 15px; font-weight: 700; cursor: pointer;
+  }
+  .allbar button.done { background: #16A34A; }
+  .guide {
+    background: #FFFBEB; border: 1px solid #FDE68A;
+    border-radius: 12px; padding: 14px 18px; margin-bottom: 16px;
+    font-size: 14px; color: #92400E;
+  }
+  .guide b { display: block; margin-bottom: 6px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="head">
+    <h1>복잡한 당직 스케줄표, AI 프롬프트 하나로 1분 만에 끝내는 법</h1>
+    <div class="date">2026년 11월 12일 03:41 생성</div>
+  </div>
+
+  <div class="guide">
+    <b>이렇게 쓰면 됩니다</b>
+    네이버 블로그 글쓰기를 연 뒤, 아래 본문을 순서대로 복사해 붙여넣고
+    사진 자리에는 저장한 이미지를 올리면 됩니다.
+  </div>
+
+  <div class="card">
+    <h2>제목 후보</h2>
+    <ul><li><span class="t">복잡한 당직 스케줄표, AI 프롬프트 하나로 1분 만에 끝내는 법</span><button class="copy" data-copy="복잡한 당직 스케줄표, AI 프롬프트 하나로 1분 만에 끝내는 법">복사</button></li><li><span class="t">휴가·연속근무 제약조건 다 넣고 챗GPT로 근무표 자동 생성하기</span><button class="copy" data-copy="휴가·연속근무 제약조건 다 넣고 챗GPT로 근무표 자동 생성하기">복사</button></li><li><span class="t">엑셀 붙여넣기만 하면 끝! AI 당직표 작성 실무 프롬프트</span><button class="copy" data-copy="엑셀 붙여넣기만 하면 끝! AI 당직표 작성 실무 프롬프트">복사</button></li></ul>
+  </div>
+
+  <div class="card">
+    <h2>태그</h2>
+    <div class="tags">#AI당직표작성 #챗GPT스케줄표 #근무표자동생성 #AI업무자동화 #챗GPT프롬프트노하우 #스케줄표자동화 #엑셀근무표</div>
+    <div style="margin-top:12px">
+      <button class="copy" data-copy="#AI당직표작성 #챗GPT스케줄표 #근무표자동생성 #AI업무자동화 #챗GPT프롬프트노하우 #스케줄표자동화 #엑셀근무표">태그 전체 복사</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>본문</h2>
+  </div>
+
+  <div class="block img"><div class="imgno">사진 1</div><img src="../images/20261112-0341-ai-1-thumbnail-sq.png" alt="대표 이미지"><div class="fname">20261112-0341-ai-1-thumbnail-sq.png</div><a class="dl" href="../images/20261112-0341-ai-1-thumbnail-sq.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">매달 돌아오는 당직표 짜기.<br>솔직히 머리 터질 것 같다.<br><br>연차 쓰는 사람 피해야 하고.<br>주말 당직 겹치면 안 되고.<br>연속 근무 금지 조건까지 넣으면 엑셀 켜두고 한참을 멍하게 된다.<br><br>이거 AI한테 시키면 1분 만에 끝난다.<br>단, 조건만 제대로 던져주면 말이다.</div><button class="copy" data-copy="매달 돌아오는 당직표 짜기.
+솔직히 머리 터질 것 같다.
+
+연차 쓰는 사람 피해야 하고.
+주말 당직 겹치면 안 되고.
+연속 근무 금지 조건까지 넣으면 엑셀 켜두고 한참을 멍하게 된다.
+
+이거 AI한테 시키면 1분 만에 끝난다.
+단, 조건만 제대로 던져주면 말이다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 2</div><img src="../images/20261112-0341-ai-1-compare.png" alt="비교표"><div class="fname">20261112-0341-ai-1-compare.png</div><a class="dl" href="../images/20261112-0341-ai-1-compare.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">보통 그냥 "이번 달 당직표 짜줘" 하면 AI도 대충 짜준다.<br>사람 이름 몇 개 빠지거나 연속 근무 걸려서 결국 손으로 다시 수정하게 되더라.<br><br>제대로 된 프롬프트를 써야 꼬임 없이 깔끔하게 나온다.<br><br>핵심은 조건표를 텍스트로 딱 정돈해서 주는 거다.</div><button class="copy" data-copy="보통 그냥 "이번 달 당직표 짜줘" 하면 AI도 대충 짜준다.
+사람 이름 몇 개 빠지거나 연속 근무 걸려서 결국 손으로 다시 수정하게 되더라.
+
+제대로 된 프롬프트를 써야 꼬임 없이 깔끔하게 나온다.
+
+핵심은 조건표를 텍스트로 딱 정돈해서 주는 거다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 3</div><img src="../images/20261112-0341-ai-1-diagram.png" alt="동작 구조 다이어그램"><div class="fname">20261112-0341-ai-1-diagram.png</div><a class="dl" href="../images/20261112-0341-ai-1-diagram.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">내가 자주 쓰는 프롬프트 구조는 간단하다.<br><br>1. 인원 목록<br>2. 근무 기간<br>3. 제약 사항 (연차, 주말 불가 등)<br>4. 출력 형식 (엑셀 복붙용 표 형태)<br><br>이 4가지만 맞춰서 작성하면 오류가 거의 안 난다.</div><button class="copy" data-copy="내가 자주 쓰는 프롬프트 구조는 간단하다.
+
+1. 인원 목록
+2. 근무 기간
+3. 제약 사항 (연차, 주말 불가 등)
+4. 출력 형식 (엑셀 복붙용 표 형태)
+
+이 4가지만 맞춰서 작성하면 오류가 거의 안 난다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 4</div><img src="../images/20261112-0341-ai-1-steps.png" alt="단계별 가이드"><div class="fname">20261112-0341-ai-1-steps.png</div><a class="dl" href="../images/20261112-0341-ai-1-steps.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">실제 사용 예시 프롬프트다.<br>그대로 복사해서 조건만 바꿔 쓰면 된다.<br><br>[근무자]<br>김철수, 이영희, 박민수, 정수진, 최동현 (총 5명)<br><br>[기간]<br>다음 달 1일 ~ 30일 (매일 1명 당직)<br><br>[제약 조건]<br>1. 2일 연속 당직 절대 불가<br>2. 김철수: 5일~7일 휴가 (당직 제외)<br>3. 정수진: 주말 당직 불가<br>4. 5명 전체 당직 횟수는 최대한 균등하게 배분할 것<br><br>[출력]<br>날짜, 요일, 당직자 이름이 들어간 마크다운 표 형태로 작성해줘.<br><br>이렇게 붙여넣으면 10초 만에 표가 만들어진다.<br><br>나온 결과를 복사해서 엑셀에 붙여넣기만 하면 끝이다.<br><br>진짜 손으로 짤 때보다 시간 절약이 수십 배는 된다.</div><button class="copy" data-copy="실제 사용 예시 프롬프트다.
+그대로 복사해서 조건만 바꿔 쓰면 된다.
+
+[근무자]
+김철수, 이영희, 박민수, 정수진, 최동현 (총 5명)
+
+[기간]
+다음 달 1일 ~ 30일 (매일 1명 당직)
+
+[제약 조건]
+1. 2일 연속 당직 절대 불가
+2. 김철수: 5일~7일 휴가 (당직 제외)
+3. 정수진: 주말 당직 불가
+4. 5명 전체 당직 횟수는 최대한 균등하게 배분할 것
+
+[출력]
+날짜, 요일, 당직자 이름이 들어간 마크다운 표 형태로 작성해줘.
+
+이렇게 붙여넣으면 10초 만에 표가 만들어진다.
+
+나온 결과를 복사해서 엑셀에 붙여넣기만 하면 끝이다.
+
+진짜 손으로 짤 때보다 시간 절약이 수십 배는 된다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 5</div><img src="../images/20261112-0341-ai-1-summary.png" alt="핵심 요약"><div class="fname">20261112-0341-ai-1-summary.png</div><a class="dl" href="../images/20261112-0341-ai-1-summary.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">AI 업무 자동화가 별거 없다.<br>내가 고생하던 걸 프롬프트 몇 줄로 줄이는 게 핵심이다.<br><br>복잡한 근무표 때문에 스트레스받지 말고<br>오늘 당장 이 프롬프트로 당직표 만들어보자.</div><button class="copy" data-copy="AI 업무 자동화가 별거 없다.
+내가 고생하던 걸 프롬프트 몇 줄로 줄이는 게 핵심이다.
+
+복잡한 근무표 때문에 스트레스받지 말고
+오늘 당장 이 프롬프트로 당직표 만들어보자.">이 부분 복사</button></div>
+
+  <div class="source">참고 기사: <a href="https://news.google.com/rss/articles/CBMia0FVX3lxTE1ua0t1aDVBTkRrdzdPLVlMOC1FYmd6VENGOElseDFpRW9kaXVGaHRqTU5QUFFzOEk5bHpwRVZLSW5McF93ZTktbHE1YVQ3cTdXd25qZHhvNk8wTUQycF_SejF4ZTFrOE0xaTR3?oc=5" target="_blank" rel="noopener">인사업무에 AI 도입…당직 근무표도 작성 - 시정일보</a></div>
+</div>
+
+<div class="allbar">
+  <button id="all" data-copy="( 사진 여기 — thumbnail )
+매달 돌아오는 당직표 짜기.
+솔직히 머리 터질 것 같다.
+
+연차 쓰는 사람 피해야 하고.
+주말 당직 겹치면 안 되고.
+연속 근무 금지 조건까지 넣으면 엑셀 켜두고 한참을 멍하게 된다.
+
+이거 AI한테 시키면 1분 만에 끝난다.
+단, 조건만 제대로 던져주면 말이다.
+
+( 사진 여기 — compare )
+보통 그냥 "이번 달 당직표 짜줘" 하면 AI도 대충 짜준다.
+사람 이름 몇 개 빠지거나 연속 근무 걸려서 결국 손으로 다시 수정하게 되더라.
+
+제대로 된 프롬프트를 써야 꼬임 없이 깔끔하게 나온다.
+
+핵심은 조건표를 텍스트로 딱 정돈해서 주는 거다.
+
+( 사진 여기 — diagram )
+내가 자주 쓰는 프롬프트 구조는 간단하다.
+
+1. 인원 목록
+2. 근무 기간
+3. 제약 사항 (연차, 주말 불가 등)
+4. 출력 형식 (엑셀 복붙용 표 형태)
+
+이 4가지만 맞춰서 작성하면 오류가 거의 안 난다.
+
+( 사진 여기 — steps )
+실제 사용 예시 프롬프트다.
+그대로 복사해서 조건만 바꿔 쓰면 된다.
+
+[근무자]
+김철수, 이영희, 박민수, 정수진, 최동현 (총 5명)
+
+[기간]
+다음 달 1일 ~ 30일 (매일 1명 당직)
+
+[제약 조건]
+1. 2일 연속 당직 절대 불가
+2. 김철수: 5일~7일 휴가 (당직 제외)
+3. 정수진: 주말 당직 불가
+4. 5명 전체 당직 횟수는 최대한 균등하게 배분할 것
+
+[출력]
+날짜, 요일, 당직자 이름이 들어간 마크다운 표 형태로 작성해줘.
+
+이렇게 붙여넣으면 10초 만에 표가 만들어진다.
+
+나온 결과를 복사해서 엑셀에 붙여넣기만 하면 끝이다.
+
+진짜 손으로 짤 때보다 시간 절약이 수십 배는 된다.
+
+( 사진 여기 — summary )
+AI 업무 자동화가 별거 없다.
+내가 고생하던 걸 프롬프트 몇 줄로 줄이는 게 핵심이다.
+
+복잡한 근무표 때문에 스트레스받지 말고
+오늘 당장 이 프롬프트로 당직표 만들어보자.">본문 전체 복사</button>
+</div>
+
+<script>
+document.addEventListener('click', function (e) {
+  var btn = e.target.closest('[data-copy]');
+  if (!btn) return;
+  var text = btn.getAttribute('data-copy');
+  var original = btn.textContent;
+
+  function done() {
+    btn.textContent = '복사됨';
+    btn.classList.add('done');
+    setTimeout(function () {
+      btn.textContent = original;
+      btn.classList.remove('done');
+    }, 1400);
+  }
+
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(text).then(done);
+  } else {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); done(); } catch (err) {}
+    document.body.removeChild(ta);
+  }
+});
+</script>
+</body>
+</html>
