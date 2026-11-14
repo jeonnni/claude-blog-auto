@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>코딩 1도 몰라도 챗GPT로 5분 만에 나만의 업무 웹툴 만들기 — 네이버 원고</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 24px 16px 80px;
+    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+                 "Malgun Gothic", sans-serif;
+    background: #F6F7F9; color: #1F2937; line-height: 1.75;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  .head {
+    background: #03C75A; color: #fff; padding: 20px 22px;
+    border-radius: 14px; margin-bottom: 20px;
+  }
+  .head h1 { margin: 0 0 6px; font-size: 20px; line-height: 1.45; }
+  .head .date { font-size: 13px; opacity: .9; }
+  .card {
+    background: #fff; border-radius: 14px; padding: 18px 20px;
+    margin-bottom: 16px; border: 1px solid #E5E7EB;
+  }
+  .card h2 {
+    margin: 0 0 12px; font-size: 15px; color: #6B7280;
+    font-weight: 700; letter-spacing: .3px;
+  }
+  ul { margin: 0; padding: 0; list-style: none; }
+  ul li {
+    display: flex; align-items: center; gap: 10px;
+    padding: 9px 0; border-bottom: 1px solid #F3F4F6;
+  }
+  ul li:last-child { border-bottom: 0; }
+  ul li .t { flex: 1; font-size: 15px; }
+  .copy {
+    border: 0; background: #EEF2FF; color: #4F46E5;
+    padding: 7px 13px; border-radius: 8px; font-size: 13px;
+    cursor: pointer; white-space: nowrap; font-weight: 600;
+  }
+  .copy:hover { background: #E0E7FF; }
+  .copy.done { background: #DCFCE7; color: #16A34A; }
+  .tags { color: #2563EB; font-size: 14px; word-break: keep-all; }
+  .block {
+    background: #fff; border: 1px solid #E5E7EB;
+    border-radius: 14px; padding: 16px 18px; margin-bottom: 12px;
+  }
+  .block.text .body { font-size: 15.5px; margin-bottom: 12px; }
+  .block.img { text-align: center; background: #FAFBFC; }
+  .block.img img {
+    width: 100%; height: auto; border-radius: 10px; display: block;
+  }
+  .imgno {
+    font-size: 12px; color: #9CA3AF; margin-bottom: 8px;
+    font-weight: 700; letter-spacing: .5px;
+  }
+  .fname {
+    font-size: 12px; color: #9CA3AF; margin-top: 8px;
+    font-family: ui-monospace, Menlo, monospace;
+  }
+  .dl {
+    display: inline-block; margin-top: 10px; padding: 8px 16px;
+    background: #F3F4F6; color: #374151; border-radius: 8px;
+    text-decoration: none; font-size: 13px; font-weight: 600;
+  }
+  .source {
+    font-size: 13px; color: #9CA3AF; margin-top: 22px;
+    padding-top: 14px; border-top: 1px solid #E5E7EB;
+  }
+  .source a { color: #6B7280; }
+  .allbar {
+    position: fixed; left: 0; right: 0; bottom: 0;
+    background: #fff; border-top: 1px solid #E5E7EB;
+    padding: 12px 16px; text-align: center;
+  }
+  .allbar button {
+    width: 100%; max-width: 720px; padding: 14px;
+    background: #03C75A; color: #fff; border: 0;
+    border-radius: 10px; font-size: 15px; font-weight: 700; cursor: pointer;
+  }
+  .allbar button.done { background: #16A34A; }
+  .guide {
+    background: #FFFBEB; border: 1px solid #FDE68A;
+    border-radius: 12px; padding: 14px 18px; margin-bottom: 16px;
+    font-size: 14px; color: #92400E;
+  }
+  .guide b { display: block; margin-bottom: 6px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="head">
+    <h1>코딩 1도 몰라도 챗GPT로 5분 만에 나만의 업무 웹툴 만들기</h1>
+    <div class="date">2026년 11월 14일 16:55 생성</div>
+  </div>
+
+  <div class="guide">
+    <b>이렇게 쓰면 됩니다</b>
+    네이버 블로그 글쓰기를 연 뒤, 아래 본문을 순서대로 복사해 붙여넣고
+    사진 자리에는 저장한 이미지를 올리면 됩니다.
+  </div>
+
+  <div class="card">
+    <h2>제목 후보</h2>
+    <ul><li><span class="t">코딩 1도 몰라도 챗GPT로 5분 만에 나만의 업무 웹툴 만들기</span><button class="copy" data-copy="코딩 1도 몰라도 챗GPT로 5분 만에 나만의 업무 웹툴 만들기">복사</button></li><li><span class="t">개발자 없이 챗GPT 바이브 코딩으로 단순 반복 업무 끝내는 법</span><button class="copy" data-copy="개발자 없이 챗GPT 바이브 코딩으로 단순 반복 업무 끝내는 법">복사</button></li><li><span class="t">비개발자가 챗GPT 웹프로그램 만들어 업무 자동화한 후기</span><button class="copy" data-copy="비개발자가 챗GPT 웹프로그램 만들어 업무 자동화한 후기">복사</button></li></ul>
+  </div>
+
+  <div class="card">
+    <h2>태그</h2>
+    <div class="tags">#챗GPT코딩 #바이브코딩 #비개발자프로그램만들기 #AI업무자동화 #챗GPT웹프로그램 #업무효율화 #나만의웹툴</div>
+    <div style="margin-top:12px">
+      <button class="copy" data-copy="#챗GPT코딩 #바이브코딩 #비개발자프로그램만들기 #AI업무자동화 #챗GPT웹프로그램 #업무효율화 #나만의웹툴">태그 전체 복사</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>본문</h2>
+  </div>
+
+  <div class="block img"><div class="imgno">사진 1</div><img src="../images/20261114-1655-1-gpt-5-thumbnail-sq.png" alt="대표 이미지"><div class="fname">20261114-1655-1-gpt-5-thumbnail-sq.png</div><a class="dl" href="../images/20261114-1655-1-gpt-5-thumbnail-sq.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">매일 반복되는 텍스트 변환이나 계산 작업할 때 은근히 짜증날 때가 많다.<br><br>개발팀에 만들어달라고 하기엔 너무 소소하고.<br>직접 코딩을 배우자니 엄두가 안 나더라.<br><br>근데 요즘은 코딩 한 줄 몰라도 챗GPT로 나만의 업무용 웹 프로그램을 만들 수 있다.<br><br>거창한 프로그램이 아니라, 딱 내 업무에 필요한 기능만 가진 툴이다.<br>텍스트로 원하는 걸 지시하기만 하면 뚝딱 만들어주는데, 이걸 바이브 코딩이라고 부르더라.</div><button class="copy" data-copy="매일 반복되는 텍스트 변환이나 계산 작업할 때 은근히 짜증날 때가 많다.
+
+개발팀에 만들어달라고 하기엔 너무 소소하고.
+직접 코딩을 배우자니 엄두가 안 나더라.
+
+근데 요즘은 코딩 한 줄 몰라도 챗GPT로 나만의 업무용 웹 프로그램을 만들 수 있다.
+
+거창한 프로그램이 아니라, 딱 내 업무에 필요한 기능만 가진 툴이다.
+텍스트로 원하는 걸 지시하기만 하면 뚝딱 만들어주는데, 이걸 바이브 코딩이라고 부르더라.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 2</div><img src="../images/20261114-1655-1-gpt-5-diagram.png" alt="동작 구조 다이어그램"><div class="fname">20261114-1655-1-gpt-5-diagram.png</div><a class="dl" href="../images/20261114-1655-1-gpt-5-diagram.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">작동 흐름도 진짜 간단하다.<br><br>내가 필요한 기능을 정리해서 챗GPT한테 말로 설명한다.<br>그럼 AI가 코드 전체를 짜준다.<br>그 코드를 메모장에 붙여넣고 파일로 저장하면 내 전용 웹 툴이 완성된다.<br><br>컴퓨터에 아무것도 설치할 필요가 없어서 비개발자한테 딱이더라.</div><button class="copy" data-copy="작동 흐름도 진짜 간단하다.
+
+내가 필요한 기능을 정리해서 챗GPT한테 말로 설명한다.
+그럼 AI가 코드 전체를 짜준다.
+그 코드를 메모장에 붙여넣고 파일로 저장하면 내 전용 웹 툴이 완성된다.
+
+컴퓨터에 아무것도 설치할 필요가 없어서 비개발자한테 딱이더라.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 3</div><img src="../images/20261114-1655-1-gpt-5-compare.png" alt="비교표"><div class="fname">20261114-1655-1-gpt-5-compare.png</div><a class="dl" href="../images/20261114-1655-1-gpt-5-compare.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">기존에 엑셀 함수 꼬이고 수작업하느라 시간 버리던 거랑 비교해 보면 차이가 크다.<br><br>기존엔 프로그램 하나 만드려면 외주를 맡기거나 몇 달 공부해야 했다.<br>반면에 바이브 코딩은 5분 만에 완성된다.<br>쓰다가 수정하고 싶은 부분이 생겨도 "버튼 색깔 바꿔줘" 하고 다시 요청하면 끝이다.</div><button class="copy" data-copy="기존에 엑셀 함수 꼬이고 수작업하느라 시간 버리던 거랑 비교해 보면 차이가 크다.
+
+기존엔 프로그램 하나 만드려면 외주를 맡기거나 몇 달 공부해야 했다.
+반면에 바이브 코딩은 5분 만에 완성된다.
+쓰다가 수정하고 싶은 부분이 생겨도 "버튼 색깔 바꿔줘" 하고 다시 요청하면 끝이다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 4</div><img src="../images/20261114-1655-1-gpt-5-steps.png" alt="단계별 가이드"><div class="fname">20261114-1655-1-gpt-5-steps.png</div><a class="dl" href="../images/20261114-1655-1-gpt-5-steps.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">실제로 쓸 수 있는 챗GPT 프롬프트 작성법이다.<br>그대로 복사해서 지시어만 바꿔서 써보자.<br><br>1. 역할과 목표 지정<br>"너는 웹 개발자야. 내가 입력한 텍스트에서 이메일 주소만 추출하는 웹 프로그램을 만들어줘."<br><br>2. 화면 구성 요청<br>"화면 중앙에 입력창과 추출 버튼을 두고, 결과는 상자에 깔끔하게 보이게 해줘."<br><br>3. 코드 형태 지정<br>"HTML, CSS, 자바스크립트를 하나의 HTML 파일 코드 블록으로 작성해 줘. 메모장에 붙여넣어 바로 쓸 수 있게 해줘."<br><br>이렇게 던지면 알아서 완전한 코드를 출력해 준다.</div><button class="copy" data-copy="실제로 쓸 수 있는 챗GPT 프롬프트 작성법이다.
+그대로 복사해서 지시어만 바꿔서 써보자.
+
+1. 역할과 목표 지정
+"너는 웹 개발자야. 내가 입력한 텍스트에서 이메일 주소만 추출하는 웹 프로그램을 만들어줘."
+
+2. 화면 구성 요청
+"화면 중앙에 입력창과 추출 버튼을 두고, 결과는 상자에 깔끔하게 보이게 해줘."
+
+3. 코드 형태 지정
+"HTML, CSS, 자바스크립트를 하나의 HTML 파일 코드 블록으로 작성해 줘. 메모장에 붙여넣어 바로 쓸 수 있게 해줘."
+
+이렇게 던지면 알아서 완전한 코드를 출력해 준다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 5</div><img src="../images/20261114-1655-1-gpt-5-summary.png" alt="핵심 요약"><div class="fname">20261114-1655-1-gpt-5-summary.png</div><a class="dl" href="../images/20261114-1655-1-gpt-5-summary.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">출력된 코드를 메모장에 붙여넣고 확장자를 .html 로 저장하면 끝이다.<br>파일을 더블클릭하면 크롬이나 웨일 브라우저에서 바로 실행된다.<br><br>매일 복사 붙여넣기 하느라 스트레스받았던 일들, 이제 나만의 웹 툴로 자동화해보자.<br>작은 툴 하나 만드는 데 5분도 안 걸린다.<br>오늘 업무 중에 제일 귀찮았던 일부터 하나 바꿔보는 걸 추천한다.</div><button class="copy" data-copy="출력된 코드를 메모장에 붙여넣고 확장자를 .html 로 저장하면 끝이다.
+파일을 더블클릭하면 크롬이나 웨일 브라우저에서 바로 실행된다.
+
+매일 복사 붙여넣기 하느라 스트레스받았던 일들, 이제 나만의 웹 툴로 자동화해보자.
+작은 툴 하나 만드는 데 5분도 안 걸린다.
+오늘 업무 중에 제일 귀찮았던 일부터 하나 바꿔보는 걸 추천한다.">이 부분 복사</button></div>
+
+  <div class="source">참고 기사: <a href="https://news.google.com/rss/articles/CBMickFVX3lxTE42b1NoQW45OXpNZFJxdWxhM2RDWE1VTTVfV2EtRXpMUTh5WFJNUjl6Z2pRY0tqRm11VWt1cDR3c1VZcXc0ZjNkaVo5VjBhQm9Md3d4VTI0V1B4TzNrNFBKMnZwYWRKbTZzMFhyT1VQMGphUQ?oc=5" target="_blank" rel="noopener">전기안전공사, 직원 주도 AI 업무혁신 본격화… 바이브코딩으로 현장 문제 해결 - 에너지데일리</a></div>
+</div>
+
+<div class="allbar">
+  <button id="all" data-copy="( 사진 여기 — thumbnail )
+
+매일 반복되는 텍스트 변환이나 계산 작업할 때 은근히 짜증날 때가 많다.
+
+개발팀에 만들어달라고 하기엔 너무 소소하고.
+직접 코딩을 배우자니 엄두가 안 나더라.
+
+근데 요즘은 코딩 한 줄 몰라도 챗GPT로 나만의 업무용 웹 프로그램을 만들 수 있다.
+
+거창한 프로그램이 아니라, 딱 내 업무에 필요한 기능만 가진 툴이다.
+텍스트로 원하는 걸 지시하기만 하면 뚝딱 만들어주는데, 이걸 바이브 코딩이라고 부르더라.
+
+( 사진 여기 — diagram )
+
+작동 흐름도 진짜 간단하다.
+
+내가 필요한 기능을 정리해서 챗GPT한테 말로 설명한다.
+그럼 AI가 코드 전체를 짜준다.
+그 코드를 메모장에 붙여넣고 파일로 저장하면 내 전용 웹 툴이 완성된다.
+
+컴퓨터에 아무것도 설치할 필요가 없어서 비개발자한테 딱이더라.
+
+( 사진 여기 — compare )
+
+기존에 엑셀 함수 꼬이고 수작업하느라 시간 버리던 거랑 비교해 보면 차이가 크다.
+
+기존엔 프로그램 하나 만드려면 외주를 맡기거나 몇 달 공부해야 했다.
+반면에 바이브 코딩은 5분 만에 완성된다.
+쓰다가 수정하고 싶은 부분이 생겨도 "버튼 색깔 바꿔줘" 하고 다시 요청하면 끝이다.
+
+( 사진 여기 — steps )
+
+실제로 쓸 수 있는 챗GPT 프롬프트 작성법이다.
+그대로 복사해서 지시어만 바꿔서 써보자.
+
+1. 역할과 목표 지정
+"너는 웹 개발자야. 내가 입력한 텍스트에서 이메일 주소만 추출하는 웹 프로그램을 만들어줘."
+
+2. 화면 구성 요청
+"화면 중앙에 입력창과 추출 버튼을 두고, 결과는 상자에 깔끔하게 보이게 해줘."
+
+3. 코드 형태 지정
+"HTML, CSS, 자바스크립트를 하나의 HTML 파일 코드 블록으로 작성해 줘. 메모장에 붙여넣어 바로 쓸 수 있게 해줘."
+
+이렇게 던지면 알아서 완전한 코드를 출력해 준다.
+
+( 사진 여기 — summary )
+
+출력된 코드를 메모장에 붙여넣고 확장자를 .html 로 저장하면 끝이다.
+파일을 더블클릭하면 크롬이나 웨일 브라우저에서 바로 실행된다.
+
+매일 복사 붙여넣기 하느라 스트레스받았던 일들, 이제 나만의 웹 툴로 자동화해보자.
+작은 툴 하나 만드는 데 5분도 안 걸린다.
+오늘 업무 중에 제일 귀찮았던 일부터 하나 바꿔보는 걸 추천한다.">본문 전체 복사</button>
+</div>
+
+<script>
+document.addEventListener('click', function (e) {
+  var btn = e.target.closest('[data-copy]');
+  if (!btn) return;
+  var text = btn.getAttribute('data-copy');
+  var original = btn.textContent;
+
+  function done() {
+    btn.textContent = '복사됨';
+    btn.classList.add('done');
+    setTimeout(function () {
+      btn.textContent = original;
+      btn.classList.remove('done');
+    }, 1400);
+  }
+
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(text).then(done);
+  } else {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); done(); } catch (err) {}
+    document.body.removeChild(ta);
+  }
+});
+</script>
+</body>
+</html>
