@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>코딩 1도 몰라도 30분 만에 AI로 2D 미니 게임 만드는 법 — 네이버 원고</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 24px 16px 80px;
+    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+                 "Malgun Gothic", sans-serif;
+    background: #F6F7F9; color: #1F2937; line-height: 1.75;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  .head {
+    background: #03C75A; color: #fff; padding: 20px 22px;
+    border-radius: 14px; margin-bottom: 20px;
+  }
+  .head h1 { margin: 0 0 6px; font-size: 20px; line-height: 1.45; }
+  .head .date { font-size: 13px; opacity: .9; }
+  .card {
+    background: #fff; border-radius: 14px; padding: 18px 20px;
+    margin-bottom: 16px; border: 1px solid #E5E7EB;
+  }
+  .card h2 {
+    margin: 0 0 12px; font-size: 15px; color: #6B7280;
+    font-weight: 700; letter-spacing: .3px;
+  }
+  ul { margin: 0; padding: 0; list-style: none; }
+  ul li {
+    display: flex; align-items: center; gap: 10px;
+    padding: 9px 0; border-bottom: 1px solid #F3F4F6;
+  }
+  ul li:last-child { border-bottom: 0; }
+  ul li .t { flex: 1; font-size: 15px; }
+  .copy {
+    border: 0; background: #EEF2FF; color: #4F46E5;
+    padding: 7px 13px; border-radius: 8px; font-size: 13px;
+    cursor: pointer; white-space: nowrap; font-weight: 600;
+  }
+  .copy:hover { background: #E0E7FF; }
+  .copy.done { background: #DCFCE7; color: #16A34A; }
+  .tags { color: #2563EB; font-size: 14px; word-break: keep-all; }
+  .block {
+    background: #fff; border: 1px solid #E5E7EB;
+    border-radius: 14px; padding: 16px 18px; margin-bottom: 12px;
+  }
+  .block.text .body { font-size: 15.5px; margin-bottom: 12px; }
+  .block.img { text-align: center; background: #FAFBFC; }
+  .block.img img {
+    width: 100%; height: auto; border-radius: 10px; display: block;
+  }
+  .imgno {
+    font-size: 12px; color: #9CA3AF; margin-bottom: 8px;
+    font-weight: 700; letter-spacing: .5px;
+  }
+  .fname {
+    font-size: 12px; color: #9CA3AF; margin-top: 8px;
+    font-family: ui-monospace, Menlo, monospace;
+  }
+  .dl {
+    display: inline-block; margin-top: 10px; padding: 8px 16px;
+    background: #F3F4F6; color: #374151; border-radius: 8px;
+    text-decoration: none; font-size: 13px; font-weight: 600;
+  }
+  .source {
+    font-size: 13px; color: #9CA3AF; margin-top: 22px;
+    padding-top: 14px; border-top: 1px solid #E5E7EB;
+  }
+  .source a { color: #6B7280; }
+  .allbar {
+    position: fixed; left: 0; right: 0; bottom: 0;
+    background: #fff; border-top: 1px solid #E5E7EB;
+    padding: 12px 16px; text-align: center;
+  }
+  .allbar button {
+    width: 100%; max-width: 720px; padding: 14px;
+    background: #03C75A; color: #fff; border: 0;
+    border-radius: 10px; font-size: 15px; font-weight: 700; cursor: pointer;
+  }
+  .allbar button.done { background: #16A34A; }
+  .guide {
+    background: #FFFBEB; border: 1px solid #FDE68A;
+    border-radius: 12px; padding: 14px 18px; margin-bottom: 16px;
+    font-size: 14px; color: #92400E;
+  }
+  .guide b { display: block; margin-bottom: 6px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="head">
+    <h1>코딩 1도 몰라도 30분 만에 AI로 2D 미니 게임 만드는 법</h1>
+    <div class="date">2026년 11월 15일 02:29 생성</div>
+  </div>
+
+  <div class="guide">
+    <b>이렇게 쓰면 됩니다</b>
+    네이버 블로그 글쓰기를 연 뒤, 아래 본문을 순서대로 복사해 붙여넣고
+    사진 자리에는 저장한 이미지를 올리면 됩니다.
+  </div>
+
+  <div class="card">
+    <h2>제목 후보</h2>
+    <ul><li><span class="t">코딩 1도 몰라도 30분 만에 AI로 2D 미니 게임 만드는 법</span><button class="copy" data-copy="코딩 1도 몰라도 30분 만에 AI로 2D 미니 게임 만드는 법">복사</button></li><li><span class="t">챗GPT로 만드는 나만의 미니 게임 (노코딩 입문 가이드)</span><button class="copy" data-copy="챗GPT로 만드는 나만의 미니 게임 (노코딩 입문 가이드)">복사</button></li><li><span class="t">비개발자가 30분 만에 웹 게임 하나 뚝딱 만들어낸 노하우</span><button class="copy" data-copy="비개발자가 30분 만에 웹 게임 하나 뚝딱 만들어낸 노하우">복사</button></li></ul>
+  </div>
+
+  <div class="card">
+    <h2>태그</h2>
+    <div class="tags">#AI게임만들기 #코딩없이게임제작 #챗GPT게임개발 #노코딩미니게임 #AI프로그래밍초보 #게임개발입문 #웹게임만들기</div>
+    <div style="margin-top:12px">
+      <button class="copy" data-copy="#AI게임만들기 #코딩없이게임제작 #챗GPT게임개발 #노코딩미니게임 #AI프로그래밍초보 #게임개발입문 #웹게임만들기">태그 전체 복사</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>본문</h2>
+  </div>
+
+  <div class="block img"><div class="imgno">사진 1</div><img src="../images/20261115-0229-1-30-ai-2d-thumbnail-sq.png" alt="대표 이미지"><div class="fname">20261115-0229-1-30-ai-2d-thumbnail-sq.png</div><a class="dl" href="../images/20261115-0229-1-30-ai-2d-thumbnail-sq.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">코딩 까막눈이어도 진짜 30분이면 나만의 웹 게임을 만들 수 있더라.<br><br>예전에는 게임 하나 만들려면 프로그래밍 언어부터 배워야 했다.<br>근데 요즘은 AI 툴만 잘 써도 실행 가능한 2D 미니 게임이 바로 나온다.<br><br>개발 지식 전혀 없는 왕초보 기준으로 제일 쉬운 방법을 정리해봤다.</div><button class="copy" data-copy="코딩 까막눈이어도 진짜 30분이면 나만의 웹 게임을 만들 수 있더라.
+
+예전에는 게임 하나 만들려면 프로그래밍 언어부터 배워야 했다.
+근데 요즘은 AI 툴만 잘 써도 실행 가능한 2D 미니 게임이 바로 나온다.
+
+개발 지식 전혀 없는 왕초보 기준으로 제일 쉬운 방법을 정리해봤다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 2</div><img src="../images/20261115-0229-1-30-ai-2d-diagram.png" alt="동작 구조 다이어그램"><div class="fname">20261115-0229-1-30-ai-2d-diagram.png</div><a class="dl" href="../images/20261115-0229-1-30-ai-2d-diagram.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">우선 어떤 순서로 진행되는지 전체적인 흐름부터 보자.<br><br>아이디어 구상부터 완성까지 생각보다 단계가 아주 단순하다.<br>우리가 할 일은 거창한 코드 작성이 아니라 AI에게 구체적으로 지시하는 거다.<br><br>핵심은 한 줄짜리 명령이 아니라 꽤 상세한 프롬프트를 넣는 거다.</div><button class="copy" data-copy="우선 어떤 순서로 진행되는지 전체적인 흐름부터 보자.
+
+아이디어 구상부터 완성까지 생각보다 단계가 아주 단순하다.
+우리가 할 일은 거창한 코드 작성이 아니라 AI에게 구체적으로 지시하는 거다.
+
+핵심은 한 줄짜리 명령이 아니라 꽤 상세한 프롬프트를 넣는 거다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 3</div><img src="../images/20261115-0229-1-30-ai-2d-steps.png" alt="단계별 가이드"><div class="fname">20261115-0229-1-30-ai-2d-steps.png</div><a class="dl" href="../images/20261115-0229-1-30-ai-2d-steps.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">첫 단계는 챗GPT 같은 대화형 AI에 접속하는 거다.<br>무료로 쓸 수 있는 기본 AI 서비스로도 충분하다.<br><br>대화창에 이렇게 입력해보자.<br><br>"HTML5 Canvas로 동작하는 2D 장애물 피하기 게임 코드를 작성해 줘."<br>"플레이어는 키보드 방향키로 움직이고 상단에서 장애물이 떨어진다."<br>"부딪히면 게임 오버가 되고 점수가 표시되게 해줘."<br>"HTML, CSS, 자바스크립트 코드를 파일 하나로 합쳐서 작성해 줘."<br><br>이렇게 요청하면 AI가 알아서 한 덩어리의 코드를 짜준다.<br><br>코드가 다 나오면 전체 복사를 하자.<br>메모장을 열고 붙여넣은 뒤 파일 이름을 game.html로 저장한다.<br><br>저장한 파일을 마우스로 두 번 클릭해서 웹 브라우저로 열어보자.<br>키보드 방향키를 누르는 순간 내가 만든 게임이 짠하고 실행된다.</div><button class="copy" data-copy="첫 단계는 챗GPT 같은 대화형 AI에 접속하는 거다.
+무료로 쓸 수 있는 기본 AI 서비스로도 충분하다.
+
+대화창에 이렇게 입력해보자.
+
+"HTML5 Canvas로 동작하는 2D 장애물 피하기 게임 코드를 작성해 줘."
+"플레이어는 키보드 방향키로 움직이고 상단에서 장애물이 떨어진다."
+"부딪히면 게임 오버가 되고 점수가 표시되게 해줘."
+"HTML, CSS, 자바스크립트 코드를 파일 하나로 합쳐서 작성해 줘."
+
+이렇게 요청하면 AI가 알아서 한 덩어리의 코드를 짜준다.
+
+코드가 다 나오면 전체 복사를 하자.
+메모장을 열고 붙여넣은 뒤 파일 이름을 game.html로 저장한다.
+
+저장한 파일을 마우스로 두 번 클릭해서 웹 브라우저로 열어보자.
+키보드 방향키를 누르는 순간 내가 만든 게임이 짠하고 실행된다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 4</div><img src="../images/20261115-0229-1-30-ai-2d-compare.png" alt="비교표"><div class="fname">20261115-0229-1-30-ai-2d-compare.png</div><a class="dl" href="../images/20261115-0229-1-30-ai-2d-compare.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">기존 방식으로 게임을 만드는 것과 AI를 쓰는 방식은 차이가 크다.<br><br>문법을 몰라도 문장으로 지시하니까 속도가 비교가 안 된다.<br>버그가 나도 당황할 필요가 없다.<br><br>게임이 멈추거나 동작을 안 하면 실행 화면이나 에러 내용을 그대로 복사해서 AI에게 던지면 된다.<br>"이 부분에서 동작이 안 되는데 수정해 줘" 하면 알아서 고쳐주더라.<br><br>점수판 디자인을 바꾸거나 캐릭터 속도를 올리는 것도 한 줄 요청이면 끝난다.</div><button class="copy" data-copy="기존 방식으로 게임을 만드는 것과 AI를 쓰는 방식은 차이가 크다.
+
+문법을 몰라도 문장으로 지시하니까 속도가 비교가 안 된다.
+버그가 나도 당황할 필요가 없다.
+
+게임이 멈추거나 동작을 안 하면 실행 화면이나 에러 내용을 그대로 복사해서 AI에게 던지면 된다.
+"이 부분에서 동작이 안 되는데 수정해 줘" 하면 알아서 고쳐주더라.
+
+점수판 디자인을 바꾸거나 캐릭터 속도를 올리는 것도 한 줄 요청이면 끝난다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 5</div><img src="../images/20261115-0229-1-30-ai-2d-summary.png" alt="핵심 요약"><div class="fname">20261115-0229-1-30-ai-2d-summary.png</div><a class="dl" href="../images/20261115-0229-1-30-ai-2d-summary.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">정리하자면 세 가지만 기억하면 된다.<br><br>첫째, 결과물을 한 파일로 받기.<br>둘째, 이상하면 AI한테 고쳐달라고 떼쓰기.<br>셋째, 메모장에 붙여넣고 html 파일로 저장하기.<br><br>오늘 퇴근하고 딱 30분만 투자해보자.<br>내 손으로 만든 게임을 직접 플레이하는 재미가 쏠쏠하다.</div><button class="copy" data-copy="정리하자면 세 가지만 기억하면 된다.
+
+첫째, 결과물을 한 파일로 받기.
+둘째, 이상하면 AI한테 고쳐달라고 떼쓰기.
+셋째, 메모장에 붙여넣고 html 파일로 저장하기.
+
+오늘 퇴근하고 딱 30분만 투자해보자.
+내 손으로 만든 게임을 직접 플레이하는 재미가 쏠쏠하다.">이 부분 복사</button></div>
+
+  <div class="source">참고 기사: <a href="https://news.google.com/rss/articles/CBMibEFVX3lxTE1XYnZzcHZaQXJvVGlMRHVPRW9iQWE4MEs4YktZZi1nRHl4WjduWTJnSG8tVjNKcWl4UVNkaUlJM3RhWjU2N0hRV01wMVVfWlltaHpodWJMR202LVNDTkZyNkZGTkZKWE9LN1U2Mw?oc=5" target="_blank" rel="noopener">코딩 몰라도 게임 만든다...제주콘텐츠진흥원, AI 활용 게임 개발 입문 캠프 수강생 모집 - 뉴스N제주</a></div>
+</div>
+
+<div class="allbar">
+  <button id="all" data-copy="( 사진 여기 — thumbnail )
+
+코딩 까막눈이어도 진짜 30분이면 나만의 웹 게임을 만들 수 있더라.
+
+예전에는 게임 하나 만들려면 프로그래밍 언어부터 배워야 했다.
+근데 요즘은 AI 툴만 잘 써도 실행 가능한 2D 미니 게임이 바로 나온다.
+
+개발 지식 전혀 없는 왕초보 기준으로 제일 쉬운 방법을 정리해봤다.
+
+( 사진 여기 — diagram )
+
+우선 어떤 순서로 진행되는지 전체적인 흐름부터 보자.
+
+아이디어 구상부터 완성까지 생각보다 단계가 아주 단순하다.
+우리가 할 일은 거창한 코드 작성이 아니라 AI에게 구체적으로 지시하는 거다.
+
+핵심은 한 줄짜리 명령이 아니라 꽤 상세한 프롬프트를 넣는 거다.
+
+( 사진 여기 — steps )
+
+첫 단계는 챗GPT 같은 대화형 AI에 접속하는 거다.
+무료로 쓸 수 있는 기본 AI 서비스로도 충분하다.
+
+대화창에 이렇게 입력해보자.
+
+"HTML5 Canvas로 동작하는 2D 장애물 피하기 게임 코드를 작성해 줘."
+"플레이어는 키보드 방향키로 움직이고 상단에서 장애물이 떨어진다."
+"부딪히면 게임 오버가 되고 점수가 표시되게 해줘."
+"HTML, CSS, 자바스크립트 코드를 파일 하나로 합쳐서 작성해 줘."
+
+이렇게 요청하면 AI가 알아서 한 덩어리의 코드를 짜준다.
+
+코드가 다 나오면 전체 복사를 하자.
+메모장을 열고 붙여넣은 뒤 파일 이름을 game.html로 저장한다.
+
+저장한 파일을 마우스로 두 번 클릭해서 웹 브라우저로 열어보자.
+키보드 방향키를 누르는 순간 내가 만든 게임이 짠하고 실행된다.
+
+( 사진 여기 — compare )
+
+기존 방식으로 게임을 만드는 것과 AI를 쓰는 방식은 차이가 크다.
+
+문법을 몰라도 문장으로 지시하니까 속도가 비교가 안 된다.
+버그가 나도 당황할 필요가 없다.
+
+게임이 멈추거나 동작을 안 하면 실행 화면이나 에러 내용을 그대로 복사해서 AI에게 던지면 된다.
+"이 부분에서 동작이 안 되는데 수정해 줘" 하면 알아서 고쳐주더라.
+
+점수판 디자인을 바꾸거나 캐릭터 속도를 올리는 것도 한 줄 요청이면 끝난다.
+
+( 사진 여기 — summary )
+
+정리하자면 세 가지만 기억하면 된다.
+
+첫째, 결과물을 한 파일로 받기.
+둘째, 이상하면 AI한테 고쳐달라고 떼쓰기.
+셋째, 메모장에 붙여넣고 html 파일로 저장하기.
+
+오늘 퇴근하고 딱 30분만 투자해보자.
+내 손으로 만든 게임을 직접 플레이하는 재미가 쏠쏠하다.">본문 전체 복사</button>
+</div>
+
+<script>
+document.addEventListener('click', function (e) {
+  var btn = e.target.closest('[data-copy]');
+  if (!btn) return;
+  var text = btn.getAttribute('data-copy');
+  var original = btn.textContent;
+
+  function done() {
+    btn.textContent = '복사됨';
+    btn.classList.add('done');
+    setTimeout(function () {
+      btn.textContent = original;
+      btn.classList.remove('done');
+    }, 1400);
+  }
+
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(text).then(done);
+  } else {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); done(); } catch (err) {}
+    document.body.removeChild(ta);
+  }
+});
+</script>
+</body>
+</html>
