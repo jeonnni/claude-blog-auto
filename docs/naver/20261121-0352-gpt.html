@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>챗GPT 쓸 때마다 '격식 있게 써줘' 반복 입력 그만하는 법 — 네이버 원고</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 24px 16px 80px;
+    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+                 "Malgun Gothic", sans-serif;
+    background: #F6F7F9; color: #1F2937; line-height: 1.75;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  .head {
+    background: #03C75A; color: #fff; padding: 20px 22px;
+    border-radius: 14px; margin-bottom: 20px;
+  }
+  .head h1 { margin: 0 0 6px; font-size: 20px; line-height: 1.45; }
+  .head .date { font-size: 13px; opacity: .9; }
+  .card {
+    background: #fff; border-radius: 14px; padding: 18px 20px;
+    margin-bottom: 16px; border: 1px solid #E5E7EB;
+  }
+  .card h2 {
+    margin: 0 0 12px; font-size: 15px; color: #6B7280;
+    font-weight: 700; letter-spacing: .3px;
+  }
+  ul { margin: 0; padding: 0; list-style: none; }
+  ul li {
+    display: flex; align-items: center; gap: 10px;
+    padding: 9px 0; border-bottom: 1px solid #F3F4F6;
+  }
+  ul li:last-child { border-bottom: 0; }
+  ul li .t { flex: 1; font-size: 15px; }
+  .copy {
+    border: 0; background: #EEF2FF; color: #4F46E5;
+    padding: 7px 13px; border-radius: 8px; font-size: 13px;
+    cursor: pointer; white-space: nowrap; font-weight: 600;
+  }
+  .copy:hover { background: #E0E7FF; }
+  .copy.done { background: #DCFCE7; color: #16A34A; }
+  .tags { color: #2563EB; font-size: 14px; word-break: keep-all; }
+  .block {
+    background: #fff; border: 1px solid #E5E7EB;
+    border-radius: 14px; padding: 16px 18px; margin-bottom: 12px;
+  }
+  .block.text .body { font-size: 15.5px; margin-bottom: 12px; }
+  .block.img { text-align: center; background: #FAFBFC; }
+  .block.img img {
+    width: 100%; height: auto; border-radius: 10px; display: block;
+  }
+  .imgno {
+    font-size: 12px; color: #9CA3AF; margin-bottom: 8px;
+    font-weight: 700; letter-spacing: .5px;
+  }
+  .fname {
+    font-size: 12px; color: #9CA3AF; margin-top: 8px;
+    font-family: ui-monospace, Menlo, monospace;
+  }
+  .dl {
+    display: inline-block; margin-top: 10px; padding: 8px 16px;
+    background: #F3F4F6; color: #374151; border-radius: 8px;
+    text-decoration: none; font-size: 13px; font-weight: 600;
+  }
+  .source {
+    font-size: 13px; color: #9CA3AF; margin-top: 22px;
+    padding-top: 14px; border-top: 1px solid #E5E7EB;
+  }
+  .source a { color: #6B7280; }
+  .allbar {
+    position: fixed; left: 0; right: 0; bottom: 0;
+    background: #fff; border-top: 1px solid #E5E7EB;
+    padding: 12px 16px; text-align: center;
+  }
+  .allbar button {
+    width: 100%; max-width: 720px; padding: 14px;
+    background: #03C75A; color: #fff; border: 0;
+    border-radius: 10px; font-size: 15px; font-weight: 700; cursor: pointer;
+  }
+  .allbar button.done { background: #16A34A; }
+  .guide {
+    background: #FFFBEB; border: 1px solid #FDE68A;
+    border-radius: 12px; padding: 14px 18px; margin-bottom: 16px;
+    font-size: 14px; color: #92400E;
+  }
+  .guide b { display: block; margin-bottom: 6px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="head">
+    <h1>챗GPT 쓸 때마다 '격식 있게 써줘' 반복 입력 그만하는 법</h1>
+    <div class="date">2026년 11월 21일 03:52 생성</div>
+  </div>
+
+  <div class="guide">
+    <b>이렇게 쓰면 됩니다</b>
+    네이버 블로그 글쓰기를 연 뒤, 아래 본문을 순서대로 복사해 붙여넣고
+    사진 자리에는 저장한 이미지를 올리면 됩니다.
+  </div>
+
+  <div class="card">
+    <h2>제목 후보</h2>
+    <ul><li><span class="t">챗GPT 쓸 때마다 '격식 있게 써줘' 반복 입력 그만하는 법</span><button class="copy" data-copy="챗GPT 쓸 때마다 '격식 있게 써줘' 반복 입력 그만하는 법">복사</button></li><li><span class="t">매번 프롬프트 입력하기 귀찮다면? 챗GPT 맞춤설정 3분 세팅</span><button class="copy" data-copy="매번 프롬프트 입력하기 귀찮다면? 챗GPT 맞춤설정 3분 세팅">복사</button></li><li><span class="t">챗GPT가 내 직무와 말투를 항상 기억하게 만드는 커스텀 인스트럭션 활용법</span><button class="copy" data-copy="챗GPT가 내 직무와 말투를 항상 기억하게 만드는 커스텀 인스트럭션 활용법">복사</button></li></ul>
+  </div>
+
+  <div class="card">
+    <h2>태그</h2>
+    <div class="tags">#챗GPT사용법 #챗GPT맞춤설정 #커스텀인스트럭션 #챗GPT프롬프트팁 #챗GPT업무활용 #생산성팁 #AI활용법</div>
+    <div style="margin-top:12px">
+      <button class="copy" data-copy="#챗GPT사용법 #챗GPT맞춤설정 #커스텀인스트럭션 #챗GPT프롬프트팁 #챗GPT업무활용 #생산성팁 #AI활용법">태그 전체 복사</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>본문</h2>
+  </div>
+
+  <div class="block img"><div class="imgno">사진 1</div><img src="../images/20261121-0352-gpt-thumbnail-sq.png" alt="대표 이미지"><div class="fname">20261121-0352-gpt-thumbnail-sq.png</div><a class="dl" href="../images/20261121-0352-gpt-thumbnail-sq.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">챗GPT한테 일 시킬 때 매번 똑같은 말 붙이는 사람들 많다.<br><br>"보고서용으로 격식 있게 작성해줘."<br>"결론부터 3줄 요약해줘."<br>"나는 마케터니까 마케팅 관점에서 답변해줘."<br><br>매번 새 대화창 열 때마다 이거 입력하는 거, 솔직히 귀찮더라.<br><br>한두 번도 아니고 매번 반복하다 보면 은근 시간 잡아먹는다.</div><button class="copy" data-copy="챗GPT한테 일 시킬 때 매번 똑같은 말 붙이는 사람들 많다.
+
+"보고서용으로 격식 있게 작성해줘."
+"결론부터 3줄 요약해줘."
+"나는 마케터니까 마케팅 관점에서 답변해줘."
+
+매번 새 대화창 열 때마다 이거 입력하는 거, 솔직히 귀찮더라.
+
+한두 번도 아니고 매번 반복하다 보면 은근 시간 잡아먹는다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 2</div><img src="../images/20261121-0352-gpt-compare.png" alt="비교표"><div class="fname">20261121-0352-gpt-compare.png</div><a class="dl" href="../images/20261121-0352-gpt-compare.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">이 귀찮은 과정을 싹 없애주는 기능이 있다.<br><br>바로 '맞춤 설정(Custom Instructions)'이다.<br><br>쉽게 말해 챗GPT한테 내 프로필과 원하는 답변 스타일을 미리 입력해두는 거다.<br><br>한 번만 설정해두면 다음부터는 알아서 내가 원하는 톤과 형식으로 답해준다.<br><br>설정 안 했을 때랑 했을 때 차이가 진짜 크더라.</div><button class="copy" data-copy="이 귀찮은 과정을 싹 없애주는 기능이 있다.
+
+바로 '맞춤 설정(Custom Instructions)'이다.
+
+쉽게 말해 챗GPT한테 내 프로필과 원하는 답변 스타일을 미리 입력해두는 거다.
+
+한 번만 설정해두면 다음부터는 알아서 내가 원하는 톤과 형식으로 답해준다.
+
+설정 안 했을 때랑 했을 때 차이가 진짜 크더라.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 3</div><img src="../images/20261121-0352-gpt-diagram.png" alt="동작 구조 다이어그램"><div class="fname">20261121-0352-gpt-diagram.png</div><a class="dl" href="../images/20261121-0352-gpt-diagram.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">원리는 의외로 간단하다.<br><br>기존에는 [질문 + 내 직무 설명 + 답변 스타일 요청]을 매번 한 번에 던졌다면,<br><br>맞춤 설정을 켜두면 [내 직무/답변 스타일]이 배경에 기본으로 깔린다.<br><br>나는 그냥 진짜 물어보고 싶은 '본론 질문'만 딱 던지면 끝난다.<br><br>AI가 나를 미리 파악하고 답변을 내놓는 구조다.</div><button class="copy" data-copy="원리는 의외로 간단하다.
+
+기존에는 [질문 + 내 직무 설명 + 답변 스타일 요청]을 매번 한 번에 던졌다면,
+
+맞춤 설정을 켜두면 [내 직무/답변 스타일]이 배경에 기본으로 깔린다.
+
+나는 그냥 진짜 물어보고 싶은 '본론 질문'만 딱 던지면 끝난다.
+
+AI가 나를 미리 파악하고 답변을 내놓는 구조다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 4</div><img src="../images/20261121-0352-gpt-steps.png" alt="단계별 가이드"><div class="fname">20261121-0352-gpt-steps.png</div><a class="dl" href="../images/20261121-0352-gpt-steps.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">세팅하는 방법도 3분이면 끝난다.<br><br>좌측 하단 프로필 아이콘 클릭하고 '맞춤 설정'으로 들어간다.<br><br>입력창은 딱 두 개가 나온다.<br><br>첫 번째 창에는 '내가 어떤 사람인지' 쓴다.<br>예시:<br>"나는 5년 차 기획자야. 주요 업무는 신사업 기획과 보고서 작성이야."<br><br>두 번째 창에는 '챗GPT가 어떻게 답해주길 바라는지' 쓴다.<br>예시:<br>"1. 두두등장 같은 쓸데없는 서론 빼고 본론부터 말해줘."<br>"2. 보고서에 바로 쓸 수 있게 격식 있는 어조로 써줘."<br>"3. 핵심 내용은 개조식(bullet point)으로 요약해줘."<br><br>이렇게 적고 저장 버튼 누르면 세팅 끝이다.</div><button class="copy" data-copy="세팅하는 방법도 3분이면 끝난다.
+
+좌측 하단 프로필 아이콘 클릭하고 '맞춤 설정'으로 들어간다.
+
+입력창은 딱 두 개가 나온다.
+
+첫 번째 창에는 '내가 어떤 사람인지' 쓴다.
+예시:
+"나는 5년 차 기획자야. 주요 업무는 신사업 기획과 보고서 작성이야."
+
+두 번째 창에는 '챗GPT가 어떻게 답해주길 바라는지' 쓴다.
+예시:
+"1. 두두등장 같은 쓸데없는 서론 빼고 본론부터 말해줘."
+"2. 보고서에 바로 쓸 수 있게 격식 있는 어조로 써줘."
+"3. 핵심 내용은 개조식(bullet point)으로 요약해줘."
+
+이렇게 적고 저장 버튼 누르면 세팅 끝이다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 5</div><img src="../images/20261121-0352-gpt-summary.png" alt="핵심 요약"><div class="fname">20261121-0352-gpt-summary.png</div><a class="dl" href="../images/20261121-0352-gpt-summary.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">🎯 오늘의 핵심 요약<br><br>1. 매번 말투나 직무 설명 입력할 필요 없다.<br>2. 맞춤 설정 하나로 기본 답변 톤을 고정할 수 있다.<br>3. 한번 세팅해두면 업무 속도가 훨씬 빨라진다.<br><br>챗GPT 제대로 쓰려면 이 설정부터 먼저 해두는 게 좋다.<br><br>오늘 당장 프로필 들어가서 설정해보자.<br>작은 차이인데 일할 때 체감되는 편의성이 완전히 다르네.</div><button class="copy" data-copy="🎯 오늘의 핵심 요약
+
+1. 매번 말투나 직무 설명 입력할 필요 없다.
+2. 맞춤 설정 하나로 기본 답변 톤을 고정할 수 있다.
+3. 한번 세팅해두면 업무 속도가 훨씬 빨라진다.
+
+챗GPT 제대로 쓰려면 이 설정부터 먼저 해두는 게 좋다.
+
+오늘 당장 프로필 들어가서 설정해보자.
+작은 차이인데 일할 때 체감되는 편의성이 완전히 다르네.">이 부분 복사</button></div>
+
+  <div class="source">참고 기사: <a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTFBMSllpN0RRZ2Z6UlU1Nl9qN0dZNVhtUkJoUGtYTWxFTG9WR1MwRG9jaVEwQl9CdE5sOGd3dC1sOUphQ3FRMWJkd3R0SlJBVHBGWTZpYXByQ2plNm0tbHFWWWVSaVRyMy1p?oc=5" target="_blank" rel="noopener">실무자동화를 위한 AI 활용 ⑥ - 스킬(Skills) (2) - CPA뉴스</a></div>
+</div>
+
+<div class="allbar">
+  <button id="all" data-copy="( 사진 여기 — thumbnail )
+
+챗GPT한테 일 시킬 때 매번 똑같은 말 붙이는 사람들 많다.
+
+"보고서용으로 격식 있게 작성해줘."
+"결론부터 3줄 요약해줘."
+"나는 마케터니까 마케팅 관점에서 답변해줘."
+
+매번 새 대화창 열 때마다 이거 입력하는 거, 솔직히 귀찮더라.
+
+한두 번도 아니고 매번 반복하다 보면 은근 시간 잡아먹는다.
+
+( 사진 여기 — compare )
+
+이 귀찮은 과정을 싹 없애주는 기능이 있다.
+
+바로 '맞춤 설정(Custom Instructions)'이다.
+
+쉽게 말해 챗GPT한테 내 프로필과 원하는 답변 스타일을 미리 입력해두는 거다.
+
+한 번만 설정해두면 다음부터는 알아서 내가 원하는 톤과 형식으로 답해준다.
+
+설정 안 했을 때랑 했을 때 차이가 진짜 크더라.
+
+( 사진 여기 — diagram )
+
+원리는 의외로 간단하다.
+
+기존에는 [질문 + 내 직무 설명 + 답변 스타일 요청]을 매번 한 번에 던졌다면,
+
+맞춤 설정을 켜두면 [내 직무/답변 스타일]이 배경에 기본으로 깔린다.
+
+나는 그냥 진짜 물어보고 싶은 '본론 질문'만 딱 던지면 끝난다.
+
+AI가 나를 미리 파악하고 답변을 내놓는 구조다.
+
+( 사진 여기 — steps )
+
+세팅하는 방법도 3분이면 끝난다.
+
+좌측 하단 프로필 아이콘 클릭하고 '맞춤 설정'으로 들어간다.
+
+입력창은 딱 두 개가 나온다.
+
+첫 번째 창에는 '내가 어떤 사람인지' 쓴다.
+예시:
+"나는 5년 차 기획자야. 주요 업무는 신사업 기획과 보고서 작성이야."
+
+두 번째 창에는 '챗GPT가 어떻게 답해주길 바라는지' 쓴다.
+예시:
+"1. 두두등장 같은 쓸데없는 서론 빼고 본론부터 말해줘."
+"2. 보고서에 바로 쓸 수 있게 격식 있는 어조로 써줘."
+"3. 핵심 내용은 개조식(bullet point)으로 요약해줘."
+
+이렇게 적고 저장 버튼 누르면 세팅 끝이다.
+
+( 사진 여기 — summary )
+
+🎯 오늘의 핵심 요약
+
+1. 매번 말투나 직무 설명 입력할 필요 없다.
+2. 맞춤 설정 하나로 기본 답변 톤을 고정할 수 있다.
+3. 한번 세팅해두면 업무 속도가 훨씬 빨라진다.
+
+챗GPT 제대로 쓰려면 이 설정부터 먼저 해두는 게 좋다.
+
+오늘 당장 프로필 들어가서 설정해보자.
+작은 차이인데 일할 때 체감되는 편의성이 완전히 다르네.">본문 전체 복사</button>
+</div>
+
+<script>
+document.addEventListener('click', function (e) {
+  var btn = e.target.closest('[data-copy]');
+  if (!btn) return;
+  var text = btn.getAttribute('data-copy');
+  var original = btn.textContent;
+
+  function done() {
+    btn.textContent = '복사됨';
+    btn.classList.add('done');
+    setTimeout(function () {
+      btn.textContent = original;
+      btn.classList.remove('done');
+    }, 1400);
+  }
+
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(text).then(done);
+  } else {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); done(); } catch (err) {}
+    document.body.removeChild(ta);
+  }
+});
+</script>
+</body>
+</html>
