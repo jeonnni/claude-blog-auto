@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>그림 못 그려도 가능! AI로 나만의 동화책 만들어 출판하는 3단계 — 네이버 원고</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 24px 16px 80px;
+    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+                 "Malgun Gothic", sans-serif;
+    background: #F6F7F9; color: #1F2937; line-height: 1.75;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  .head {
+    background: #03C75A; color: #fff; padding: 20px 22px;
+    border-radius: 14px; margin-bottom: 20px;
+  }
+  .head h1 { margin: 0 0 6px; font-size: 20px; line-height: 1.45; }
+  .head .date { font-size: 13px; opacity: .9; }
+  .card {
+    background: #fff; border-radius: 14px; padding: 18px 20px;
+    margin-bottom: 16px; border: 1px solid #E5E7EB;
+  }
+  .card h2 {
+    margin: 0 0 12px; font-size: 15px; color: #6B7280;
+    font-weight: 700; letter-spacing: .3px;
+  }
+  ul { margin: 0; padding: 0; list-style: none; }
+  ul li {
+    display: flex; align-items: center; gap: 10px;
+    padding: 9px 0; border-bottom: 1px solid #F3F4F6;
+  }
+  ul li:last-child { border-bottom: 0; }
+  ul li .t { flex: 1; font-size: 15px; }
+  .copy {
+    border: 0; background: #EEF2FF; color: #4F46E5;
+    padding: 7px 13px; border-radius: 8px; font-size: 13px;
+    cursor: pointer; white-space: nowrap; font-weight: 600;
+  }
+  .copy:hover { background: #E0E7FF; }
+  .copy.done { background: #DCFCE7; color: #16A34A; }
+  .tags { color: #2563EB; font-size: 14px; word-break: keep-all; }
+  .block {
+    background: #fff; border: 1px solid #E5E7EB;
+    border-radius: 14px; padding: 16px 18px; margin-bottom: 12px;
+  }
+  .block.text .body { font-size: 15.5px; margin-bottom: 12px; }
+  .block.img { text-align: center; background: #FAFBFC; }
+  .block.img img {
+    width: 100%; height: auto; border-radius: 10px; display: block;
+  }
+  .imgno {
+    font-size: 12px; color: #9CA3AF; margin-bottom: 8px;
+    font-weight: 700; letter-spacing: .5px;
+  }
+  .fname {
+    font-size: 12px; color: #9CA3AF; margin-top: 8px;
+    font-family: ui-monospace, Menlo, monospace;
+  }
+  .dl {
+    display: inline-block; margin-top: 10px; padding: 8px 16px;
+    background: #F3F4F6; color: #374151; border-radius: 8px;
+    text-decoration: none; font-size: 13px; font-weight: 600;
+  }
+  .source {
+    font-size: 13px; color: #9CA3AF; margin-top: 22px;
+    padding-top: 14px; border-top: 1px solid #E5E7EB;
+  }
+  .source a { color: #6B7280; }
+  .allbar {
+    position: fixed; left: 0; right: 0; bottom: 0;
+    background: #fff; border-top: 1px solid #E5E7EB;
+    padding: 12px 16px; text-align: center;
+  }
+  .allbar button {
+    width: 100%; max-width: 720px; padding: 14px;
+    background: #03C75A; color: #fff; border: 0;
+    border-radius: 10px; font-size: 15px; font-weight: 700; cursor: pointer;
+  }
+  .allbar button.done { background: #16A34A; }
+  .guide {
+    background: #FFFBEB; border: 1px solid #FDE68A;
+    border-radius: 12px; padding: 14px 18px; margin-bottom: 16px;
+    font-size: 14px; color: #92400E;
+  }
+  .guide b { display: block; margin-bottom: 6px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="head">
+    <h1>그림 못 그려도 가능! AI로 나만의 동화책 만들어 출판하는 3단계</h1>
+    <div class="date">2026년 11월 22일 18:22 생성</div>
+  </div>
+
+  <div class="guide">
+    <b>이렇게 쓰면 됩니다</b>
+    네이버 블로그 글쓰기를 연 뒤, 아래 본문을 순서대로 복사해 붙여넣고
+    사진 자리에는 저장한 이미지를 올리면 됩니다.
+  </div>
+
+  <div class="card">
+    <h2>제목 후보</h2>
+    <ul><li><span class="t">그림 못 그려도 가능! AI로 나만의 동화책 만들어 출판하는 3단계</span><button class="copy" data-copy="그림 못 그려도 가능! AI로 나만의 동화책 만들어 출판하는 3단계">복사</button></li><li><span class="t">챗GPT로 동화책 쓰고 전자책 자가출판까지 완성하는 방법</span><button class="copy" data-copy="챗GPT로 동화책 쓰고 전자책 자가출판까지 완성하는 방법">복사</button></li><li><span class="t">손재주 없어도 뚝딱 만드는 AI 그림책 제작 및 등록법</span><button class="copy" data-copy="손재주 없어도 뚝딱 만드는 AI 그림책 제작 및 등록법">복사</button></li></ul>
+  </div>
+
+  <div class="card">
+    <h2>태그</h2>
+    <div class="tags">#AI전자책만들기 #AI동화책제작 #챗GPT전자책출판 #AI그림책 #전자책자가출판 #동화책출판 #1인출판</div>
+    <div style="margin-top:12px">
+      <button class="copy" data-copy="#AI전자책만들기 #AI동화책제작 #챗GPT전자책출판 #AI그림책 #전자책자가출판 #동화책출판 #1인출판">태그 전체 복사</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>본문</h2>
+  </div>
+
+  <div class="block img"><div class="imgno">사진 1</div><img src="../images/20261122-1822-ai-3-thumbnail-sq.png" alt="대표 이미지"><div class="fname">20261122-1822-ai-3-thumbnail-sq.png</div><a class="dl" href="../images/20261122-1822-ai-3-thumbnail-sq.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">그림 손재주 없어도 내 이름으로 된 동화책 만드는 방법이 있다.<br><br>요즘은 글쓰기나 그림 기술이 전혀 없어도 AI로 뚝딱 만들더라.<br><br>나도 처음엔 내가 무슨 책을 쓰나 싶었는데, 막상 해보니까 하루 만에 전자책 형태가 나왔다.<br><br>핵심은 딱 3단계 흐름만 기억하면 된다.</div><button class="copy" data-copy="그림 손재주 없어도 내 이름으로 된 동화책 만드는 방법이 있다.
+
+요즘은 글쓰기나 그림 기술이 전혀 없어도 AI로 뚝딱 만들더라.
+
+나도 처음엔 내가 무슨 책을 쓰나 싶었는데, 막상 해보니까 하루 만에 전자책 형태가 나왔다.
+
+핵심은 딱 3단계 흐름만 기억하면 된다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 2</div><img src="../images/20261122-1822-ai-3-diagram.png" alt="동작 구조 다이어그램"><div class="fname">20261122-1822-ai-3-diagram.png</div><a class="dl" href="../images/20261122-1822-ai-3-diagram.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">첫 번째는 스토리 구성이다.<br><br>챗GPT 같은 글쓰기 AI를 켜고 구체적인 설정을 던져주는 거다.<br><br>그냥 동화책 써달라고 하면 너무 뻔한 이야기만 나온다.<br><br>이럴 땐 프롬프트를 구체적으로 써야 원하는 결과가 나온다.<br><br>예를 들어 이렇게 입력하는 거다.<br><br>"7세 아이를 위한 힐링 동화 / 주인공: 용감한 꼬마 유령 / 5개 장으로 나누고 장면별 설명과 대사를 작성해줘"<br><br>이렇게 요청하면 등장인물 설정부터 각 페이지별 장면 묘사까지 깔끔하게 뽑아준다.</div><button class="copy" data-copy="첫 번째는 스토리 구성이다.
+
+챗GPT 같은 글쓰기 AI를 켜고 구체적인 설정을 던져주는 거다.
+
+그냥 동화책 써달라고 하면 너무 뻔한 이야기만 나온다.
+
+이럴 땐 프롬프트를 구체적으로 써야 원하는 결과가 나온다.
+
+예를 들어 이렇게 입력하는 거다.
+
+"7세 아이를 위한 힐링 동화 / 주인공: 용감한 꼬마 유령 / 5개 장으로 나누고 장면별 설명과 대사를 작성해줘"
+
+이렇게 요청하면 등장인물 설정부터 각 페이지별 장면 묘사까지 깔끔하게 뽑아준다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 3</div><img src="../images/20261122-1822-ai-3-compare.png" alt="비교표"><div class="fname">20261122-1822-ai-3-compare.png</div><a class="dl" href="../images/20261122-1822-ai-3-compare.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">두 번째는 삽화 제작이다.<br><br>예전 같으면 일러스트 작가를 외주 주느라 돈도 들고 시간도 오래 걸렸다.<br><br>요즘은 이미지 생성 AI 서비스에 묘사글만 넣으면 몇 초 만에 그림을 그려준다.<br><br>여기서 꿀팁이 하나 있다.<br><br>캐릭터의 얼굴이나 화풍이 페이지마다 바뀌면 어색해진다.<br><br>프롬프트 끝에 항상 "파스텔 수채화 스타일, 동글동글한 3D 캐릭터"처럼 동일한 스타일 태그를 고정으로 붙여야 한다.<br><br>그러면 전체적으로 통일감 있는 예쁜 그림책 삽화가 완성된다.</div><button class="copy" data-copy="두 번째는 삽화 제작이다.
+
+예전 같으면 일러스트 작가를 외주 주느라 돈도 들고 시간도 오래 걸렸다.
+
+요즘은 이미지 생성 AI 서비스에 묘사글만 넣으면 몇 초 만에 그림을 그려준다.
+
+여기서 꿀팁이 하나 있다.
+
+캐릭터의 얼굴이나 화풍이 페이지마다 바뀌면 어색해진다.
+
+프롬프트 끝에 항상 "파스텔 수채화 스타일, 동글동글한 3D 캐릭터"처럼 동일한 스타일 태그를 고정으로 붙여야 한다.
+
+그러면 전체적으로 통일감 있는 예쁜 그림책 삽화가 완성된다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 4</div><img src="../images/20261122-1822-ai-3-steps.png" alt="단계별 가이드"><div class="fname">20261122-1822-ai-3-steps.png</div><a class="dl" href="../images/20261122-1822-ai-3-steps.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">세 번째는 조립과 전자책 출판이다.<br><br>만들어진 글과 그림을 무료 디자인 툴로 가져와서 배치하면 된다.<br><br>페이지별로 이미지 올리고 아래에 글씨 몇 줄 얹으면 끝난다.<br><br>다 만든 작업물은 PDF 파일로 저장한다.<br><br>그리고 전자책 자가출판 플랫폼에 등록하면 된다.<br><br>요즘 플랫폼들은 무료로 ISBN까지 발급해주기 때문에 실제로 인터넷 서점에 유통도 가능하다.</div><button class="copy" data-copy="세 번째는 조립과 전자책 출판이다.
+
+만들어진 글과 그림을 무료 디자인 툴로 가져와서 배치하면 된다.
+
+페이지별로 이미지 올리고 아래에 글씨 몇 줄 얹으면 끝난다.
+
+다 만든 작업물은 PDF 파일로 저장한다.
+
+그리고 전자책 자가출판 플랫폼에 등록하면 된다.
+
+요즘 플랫폼들은 무료로 ISBN까지 발급해주기 때문에 실제로 인터넷 서점에 유통도 가능하다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 5</div><img src="../images/20261122-1822-ai-3-summary.png" alt="핵심 요약"><div class="fname">20261122-1822-ai-3-summary.png</div><a class="dl" href="../images/20261122-1822-ai-3-summary.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">내 이름이 저자로 올라간 책을 보면 기분이 정말 묘하다.<br><br>그림 못 그려도, 글을 못 써도 아무 상관없다.<br><br>주말에 한두 시간만 투자하면 나만의 AI 동화책을 만들 수 있다.<br><br>오늘 당장 아이디어나 프롬프트 하나 던져보는 건 어떨까.</div><button class="copy" data-copy="내 이름이 저자로 올라간 책을 보면 기분이 정말 묘하다.
+
+그림 못 그려도, 글을 못 써도 아무 상관없다.
+
+주말에 한두 시간만 투자하면 나만의 AI 동화책을 만들 수 있다.
+
+오늘 당장 아이디어나 프롬프트 하나 던져보는 건 어떨까.">이 부분 복사</button></div>
+
+  <div class="source">참고 기사: <a href="https://news.google.com/rss/articles/CBMiW0FVX3lxTE1oZmcwV1FkRnd6YWdwRzBxYTYycHF2WUFiNDNqZzVGQUM4VHRKLXREc0w5aWJzOWdnTzIzR2NFNVh3U2xUa0oxZWZBUmNCU181S0dSMDdSSlRGTDg?oc=5" target="_blank" rel="noopener">장성 주민 15명, AI로 전자그림책 작가 데뷔 - 에너지경제신문</a></div>
+</div>
+
+<div class="allbar">
+  <button id="all" data-copy="( 사진 여기 — thumbnail )
+
+그림 손재주 없어도 내 이름으로 된 동화책 만드는 방법이 있다.
+
+요즘은 글쓰기나 그림 기술이 전혀 없어도 AI로 뚝딱 만들더라.
+
+나도 처음엔 내가 무슨 책을 쓰나 싶었는데, 막상 해보니까 하루 만에 전자책 형태가 나왔다.
+
+핵심은 딱 3단계 흐름만 기억하면 된다.
+
+( 사진 여기 — diagram )
+
+첫 번째는 스토리 구성이다.
+
+챗GPT 같은 글쓰기 AI를 켜고 구체적인 설정을 던져주는 거다.
+
+그냥 동화책 써달라고 하면 너무 뻔한 이야기만 나온다.
+
+이럴 땐 프롬프트를 구체적으로 써야 원하는 결과가 나온다.
+
+예를 들어 이렇게 입력하는 거다.
+
+"7세 아이를 위한 힐링 동화 / 주인공: 용감한 꼬마 유령 / 5개 장으로 나누고 장면별 설명과 대사를 작성해줘"
+
+이렇게 요청하면 등장인물 설정부터 각 페이지별 장면 묘사까지 깔끔하게 뽑아준다.
+
+( 사진 여기 — compare )
+
+두 번째는 삽화 제작이다.
+
+예전 같으면 일러스트 작가를 외주 주느라 돈도 들고 시간도 오래 걸렸다.
+
+요즘은 이미지 생성 AI 서비스에 묘사글만 넣으면 몇 초 만에 그림을 그려준다.
+
+여기서 꿀팁이 하나 있다.
+
+캐릭터의 얼굴이나 화풍이 페이지마다 바뀌면 어색해진다.
+
+프롬프트 끝에 항상 "파스텔 수채화 스타일, 동글동글한 3D 캐릭터"처럼 동일한 스타일 태그를 고정으로 붙여야 한다.
+
+그러면 전체적으로 통일감 있는 예쁜 그림책 삽화가 완성된다.
+
+( 사진 여기 — steps )
+
+세 번째는 조립과 전자책 출판이다.
+
+만들어진 글과 그림을 무료 디자인 툴로 가져와서 배치하면 된다.
+
+페이지별로 이미지 올리고 아래에 글씨 몇 줄 얹으면 끝난다.
+
+다 만든 작업물은 PDF 파일로 저장한다.
+
+그리고 전자책 자가출판 플랫폼에 등록하면 된다.
+
+요즘 플랫폼들은 무료로 ISBN까지 발급해주기 때문에 실제로 인터넷 서점에 유통도 가능하다.
+
+( 사진 여기 — summary )
+
+내 이름이 저자로 올라간 책을 보면 기분이 정말 묘하다.
+
+그림 못 그려도, 글을 못 써도 아무 상관없다.
+
+주말에 한두 시간만 투자하면 나만의 AI 동화책을 만들 수 있다.
+
+오늘 당장 아이디어나 프롬프트 하나 던져보는 건 어떨까.">본문 전체 복사</button>
+</div>
+
+<script>
+document.addEventListener('click', function (e) {
+  var btn = e.target.closest('[data-copy]');
+  if (!btn) return;
+  var text = btn.getAttribute('data-copy');
+  var original = btn.textContent;
+
+  function done() {
+    btn.textContent = '복사됨';
+    btn.classList.add('done');
+    setTimeout(function () {
+      btn.textContent = original;
+      btn.classList.remove('done');
+    }, 1400);
+  }
+
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(text).then(done);
+  } else {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); done(); } catch (err) {}
+    document.body.removeChild(ta);
+  }
+});
+</script>
+</body>
+</html>
