@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>캔바 AI 끄기 설정으로 팝업 차단하고 작업 속도 올리는 법 — 네이버 원고</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 24px 16px 80px;
+    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+                 "Malgun Gothic", sans-serif;
+    background: #F6F7F9; color: #1F2937; line-height: 1.75;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  .head {
+    background: #03C75A; color: #fff; padding: 20px 22px;
+    border-radius: 14px; margin-bottom: 20px;
+  }
+  .head h1 { margin: 0 0 6px; font-size: 20px; line-height: 1.45; }
+  .head .date { font-size: 13px; opacity: .9; }
+  .card {
+    background: #fff; border-radius: 14px; padding: 18px 20px;
+    margin-bottom: 16px; border: 1px solid #E5E7EB;
+  }
+  .card h2 {
+    margin: 0 0 12px; font-size: 15px; color: #6B7280;
+    font-weight: 700; letter-spacing: .3px;
+  }
+  ul { margin: 0; padding: 0; list-style: none; }
+  ul li {
+    display: flex; align-items: center; gap: 10px;
+    padding: 9px 0; border-bottom: 1px solid #F3F4F6;
+  }
+  ul li:last-child { border-bottom: 0; }
+  ul li .t { flex: 1; font-size: 15px; }
+  .copy {
+    border: 0; background: #EEF2FF; color: #4F46E5;
+    padding: 7px 13px; border-radius: 8px; font-size: 13px;
+    cursor: pointer; white-space: nowrap; font-weight: 600;
+  }
+  .copy:hover { background: #E0E7FF; }
+  .copy.done { background: #DCFCE7; color: #16A34A; }
+  .tags { color: #2563EB; font-size: 14px; word-break: keep-all; }
+  .block {
+    background: #fff; border: 1px solid #E5E7EB;
+    border-radius: 14px; padding: 16px 18px; margin-bottom: 12px;
+  }
+  .block.text .body { font-size: 15.5px; margin-bottom: 12px; }
+  .block.img { text-align: center; background: #FAFBFC; }
+  .block.img img {
+    width: 100%; height: auto; border-radius: 10px; display: block;
+  }
+  .imgno {
+    font-size: 12px; color: #9CA3AF; margin-bottom: 8px;
+    font-weight: 700; letter-spacing: .5px;
+  }
+  .fname {
+    font-size: 12px; color: #9CA3AF; margin-top: 8px;
+    font-family: ui-monospace, Menlo, monospace;
+  }
+  .dl {
+    display: inline-block; margin-top: 10px; padding: 8px 16px;
+    background: #F3F4F6; color: #374151; border-radius: 8px;
+    text-decoration: none; font-size: 13px; font-weight: 600;
+  }
+  .source {
+    font-size: 13px; color: #9CA3AF; margin-top: 22px;
+    padding-top: 14px; border-top: 1px solid #E5E7EB;
+  }
+  .source a { color: #6B7280; }
+  .allbar {
+    position: fixed; left: 0; right: 0; bottom: 0;
+    background: #fff; border-top: 1px solid #E5E7EB;
+    padding: 12px 16px; text-align: center;
+  }
+  .allbar button {
+    width: 100%; max-width: 720px; padding: 14px;
+    background: #03C75A; color: #fff; border: 0;
+    border-radius: 10px; font-size: 15px; font-weight: 700; cursor: pointer;
+  }
+  .allbar button.done { background: #16A34A; }
+  .guide {
+    background: #FFFBEB; border: 1px solid #FDE68A;
+    border-radius: 12px; padding: 14px 18px; margin-bottom: 16px;
+    font-size: 14px; color: #92400E;
+  }
+  .guide b { display: block; margin-bottom: 6px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="head">
+    <h1>캔바 AI 끄기 설정으로 팝업 차단하고 작업 속도 올리는 법</h1>
+    <div class="date">2026년 11월 23일 22:31 생성</div>
+  </div>
+
+  <div class="guide">
+    <b>이렇게 쓰면 됩니다</b>
+    네이버 블로그 글쓰기를 연 뒤, 아래 본문을 순서대로 복사해 붙여넣고
+    사진 자리에는 저장한 이미지를 올리면 됩니다.
+  </div>
+
+  <div class="card">
+    <h2>제목 후보</h2>
+    <ul><li><span class="t">캔바 AI 끄기 설정으로 팝업 차단하고 작업 속도 올리는 법</span><button class="copy" data-copy="캔바 AI 끄기 설정으로 팝업 차단하고 작업 속도 올리는 법">복사</button></li><li><span class="t">버벅이는 캔바 쾌적하게 만들기! AI 추천 팝업 차단 팁</span><button class="copy" data-copy="버벅이는 캔바 쾌적하게 만들기! AI 추천 팝업 차단 팁">복사</button></li><li><span class="t">캔바 디자인 팁: 답답한 AI 자동 추천 끄는 2가지 설정</span><button class="copy" data-copy="캔바 디자인 팁: 답답한 AI 자동 추천 끄는 2가지 설정">복사</button></li></ul>
+  </div>
+
+  <div class="card">
+    <h2>태그</h2>
+    <div class="tags">#캔바AI끄기 #캔바사용법 #캔바AI추천차단 #캔바디자인팁 #캔바설정 #캔바속도개선 #디자인팁</div>
+    <div style="margin-top:12px">
+      <button class="copy" data-copy="#캔바AI끄기 #캔바사용법 #캔바AI추천차단 #캔바디자인팁 #캔바설정 #캔바속도개선 #디자인팁">태그 전체 복사</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>본문</h2>
+  </div>
+
+  <div class="block img"><div class="imgno">사진 1</div><img src="../images/20261123-2231-ai-thumbnail-sq.png" alt="대표 이미지"><div class="fname">20261123-2231-ai-thumbnail-sq.png</div><a class="dl" href="../images/20261123-2231-ai-thumbnail-sq.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">캔바 켜서 디자인 좀 하려다 보면 랙 걸릴 때가 많다.<br>텍스트나 사진 하나 얹으면 둥둥 뜨는 AI 추천창 때문이다.<br><br>버벅거리는 것도 짜증 나는데 작업 흐름까지 계속 꺾이더라.<br><br>자동으로 튀어나오는 AI 도움말이랑 팝업만 꺼도 캔바가 훨씬 가벼워진다.<br>오늘 딱 2가지만 설정해서 쾌적하게 만드는 법 정리했다.</div><button class="copy" data-copy="캔바 켜서 디자인 좀 하려다 보면 랙 걸릴 때가 많다.
+텍스트나 사진 하나 얹으면 둥둥 뜨는 AI 추천창 때문이다.
+
+버벅거리는 것도 짜증 나는데 작업 흐름까지 계속 꺾이더라.
+
+자동으로 튀어나오는 AI 도움말이랑 팝업만 꺼도 캔바가 훨씬 가벼워진다.
+오늘 딱 2가지만 설정해서 쾌적하게 만드는 법 정리했다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 2</div><img src="../images/20261123-2231-ai-diagram.png" alt="동작 구조 다이어그램"><div class="fname">20261123-2231-ai-diagram.png</div><a class="dl" href="../images/20261123-2231-ai-diagram.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">원인은 간단하다.<br>캔바에서 요소 하나 클릭할 때마다 AI 툴을 추천해주려고 배경에서 계속 엔진이 돌아간다.<br><br>그러다 보니 스펙이 넉넉한 PC에서도 순간 순간 멈칫거리더라.<br>원하지도 않는 매직 아이콘 끄고 설정만 바꿔주면 바로 해결된다.</div><button class="copy" data-copy="원인은 간단하다.
+캔바에서 요소 하나 클릭할 때마다 AI 툴을 추천해주려고 배경에서 계속 엔진이 돌아간다.
+
+그러다 보니 스펙이 넉넉한 PC에서도 순간 순간 멈칫거리더라.
+원하지도 않는 매직 아이콘 끄고 설정만 바꿔주면 바로 해결된다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 3</div><img src="../images/20261123-2231-ai-compare.png" alt="비교표"><div class="fname">20261123-2231-ai-compare.png</div><a class="dl" href="../images/20261123-2231-ai-compare.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">첫 번째는 계정 설정에서 불필요한 자동 추천을 막는 거다.<br><br>우측 상단 프로필 클릭하고 계정 설정으로 들어간다.<br>메뉴 중에 환경설정 또는 개인정보 관련 항목이 보인다.<br><br>여기서 맞춤형 AI 기능 추천이랑 자동 도구 제안 토글을 꺼주면 된다.<br>이것만 꺼도 요소 잡을 때 팝업 뜨는 속도가 확실히 달라진다.</div><button class="copy" data-copy="첫 번째는 계정 설정에서 불필요한 자동 추천을 막는 거다.
+
+우측 상단 프로필 클릭하고 계정 설정으로 들어간다.
+메뉴 중에 환경설정 또는 개인정보 관련 항목이 보인다.
+
+여기서 맞춤형 AI 기능 추천이랑 자동 도구 제안 토글을 꺼주면 된다.
+이것만 꺼도 요소 잡을 때 팝업 뜨는 속도가 확실히 달라진다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 4</div><img src="../images/20261123-2231-ai-steps.png" alt="단계별 가이드"><div class="fname">20261123-2231-ai-steps.png</div><a class="dl" href="../images/20261123-2231-ai-steps.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">두 번째는 에디터 화면 내 단축키 및 자동 툴바 숨기기다.<br><br>캔버스 내에서 타이핑할 때마다 슬래시(/) AI 명령어 창이 떠서 거슬렸을 거다.<br>에디터 설정에서 스마트 힌트 안내 팝업을 끄면 깔끔해진다.<br><br>키보드 칠 때마다 창 떠서 화면 가리던 분들은 이거 꼭 꺼야 된다.<br><br>1분도 안 걸리는 설정인데 바꾸고 나면 버벅임이 싹 사라진다.</div><button class="copy" data-copy="두 번째는 에디터 화면 내 단축키 및 자동 툴바 숨기기다.
+
+캔버스 내에서 타이핑할 때마다 슬래시(/) AI 명령어 창이 떠서 거슬렸을 거다.
+에디터 설정에서 스마트 힌트 안내 팝업을 끄면 깔끔해진다.
+
+키보드 칠 때마다 창 떠서 화면 가리던 분들은 이거 꼭 꺼야 된다.
+
+1분도 안 걸리는 설정인데 바꾸고 나면 버벅임이 싹 사라진다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 5</div><img src="../images/20261123-2231-ai-summary.png" alt="핵심 요약"><div class="fname">20261123-2231-ai-summary.png</div><a class="dl" href="../images/20261123-2231-ai-summary.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">AI 추천 차단해 두고 쓰니까 작업 집중도가 확실히 오른다.<br>프로그램 자체 반응 속도도 훨씬 빠르네.<br><br>캔바 쓰면서 팝업 때문에 스트레스받았던 분들은 지금 바로 설정해 두길 권한다.</div><button class="copy" data-copy="AI 추천 차단해 두고 쓰니까 작업 집중도가 확실히 오른다.
+프로그램 자체 반응 속도도 훨씬 빠르네.
+
+캔바 쓰면서 팝업 때문에 스트레스받았던 분들은 지금 바로 설정해 두길 권한다.">이 부분 복사</button></div>
+
+  <div class="source">참고 기사: <a href="https://news.google.com/rss/articles/CBMiSkFVX3lxTE9HWjE1dDQyZno5TUpoR0tBTkc2eWloU0JJYWROQ3Ztb1pGSDVKNUFqYlkzMFVQcXJ4ZjlMdUszU28zRjhrOWItM3Z3?oc=5" target="_blank" rel="noopener">[AI 라이프] 캔바 AI ‘끄기’ 버튼 2개…생성 도구도 추천도 줄인다 - 코인리더스</a></div>
+</div>
+
+<div class="allbar">
+  <button id="all" data-copy="( 사진 여기 — thumbnail )
+
+캔바 켜서 디자인 좀 하려다 보면 랙 걸릴 때가 많다.
+텍스트나 사진 하나 얹으면 둥둥 뜨는 AI 추천창 때문이다.
+
+버벅거리는 것도 짜증 나는데 작업 흐름까지 계속 꺾이더라.
+
+자동으로 튀어나오는 AI 도움말이랑 팝업만 꺼도 캔바가 훨씬 가벼워진다.
+오늘 딱 2가지만 설정해서 쾌적하게 만드는 법 정리했다.
+
+( 사진 여기 — diagram )
+
+원인은 간단하다.
+캔바에서 요소 하나 클릭할 때마다 AI 툴을 추천해주려고 배경에서 계속 엔진이 돌아간다.
+
+그러다 보니 스펙이 넉넉한 PC에서도 순간 순간 멈칫거리더라.
+원하지도 않는 매직 아이콘 끄고 설정만 바꿔주면 바로 해결된다.
+
+( 사진 여기 — compare )
+
+첫 번째는 계정 설정에서 불필요한 자동 추천을 막는 거다.
+
+우측 상단 프로필 클릭하고 계정 설정으로 들어간다.
+메뉴 중에 환경설정 또는 개인정보 관련 항목이 보인다.
+
+여기서 맞춤형 AI 기능 추천이랑 자동 도구 제안 토글을 꺼주면 된다.
+이것만 꺼도 요소 잡을 때 팝업 뜨는 속도가 확실히 달라진다.
+
+( 사진 여기 — steps )
+
+두 번째는 에디터 화면 내 단축키 및 자동 툴바 숨기기다.
+
+캔버스 내에서 타이핑할 때마다 슬래시(/) AI 명령어 창이 떠서 거슬렸을 거다.
+에디터 설정에서 스마트 힌트 안내 팝업을 끄면 깔끔해진다.
+
+키보드 칠 때마다 창 떠서 화면 가리던 분들은 이거 꼭 꺼야 된다.
+
+1분도 안 걸리는 설정인데 바꾸고 나면 버벅임이 싹 사라진다.
+
+( 사진 여기 — summary )
+
+AI 추천 차단해 두고 쓰니까 작업 집중도가 확실히 오른다.
+프로그램 자체 반응 속도도 훨씬 빠르네.
+
+캔바 쓰면서 팝업 때문에 스트레스받았던 분들은 지금 바로 설정해 두길 권한다.">본문 전체 복사</button>
+</div>
+
+<script>
+document.addEventListener('click', function (e) {
+  var btn = e.target.closest('[data-copy]');
+  if (!btn) return;
+  var text = btn.getAttribute('data-copy');
+  var original = btn.textContent;
+
+  function done() {
+    btn.textContent = '복사됨';
+    btn.classList.add('done');
+    setTimeout(function () {
+      btn.textContent = original;
+      btn.classList.remove('done');
+    }, 1400);
+  }
+
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(text).then(done);
+  } else {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); done(); } catch (err) {}
+    document.body.removeChild(ta);
+  }
+});
+</script>
+</body>
+</html>
