@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>수십 개 리뷰 1분 만에 분석해서 단점 파악하는 프롬프트 — 네이버 원고</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 24px 16px 80px;
+    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+                 "Malgun Gothic", sans-serif;
+    background: #F6F7F9; color: #1F2937; line-height: 1.75;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  .head {
+    background: #03C75A; color: #fff; padding: 20px 22px;
+    border-radius: 14px; margin-bottom: 20px;
+  }
+  .head h1 { margin: 0 0 6px; font-size: 20px; line-height: 1.45; }
+  .head .date { font-size: 13px; opacity: .9; }
+  .card {
+    background: #fff; border-radius: 14px; padding: 18px 20px;
+    margin-bottom: 16px; border: 1px solid #E5E7EB;
+  }
+  .card h2 {
+    margin: 0 0 12px; font-size: 15px; color: #6B7280;
+    font-weight: 700; letter-spacing: .3px;
+  }
+  ul { margin: 0; padding: 0; list-style: none; }
+  ul li {
+    display: flex; align-items: center; gap: 10px;
+    padding: 9px 0; border-bottom: 1px solid #F3F4F6;
+  }
+  ul li:last-child { border-bottom: 0; }
+  ul li .t { flex: 1; font-size: 15px; }
+  .copy {
+    border: 0; background: #EEF2FF; color: #4F46E5;
+    padding: 7px 13px; border-radius: 8px; font-size: 13px;
+    cursor: pointer; white-space: nowrap; font-weight: 600;
+  }
+  .copy:hover { background: #E0E7FF; }
+  .copy.done { background: #DCFCE7; color: #16A34A; }
+  .tags { color: #2563EB; font-size: 14px; word-break: keep-all; }
+  .block {
+    background: #fff; border: 1px solid #E5E7EB;
+    border-radius: 14px; padding: 16px 18px; margin-bottom: 12px;
+  }
+  .block.text .body { font-size: 15.5px; margin-bottom: 12px; }
+  .block.img { text-align: center; background: #FAFBFC; }
+  .block.img img {
+    width: 100%; height: auto; border-radius: 10px; display: block;
+  }
+  .imgno {
+    font-size: 12px; color: #9CA3AF; margin-bottom: 8px;
+    font-weight: 700; letter-spacing: .5px;
+  }
+  .fname {
+    font-size: 12px; color: #9CA3AF; margin-top: 8px;
+    font-family: ui-monospace, Menlo, monospace;
+  }
+  .dl {
+    display: inline-block; margin-top: 10px; padding: 8px 16px;
+    background: #F3F4F6; color: #374151; border-radius: 8px;
+    text-decoration: none; font-size: 13px; font-weight: 600;
+  }
+  .source {
+    font-size: 13px; color: #9CA3AF; margin-top: 22px;
+    padding-top: 14px; border-top: 1px solid #E5E7EB;
+  }
+  .source a { color: #6B7280; }
+  .allbar {
+    position: fixed; left: 0; right: 0; bottom: 0;
+    background: #fff; border-top: 1px solid #E5E7EB;
+    padding: 12px 16px; text-align: center;
+  }
+  .allbar button {
+    width: 100%; max-width: 720px; padding: 14px;
+    background: #03C75A; color: #fff; border: 0;
+    border-radius: 10px; font-size: 15px; font-weight: 700; cursor: pointer;
+  }
+  .allbar button.done { background: #16A34A; }
+  .guide {
+    background: #FFFBEB; border: 1px solid #FDE68A;
+    border-radius: 12px; padding: 14px 18px; margin-bottom: 16px;
+    font-size: 14px; color: #92400E;
+  }
+  .guide b { display: block; margin-bottom: 6px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="head">
+    <h1>수십 개 리뷰 1분 만에 분석해서 단점 파악하는 프롬프트</h1>
+    <div class="date">2026년 11월 27일 19:52 생성</div>
+  </div>
+
+  <div class="guide">
+    <b>이렇게 쓰면 됩니다</b>
+    네이버 블로그 글쓰기를 연 뒤, 아래 본문을 순서대로 복사해 붙여넣고
+    사진 자리에는 저장한 이미지를 올리면 됩니다.
+  </div>
+
+  <div class="card">
+    <h2>제목 후보</h2>
+    <ul><li><span class="t">쇼핑 실패 제로, 챗GPT로 진짜 후기만 골라내기</span><button class="copy" data-copy="쇼핑 실패 제로, 챗GPT로 진짜 후기만 골라내기">복사</button></li><li><span class="t">수십 개 리뷰 1분 만에 분석해서 단점 파악하는 프롬프트</span><button class="copy" data-copy="수십 개 리뷰 1분 만에 분석해서 단점 파악하는 프롬프트">복사</button></li><li><span class="t">내돈내산 구분 AI 활용법, 광고글에 속지 않는 꿀팁</span><button class="copy" data-copy="내돈내산 구분 AI 활용법, 광고글에 속지 않는 꿀팁">복사</button></li></ul>
+  </div>
+
+  <div class="card">
+    <h2>태그</h2>
+    <div class="tags">#AI쇼핑활용법 #챗GPT리뷰분석 #내돈내산구분AI #제품단점분석프롬프트 #AI구매후기요약 #쇼핑꿀팁 #리뷰분석</div>
+    <div style="margin-top:12px">
+      <button class="copy" data-copy="#AI쇼핑활용법 #챗GPT리뷰분석 #내돈내산구분AI #제품단점분석프롬프트 #AI구매후기요약 #쇼핑꿀팁 #리뷰분석">태그 전체 복사</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>본문</h2>
+  </div>
+
+  <div class="block img"><div class="imgno">사진 1</div><img src="../images/20261127-1952-1-thumbnail-sq.png" alt="대표 이미지"><div class="fname">20261127-1952-1-thumbnail-sq.png</div><a class="dl" href="../images/20261127-1952-1-thumbnail-sq.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">인터넷에서 뭐 하나 살 때 리뷰 읽다가 지친 적 많을 거다.<br>별점 5점짜리 글만 수십 개인데 막상 사보면 실망스럽더라.<br><br>광고나 협찬 글이 섞여 있어서 진짜 후기 찾기가 힘들네.<br>특히 제품의 진짜 단점이 뭔지 알고 싶은데 다들 칭찬만 써놓는다.<br><br>이럴 때 챗GPT 같은 AI를 쓰면 진짜 편하다.<br>수십 개 후기를 통째로 넣고 단점만 쏙 뽑아달라고 하면 1분 만에 끝난다.</div><button class="copy" data-copy="인터넷에서 뭐 하나 살 때 리뷰 읽다가 지친 적 많을 거다.
+별점 5점짜리 글만 수십 개인데 막상 사보면 실망스럽더라.
+
+광고나 협찬 글이 섞여 있어서 진짜 후기 찾기가 힘들네.
+특히 제품의 진짜 단점이 뭔지 알고 싶은데 다들 칭찬만 써놓는다.
+
+이럴 때 챗GPT 같은 AI를 쓰면 진짜 편하다.
+수십 개 후기를 통째로 넣고 단점만 쏙 뽑아달라고 하면 1분 만에 끝난다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 2</div><img src="../images/20261127-1952-1-diagram.png" alt="동작 구조 다이어그램"><div class="fname">20261127-1952-1-diagram.png</div><a class="dl" href="../images/20261127-1952-1-diagram.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">원리는 의외로 간단하다.<br>리뷰를 긁어다가 프롬프트에 넣고 세 가지만 요청하면 된다.<br><br>광고성 패턴 제외하기, 반복 언급되는 단점 추출, 실사용자 불만 요약.<br>이렇게 설정하면 제품의 치명적인 단점부터 눈에 들어온다.</div><button class="copy" data-copy="원리는 의외로 간단하다.
+리뷰를 긁어다가 프롬프트에 넣고 세 가지만 요청하면 된다.
+
+광고성 패턴 제외하기, 반복 언급되는 단점 추출, 실사용자 불만 요약.
+이렇게 설정하면 제품의 치명적인 단점부터 눈에 들어온다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 3</div><img src="../images/20261127-1952-1-compare.png" alt="비교표"><div class="fname">20261127-1952-1-compare.png</div><a class="dl" href="../images/20261127-1952-1-compare.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">사람이 일일이 읽을 때는 협찬 글에 낚이기 쉽다.<br>"제공받아 작성했습니다" 문구가 없어도 어투만 보면 감이 오는데, AI는 그 어투 패턴을 정확히 잡아낸다.<br><br>실제 내돈내산 후기는 장단점이 구체적이고 톤이 건조하다.<br>반면 협찬 글은 찬양 일색에 주저리주저리 설명이 길다.<br><br>AI한테 이 차이를 인식시키면 광고글을 알아서 가려준다.</div><button class="copy" data-copy="사람이 일일이 읽을 때는 협찬 글에 낚이기 쉽다.
+"제공받아 작성했습니다" 문구가 없어도 어투만 보면 감이 오는데, AI는 그 어투 패턴을 정확히 잡아낸다.
+
+실제 내돈내산 후기는 장단점이 구체적이고 톤이 건조하다.
+반면 협찬 글은 찬양 일색에 주저리주저리 설명이 길다.
+
+AI한테 이 차이를 인식시키면 광고글을 알아서 가려준다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 4</div><img src="../images/20261127-1952-1-steps.png" alt="단계별 가이드"><div class="fname">20261127-1952-1-steps.png</div><a class="dl" href="../images/20261127-1952-1-steps.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">내가 자주 쓰는 리뷰 분석 프롬프트 공유해 본다.<br><br>1단계: 쇼핑몰 리뷰 text를 20~30개 긁어서 복사한다.<br>2단계: AI에 프롬프트를 이렇게 입력한다.<br><br>"아래 리뷰 데이터를 분석해 줘.<br>1. 협찬 및 광고성 어투를 가진 리뷰는 분석에서 제외할 것.<br>2. 실제 사용자가 겪은 공통적인 단점 3가지를 정리할 것.<br>3. 내돈내산 사용자의 솔직한 평가 총평을 한 줄로 작성할 것."<br><br>3단계: 출력된 결과를 확인하고 구매 여부를 결정한다.<br><br>이 프롬프트 하나면 장바구니 털기 전 고민이 싹 사라진다.</div><button class="copy" data-copy="내가 자주 쓰는 리뷰 분석 프롬프트 공유해 본다.
+
+1단계: 쇼핑몰 리뷰 text를 20~30개 긁어서 복사한다.
+2단계: AI에 프롬프트를 이렇게 입력한다.
+
+"아래 리뷰 데이터를 분석해 줘.
+1. 협찬 및 광고성 어투를 가진 리뷰는 분석에서 제외할 것.
+2. 실제 사용자가 겪은 공통적인 단점 3가지를 정리할 것.
+3. 내돈내산 사용자의 솔직한 평가 총평을 한 줄로 작성할 것."
+
+3단계: 출력된 결과를 확인하고 구매 여부를 결정한다.
+
+이 프롬프트 하나면 장바구니 털기 전 고민이 싹 사라진다.">이 부분 복사</button></div>
+<div class="block img"><div class="imgno">사진 5</div><img src="../images/20261127-1952-1-summary.png" alt="핵심 요약"><div class="fname">20261127-1952-1-summary.png</div><a class="dl" href="../images/20261127-1952-1-summary.png" download>사진 저장</a></div>
+<div class="block text"><div class="body">물건 사고 후회하는 일 줄이려면 사기 전에 딱 1분만 투자해 보자.<br>챗GPT 리뷰 분석으로 진짜 내돈내산 후기만 걸러내고 단점 파악하기.<br><br>AI 쇼핑 활용법 별거 없더라.<br>프롬프트 잘 짜서 단점부터 확인하는 게 핵심이다.</div><button class="copy" data-copy="물건 사고 후회하는 일 줄이려면 사기 전에 딱 1분만 투자해 보자.
+챗GPT 리뷰 분석으로 진짜 내돈내산 후기만 걸러내고 단점 파악하기.
+
+AI 쇼핑 활용법 별거 없더라.
+프롬프트 잘 짜서 단점부터 확인하는 게 핵심이다.">이 부분 복사</button></div>
+
+  <div class="source">참고 기사: <a href="https://news.google.com/rss/articles/CBMifkFVX3lxTFBnMDl5Z0FNS1Nia2R5SndWNUsxSzRxYXFUNFRyaVpjZHBiQ2VhUUNCcEJMM2NVc0RmYlpLT0NHN1dTS3dtU3lwczIyN01Ma0NMTHY2dW5lQVM1NE04c2gxUlZmNjlScDUtdEdlRFdWZEFwOWs5TU9aM0kwNUJqZw?oc=5" target="_blank" rel="noopener">"85%가 상품 탐색·구매 과정에서 생성형 AI 활용, AI 추천 제품 구매 경험도 50%" - 브랜드브리프</a></div>
+</div>
+
+<div class="allbar">
+  <button id="all" data-copy="( 사진 여기 — thumbnail )
+
+인터넷에서 뭐 하나 살 때 리뷰 읽다가 지친 적 많을 거다.
+별점 5점짜리 글만 수십 개인데 막상 사보면 실망스럽더라.
+
+광고나 협찬 글이 섞여 있어서 진짜 후기 찾기가 힘들네.
+특히 제품의 진짜 단점이 뭔지 알고 싶은데 다들 칭찬만 써놓는다.
+
+이럴 때 챗GPT 같은 AI를 쓰면 진짜 편하다.
+수십 개 후기를 통째로 넣고 단점만 쏙 뽑아달라고 하면 1분 만에 끝난다.
+
+( 사진 여기 — diagram )
+
+원리는 의외로 간단하다.
+리뷰를 긁어다가 프롬프트에 넣고 세 가지만 요청하면 된다.
+
+광고성 패턴 제외하기, 반복 언급되는 단점 추출, 실사용자 불만 요약.
+이렇게 설정하면 제품의 치명적인 단점부터 눈에 들어온다.
+
+( 사진 여기 — compare )
+
+사람이 일일이 읽을 때는 협찬 글에 낚이기 쉽다.
+"제공받아 작성했습니다" 문구가 없어도 어투만 보면 감이 오는데, AI는 그 어투 패턴을 정확히 잡아낸다.
+
+실제 내돈내산 후기는 장단점이 구체적이고 톤이 건조하다.
+반면 협찬 글은 찬양 일색에 주저리주저리 설명이 길다.
+
+AI한테 이 차이를 인식시키면 광고글을 알아서 가려준다.
+
+( 사진 여기 — steps )
+
+내가 자주 쓰는 리뷰 분석 프롬프트 공유해 본다.
+
+1단계: 쇼핑몰 리뷰 text를 20~30개 긁어서 복사한다.
+2단계: AI에 프롬프트를 이렇게 입력한다.
+
+"아래 리뷰 데이터를 분석해 줘.
+1. 협찬 및 광고성 어투를 가진 리뷰는 분석에서 제외할 것.
+2. 실제 사용자가 겪은 공통적인 단점 3가지를 정리할 것.
+3. 내돈내산 사용자의 솔직한 평가 총평을 한 줄로 작성할 것."
+
+3단계: 출력된 결과를 확인하고 구매 여부를 결정한다.
+
+이 프롬프트 하나면 장바구니 털기 전 고민이 싹 사라진다.
+
+( 사진 여기 — summary )
+
+물건 사고 후회하는 일 줄이려면 사기 전에 딱 1분만 투자해 보자.
+챗GPT 리뷰 분석으로 진짜 내돈내산 후기만 걸러내고 단점 파악하기.
+
+AI 쇼핑 활용법 별거 없더라.
+프롬프트 잘 짜서 단점부터 확인하는 게 핵심이다.">본문 전체 복사</button>
+</div>
+
+<script>
+document.addEventListener('click', function (e) {
+  var btn = e.target.closest('[data-copy]');
+  if (!btn) return;
+  var text = btn.getAttribute('data-copy');
+  var original = btn.textContent;
+
+  function done() {
+    btn.textContent = '복사됨';
+    btn.classList.add('done');
+    setTimeout(function () {
+      btn.textContent = original;
+      btn.classList.remove('done');
+    }, 1400);
+  }
+
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(text).then(done);
+  } else {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); done(); } catch (err) {}
+    document.body.removeChild(ta);
+  }
+});
+</script>
+</body>
+</html>
